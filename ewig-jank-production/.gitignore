@@ -1,0 +1,18 @@
+# OCaml/Dune build artifacts
+_build/
+*.install
+*.merlin
+
+# OPAM files
+*.opam.locked
+
+# Editor files
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Development
+.flox/
+

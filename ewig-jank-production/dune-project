@@ -1,0 +1,15 @@
+(lang dune 3.0)
+
+(name mcp)
+
+(package
+ (name mcp)
+ (synopsis "Model Context Protocol implementation for OCaml")
+ (description "A comprehensive OCaml implementation of the Model Context Protocol (MCP)")
+ (depends
+  (ocaml (>= 4.14))
+  (dune (>= 3.0))
+  (yojson (>= 1.7.0))
+  (lwt (>= 5.0.0))
+  (cmdliner (>= 1.1.0))))
+
