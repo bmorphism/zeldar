@@ -1,0 +1,100 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/Users/barton/infinity-topos"
+      ]
+    },
+    "git": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-git", "--repository", "."]
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-playwright"]
+    },
+    "memory": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-memory"]
+    },
+    "time": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-time"]
+    },
+    "elevenlabs": {
+      "command": "/Users/barton/infinity-topos/elevenlabs-mcp/.venv/bin/python3",
+      "args": [
+        "/Users/barton/infinity-topos/elevenlabs-mcp/elevenlabs_mcp/server.py"
+      ],
+      "env": {
+        "ELEVENLABS_API_KEY": "sk_3fef188ecd6cd8c8a6671f8879e758ea6346d350816b4291"
+      }
+    },
+    "apple-mcp": {
+      "command": "uvx",
+      "args": ["apple-mcp"]
+    },
+    "kuzu": {
+      "command": "uvx",
+      "args": ["kuzu-mcp-server"]
+    },
+    "duckdb": {
+      "command": "uvx",
+      "args": ["duckdb-mcp-server"]
+    },
+    "firecrawl": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-firecrawl"],
+      "env": {
+        "FIRECRAWL_API_KEY": "${FIRECRAWL_API_KEY}"
+      }
+    },
+    "tree-sitter": {
+      "command": "uvx",
+      "args": ["tree-sitter-mcp"]
+    },
+    "anti-bullshit": {
+      "command": "uvx",
+      "args": ["anti-bullshit-mcp"]
+    },
+    "exa": {
+      "command": "uvx",
+      "args": ["exa-mcp-server"],
+      "env": {
+        "EXA_API_KEY": "${EXA_API_KEY}"
+      }
+    },
+    "radare2": {
+      "command": "uvx",
+      "args": ["radare2-mcp"]
+    },
+    "babashka": {
+      "command": "/Users/barton/infinity-topos/babashka-mcp-server/target/babashka-mcp-server"
+    },
+    "brave-search": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-brave-search"],
+      "env": {
+        "BRAVE_API_KEY": "${BRAVE_API_KEY}"
+      }
+    },
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_TOKEN}"
+      }
+    },
+    "postgres": {
+      "command": "uvx",
+      "args": ["mcp-server-postgres", "--connection-string", "postgresql://localhost/infinity_topos"]
+    },
+    "everything": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-everything"]
+    }
+  }
+}
