@@ -124,7 +124,7 @@ args = ["/Users/barton/infinity-topos/marginalia-mcp-server/build/index.js"]
 [[agents.gemini-cli.mcp.servers]]
 name = "exa"
 command = "node"
-args = ["/Users/barton/infinity-topos/exa-mcp-server/build/index.js", "--tools=web_search_exa,research_paper_search,company_research,crawling,competitor_finder,linkedin_search,wikipedia_search_exa,github_search,deep_researcher_start,deep_researcher_check"]
+args = ["/Users/barton/infinity-topos/exa-mcp-server/.smithery/index.cjs"]
 [agents.gemini-cli.mcp.servers.env]
 EXA_API_KEY = "661d2d28-2886-4bb6-9903-9b2f8e453187"
 
