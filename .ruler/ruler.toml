@@ -71,14 +71,118 @@ output_path = ".kilocode/rules/ruler_kilocode_instructions.md"
 [agents.opencode]
 enabled = true
 output_path = "AGENTS.md"
+output_path_config = ".opencode.json"
 
 # [agents.firebase]
 # enabled = true
 # output_path = ".idx/airules.md"
 
-# [agents.gemini-cli]
-# enabled = true
-
 # [agents.kilocode]
 # enabled = true
 # output_path = ".kilocode/rules/ruler_kilocode_instructions.md"
+
+# --- MCP Service Integration Configuration ---
+[services]
+
+[services.exa]
+# Single source for Exa credentials. Picks up the key from the environment so
+# it can be rotated without modifying version-controlled files.
+api_key = "${EXA_API_KEY}"
+tools = ["web_search_exa", "research_paper_search", "company_research", "crawling", "competitor_finder", "github_search"]
+search_strategy = "dialectical_coin_flip"
+exploration_pattern = "2-3-5-7"
+exploitation_pattern = "2-3-5-1069"
+
+# ---------------------------------------------------------------------------
+# ElevenLabs TTS configuration (now defined only here)
+# ---------------------------------------------------------------------------
+[services.elevenlabs]
+# API key comes from env for security.
+api_key = "${ELEVENLABS_API_KEY}"
+# Default voice & parameters
+default_voice = "Fiona (Enhanced)"
+default_rate_wpm = 193
+approved_voices = ["Wolfram", "Queen", "Tau"]
+output_path = "/Users/barton/Desktop"
+vocalization_frequency = 3  # every N interactions
+
+# Agent-specific MCP server configurations
+[agents.claude.mcp]
+config_file = "mcp.json"  # Full MCP server set
+
+
+# Gemini CLI configured with declarative server definitions using replace strategy
+[agents.gemini-cli.mcp]
+strategy = "replace"
+config_file = ".gemini/settings.json"
+
+[[agents.gemini-cli.mcp.servers]]
+name = "marginalia"
+command = "node"
+args = ["/Users/barton/infinity-topos/marginalia-mcp-server/build/index.js"]
+
+[[agents.gemini-cli.mcp.servers]]
+name = "exa"
+command = "node"
+args = ["/Users/barton/infinity-topos/exa-mcp-server/build/index.js", "--tools=web_search_exa,research_paper_search,company_research,crawling,competitor_finder,linkedin_search,wikipedia_search_exa,github_search,deep_researcher_start,deep_researcher_check"]
+[agents.gemini-cli.mcp.servers.env]
+EXA_API_KEY = "661d2d28-2886-4bb6-9903-9b2f8e453187"
+
+[[agents.gemini-cli.mcp.servers]]
+name = "babashka"
+command = "node"
+args = ["/Users/barton/infinity-topos/babashka-mcp-server/build/index.js"]
+
+[[agents.gemini-cli.mcp.servers]]
+name = "anti-bullshit"
+command = "node"
+args = ["/Users/barton/infinity-topos/anti-bullshit-mcp-server/build/index.js"]
+
+[[agents.gemini-cli.mcp.servers]]
+name = "apple-mcp"
+command = "bun"
+args = ["run", "/Users/barton/infinity-topos/apple-mcp/index.ts"]
+
+[[agents.gemini-cli.mcp.servers]]
+name = "dialectical-coin"
+command = "node"
+args = ["/Users/barton/infinity-topos/coin-flip-mcp/build/index.js"]
+
+[[agents.gemini-cli.mcp.servers]]
+name = "tree-sitter"
+command = "/Users/barton/infinity-topos/mcp-server-tree-sitter/.venv/bin/python"
+args = ["-m", "mcp_server_tree_sitter.server"]
+
+[[agents.gemini-cli.mcp.servers]]
+name = "say"
+command = "node"
+args = ["/Users/barton/infinity-topos/say/build/index.js"]
+
+[[agents.gemini-cli.mcp.servers]]
+name = "elevenlabs"
+command = "uvx"
+args = ["elevenlabs-mcp"]
+[agents.gemini-cli.mcp.servers.env]
+ELEVENLABS_API_KEY = "sk_e3c5936a061a616f257d29733d8832a19e3ae971a406186c"
+ELEVENLABS_MCP_BASE_PATH = "/Users/barton/Desktop"
+
+# Gemini service configuration centralised here so there is only *one* place
+# to tweak API keys and model selection.
+[services.gemini]
+api_key = "${GEMINI_API_KEY}"
+# Allow three candidate models; downstream tools can randomly choose or cycle.
+models = ["gemini-2.5-pro", "gemini-2.5-flash", "gemini-1.5-pro"]
+model_selection = "random" # pick one per invocation
+
+# OpenCode now using global MCP configuration (same pattern as Gemini)
+[agents.opencode.mcp]
+strategy = "replace"
+config_file = "opencode.json"
+
+# OpenCode service configuration
+[services.opencode]
+api_key = "${ANTHROPIC_API_KEY}"
+default_provider = "anthropic"
+theme = "dark"
+auto_save = true
+project_name = "infinity-topos"

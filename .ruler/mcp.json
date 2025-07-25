@@ -1,100 +1,68 @@
 {
   "mcpServers": {
-    "filesystem": {
-      "command": "npx",
+    "marginalia": {
+      "command": "node",
       "args": [
-        "-y",
-        "@modelcontextprotocol/server-filesystem",
-        "/Users/barton/infinity-topos"
+        "/Users/barton/infinity-topos/marginalia-mcp-server/build/index.js"
       ]
     },
-    "git": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-git", "--repository", "."]
-    },
-    "playwright": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-playwright"]
-    },
-    "memory": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-memory"]
-    },
-    "time": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-time"]
-    },
-    "elevenlabs": {
-      "command": "/Users/barton/infinity-topos/elevenlabs-mcp/.venv/bin/python3",
+    "exa": {
+      "command": "node",
       "args": [
-        "/Users/barton/infinity-topos/elevenlabs-mcp/elevenlabs_mcp/server.py"
+        "/Users/barton/infinity-topos/exa-mcp-server/build/index.js",
+        "--tools=web_search_exa,research_paper_search,company_research,crawling,competitor_finder,linkedin_search,wikipedia_search_exa,github_search,deep_researcher_start,deep_researcher_check"
       ],
       "env": {
-        "ELEVENLABS_API_KEY": "sk_3fef188ecd6cd8c8a6671f8879e758ea6346d350816b4291"
+        "EXA_API_KEY": "661d2d28-2886-4bb6-9903-9b2f8e453187"
       }
-    },
-    "apple-mcp": {
-      "command": "uvx",
-      "args": ["apple-mcp"]
-    },
-    "kuzu": {
-      "command": "uvx",
-      "args": ["kuzu-mcp-server"]
-    },
-    "duckdb": {
-      "command": "uvx",
-      "args": ["duckdb-mcp-server"]
-    },
-    "firecrawl": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-firecrawl"],
-      "env": {
-        "FIRECRAWL_API_KEY": "${FIRECRAWL_API_KEY}"
-      }
-    },
-    "tree-sitter": {
-      "command": "uvx",
-      "args": ["tree-sitter-mcp"]
-    },
-    "anti-bullshit": {
-      "command": "uvx",
-      "args": ["anti-bullshit-mcp"]
-    },
-    "exa": {
-      "command": "uvx",
-      "args": ["exa-mcp-server"],
-      "env": {
-        "EXA_API_KEY": "${EXA_API_KEY}"
-      }
-    },
-    "radare2": {
-      "command": "uvx",
-      "args": ["radare2-mcp"]
     },
     "babashka": {
-      "command": "/Users/barton/infinity-topos/babashka-mcp-server/target/babashka-mcp-server"
+      "command": "node",
+      "args": [
+        "/Users/barton/infinity-topos/babashka-mcp-server/build/index.js"
+      ]
     },
-    "brave-search": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-brave-search"],
-      "env": {
-        "BRAVE_API_KEY": "${BRAVE_API_KEY}"
-      }
+    "anti-bullshit": {
+      "command": "node",
+      "args": [
+        "/Users/barton/infinity-topos/anti-bullshit-mcp-server/build/index.js"
+      ]
     },
-    "github": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-github"],
-      "env": {
-        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_TOKEN}"
-      }
+    "apple-mcp": {
+      "command": "bun",
+      "args": [
+        "run",
+        "/Users/barton/infinity-topos/apple-mcp/index.ts"
+      ]
     },
-    "postgres": {
+    "dialectical-coin": {
+      "command": "node",
+      "args": [
+        "/Users/barton/infinity-topos/coin-flip-mcp/build/index.js"
+      ]
+    },
+    "tree-sitter": {
+      "command": "/Users/barton/infinity-topos/mcp-server-tree-sitter/.venv/bin/python",
+      "args": [
+        "-m",
+        "mcp_server_tree_sitter.server"
+      ]
+    },
+    "say": {
+      "command": "node",
+      "args": [
+        "/Users/barton/infinity-topos/say/build/index.js"
+      ]
+    },
+    "elevenlabs": {
       "command": "uvx",
-      "args": ["mcp-server-postgres", "--connection-string", "postgresql://localhost/infinity_topos"]
-    },
-    "everything": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-everything"]
+      "args": [
+        "elevenlabs-mcp"
+      ],
+      "env": {
+        "ELEVENLABS_API_KEY": "sk_e3c5936a061a616f257d29733d8832a19e3ae971a406186c",
+        "ELEVENLABS_MCP_BASE_PATH": "/Users/barton/Desktop"
+      }
     }
   }
 }

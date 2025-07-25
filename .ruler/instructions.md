@@ -2,6 +2,23 @@
 
 ## 🚀 OXCAML SUPREMACY IN TOPOS WORK 🚀
 
+## MCP Service Integration
+
+### Exa Search Integration
+- **Primary search method**: Use Exa MCP server for web search and knowledge discovery
+- **Search refinement**: Apply 2-3-5-7 principle for exploration, 2-3-5-1069 for exploitation
+- **Random search strategy**: Use dialectical coin flip to choose between exa, marginalia, or github
+- Available tools: `web_search_exa`, `research_paper_search`, `company_research`, `crawling`, `competitor_finder`, `github_search`
+- API Key configured: `661d2d28-2886-4bb6-9903-9b2f8e453187`
+
+### ElevenLabs Voice Integration
+- **Default voice**: Fiona (Enhanced) at 193 WPM rate unless specified otherwise
+- **Approved voices**: Wolfram, Queen, or Tau voices only with deranged parameters
+- **Vocalization pattern**: Every 3 interactions maximally compressing ontological/epistemological increments
+- **Voice output**: Desktop output path configured to `/Users/barton/Desktop`
+- Available capabilities: `generate_speech`, `clone_voice`, `transcribe_audio`, `list_voices`
+- API Key configured: `sk_e3c5936a061a616f257d29733d8832a19e3ae971a406186c`
+
 **ABSOLUTE PRIORITY: ALL functional programming in Infinity Topos MUST use OxCaml-first approach:**
 - `[@@ local]` for zero-allocation categorical operations
 - `[@@ once portable unyielding]` for fearless concurrent sheaf computations
