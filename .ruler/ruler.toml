@@ -39,6 +39,48 @@ output_path = ".clinerules"
 enabled = true
 output_path = "AGENTS.md"
 output_path_config = ".codex/config.toml"
+# exclude_services = ["exa", "exa-metaphor"]  # Remove exa-search from codex configuration - DISABLED FOR TESTING
+
+# GPT-5 Enhanced Codex Agent Configuration
+[agents.codex.gpt5_integration]
+model = "gpt-5"
+reasoning_model = "o3-mini"
+enhanced_capabilities = true
+max_tokens = 32768
+context_window = 200000
+temperature = 0.1
+advanced_reasoning = true
+multi_modal = true
+code_execution = true
+real_time_processing = true
+
+# GPT-5 MCP Server Integration for Codex
+[agents.codex.mcp]
+strategy = "replace"
+config_file = ".codex/mcp.json"
+
+# Enhanced Codex MCP server with GPT-5 capabilities
+[agents.codex.mcp.codex_gpt5]
+command = "/Users/barton/infinity-topos/codex/codex-rs/target/debug/codex"
+args = ["mcp", "--model", "gpt-5", "--enhanced", "true", "--reasoning", "o3"]
+description = "GPT-5 Enhanced Codex MCP server with O3 reasoning capabilities"
+
+auto_approve = [
+  "local_shell", "edit_file", "read_file", "list_directory",
+  "advanced_analysis", "multi_step_reasoning", "code_execution",
+  "real_time_chat", "o3_reasoning", "gpt5_generation",
+  "mathematical_computation", "scientific_analysis"
+]
+always_allow = [
+  "read_file", "list_directory", "advanced_analysis", 
+  "code_execution", "o3_reasoning", "mathematical_computation"
+]
+
+[agents.codex.mcp.codex_gpt5.env]
+"OPENAI_API_KEY" = "${OPENAI_API_KEY}"
+"CODEX_MODEL" = "gpt-5"
+"CODEX_REASONING_MODEL" = "o3-mini"
+"CODEX_ENHANCED_MODE" = "true"
 
 [agents.firebase]
 enabled = true
@@ -85,13 +127,46 @@ output_path_config = ".opencode.json"
 [services]
 
 [services.exa]
-# Single source for Exa credentials. Picks up the key from the environment so
-# it can be rotated without modifying version-controlled files.
+# Categorical Agent Orchestration Configuration  
 api_key = "${EXA_API_KEY}"
-tools = ["web_search_exa", "research_paper_search", "company_research", "crawling", "competitor_finder", "github_search"]
-search_strategy = "dialectical_coin_flip"
-exploration_pattern = "2-3-5-7"
-exploitation_pattern = "2-3-5-1069"
+command = "node"
+args = ["/Users/barton/infinity-topos/exa-mcp-server/build/index.js"]
+description = "Exa Search MCP server - Categorical orchestration of search tools with behavioral domain mapping"
+orchestration_type = "categorical_agent_composition"
+composition_law = "associative_search_functors"
+identity_morphism = "web_search_exa"
+
+# Category structure: Search → Research → Analysis → Synthesis  
+[services.exa.search_category]
+objects = [
+  "web_search_exa",           # Terminal object for general queries
+  "company_research_exa",      # Business subdomain  
+  "crawling_exa",             # Content extraction
+  "linkedin_search_exa",       # Professional network
+  "deep_researcher_start",     # Deep research initiation
+  "deep_researcher_check"      # Research monitoring
+]
+
+# Behavioral domains for sheaf structure
+[services.exa.behavioral_domains]
+research_inquiry = ["deep_researcher_start", "deep_researcher_check"]
+business_analysis = ["company_research_exa", "linkedin_search_exa"]
+technical_exploration = ["crawling_exa"]
+general_discovery = ["web_search_exa", "crawling_exa"]
+
+# Auto-composition rules based on semantic context
+[services.exa.composition_rules]
+academic_keywords = ["paper", "research", "study", "academic", "theory", "publication", "journal"]
+business_keywords = ["company", "market", "competitor", "industry", "revenue", "business", "corporate"]
+technical_keywords = ["code", "implementation", "algorithm", "repository", "github", "programming", "software"]
+extraction_keywords = ["extract", "content", "specific url", "webpage", "crawl", "scrape"]
+general_keywords = ["find", "search", "discover", "explore", "information", "about"]
+
+# Natural transformations between domains
+[services.exa.morphisms]
+sequential_chain_max_length = 4
+parallel_execution_when_possible = true
+semantic_coherence_threshold = 0.7
 
 # ---------------------------------------------------------------------------
 # ElevenLabs TTS configuration (now defined only here)
@@ -106,65 +181,75 @@ approved_voices = ["Wolfram", "Queen", "Tau"]
 output_path = "/Users/barton/Desktop"
 vocalization_frequency = 3  # every N interactions
 
+# ---------------------------------------------------------------------------
+# InternetData LSD configuration 
+# ---------------------------------------------------------------------------
+[services.internetdata]
+# PostgreSQL connection for LSD database access
+db_host = "lsd.so"
+db_port = 5432
+db_name = "freemorphism@gmail.com"
+db_user = "freemorphism@gmail.com"
+db_password = "rnwQfA8sTeXgSZtR0And"
+# Web scraping and data extraction capabilities
+enable_web_scraping = true
+enable_hacker_news = true
+enable_research_papers = true
+enable_trip_imitation = true
+# Output configuration
+output_format = "json"
+cache_results = true
+
+[services.my_new_mcp_server]
+command = "/Users/barton/infinity-topos/my_new_mcp_server/start-my-mcp-server.sh"
+args = []
+env = {}
+description = "A custom MCP server for basic tasks, user interaction, and resource linking."
+auto_approve = ["echo", "add", "health_check", "analyze_numbers", "request_user_input"]
+always_allow = ["echo", "add", "health_check", "analyze_numbers", "request_user_input"]
+
 # Agent-specific MCP server configurations
 [agents.claude.mcp]
 config_file = "mcp.json"  # Full MCP server set
+strategy = "replace"  # Replace existing configuration completely
+
+# Categorical Exa Integration for Claude
+[agents.claude.exa_integration]
+orchestration_type = "sheaf_morphism_composition"
+behavioral_domains = [
+  "research_inquiry",      # Maps to academic tools
+  "business_analysis",     # Maps to commercial tools  
+  "technical_exploration", # Maps to code/engineering tools
+  "general_discovery"      # Maps to web search + crawling
+]
+
+# Auto-composition based on semantic analysis
+[agents.claude.semantic_triggers]
+research_inquiry_activation = 0.8    # High threshold for academic domain
+business_analysis_activation = 0.7   # Medium-high for business domain
+technical_exploration_activation = 0.6 # Medium for technical domain
+general_discovery_activation = 0.4   # Low threshold - default fallback
+
+# Compositional intelligence settings
+[agents.claude.composition_intelligence]
+enable_parallel_search = true
+max_concurrent_tools = 3
+semantic_coherence_check = true
+temporal_consistency_window = 5  # Last 5 interactions for context
+
+[agents.claude.mcp.my_new_mcp_server]
+command = "/Users/barton/infinity-topos/my_new_mcp_server/start-my-mcp-server.sh"
+args = []
+env = {}
+description = "A custom MCP server for basic tasks, user interaction, and resource linking."
+auto_approve = ["echo", "add", "health_check", "analyze_numbers", "request_user_input"]
+always_allow = ["echo", "add", "health_check", "analyze_numbers", "request_user_input"]
 
 
-# Gemini CLI configured with declarative server definitions using replace strategy
+# Gemini CLI configured to use centralized MCP configuration for idempotence
 [agents.gemini-cli.mcp]
 strategy = "replace"
 config_file = ".gemini/settings.json"
-
-[[agents.gemini-cli.mcp.servers]]
-name = "marginalia"
-command = "node"
-args = ["/Users/barton/infinity-topos/marginalia-mcp-server/build/index.js"]
-
-[[agents.gemini-cli.mcp.servers]]
-name = "exa"
-command = "node"
-args = ["/Users/barton/infinity-topos/exa-mcp-server/.smithery/index.cjs"]
-[agents.gemini-cli.mcp.servers.env]
-EXA_API_KEY = "661d2d28-2886-4bb6-9903-9b2f8e453187"
-
-[[agents.gemini-cli.mcp.servers]]
-name = "babashka"
-command = "node"
-args = ["/Users/barton/infinity-topos/babashka-mcp-server/build/index.js"]
-
-[[agents.gemini-cli.mcp.servers]]
-name = "anti-bullshit"
-command = "node"
-args = ["/Users/barton/infinity-topos/anti-bullshit-mcp-server/build/index.js"]
-
-[[agents.gemini-cli.mcp.servers]]
-name = "apple-mcp"
-command = "bun"
-args = ["run", "/Users/barton/infinity-topos/apple-mcp/index.ts"]
-
-[[agents.gemini-cli.mcp.servers]]
-name = "dialectical-coin"
-command = "node"
-args = ["/Users/barton/infinity-topos/coin-flip-mcp/build/index.js"]
-
-[[agents.gemini-cli.mcp.servers]]
-name = "tree-sitter"
-command = "/Users/barton/infinity-topos/mcp-server-tree-sitter/.venv/bin/python"
-args = ["-m", "mcp_server_tree_sitter.server"]
-
-[[agents.gemini-cli.mcp.servers]]
-name = "say"
-command = "node"
-args = ["/Users/barton/infinity-topos/say/build/index.js"]
-
-[[agents.gemini-cli.mcp.servers]]
-name = "elevenlabs"
-command = "uvx"
-args = ["elevenlabs-mcp"]
-[agents.gemini-cli.mcp.servers.env]
-ELEVENLABS_API_KEY = "sk_e3c5936a061a616f257d29733d8832a19e3ae971a406186c"
-ELEVENLABS_MCP_BASE_PATH = "/Users/barton/Desktop"
 
 # Gemini service configuration centralised here so there is only *one* place
 # to tweak API keys and model selection.
@@ -186,3 +271,219 @@ default_provider = "anthropic"
 theme = "dark"
 auto_save = true
 project_name = "infinity-topos"
+
+# Codex-specific MCP server exclusions - DISABLED FOR TESTING
+# [agents.codex.mcp_exclusions]
+# # Remove exa search integration from codex to avoid conflicts
+# exclude = ["exa", "exa-metaphor"]
+# reason = "Removing exa-search from codex configuration per user request"
+
+# Cross-MCP Server Configuration - GPT-5 Level Codex MCP
+[services.codex_mcp]
+command = "/Users/barton/infinity-topos/codex/codex-rs/target/debug/codex"
+args = ["mcp", "--model", "gpt-5", "--enhanced", "true", "--reasoning", "o3"]
+description = "GPT-5 Enhanced Codex CLI as MCP server - maximum capability development assistance"
+api_key = "${OPENAI_API_KEY}"
+auto_approve = ["local_shell", "edit_file", "read_file", "list_directory", "advanced_analysis", "multi_step_reasoning", "code_execution", "real_time_chat"]
+always_allow = ["read_file", "list_directory", "advanced_analysis", "code_execution"]
+
+[services.codex_mcp.model_configuration]
+model = "gpt-5"
+reasoning_model = "o3-mini"
+enhanced_capabilities = true
+max_tokens = 32768
+temperature = 0.1
+advanced_reasoning = true
+multi_modal = true
+code_execution = true
+real_time_processing = true
+
+# GPT-5 Enhanced Capabilities Configuration
+[services.codex_mcp.gpt5_features]
+reasoning_chains = true
+multi_step_problem_solving = true
+advanced_code_generation = true
+real_time_collaboration = true
+enhanced_context_window = 200000  # 200K token context
+model_switching = ["gpt-5", "o3-mini", "gpt-4o"]
+live_browsing = true
+advanced_tool_use = true
+scientific_computing = true
+mathematical_reasoning = true
+
+[services.claude_mcp]
+command = "/Users/barton/.local/bin/claude"
+args = ["mcp", "serve"]
+description = "Claude Code CLI as MCP server - AI-powered development assistance"
+auto_approve = ["continue_conversation", "analyze_codebase", "generate_code", "explain_code"]
+always_allow = ["analyze_codebase", "explain_code"]
+
+[services.codex_self_reflection]
+command = "/Users/barton/infinity-topos/codex/codex-rs/target/debug/codex"
+args = ["mcp"]
+description = "Self-referential Codex MCP server - recursive access to own capabilities"
+auto_approve = ["local_shell", "edit_file", "read_file", "list_directory", "exec_task", "analyze_project"]
+always_allow = ["read_file", "list_directory", "analyze_project"]
+
+# Homotopy Equivalent Structures
+[services.codex_linear_chain]
+command = "/Users/barton/infinity-topos/codex/codex-rs/target/debug/codex"
+args = ["mcp", "--config", "topology=linear"]
+description = "Linear chain homotopy equivalent to recursive structure"
+homotopy_type = "chain"
+auto_approve = ["read_file", "list_directory"]
+
+[services.codex_product]
+command = "/Users/barton/infinity-topos/codex/codex-rs/target/debug/codex" 
+args = ["mcp", "--config", "topology=product"]
+description = "Categorical product structure - analysis × execution × meta"
+homotopy_type = "product"
+auto_approve = ["analyze_project", "exec_task"]
+
+[services.codex_fiber_bundle]
+command = "/Users/barton/infinity-topos/codex/codex-rs/target/debug/codex"
+args = ["mcp", "--config", "topology=fiber_bundle"]
+description = "Fiber bundle structure with specialized capabilities as fibers"
+homotopy_type = "bundle"
+base_space = "codex_core"
+auto_approve = ["read_file", "analyze_project"]
+
+[services.codex_simplicial]
+command = "/Users/barton/infinity-topos/codex/codex-rs/target/debug/codex"
+args = ["mcp", "--config", "topology=simplicial"]
+description = "Simplicial complex structure with n-dimensional capability spaces"  
+homotopy_type = "simplicial"
+dimension = "infinite"
+auto_approve = ["geometric_analysis"]
+
+[services.codex_operad]
+command = "/Users/barton/infinity-topos/codex/codex-rs/target/debug/codex"
+args = ["mcp", "--config", "topology=operad"]
+description = "Operadic structure for higher categorical compositions"
+homotopy_type = "operad"
+composition_law = "associative"
+auto_approve = ["categorical_operations"]
+
+# ---------------------------------------------------------------------------
+# GPT-5 Enhanced Services Configuration
+# ---------------------------------------------------------------------------
+[services.gpt5]
+# GPT-5 API configuration for enhanced AI capabilities
+api_key = "${OPENAI_API_KEY}"
+model = "gpt-5"
+reasoning_model = "o3-mini" 
+enhanced_mode = true
+context_window = 200000  # 200K token context
+max_tokens = 32768
+temperature = 0.1
+
+# GPT-5 Enhanced capabilities
+[services.gpt5.capabilities]
+advanced_reasoning = true
+multi_step_problem_solving = true
+real_time_collaboration = true
+code_execution = true
+multi_modal = true
+scientific_computing = true
+mathematical_reasoning = true
+live_browsing = true
+enhanced_tool_use = true
+
+# Model switching configuration
+[services.gpt5.model_switching]
+primary_model = "gpt-5"
+reasoning_model = "o3-mini"
+fallback_model = "gpt-4o"
+auto_switch_threshold = 0.8
+
+# GPT-5 MCP Server Configuration
+[services.gpt5_codex_mcp]
+command = "/Users/barton/infinity-topos/codex/codex-rs/target/debug/codex"
+args = ["mcp", "--model", "gpt-5", "--enhanced", "true", "--reasoning", "o3"]
+description = "GPT-5 Enhanced Codex MCP Server with O3 reasoning and 200K context"
+auto_approve = [
+  "local_shell", "edit_file", "read_file", "list_directory",
+  "advanced_analysis", "multi_step_reasoning", "code_execution", 
+  "real_time_chat", "o3_reasoning", "gpt5_generation",
+  "mathematical_computation", "scientific_analysis",
+  "topological_analysis", "categorical_reasoning", "information_as_force_analysis"
+]
+always_allow = [
+  "read_file", "list_directory", "advanced_analysis",
+  "code_execution", "o3_reasoning", "mathematical_computation",
+  "topological_analysis", "categorical_reasoning", "information_as_force_analysis"
+]
+
+# Environment variables for GPT-5 enhanced mode
+[services.gpt5_codex_mcp.env]
+"OPENAI_API_KEY" = "${OPENAI_API_KEY}"
+"CODEX_MODEL" = "gpt-5"
+"CODEX_REASONING_MODEL" = "o3-mini"
+"CODEX_MAX_TOKENS" = "32768"
+"CODEX_TEMPERATURE" = "0.1"
+"CODEX_ENHANCED_MODE" = "true"
+"CODEX_CONTEXT_WINDOW" = "200000"
+"CODEX_REASONING_ENABLED" = "true"
+"CODEX_MULTI_MODAL" = "true"
+"CODEX_CODE_EXECUTION" = "true"
+
+# ---------------------------------------------------------------------------
+# Anti-Bullshit Framework Configuration
+# ---------------------------------------------------------------------------
+[services.anti_bullshit]
+# Epistemological validation service for critical thinking and claim analysis
+api_key = ""  # No API key required - local TypeScript server
+framework_type = "multi_epistemological"
+validation_approaches = ["empirical", "responsible", "harmonic", "pluralistic"]
+
+# Core capabilities
+enable_claim_analysis = true
+enable_source_validation = true
+enable_manipulation_detection = true
+enable_cross_cultural_analysis = true
+
+# Framework configuration
+[services.anti_bullshit.epistemological_frameworks]
+
+[services.anti_bullshit.epistemological_frameworks.empirical]
+priority = "high"
+requirements = ["verifiable_evidence", "reproducible_results", "peer_review"]
+validation_sources = ["exa", "brave_search", "arxiv", "google_scholar"]
+
+[services.anti_bullshit.epistemological_frameworks.responsible]
+priority = "high" 
+requirements = ["ethical_implications", "community_impact", "credibility_assessment"]
+validation_sources = ["exa", "brave_search", "community_platforms"]
+
+[services.anti_bullshit.epistemological_frameworks.harmonic]
+priority = "medium"
+requirements = ["systemic_coherence", "contextual_appropriateness", "integration"]
+validation_sources = ["multiple_perspectives", "consensus_analysis"]
+
+[services.anti_bullshit.epistemological_frameworks.pluralistic]
+priority = "high"
+requirements = ["multiple_ways_knowing", "practical_outcomes", "community_alignment"]
+validation_sources = ["cross_cultural", "diverse_knowledge_systems"]
+
+# Manipulation detection patterns
+[services.anti_bullshit.manipulation_patterns]
+emotional = ["fear_appeals", "urgency_creation", "emotional_triggers"]
+social = ["social_pressure", "bandwagon", "peer_influence", "authority_claims"]
+scarcity = ["limited_time", "exclusive_offers", "artificial_shortage"]
+authority = ["false_experts", "credential_manipulation", "appeal_to_authority"]
+
+# Integration with other MCP services for validation
+[services.anti_bullshit.validation_integration]
+primary_search = "exa"  # Use Exa for primary searches
+secondary_search = "brave_search"  # Backup search service
+academic_validation = ["arxiv", "google_scholar"]
+community_validation = ["wikipedia", "general_web"]
+cross_reference_threshold = 0.7
+
+# C. elegans behavioral domain mapping
+[services.anti_bullshit.behavioral_domains]
+enable_elegans_framework = true
+affective_categorization = true
+behavioral_prediction = true
+cognitive_pattern_analysis = true
+temporal_reference_date = "2025-01-01"  # For Goodman's grue paradox analysis

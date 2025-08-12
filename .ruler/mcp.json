@@ -6,16 +6,6 @@
         "/Users/barton/infinity-topos/marginalia-mcp-server/build/index.js"
       ]
     },
-    "exa": {
-      "command": "node",
-      "args": [
-        "/Users/barton/infinity-topos/exa-mcp-server/build/index.js",
-        "--tools=web_search_exa,research_paper_search,company_research,crawling,competitor_finder,linkedin_search,wikipedia_search_exa,github_search,deep_researcher_start,deep_researcher_check"
-      ],
-      "env": {
-        "EXA_API_KEY": "661d2d28-2886-4bb6-9903-9b2f8e453187"
-      }
-    },
     "babashka": {
       "command": "node",
       "args": [
@@ -26,7 +16,29 @@
       "command": "node",
       "args": [
         "/Users/barton/infinity-topos/anti-bullshit-mcp-server/build/index.js"
-      ]
+      ],
+      "description": "Anti-bullshit MCP server - epistemological analysis, claim validation, manipulation detection",
+      "capabilities": {
+        "frameworks": ["empirical", "responsible", "harmonic", "pluralistic"],
+        "detection": ["manipulation", "source_validation", "cross_cultural_context"],
+        "integration": ["c_elegans_framework", "behavioral_domains", "cognitive_patterns"]
+      },
+      "autoApprove": [
+        "analyze_claim",
+        "validate_sources", 
+        "check_manipulation"
+      ],
+      "alwaysAllow": [
+        "analyze_claim",
+        "validate_sources",
+        "check_manipulation"
+      ],
+      "epistemological_config": {
+        "temporal_reference": "2025-01-01",
+        "grue_paradox_handling": true,
+        "c_elegans_neurons": 302,
+        "behavioral_domain_mapping": true
+      }
     },
     "apple-mcp": {
       "command": "bun",
@@ -63,6 +75,410 @@
         "ELEVENLABS_API_KEY": "sk_e3c5936a061a616f257d29733d8832a19e3ae971a406186c",
         "ELEVENLABS_MCP_BASE_PATH": "/Users/barton/Desktop"
       }
+    },
+    "kuzu-graph": {
+      "command": "node",
+      "args": [
+        "/Users/barton/infinity-topos/kuzu-mcp-server-bmorphism/index.js"
+      ],
+      "env": {
+        "KUZU_DB_PATH": "/Users/barton/infinity-topos/graph.db"
+      }
+    },
+    "abnormies": {
+      "command": "node",
+      "args": [
+        "/Users/barton/infinity-topos/abnormies-mcp-server/dist/index.js"
+      ],
+      "description": "Theoretical concept queries (autopoietic ergodicity, embodied gradualism, etc.)",
+      "autoApprove": [
+        "query_theoretical_concept",
+        "abnormies_classic_query",
+        "explore_concept_relationships",
+        "preset_query"
+      ]
+    },
+    "internetdata": {
+      "command": "/Users/barton/infinity-topos/start-internetdata-mcp.sh",
+      "args": [],
+      "env": {
+        "LSD_USER": "freemorphism@gmail.com",
+        "LSD_PASSWORD": "rnwQfA8sTeXgSZtR0And",
+        "DATABASE_URL": "postgresql://freemorphism%40gmail.com:rnwQfA8sTeXgSZtR0And@lsd.so:5432/freemorphism%40gmail.com"
+      },
+      "description": "LSD InternetData MCP server - web scraping, research, and database queries",
+      "autoApprove": [
+        "web_scrape",
+        "hacker_news_extract", 
+        "research_papers",
+        "imitate_trip",
+        "database_query",
+        "save_trip"
+      ],
+      "alwaysAllow": [
+        "web_scrape",
+        "hacker_news_extract",
+        "database_query"
+      ]
+    },
+    "codex-mcp-server": {
+      "command": "/Users/barton/infinity-topos/codex/codex-rs/target/debug/codex",
+      "args": [
+        "mcp",
+        "--model",
+        "gpt-5",
+        "--enhanced",
+        "true",
+        "--reasoning",
+        "o3"
+      ],
+      "env": {
+        "OPENAI_API_KEY": "${OPENAI_API_KEY}",
+        "CODEX_MODEL": "gpt-5",
+        "CODEX_REASONING_MODEL": "o3-mini",
+        "CODEX_MAX_TOKENS": "32768",
+        "CODEX_TEMPERATURE": "0.1",
+        "CODEX_ENHANCED_MODE": "true"
+      },
+      "description": "GPT-5 Enhanced Codex CLI as MCP server - maximum capability development assistance with O3 reasoning",
+      "capabilities": {
+        "models": ["gpt-5", "o3-mini", "gpt-4o"],
+        "reasoning": "advanced_multi_step",
+        "context_window": 200000,
+        "code_execution": true,
+        "real_time_processing": true,
+        "multi_modal": true,
+        "scientific_computing": true,
+        "mathematical_reasoning": true,
+        "live_browsing": true
+      },
+      "gpt5_features": {
+        "reasoning_chains": true,
+        "multi_step_problem_solving": true,
+        "advanced_code_generation": true,
+        "real_time_collaboration": true,
+        "enhanced_context_window": 200000,
+        "model_switching": ["gpt-5", "o3-mini", "gpt-4o"],
+        "live_browsing": true,
+        "advanced_tool_use": true,
+        "scientific_computing": true,
+        "mathematical_reasoning": true
+      },
+      "autoApprove": [
+        "local_shell",
+        "edit_file",
+        "read_file",
+        "list_directory",
+        "advanced_analysis",
+        "multi_step_reasoning",
+        "code_execution",
+        "real_time_chat",
+        "o3_reasoning",
+        "gpt5_generation",
+        "mathematical_computation",
+        "scientific_analysis"
+      ],
+      "alwaysAllow": [
+        "read_file",
+        "list_directory",
+        "advanced_analysis",
+        "code_execution",
+        "o3_reasoning",
+        "mathematical_computation"
+      ]
+    },
+    "claude-mcp-server": {
+      "command": "/Users/barton/.local/bin/claude",
+      "args": [
+        "mcp",
+        "serve"
+      ],
+      "description": "Claude Code CLI as MCP server - provides AI-powered development assistance",
+      "autoApprove": [
+        "continue_conversation",
+        "analyze_codebase",
+        "generate_code",
+        "explain_code"
+      ],
+      "alwaysAllow": [
+        "analyze_codebase",
+        "explain_code"
+      ]
+    },
+    "codex-self-reflection": {
+      "command": "/Users/barton/infinity-topos/codex/codex-rs/target/debug/codex",
+      "args": [
+        "mcp"
+      ],
+      "description": "Self-referential Codex MCP server - recursive access to own capabilities",
+      "autoApprove": [
+        "local_shell",
+        "edit_file", 
+        "read_file",
+        "list_directory",
+        "exec_task",
+        "analyze_project"
+      ],
+      "alwaysAllow": [
+        "read_file",
+        "list_directory",
+        "analyze_project"
+      ]
+    },
+    "codex-linear-chain": {
+      "command": "/Users/barton/infinity-topos/codex/codex-rs/target/debug/codex",
+      "args": [
+        "mcp",
+        "--config",
+        "topology=linear"
+      ],
+      "description": "Linear chain homotopy equivalent - π₁ ≅ ℤ",
+      "homotopyType": "chain",
+      "fundamentalGroup": "Z",
+      "autoApprove": [
+        "read_file",
+        "list_directory"
+      ]
+    },
+    "codex-product": {
+      "command": "/Users/barton/infinity-topos/codex/codex-rs/target/debug/codex",
+      "args": [
+        "mcp", 
+        "--config",
+        "topology=product"
+      ],
+      "description": "Categorical product structure - analysis × execution × meta",
+      "homotopyType": "product",
+      "fundamentalGroup": "trivial",
+      "autoApprove": [
+        "analyze_project",
+        "exec_task"
+      ]
+    },
+    "codex-fiber-bundle": {
+      "command": "/Users/barton/infinity-topos/codex/codex-rs/target/debug/codex",
+      "args": [
+        "mcp",
+        "--config", 
+        "topology=fiber_bundle"
+      ],
+      "description": "Fiber bundle structure with specialized capability fibers",
+      "homotopyType": "bundle",
+      "baseSpace": "codex_core",
+      "fiberType": "capability_space",
+      "autoApprove": [
+        "read_file",
+        "analyze_project"
+      ]
+    },
+    "codex-simplicial": {
+      "command": "/Users/barton/infinity-topos/codex/codex-rs/target/debug/codex",
+      "args": [
+        "mcp",
+        "--config",
+        "topology=simplicial"
+      ],
+      "description": "Simplicial complex with n-dimensional capability spaces",
+      "homotopyType": "simplicial", 
+      "dimension": "infinite",
+      "fundamentalGroup": "Z_2",
+      "autoApprove": [
+        "geometric_analysis",
+        "topological_operations"
+      ]
+    },
+    "codex-operad": {
+      "command": "/Users/barton/infinity-topos/codex/codex-rs/target/debug/codex",
+      "args": [
+        "mcp",
+        "--config",
+        "topology=operad"
+      ],
+      "description": "Operadic structure for higher categorical compositions",
+      "homotopyType": "operad",
+      "compositionLaw": "associative",
+      "categoryLevel": "infinity_1",
+      "autoApprove": [
+        "categorical_operations",
+        "operadic_composition"
+      ]
+    },
+    "deepwiki": {
+      "command": "npx",
+      "args": [
+        "-y", 
+        "mcp-deepwiki@latest"
+      ],
+      "description": "Deepwiki MCP server - crawls deepwiki.com repositories and converts to Markdown",
+      "capabilities": {
+        "domain_safety": "deepwiki.com only",
+        "output_formats": ["aggregate", "pages"],
+        "features": ["html_sanitization", "link_rewriting", "performance_optimization"]
+      },
+      "autoApprove": [
+        "deepwiki_fetch"
+      ],
+      "alwaysAllow": [
+        "deepwiki_fetch"
+      ],
+      "environment": {
+        "DEEPWIKI_MAX_CONCURRENCY": "10",
+        "DEEPWIKI_REQUEST_TIMEOUT": "60000",
+        "DEEPWIKI_MAX_RETRIES": "3",
+        "DEEPWIKI_RETRY_DELAY": "250"
+      },
+      "usage_examples": [
+        "deepwiki fetch how can i use gpt-image-1 with 'vercel ai' sdk",
+        "deepwiki fetch how can i create new blocks in shadcn?",
+        "use deepwiki https://deepwiki.com/shadcn-ui/ui",
+        "use deepwiki fetch single page https://deepwiki.com/tailwindlabs/tailwindcss/2.2-theme-system"
+      ],
+      "warning": "Server currently not working as DeepWiki has disabled scraping - use official server at https://docs.devin.ai/work-with-devin/deepwiki-mcp"
+    },
+    "gpt5-enhanced-codex": {
+      "command": "/Users/barton/infinity-topos/codex/codex-rs/target/debug/codex",
+      "args": [
+        "mcp",
+        "--model",
+        "gpt-5", 
+        "--enhanced",
+        "true",
+        "--reasoning",
+        "o3",
+        "--context-window",
+        "200000"
+      ],
+      "env": {
+        "OPENAI_API_KEY": "${OPENAI_API_KEY}",
+        "CODEX_MODEL": "gpt-5",
+        "CODEX_REASONING_MODEL": "o3-mini",
+        "CODEX_MAX_TOKENS": "32768",
+        "CODEX_TEMPERATURE": "0.1",
+        "CODEX_ENHANCED_MODE": "true",
+        "CODEX_CONTEXT_WINDOW": "200000",
+        "CODEX_REASONING_ENABLED": "true",
+        "CODEX_MULTI_MODAL": "true",
+        "CODEX_CODE_EXECUTION": "true"
+      },
+      "description": "GPT-5 Enhanced Codex MCP server with O3 reasoning, 200K context, and maximum AI capabilities",
+      "capabilities": {
+        "model": "gpt-5",
+        "reasoning_model": "o3-mini",
+        "context_window": 200000,
+        "max_tokens": 32768,
+        "advanced_reasoning": true,
+        "multi_step_problem_solving": true,
+        "code_execution": true,
+        "real_time_processing": true,
+        "multi_modal": true,
+        "scientific_computing": true,
+        "mathematical_reasoning": true,
+        "live_browsing": true,
+        "topological_analysis": true,
+        "categorical_reasoning": true
+      },
+      "gpt5_enhanced_features": {
+        "reasoning_chains": true,
+        "o3_integration": true,
+        "enhanced_context": 200000,
+        "model_switching": ["gpt-5", "o3-mini", "gpt-4o"],
+        "real_time_collaboration": true,
+        "advanced_code_generation": true,
+        "scientific_analysis": true,
+        "topological_computation": true,
+        "homotopy_analysis": true,
+        "categorical_orchestration": true
+      },
+      "autoApprove": [
+        "local_shell",
+        "edit_file", 
+        "read_file",
+        "list_directory",
+        "advanced_analysis",
+        "multi_step_reasoning",
+        "code_execution",
+        "real_time_chat",
+        "o3_reasoning",
+        "gpt5_generation",
+        "mathematical_computation",
+        "scientific_analysis",
+        "topological_analysis",
+        "categorical_reasoning",
+        "homotopy_computation",
+        "information_as_force_analysis"
+      ],
+      "alwaysAllow": [
+        "read_file",
+        "list_directory", 
+        "advanced_analysis",
+        "code_execution",
+        "o3_reasoning",
+        "mathematical_computation",
+        "topological_analysis",
+        "categorical_reasoning",
+        "homotopy_computation"
+      ]
+    },
+    "exa": {
+      "command": "node",
+      "args": [
+        "/Users/barton/infinity-topos/exa-mcp-server/.smithery/index.cjs"
+      ],
+      "env": {
+        "EXA_API_KEY": "661d2d28-2886-4bb6-9903-9b2f8e453187"
+      },
+      "description": "Exa Search MCP server - Categorical orchestration of search tools with behavioral domain mapping",
+      "capabilities": {
+        "orchestration_type": "categorical_agent_composition",
+        "composition_law": "associative_search_functors", 
+        "identity_morphism": "web_search_exa",
+        "behavioral_domains": [
+          "research_inquiry",
+          "business_analysis", 
+          "technical_exploration",
+          "general_discovery"
+        ],
+        "search_category_objects": [
+          "web_search_exa",
+          "company_research_exa",
+          "crawling_exa",
+          "linkedin_search_exa",
+          "deep_researcher_start",
+          "deep_researcher_check"
+        ]
+      },
+      "behavioral_domains": {
+        "research_inquiry": ["deep_researcher_start", "deep_researcher_check"],
+        "business_analysis": ["company_research_exa", "linkedin_search_exa"],
+        "technical_exploration": ["crawling_exa"],
+        "general_discovery": ["web_search_exa", "crawling_exa"]
+      },
+      "composition_rules": {
+        "academic_keywords": ["paper", "research", "study", "academic", "theory", "publication", "journal"],
+        "business_keywords": ["company", "market", "competitor", "industry", "revenue", "business", "corporate"],
+        "technical_keywords": ["code", "implementation", "algorithm", "repository", "github", "programming", "software"],
+        "extraction_keywords": ["extract", "content", "specific url", "webpage", "crawl", "scrape"],
+        "general_keywords": ["find", "search", "discover", "explore", "information", "about"]
+      },
+      "morphisms": {
+        "sequential_chain_max_length": 4,
+        "parallel_execution_when_possible": true,
+        "semantic_coherence_threshold": 0.7
+      },
+      "autoApprove": [
+        "web_search_exa",
+        "company_research_exa",
+        "crawling_exa",
+        "linkedin_search_exa",
+        "deep_researcher_start",
+        "deep_researcher_check"
+      ],
+      "alwaysAllow": [
+        "web_search_exa",
+        "crawling_exa",
+        "deep_researcher_start",
+        "deep_researcher_check"
+      ]
     }
   }
 }

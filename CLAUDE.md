@@ -1,4 +1,128 @@
 ---
+Source: .ruler/exa_categorical_orchestration.md
+---
+# Exa Categorical Orchestration Guide
+
+## Overview
+
+This document defines the categorical orchestration strategy for Exa search tools within the Infinity Topos project, implementing sheaf morphism composition for intelligent tool selection and behavioral domain mapping.
+
+## Categorical Structure
+
+### Search Category Objects
+The Exa tools form a category with the following objects and morphisms:
+
+```
+Terminal Object: web_search_exa (identity for general queries)
+├── deep_researcher_start → deep_researcher_check (research workflows)
+├── company_research_exa → linkedin_search_exa (business analysis)
+└── crawling_exa (content extraction)
+```
+
+### Behavioral Domains (Sheaf Structure)
+
+#### 1. Research Inquiry Domain
+**Tools**: `deep_researcher_start`, `deep_researcher_check`
+**Activation Keywords**: paper, research, study, academic, theory, publication, journal
+**Processing Style**: Sequential depth-first analysis
+**Specialization**: Academic rigor, systematic investigation, comprehensive research workflows
+
+#### 2. Business Analysis Domain  
+**Tools**: `company_research_exa`, `linkedin_search_exa`
+**Activation Keywords**: company, market, competitor, industry, revenue, business, corporate
+**Processing Style**: Strategic intelligence gathering
+**Specialization**: Market analysis, competitive landscapes, corporate intelligence
+
+#### 3. Technical Exploration Domain
+**Tools**: `crawling_exa`
+**Activation Keywords**: code, implementation, algorithm, repository, github, programming, software, extract, content
+**Processing Style**: Implementation-focused discovery
+**Specialization**: Content extraction, technical solutions, web crawling
+
+#### 4. General Discovery Domain
+**Tools**: `web_search_exa`, `crawling_exa`
+**Activation Keywords**: find, search, discover, explore, information, about
+**Processing Style**: Broad exploratory search
+**Specialization**: Comprehensive information gathering, serendipitous discovery
+
+## Natural Transformations
+
+### Composition Rules
+1. **Sequential Chains**: Maximum length of 4 tools to prevent infinite recursion
+2. **Parallel Execution**: When semantically coherent, run complementary tools simultaneously
+3. **Domain Coherence**: Maintain semantic consistency within behavioral domains
+4. **Morphism Validation**: Ensure all tool transitions are mathematically valid
+
+### Auto-Composition Triggers
+- **Academic Context** → Research Inquiry Domain (threshold: 0.8)
+- **Business Context** → Business Analysis Domain (threshold: 0.7)  
+- **Technical Context** → Technical Exploration Domain (threshold: 0.6)
+- **General Context** → General Discovery Domain (threshold: 0.4)
+
+## Implementation Guidelines
+
+### For Claude Integration
+1. **Context Analysis**: Analyze conversation context for domain classification
+2. **Tool Selection**: Choose tools based on behavioral domain mapping
+3. **Composition Logic**: Apply natural transformations for tool chaining
+4. **Parallel Execution**: Run complementary tools when semantically coherent
+5. **Result Synthesis**: Combine results maintaining categorical structure
+
+### Semantic Coherence Checking
+- Maintain temporal consistency across 5-interaction window
+- Validate tool combinations against composition laws
+- Ensure morphism preservation across domain boundaries
+- Apply coherence threshold of 0.7 for tool transitions
+
+### Error Handling & Fallbacks
+- Failed tools trigger morphism to identity object (web_search_exa)
+- Domain switching when coherence threshold not met
+- Graceful degradation through categorical hierarchy
+- Recovery via general discovery domain when other domains fail
+
+## Mathematical Foundations
+
+### Category Theory Properties
+- **Associativity**: (f ∘ g) ∘ h = f ∘ (g ∘ h) for tool compositions
+- **Identity**: web_search_exa acts as identity morphism
+- **Composition**: All tool transitions form valid morphisms
+- **Functoriality**: Domain mappings preserve categorical structure
+
+### Sheaf Conditions
+- **Locality**: Tool selection based on local conversation context  
+- **Gluing**: Coherent tool combinations across domain boundaries
+- **Uniqueness**: Deterministic tool selection given semantic context
+- **Existence**: Always-available fallback through general discovery domain
+
+## Usage Examples
+
+### Research Query
+```
+User: "What are the latest developments in quantum error correction?"
+Domain: Research Inquiry (0.9 activation)
+Tools: deep_researcher_start → deep_researcher_check
+Composition: Academic depth-first investigation with comprehensive research workflow
+```
+
+### Business Query  
+```
+User: "Who are OpenAI's main competitors?"
+Domain: Business Analysis (0.8 activation)
+Tools: company_research_exa → linkedin_search_exa
+Composition: Strategic competitive analysis with professional network exploration
+```
+
+### Technical Query
+```
+User: "Extract content from this technical documentation URL"
+Domain: Technical Exploration (0.7 activation)
+Tools: crawling_exa
+Composition: Content extraction with web crawling capabilities
+```
+
+This categorical orchestration ensures mathematically sound, semantically coherent, and behaviorally appropriate tool selection for optimal search results within the Infinity Topos cognitive architecture.
+
+---
 Source: .ruler/EXA_ELEVENLABS_INTEGRATION.md
 ---
 # Exa & ElevenLabs Integration in .ruler Configuration
@@ -155,6 +279,17 @@ Source: .ruler/instructions.md
 - Available capabilities: `generate_speech`, `clone_voice`, `transcribe_audio`, `list_voices`
 - API Key configured: `sk_e3c5936a061a616f257d29733d8832a19e3ae971a406186c`
 
+### Anti-Bullshit Framework Integration
+- **Primary purpose**: Epistemological analysis and critical thinking validation
+- **Core capabilities**: Claim analysis, source validation, manipulation detection
+- **Frameworks available**: Empirical, responsible, harmonic, pluralistic
+- **Tools**: `analyze_claim`, `validate_sources`, `check_manipulation`
+- **Behavioral domains**: C. elegans cognitive framework with 302 neurons
+- **Cross-cultural analysis**: Pattern detection across different cultural contexts
+- **Integration**: Works with Exa/Brave Search for cross-validation
+- **Temporal reference**: 2025-01-01 for Goodman's grue paradox handling
+- **Manipulation patterns**: Emotional, social, scarcity, authority detection
+
 **ABSOLUTE PRIORITY: ALL functional programming in Infinity Topos MUST use OxCaml-first approach:**
 - `[@@ local]` for zero-allocation categorical operations
 - `[@@ once portable unyielding]` for fearless concurrent sheaf computations
@@ -225,6 +360,169 @@ Source: .ruler/instructions.md
 2. **TypeScript**: High-level framework code, UI components, API definitions  
 3. **Julia**: Theoretical models, mathematical computations, research prototypes
 4. **Python**: ML integrations, data processing, rapid prototyping (lowest priority)
+
+---
+Source: .ruler/INTERNETDATA_MCP_INTEGRATION.md
+---
+# InternetData MCP Integration with Ruler
+
+## Overview
+
+InternetData MCP server provides web scraping, research extraction, and PostgreSQL database access through the LSD platform. This integration adds structured data extraction capabilities to the Infinity Topos project.
+
+## Database Connection
+
+**PostgreSQL Database**: lsd.so:5432
+- **Database**: freemorphism@gmail.com
+- **User**: freemorphism@gmail.com  
+- **Password**: rnwQfA8sTeXgSZtR0And
+- **Connection String**: `postgresql://freemorphism%40gmail.com:rnwQfA8sTeXgSZtR0And@lsd.so:5432/freemorphism%40gmail.com`
+
+## MCP Server Configuration
+
+### Ruler TOML Configuration
+```toml
+[services.internetdata]
+db_host = "lsd.so"
+db_port = 5432
+db_name = "freemorphism@gmail.com"
+db_user = "freemorphism@gmail.com"
+db_password = "rnwQfA8sTeXgSZtR0And"
+enable_web_scraping = true
+enable_hacker_news = true
+enable_research_papers = true
+enable_trip_imitation = true
+output_format = "json"
+cache_results = true
+```
+
+### MCP JSON Configuration
+```json
+"internetdata": {
+  "command": "/Users/barton/infinity-topos/start-internetdata-mcp.sh",
+  "args": [],
+  "env": {
+    "LSD_USER": "freemorphism@gmail.com",
+    "LSD_PASSWORD": "rnwQfA8sTeXgSZtR0And",
+    "DATABASE_URL": "postgresql://freemorphism%40gmail.com:rnwQfA8sTeXgSZtR0And@lsd.so:5432/freemorphism%40gmail.com"
+  },
+  "description": "LSD InternetData MCP server - web scraping, research, and database queries",
+  "autoApprove": [
+    "web_scrape",
+    "hacker_news_extract", 
+    "research_papers",
+    "imitate_trip",
+    "database_query",
+    "save_trip"
+  ]
+}
+```
+
+## Available Capabilities
+
+### Web Scraping
+- **Structured data extraction** using CSS selectors and Zod schemas
+- **Real-time web content** retrieval and parsing
+- **Trip recording** for reproducible scraping workflows
+
+### Research Integration  
+- **Hacker News** front page analysis
+- **Academic paper** discovery and extraction
+- **Documentation** scraping (LSD docs, research sites)
+- **Trip imitation** using saved workflows
+
+### Database Operations
+- **PostgreSQL queries** against LSD database
+- **Data persistence** for scraped content
+- **Relationship analysis** across web data
+
+### Supported Sites
+- Hacker News (news.ycombinator.com)
+- Lobsters (lobste.rs)
+- Google Search results  
+- McMaster-Carr product catalogs
+- LSD documentation
+- Custom site scraping
+
+## Usage Examples
+
+### TypeScript API Usage
+```typescript
+import drop from "internetdata";
+import { z } from "zod";
+
+const trip = await drop.tab({
+  user: "freemorphism@gmail.com",
+  password: "rnwQfA8sTeXgSZtR0And"
+});
+
+const hnSchema = z.array(z.object({
+  post: z.string(),
+  post_link: z.string()
+}));
+
+const frontPage = await trip
+  .navigate("https://news.ycombinator.com")
+  .group("span.titleline") 
+  .select("a@href", "post_link")
+  .select("a", "post")
+  .extrapolate<typeof hnSchema>(hnSchema);
+```
+
+### Trip Imitation
+```typescript
+const frontPage = await trip
+  .imitate("yev/hacker_news")
+  .extrapolate<typeof hnSchema>(hnSchema);
+```
+
+## File Structure
+
+```
+internetdata-mcp/
+├── internetdata-mcp/
+│   ├── build/           # Compiled JavaScript
+│   ├── src/            # TypeScript source
+│   │   ├── index.ts    # MCP server entry
+│   │   ├── lsd.ts      # LSD database integration
+│   │   ├── trips.ts    # Trip management
+│   │   └── tools.ts    # MCP tool definitions
+│   ├── package.json    # Dependencies
+│   └── tsconfig.json   # TypeScript config
+└── start-internetdata-mcp.sh  # Startup script
+```
+
+## Integration with Infinity Topos
+
+### Categorical Framework
+- **Web scraping** as functorial data transformation
+- **Trip workflows** as composable morphisms  
+- **Database persistence** as categorical limits
+- **Schema validation** as type-theoretic contracts
+
+### Ruler Integration
+- **Multi-agent deployment** across all supported platforms
+- **Environment variable** propagation for credentials
+- **Auto-approval** for safe scraping operations
+- **Always-allow** for read-only database queries
+
+## Security Considerations
+
+- Database credentials stored in ruler configuration
+- Environment variables used for runtime security
+- Auto-approval limited to safe operations
+- PostgreSQL connection over SSL
+
+## Cost Management
+
+LSD platform is developer-friendly with generous free tiers for research and prototyping use cases.
+
+## Troubleshooting
+
+1. **Build issues**: Run `npm run build` in internetdata-mcp directory
+2. **Connection issues**: Verify database credentials and network access
+3. **Permission issues**: Check file permissions on startup script
+4. **MCP issues**: Verify ruler configuration syntax in TOML and JSON
 
 ---
 Source: .ruler/reproducible-build.md
