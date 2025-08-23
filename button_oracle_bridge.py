@@ -98,7 +98,7 @@ def main():
     
     # Initialize button on GPIO Pin 6 (same as simple_button.py)
     try:
-        button = Button(6)
+        button = Button(6, pull_up=False)  # pull-down, detects falling edge
         print("🔌 GPIO Pin 6 button initialized")
         
         # Attach event handlers

@@ -16,7 +16,7 @@ from pathlib import Path
 COOLDOWN_FILE = '/home/zeldar/burningman/last_print.json'
 MIN_PRINT_INTERVAL = 5.0  # Minimum seconds between prints
 
-button = Button(6)
+button = Button(6, pull_up=False)  # pull-down, detects falling edge
 
 def load_last_print_time():
     """Load the timestamp of the last print"""

@@ -37,7 +37,7 @@ class UnifiedConsciousnessButton:
         
         # Initialize GPIO if available
         if GPIO_AVAILABLE:
-            self.button = Button(gpio_pin)
+            self.button = Button(gpio_pin, pull_up=False)  # pull-down, detects falling edge
             self.button.when_pressed = self.on_button_press
             print(f"🔌 GPIO Pin {gpio_pin} initialized")
         else:

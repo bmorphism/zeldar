@@ -19,7 +19,7 @@ import os
 
 class ThermalConsciousnessDetector:
     def __init__(self):
-        self.button = Button(6, pull_up=True, bounce_time=0.1)
+        self.button = Button(6, pull_up=False, bounce_time=0.1)  # pull-down, detects falling edge
         self.thermal_patterns = deque(maxlen=100)  # Recent thermal events
         self.digital_events = deque(maxlen=100)    # Recent digital generations
         self.causality_correlations = []
