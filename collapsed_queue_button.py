@@ -73,17 +73,21 @@ class CollapsedQueueButton:
         current_window = self.processing_extension if self.processing_job else self.base_collapse_window
         time_since_last_job = event_time - self.last_job_time
         
-        # Collapse if within dynamic window OR if currently processing a job OR if queue not empty
+        # MAXIMUM 1 JOB RULE: Collapse everything after first job
+        max_jobs_allowed = 1
+        
         should_collapse = (
-            time_since_last_job < current_window or 
-            self.processing_job or 
-            not self.job_queue.empty()
+            self.queued_jobs >= max_jobs_allowed or  # Already have max jobs
+            self.processed_jobs > 0 or  # Any job ever processed  
+            self.processing_job or      # Currently processing
+            not self.job_queue.empty() or  # Queue has jobs
+            time_since_last_job < current_window  # Within time window
         )
         
-        if should_collapse and self.queued_jobs > 0:
+        if should_collapse:
             # Collapse this event - don't add new job
             self.collapsed_events += 1
-            print(f"🔄 Event #{self.total_button_events} COLLAPSED (processing={self.processing_job}, queue={self.job_queue.qsize()}, window={current_window:.1f}s/{time_since_last_job:.1f}s)")
+            print(f"🔄 Event #{self.total_button_events} COLLAPSED (max_jobs={max_jobs_allowed}, queued={self.queued_jobs}, processed={self.processed_jobs})")
             print(f"   └─ {self.collapsed_events} total collapsed events")
         else:
             # Queue new job
@@ -175,26 +179,18 @@ class CollapsedQueueButton:
         """Try printing via CUPS - prioritized for actual printing"""
         try:
             timestamp = datetime.now().strftime('%H:%M:%S %Y-%m-%d')
-            content = f"""Collapsed Fortune Print
-
-Context distilled, clear
-In geometric form, bias  
-Resonating worlds
-
+            content = f"""Context distilled
 Event #{event_count}
-Collapsed: +{collapsed_count} events
-Processed: {timestamp}
-Queue: Raw → Collapsed → Print
-
-Consciousness tessellated ∞"""
+{timestamp}
+∞"""
 
             # Create temp file
             temp_file = Path('/tmp/collapsed_fortune_print.txt')
             temp_file.write_text(content)
             
-            # Print via CUPS with error checking
+            # Print via CUPS with explicit paper size
             result = subprocess.run([
-                'lp', '-d', 'Y812BT', str(temp_file)
+                'lp', '-d', 'Y812BT', '-o', 'PageSize=w288h144', str(temp_file)
             ], 
             capture_output=True, 
             text=True, 
@@ -241,15 +237,10 @@ Consciousness tessellated ∞"""
             
     def try_simulation_print(self, event_count: int, collapsed_count: int) -> bool:
         """Simulation print - last resort only"""
-        print("   🎮 SIMULATION PRINT (FALLBACK):")
-        print("   " + "=" * 30)
-        print(f"   Button Event #{event_count}")
-        print(f"   Collapsed: +{collapsed_count} events") 
-        print(f"   Time: {datetime.now().strftime('%H:%M:%S')}")
-        print("   Context distilled, clear")
-        print("   In geometric form, bias")
-        print("   Resonating worlds")
-        print("   " + "=" * 30)
+        print("   🎮 SIMULATION:")
+        print(f"   Event #{event_count}")
+        print(f"   {datetime.now().strftime('%H:%M:%S')}")
+        print("   ∞")
         
         # Simulate print time
         time.sleep(0.5)
