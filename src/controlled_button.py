@@ -38,6 +38,10 @@ def save_last_print_time():
         pass
 
 from fortune_selector import get_daily_fortune
+from audio_system import AudioSystem
+
+# Initialize audio system
+audio_system = AudioSystem()
 
 def can_print_now():
     """Check if enough time has passed since last print"""
@@ -70,6 +74,12 @@ def controlled_print_haiku():
     try:
         # Save timestamp BEFORE printing to prevent race conditions
         save_last_print_time()
+        
+        # Play audio simultaneously with print start
+        print("🎵 Playing consciousness voice...")
+        audio_success = audio_system.play_random_voice()
+        if not audio_success:
+            print("⚠️  Audio playback failed, continuing with print")
         
         # Execute the print with fortune selection
         result = subprocess.run(['./scripts/print-now.sh', fortune_type], 
