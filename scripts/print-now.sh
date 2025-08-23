@@ -17,17 +17,17 @@ echo ""
 # Print the precision formatted fortune
 echo "Printing precision fortune..."
 
-# Use CUPS printing (more reliable than direct device)
-FORTUNE_CONTENT="ヲヲヲ welcome to the Uncommons
-(up to a symplectomorphic cobordism)
+# PAPER-OPTIMIZED COMPACT FORMAT
+FORTUNE_CONTENT="ヲヲヲ welcome to Uncommons
+(symplectomorphic cobord.)
 
-there is no official _ universe-agent
-every _ is the unofficial universe-agent
-
+no official universe-agent
+every _ unofficial agent
 -----
-Context distilled, In geometric 
-    form -- Inductive bias,     
-       Resonating worlds        
+Context distilled,
+In geometric form --
+Inductive bias,
+Resonating worlds
 
 sincerely yours
 reafferent reaberrant"

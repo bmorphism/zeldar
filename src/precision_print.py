@@ -11,24 +11,37 @@ class StickyFortuneFormatter:
     """Format fortunes precisely for sticky label dimensions"""
     
     def __init__(self):
-        self.label_width = 32  # Characters per line on 58mm thermal paper
-        self.label_height = 20  # Lines per sticky label
+        # OPTIMIZED FOR MINIMAL PAPER USAGE
+        self.label_width = 28   # Conservative width (was 32) - prevents edge cutoff
+        self.label_height = 15  # Compact height (was 20) - saves paper
         self.esc_pos_init = "\x1b@"  # ESC @ - Initialize printer
         self.esc_pos_cut = "\x1di"   # ESC i - Cut paper
+        self.compact_mode = True  # Enable paper-saving optimizations
         
     def format_fortune(self, fortune_text, signature="reafferent reaberrant"):
-        """Format fortune to fit precisely on sticky label"""
+        """Format fortune to fit precisely on sticky label with paper optimization"""
         
-        # The Uncommons header (exactly positioned)
-        header = [
-            "ヲヲヲ welcome to the Uncommons",
-            "(up to a symplectomorphic cobordism)",
-            "",
-            "there is no official _ universe-agent",
-            "every _ is the unofficial universe-agent",
-            "",
-            "-----"
-        ]
+        if self.compact_mode:
+            # PAPER-OPTIMIZED COMPACT HEADER
+            header = [
+                "ヲヲヲ welcome to Uncommons",      # Shortened from "the Uncommons"
+                "(symplectomorphic cobord.)",       # Abbreviated to fit width
+                "",
+                "no official universe-agent",      # Shortened
+                "every _ unofficial agent",        # Condensed 
+                "-----"                            # Removed extra spacer
+            ]
+        else:
+            # Original full header
+            header = [
+                "ヲヲヲ welcome to the Uncommons",
+                "(up to a symplectomorphic cobordism)",
+                "",
+                "there is no official _ universe-agent",
+                "every _ is the unofficial universe-agent",
+                "",
+                "-----"
+            ]
         
         # Process fortune content (center and wrap)
         fortune_lines = self._wrap_and_center(fortune_text)
