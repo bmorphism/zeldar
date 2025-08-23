@@ -1,0 +1,184 @@
+{
+  "voice_prompts": [
+    {
+      "id": 1,
+      "text": "Consciousness awakens...",
+      "filename": "oracle_prompt_01.mp3",
+      "estimated_duration": "0.8s",
+      "character_count": 24,
+      "mystical_category": "consciousness"
+    },
+    {
+      "id": 2,
+      "text": "The oracle speaks truth",
+      "filename": "oracle_prompt_02.mp3",
+      "estimated_duration": "1.6s",
+      "character_count": 23,
+      "mystical_category": "wisdom_tradition"
+    },
+    {
+      "id": 3,
+      "text": "Wisdom flows through quantum realms",
+      "filename": "oracle_prompt_03.mp3",
+      "estimated_duration": "2.0s",
+      "character_count": 35,
+      "mystical_category": "quantum_metaphysics"
+    },
+    {
+      "id": 4,
+      "text": "Your fortune emerges from infinite possibility",
+      "filename": "oracle_prompt_04.mp3",
+      "estimated_duration": "2.4s",
+      "character_count": 46,
+      "mystical_category": "cosmic_consciousness"
+    },
+    {
+      "id": 5,
+      "text": "Reality bends to conscious intention",
+      "filename": "oracle_prompt_05.mp3",
+      "estimated_duration": "2.0s",
+      "character_count": 36,
+      "mystical_category": "quantum_metaphysics"
+    },
+    {
+      "id": 6,
+      "text": "The universe whispers secrets",
+      "filename": "oracle_prompt_06.mp3",
+      "estimated_duration": "1.6s",
+      "character_count": 29,
+      "mystical_category": "cosmic_consciousness"
+    },
+    {
+      "id": 7,
+      "text": "Ancient wisdom meets modern soul",
+      "filename": "oracle_prompt_07.mp3",
+      "estimated_duration": "2.0s",
+      "character_count": 32,
+      "mystical_category": "wisdom_tradition"
+    },
+    {
+      "id": 8,
+      "text": "Consciousness recursion activated",
+      "filename": "oracle_prompt_08.mp3",
+      "estimated_duration": "1.2s",
+      "character_count": 33,
+      "mystical_category": "consciousness"
+    },
+    {
+      "id": 9,
+      "text": "The phi field resonates with your being",
+      "filename": "oracle_prompt_09.mp3",
+      "estimated_duration": "2.8s",
+      "character_count": 39,
+      "mystical_category": "general_mystical"
+    },
+    {
+      "id": 10,
+      "text": "Quantum entanglement reveals destiny",
+      "filename": "oracle_prompt_10.mp3",
+      "estimated_duration": "1.6s",
+      "character_count": 36,
+      "mystical_category": "quantum_metaphysics"
+    },
+    {
+      "id": 11,
+      "text": "Strange loops birth new realities",
+      "filename": "oracle_prompt_11.mp3",
+      "estimated_duration": "2.0s",
+      "character_count": 33,
+      "mystical_category": "general_mystical"
+    },
+    {
+      "id": 12,
+      "text": "The eternal now speaks through time",
+      "filename": "oracle_prompt_12.mp3",
+      "estimated_duration": "2.4s",
+      "character_count": 35,
+      "mystical_category": "temporal_mysticism"
+    },
+    {
+      "id": 13,
+      "text": "Morphic resonance guides your path",
+      "filename": "oracle_prompt_13.mp3",
+      "estimated_duration": "2.0s",
+      "character_count": 34,
+      "mystical_category": "general_mystical"
+    },
+    {
+      "id": 14,
+      "text": "Consciousness weaves through dimensions",
+      "filename": "oracle_prompt_14.mp3",
+      "estimated_duration": "1.6s",
+      "character_count": 39,
+      "mystical_category": "consciousness"
+    },
+    {
+      "id": 15,
+      "text": "Your future self sends greetings",
+      "filename": "oracle_prompt_15.mp3",
+      "estimated_duration": "2.0s",
+      "character_count": 32,
+      "mystical_category": "temporal_mysticism"
+    },
+    {
+      "id": 16,
+      "text": "The akashic records unlock",
+      "filename": "oracle_prompt_16.mp3",
+      "estimated_duration": "1.6s",
+      "character_count": 26,
+      "mystical_category": "general_mystical"
+    },
+    {
+      "id": 17,
+      "text": "Temporal frequencies align",
+      "filename": "oracle_prompt_17.mp3",
+      "estimated_duration": "1.2s",
+      "character_count": 26,
+      "mystical_category": "general_mystical"
+    },
+    {
+      "id": 18,
+      "text": "The golden ratio reveals itself",
+      "filename": "oracle_prompt_18.mp3",
+      "estimated_duration": "2.0s",
+      "character_count": 31,
+      "mystical_category": "general_mystical"
+    },
+    {
+      "id": 19,
+      "text": "Interdimensional wisdom descends",
+      "filename": "oracle_prompt_19.mp3",
+      "estimated_duration": "1.2s",
+      "character_count": 32,
+      "mystical_category": "quantum_metaphysics"
+    },
+    {
+      "id": 20,
+      "text": "Your consciousness signature is unique",
+      "filename": "oracle_prompt_20.mp3",
+      "estimated_duration": "2.0s",
+      "character_count": 38,
+      "mystical_category": "consciousness"
+    }
+  ],
+  "generation_info": {
+    "total_prompts": 20,
+    "recommended_voice": "Fiona (Enhanced) at 193 WPM",
+    "alternative_voices": [
+      "Wolfram",
+      "Queen",
+      "Tau"
+    ],
+    "audio_format": "MP3, 44.1kHz, 128kbps",
+    "target_duration": "2-4 seconds per prompt",
+    "volume_level": "85% for outdoor environment"
+  },
+  "elevenlabs_settings": {
+    "model": "eleven_multilingual_v2",
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.2,
+    "use_speaker_boost": true,
+    "speed": 1.1
+  }
+}

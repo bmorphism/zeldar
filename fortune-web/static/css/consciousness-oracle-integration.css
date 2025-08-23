@@ -1,0 +1,388 @@
+/**
+ * Zeldar Consciousness Oracle Integration Styles
+ * Visual styling for real-time consciousness metrics and tri-loop system
+ */
+
+/* Main consciousness metrics container */
+.consciousness-metrics {
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+    border: 2px solid #e94560;
+    border-radius: 15px;
+    padding: 25px;
+    margin: 20px 0;
+    color: #ffffff;
+    font-family: 'Courier New', monospace;
+    box-shadow: 0 0 20px rgba(233, 69, 96, 0.3);
+}
+
+/* Consciousness header */
+.consciousness-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.consciousness-header h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.5em;
+    animation: consciousness-pulse 2s ease-in-out infinite;
+}
+
+.phi-display {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+#phi-value {
+    color: #e94560;
+    text-shadow: 0 0 10px rgba(233, 69, 96, 0.8);
+}
+
+#phi-value.phi-transcendent {
+    color: #00ff88;
+    text-shadow: 0 0 15px rgba(0, 255, 136, 0.8);
+    animation: transcendent-glow 1.5s ease-in-out infinite;
+}
+
+#phi-value.phi-normal {
+    color: #ffaa00;
+    text-shadow: 0 0 10px rgba(255, 170, 0, 0.6);
+}
+
+#phi-value.phi-offline {
+    color: #666;
+    text-shadow: none;
+    animation: offline-blink 1s ease-in-out infinite;
+}
+
+/* Metrics grid */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.metric-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(233, 69, 96, 0.3);
+}
+
+.metric-item label {
+    display: block;
+    font-size: 0.9em;
+    margin-bottom: 8px;
+    color: #cccccc;
+}
+
+.metric-bar {
+    position: relative;
+    background: rgba(0, 0, 0, 0.3);
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.metric-progress {
+    height: 100%;
+    transition: width 0.5s ease-in-out;
+    border-radius: 4px;
+}
+
+.metric-progress.above-threshold {
+    background: linear-gradient(90deg, #00ff88, #00cc66);
+    box-shadow: 0 0 8px rgba(0, 255, 136, 0.4);
+}
+
+.metric-progress.below-threshold {
+    background: linear-gradient(90deg, #ffaa00, #ff8800);
+    box-shadow: 0 0 8px rgba(255, 170, 0, 0.4);
+}
+
+.metric-progress.entropy-visualization {
+    background: linear-gradient(90deg, #8a2be2, #da70d6);
+    box-shadow: 0 0 8px rgba(138, 43, 226, 0.4);
+}
+
+.metric-number {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #e94560;
+}
+
+/* Tri-loop status section */
+.tri-loop-status {
+    margin-top: 25px;
+    border-top: 1px solid rgba(233, 69, 96, 0.3);
+    padding-top: 15px;
+}
+
+.tri-loop-status h4 {
+    margin: 0 0 15px 0;
+    text-align: center;
+}
+
+.status-indicators {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    font-size: 0.9em;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 8px;
+    transition: all 0.3s ease;
+}
+
+.status-dot.status-active {
+    background: #00ff88;
+    box-shadow: 0 0 8px rgba(0, 255, 136, 0.6);
+    animation: active-pulse 2s ease-in-out infinite;
+}
+
+.status-dot.status-inactive {
+    background: #666;
+}
+
+.status-indicator.indicator-active {
+    border: 1px solid rgba(0, 255, 136, 0.3);
+    color: #ffffff;
+}
+
+.status-indicator.indicator-inactive {
+    border: 1px solid rgba(102, 102, 102, 0.3);
+    color: #cccccc;
+}
+
+/* Oracle controls */
+.oracle-controls {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.oracle-button {
+    background: linear-gradient(135deg, #e94560, #c73650);
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.oracle-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(233, 69, 96, 0.4);
+    background: linear-gradient(135deg, #ff5577, #e94560);
+}
+
+.oracle-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Fortune overlay */
+.fortune-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fade-in 0.3s ease;
+}
+
+.fortune-modal {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    border: 2px solid #e94560;
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 500px;
+    width: 90%;
+    color: white;
+    font-family: 'Courier New', monospace;
+    box-shadow: 0 0 30px rgba(233, 69, 96, 0.5);
+    animation: modal-enter 0.5s ease;
+}
+
+.fortune-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(233, 69, 96, 0.3);
+    padding-bottom: 10px;
+}
+
+.fortune-header h3 {
+    margin: 0;
+    color: #e94560;
+}
+
+.close-fortune {
+    background: none;
+    border: none;
+    color: #e94560;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+}
+
+.close-fortune:hover {
+    background: rgba(233, 69, 96, 0.2);
+}
+
+.haiku-display {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1.2em;
+    line-height: 1.8;
+}
+
+.haiku-line {
+    margin: 8px 0;
+    animation: haiku-reveal 0.8s ease forwards;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.haiku-line:nth-child(1) { animation-delay: 0.2s; }
+.haiku-line:nth-child(2) { animation-delay: 0.4s; }
+.haiku-line:nth-child(3) { animation-delay: 0.6s; }
+
+.fortune-metadata {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+.fortune-metadata div {
+    margin: 5px 0;
+}
+
+.consciousness-level {
+    font-weight: bold;
+    color: #00ff88;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+/* Dynamic state classes */
+.consciousness-metrics.transcendent-state {
+    border-color: #00ff88;
+    box-shadow: 0 0 25px rgba(0, 255, 136, 0.4);
+    animation: transcendent-border 3s ease-in-out infinite;
+}
+
+.consciousness-metrics.consciousness-emerging {
+    border-color: #ffaa00;
+    box-shadow: 0 0 20px rgba(255, 170, 0, 0.3);
+    animation: emerging-border 2s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes consciousness-pulse {
+    0%, 100% { opacity: 0.8; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.02); }
+}
+
+@keyframes transcendent-glow {
+    0%, 100% { text-shadow: 0 0 15px rgba(0, 255, 136, 0.8); }
+    50% { text-shadow: 0 0 25px rgba(0, 255, 136, 1); }
+}
+
+@keyframes offline-blink {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.8; }
+}
+
+@keyframes active-pulse {
+    0%, 100% { box-shadow: 0 0 8px rgba(0, 255, 136, 0.6); }
+    50% { box-shadow: 0 0 15px rgba(0, 255, 136, 1); }
+}
+
+@keyframes transcendent-border {
+    0%, 100% { box-shadow: 0 0 25px rgba(0, 255, 136, 0.4); }
+    50% { box-shadow: 0 0 35px rgba(0, 255, 136, 0.6); }
+}
+
+@keyframes emerging-border {
+    0%, 100% { box-shadow: 0 0 20px rgba(255, 170, 0, 0.3); }
+    50% { box-shadow: 0 0 30px rgba(255, 170, 0, 0.5); }
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes modal-enter {
+    from { 
+        opacity: 0; 
+        transform: scale(0.8) translateY(-50px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: scale(1) translateY(0); 
+    }
+}
+
+@keyframes haiku-reveal {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .oracle-controls {
+        flex-direction: column;
+    }
+    
+    .oracle-button {
+        width: 100%;
+    }
+    
+    .fortune-modal {
+        margin: 20px;
+        padding: 20px;
+    }
+}

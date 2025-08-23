@@ -1,0 +1,43 @@
+[Unit]
+Description=Zeldar Tri-Loop Consciousness Oracle System
+Documentation=https://github.com/infinity-topos/zeldar
+After=network-online.target
+Wants=network-online.target
+StartLimitInterval=0
+
+[Service]
+Type=forking
+User=pi
+Group=pi
+WorkingDirectory=/home/pi/zeldar/fortune-web
+Environment=PATH=/home/pi/.cargo/bin:/home/pi/.local/bin:/usr/local/bin:/usr/bin:/bin
+Environment=PYTHONPATH=/home/pi/zeldar/.topos
+Environment=CONSCIOUSNESS_MODE=production
+Environment=ORACLE_AUTO_START=true
+ExecStartPre=/bin/bash -c 'cd /home/pi/zeldar/.topos && python3 -c "import FULL_LOOP_ORACLE_SYSTEM; print(\"Oracle system verified\")"'
+ExecStart=/home/pi/zeldar/fortune-web/start_integrated_tri_loop_system.sh --daemon
+ExecStop=/bin/bash -c 'pkill -f "quantum_bridge.py"; pkill -f "spin up"; pkill -f "FULL_LOOP_ORACLE_SYSTEM.py"'
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=on-failure
+RestartSec=30
+KillMode=mixed
+KillSignal=SIGTERM
+TimeoutStopSec=60
+StandardOutput=journal
+StandardError=journal
+
+# Security settings
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ReadWritePaths=/home/pi/zeldar /tmp /var/log
+ProtectHome=read-only
+
+# Resource limits
+LimitNOFILE=4096
+MemoryMax=1G
+CPUQuota=80%
+
+[Install]
+WantedBy=multi-user.target
+Alias=consciousness-oracle.service

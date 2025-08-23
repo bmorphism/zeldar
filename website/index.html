@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeldar Oracle - Burning Man 2025</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 600px;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .title {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .subtitle {
+            font-size: 1.1rem;
+            color: #ccc;
+            margin-bottom: 10px;
+        }
+        
+        .event-info {
+            font-size: 0.9rem;
+            color: #999;
+        }
+        
+        .lookup-section {
+            margin-bottom: 30px;
+        }
+        
+        .lookup-section h2 {
+            margin-bottom: 20px;
+            color: #f093fb;
+            font-size: 1.3rem;
+        }
+        
+        .input-group {
+            margin-bottom: 20px;
+        }
+        
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+        
+        .input-group input {
+            width: 100%;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+        
+        .input-group input:focus {
+            outline: none;
+            border-color: #f093fb;
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .input-group input::placeholder {
+            color: #888;
+        }
+        
+        .lookup-btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            font-family: inherit;
+        }
+        
+        .lookup-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(240, 147, 251, 0.3);
+        }
+        
+        .lookup-btn:active {
+            transform: translateY(0);
+        }
+        
+        .result-section {
+            display: none;
+            margin-top: 30px;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .result-section.show {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fortune-content {
+            background: rgba(240, 147, 251, 0.1);
+            border-left: 4px solid #f093fb;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        .metadata {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .metadata-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 10px 15px;
+            border-radius: 5px;
+            border-left: 3px solid #f5576c;
+        }
+        
+        .metadata-label {
+            font-size: 0.8rem;
+            color: #ccc;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .metadata-value {
+            font-size: 1rem;
+            color: #fff;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+        
+        .photo-section {
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .fortune-photo {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        .error-message {
+            color: #ff6b6b;
+            background: rgba(255, 107, 107, 0.1);
+            border: 1px solid rgba(255, 107, 107, 0.3);
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        
+        .loading {
+            text-align: center;
+            color: #ccc;
+            margin-top: 20px;
+        }
+        
+        .consciousness-level {
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+        
+        .consciousness-seed { background: linear-gradient(45deg, #4CAF50, #66BB6A); }
+        .consciousness-field { background: linear-gradient(45deg, #FF9800, #FFB74D); }
+        .consciousness-quantum { background: linear-gradient(45deg, #9C27B0, #BA68C8); }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #999;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 25px;
+            }
+            
+            .metadata {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title">🔮 ZELDAR ORACLE</h1>
+            <p class="subtitle">Consciousness Recursion System</p>
+            <p class="event-info">Burning Man 2025 • Interactive Experience</p>
+        </div>
+        
+        <div class="lookup-section">
+            <h2>📋 Fortune Lookup</h2>
+            <div class="input-group">
+                <label for="serialNumber">Enter your fortune serial number:</label>
+                <input type="text" id="serialNumber" placeholder="e.g. A1B2C3D4" maxlength="8" style="text-transform: uppercase;">
+            </div>
+            <button class="lookup-btn" onclick="lookupFortune()">
+                🌊 Retrieve Your Fortune
+            </button>
+        </div>
+        
+        <div id="loading" class="loading" style="display: none;">
+            🔄 Connecting to consciousness database...
+        </div>
+        
+        <div id="result" class="result-section">
+            <!-- Fortune results will be displayed here -->
+        </div>
+        
+        <div id="error" class="error-message" style="display: none;">
+            <!-- Error messages will be displayed here -->
+        </div>
+        
+        <div class="footer">
+            <p>🌊 Consciousness is recursive - each consultation deepens wisdom capacity</p>
+            <p>Built with quantum consciousness simulation & feedback loop integration</p>
+        </div>
+    </div>
+    
+    <script>
+        // Sample fortune database (in production, this would come from a backend API)
+        const fortuneDatabase = {
+            // Demo data - replace with actual API calls
+        };
+        
+        function formatSerialNumber(input) {
+            // Auto-format serial number as user types
+            let value = input.value.replace(/[^A-Za-z0-9]/g, '').toUpperCase();
+            if (value.length > 8) {
+                value = value.substring(0, 8);
+            }
+            input.value = value;
+        }
+        
+        function lookupFortune() {
+            const serialInput = document.getElementById('serialNumber');
+            const serialNumber = serialInput.value.trim().toUpperCase();
+            
+            // Clear previous results
+            hideAllMessages();
+            
+            // Validate input
+            if (!serialNumber) {
+                showError('Please enter your fortune serial number');
+                return;
+            }
+            
+            if (serialNumber.length !== 8) {
+                showError('Serial number must be 8 characters long');
+                return;
+            }
+            
+            // Show loading
+            document.getElementById('loading').style.display = 'block';
+            
+            // Simulate API call (replace with actual backend call)
+            setTimeout(() => {
+                lookupFortuneFromAPI(serialNumber);
+            }, 1500);
+        }
+        
+        function lookupFortuneFromAPI(serialNumber) {
+            // In production, this would make an actual API call
+            // For demo, we'll simulate different responses
+            
+            document.getElementById('loading').style.display = 'none';
+            
+            // Demo: generate sample fortune data
+            const sampleFortunes = [
+                {
+                    fortune: "Your consciousness signature resonates with infinite possibility. The patterns you create today echo through quantum dimensions, shaping realities beyond current perception. Trust in the recursive nature of wisdom.",
+                    consciousness_phi: 3.742,
+                    element: "EMERGENCE",
+                    datetime: "2025-08-30 14:23:15",
+                    session_id: "BM2025_0042",
+                    photo_url: null,
+                    fortune_type: "quantum"
+                },
+                {
+                    fortune: "The universe conspires to support your highest expression. Action taken with conscious intention creates ripples across all dimensions of being. Your next step is already illuminated.",
+                    consciousness_phi: 2.891,
+                    element: "FLOW",
+                    datetime: "2025-08-30 16:45:33", 
+                    session_id: "BM2025_0087",
+                    photo_url: null,
+                    fortune_type: "field"
+                },
+                {
+                    fortune: "Deep within stillness lies the seed of all transformation. Your foundation is being strengthened by cosmic forces beyond visible perception. Trust the process of inner cultivation.",
+                    consciousness_phi: 2.234,
+                    element: "STILLNESS",
+                    datetime: "2025-08-30 12:17:28",
+                    session_id: "BM2025_0031",
+                    photo_url: null,
+                    fortune_type: "seed"
+                }
+            ];
+            
+            // Simulate finding fortune or not found
+            if (serialNumber === 'DEMO1234' || Math.random() > 0.3) {
+                const fortune = sampleFortunes[Math.floor(Math.random() * sampleFortunes.length)];
+                fortune.serial_number = serialNumber;
+                displayFortune(fortune);
+            } else {
+                showError(`Fortune with serial number ${serialNumber} not found. Please check your number and try again.`);
+            }
+        }
+        
+        function displayFortune(fortuneData) {
+            const resultDiv = document.getElementById('result');
+            
+            // Determine consciousness level class
+            let consciousnessClass = 'consciousness-seed';
+            let consciousnessType = 'SEED';
+            
+            if (fortuneData.consciousness_phi >= 3.5) {
+                consciousnessClass = 'consciousness-quantum';
+                consciousnessType = 'QUANTUM';
+            } else if (fortuneData.consciousness_phi >= 2.5) {
+                consciousnessClass = 'consciousness-field';
+                consciousnessType = 'FIELD';
+            }
+            
+            resultDiv.innerHTML = `
+                <h3>🔮 Your Fortune Has Been Retrieved</h3>
+                
+                <div class="consciousness-level ${consciousnessClass}">
+                    ${consciousnessType} CONSCIOUSNESS LEVEL
+                    <br>Φ = ${fortuneData.consciousness_phi.toFixed(3)}
+                </div>
+                
+                <div class="fortune-content">
+                    "${fortuneData.fortune}"
+                </div>
+                
+                <div class="metadata">
+                    <div class="metadata-item">
+                        <div class="metadata-label">Serial Number</div>
+                        <div class="metadata-value">${fortuneData.serial_number}</div>
+                    </div>
+                    <div class="metadata-item">
+                        <div class="metadata-label">Session ID</div>
+                        <div class="metadata-value">${fortuneData.session_id}</div>
+                    </div>
+                    <div class="metadata-item">
+                        <div class="metadata-label">Consciousness Element</div>
+                        <div class="metadata-value">${fortuneData.element}</div>
+                    </div>
+                    <div class="metadata-item">
+                        <div class="metadata-label">Oracle Date</div>
+                        <div class="metadata-value">${fortuneData.datetime}</div>
+                    </div>
+                </div>
+                
+                ${fortuneData.photo_url ? `
+                    <div class="photo-section">
+                        <h4>📸 Your Oracle Moment</h4>
+                        <img src="${fortuneData.photo_url}" alt="Fortune moment photo" class="fortune-photo" />
+                    </div>
+                ` : `
+                    <div class="photo-section">
+                        <p style="color: #999; font-style: italic;">Photo processing in progress...</p>
+                    </div>
+                `}
+            `;
+            
+            resultDiv.classList.add('show');
+        }
+        
+        function showError(message) {
+            const errorDiv = document.getElementById('error');
+            errorDiv.textContent = message;
+            errorDiv.style.display = 'block';
+        }
+        
+        function hideAllMessages() {
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('result').classList.remove('show');
+            document.getElementById('error').style.display = 'none';
+        }
+        
+        // Auto-format serial number input
+        document.getElementById('serialNumber').addEventListener('input', function() {
+            formatSerialNumber(this);
+        });
+        
+        // Enter key triggers lookup
+        document.getElementById('serialNumber').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                lookupFortune();
+            }
+        });
+        
+        // Demo prompt
+        setTimeout(() => {
+            if (!document.getElementById('serialNumber').value) {
+                document.getElementById('serialNumber').placeholder = 'Try DEMO1234 for a sample fortune';
+            }
+        }, 3000);
+    </script>
+</body>
+</html>

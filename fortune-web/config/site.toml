@@ -1,0 +1,20 @@
+title = "Zeldar - The Mystical Fortune-Teller"
+base_url = "http://localhost:3000"
+about = "Experience the mystical wisdom of Zeldar, an interactive fortune-teller inspired by the great automaton tradition. Discover the rich history of mechanical fortune-telling machines from 1867 to present."
+index_site_pages = ["history"]
+
+[extra]
+copyright = "Infinity Topos Project"
+github = "https://github.com/infinity-topos/zeldar-fortune"
+twitter = "https://twitter.com/infinitytopos"
+
+# Zeldar-specific configuration - flattened for bartholomew compatibility
+zeldar_fortune_style = "mystical"
+zeldar_period_mechanical = "mechanical"
+zeldar_period_electrical = "electromechanical" 
+zeldar_period_animatronic = "animatronic"
+zeldar_default_voice = "ancient"
+
+# Date formatting
+date_style = "%B %e, %Y"
+historical_date_style = "%Y"

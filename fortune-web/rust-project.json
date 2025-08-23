@@ -1,0 +1,18 @@
+{
+    "sysroot_src": null,
+    "crates": [
+        {
+            "root_module": "oracle-component/oracle/src/lib.rs",
+            "edition": "2021",
+            "deps": [],
+            "cfg": [
+                "target_arch=\"wasm32\"",
+                "target_os=\"wasi\""
+            ],
+            "env": {
+                "CARGO_PKG_VERSION": "0.1.0"
+            },
+            "proc_macro_dylib_path": null
+        }
+    ]
+}

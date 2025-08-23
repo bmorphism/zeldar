@@ -1,0 +1,18 @@
+spin_manifest_version = 2
+
+[application]
+name = "oracle"
+version = "0.1.0"
+authors = ["bmorphism <bmorphism@users.noreply.github.com>"]
+description = ""
+
+[[trigger.http]]
+route = "/..."
+component = "oracle"
+
+[component.oracle]
+source = "target/wasm32-wasip1/release/oracle.wasm"
+allowed_outbound_hosts = []
+[component.oracle.build]
+command = "cargo build --target wasm32-wasip1 --release"
+watch = ["src/**/*.rs", "Cargo.toml"]
