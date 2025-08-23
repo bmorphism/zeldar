@@ -43,6 +43,22 @@ lp -d Y812BT haiku.txt
 - GPIO monitoring active
 - User permissions configured
 
+## System Flow
+The following diagram illustrates the process from button press to printout, including the fallback mechanism.
+
+```mermaid
+graph TD
+    A[User Press] --> B{GPIO Button};
+    B --> C[button-print.py];
+    C --> D{Attempt Direct Print};
+    D -- Success --> E[./print-now.sh];
+    E -- Raw ESC/POS --> F[Y812BT Printer];
+    D -- Failure --> G{Attempt CUPS Fallback};
+    G -- Success --> H[lp -d Y812BT ...];
+    H -- CUPS Queue --> F;
+    G -- Failure --> I[Log Error];
+```
+
 ## Documentation
 See `PRINTER_GUIDE.md` for detailed setup, troubleshooting, and technical specifications.
 
