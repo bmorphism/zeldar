@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Controlled Button Print - Prevents Multiple Rapid Prints
-Adds persistence control and debouncing
+Adds persistence control and debouncing with daily fortune selection
 """
 
 from gpiozero import Button
@@ -9,6 +9,7 @@ from signal import pause
 import subprocess
 import time
 import json
+import datetime
 from pathlib import Path
 
 # Persistence control
@@ -36,6 +37,8 @@ def save_last_print_time():
     except:
         pass
 
+from fortune_selector import get_daily_fortune
+
 def can_print_now():
     """Check if enough time has passed since last print"""
     last_print = load_last_print_time()
@@ -49,7 +52,7 @@ def can_print_now():
         return False, remaining
 
 def controlled_print_haiku():
-    """Print haiku with persistence control to prevent spam"""
+    """Print daily fortune with persistence control to prevent spam"""
     
     can_print, wait_time = can_print_now()
     
@@ -57,21 +60,25 @@ def controlled_print_haiku():
         print(f"⏳ Cooldown active: {wait_time:.1f}s remaining")
         return
     
+    # Get today's fortune selection
+    fortune_type = get_daily_fortune()
+    today_str = datetime.date.today().strftime('%Y-%m-%d')
+    
     print(f"🔘 Button pressed - {time.strftime('%H:%M:%S')}")
-    print("🎯 Executing controlled print...")
+    print(f"🎯 Executing controlled print: {fortune_type} ({today_str})")
     
     try:
         # Save timestamp BEFORE printing to prevent race conditions
         save_last_print_time()
         
-        # Execute the print
-        result = subprocess.run(['./scripts/print-now.sh'], 
+        # Execute the print with fortune selection
+        result = subprocess.run(['./scripts/print-now.sh', fortune_type], 
                               capture_output=True, 
                               text=True, 
                               timeout=10)
         
         if result.returncode == 0:
-            print("✅ Controlled print successful")
+            print(f"✅ Controlled print successful: {fortune_type}")
         else:
             print(f"❌ Print failed: {result.stderr}")
             

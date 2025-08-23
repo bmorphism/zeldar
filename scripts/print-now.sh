@@ -1,8 +1,9 @@
 #!/bin/bash
-# Immediate print test - bypasses GPIO button for direct testing
+# Daily fortune printing with date-based selection
 
-echo "🖨️  IMMEDIATE PRINT TEST"
-echo "======================"
+FORTUNE_TYPE=${1:-"default_fortune"}
+echo "🖨️  DAILY FORTUNE PRINT: $FORTUNE_TYPE"
+echo "====================================="
 
 # Check if printer is connected
 if ! lsusb | grep -q "5958:0130"; then
@@ -14,11 +15,16 @@ fi
 echo "✅ Printer detected and ready"
 echo ""
 
-# Print the precision formatted fortune
-echo "Printing precision fortune..."
+# Select fortune content based on type
+FORTUNE_FILE="/home/zeldar/burningman/fortunes/${FORTUNE_TYPE}.txt"
 
-# PAPER-OPTIMIZED COMPACT FORMAT
-FORTUNE_CONTENT="ヲヲヲ welcome to Uncommons
+if [ -f "$FORTUNE_FILE" ]; then
+    echo "📅 Loading fortune: $FORTUNE_TYPE"
+    FORTUNE_CONTENT=$(cat "$FORTUNE_FILE")
+else
+    echo "⚠️  Fortune file not found: $FORTUNE_FILE"
+    echo "📄 Using default fortune"
+    FORTUNE_CONTENT="ヲヲヲ welcome to Uncommons
 (symplectomorphic cobord.)
 
 no official universe-agent
@@ -31,21 +37,18 @@ Resonating worlds
 
 sincerely yours
 reafferent reaberrant"
+fi
+
+echo "Printing daily fortune..."
 
 # Send via CUPS with ESC/POS formatting
 echo -e "\x1b@$FORTUNE_CONTENT\n\n\x1bi" | lp -d Y812BT
 
 if [ $? -eq 0 ]; then
-    echo "✅ Precision fortune sent successfully!"
+    echo "✅ Daily fortune sent successfully: $FORTUNE_TYPE"
     echo ""
-    echo "🎯 Sticky fortune should be printing now:"
-    echo "   ヲヲヲ welcome to the Uncommons"
-    echo "   (up to a symplectomorphic cobordism)"
-    echo "   there is no official _ universe-agent"
-    echo "   every _ is the unofficial universe-agent"
-    echo "   Context distilled, In geometric form"
-    echo "   sincerely yours"
-    echo "   reafferent reaberrant"
+    echo "🎯 Fortune printing to thermal printer..."
+    echo "📅 Date-based content selection active"
 else
     echo "❌ Print command failed"
     exit 1
