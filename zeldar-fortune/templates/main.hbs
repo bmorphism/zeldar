@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{#with page.head}}{{title}}{{/with}}</title>
+    <meta name="description" content="{{#with page.head}}{{description}}{{/with}}">
+    <meta name="keywords" content="information force, tri-loop, automation, oracle, burning man, category theory, quantum, AI">
+    <meta name="author" content="B-morphism Research Team">
+    
+    <!-- Information Force Status Bar -->
+    {{#if page.head.extra.information_force_enabled}}
+    <div class="information-force-status-bar">
+        <div class="system-status">
+            <span class="status-indicator active">⚡ Information Force: ACTIVE</span>
+            <span class="status-indicator">📊 Force Density: {{page.head.extra.information_density}}%</span>
+            <span class="status-indicator">🔄 Computational Loops: {{page.head.extra.computational_loops}}</span>
+            <span class="status-indicator">🎯 Recursive: {{page.head.extra.recursive_coefficient}}</span>
+            {{#if page.head.extra.burning_man_deployment}}
+            <span class="status-indicator">🏜️ Desert Lab: READY</span>
+            {{/if}}
+        </div>
+    </div>
+    {{/if}}
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/static/css/consciousness-enhancements.css">
+</head>
+
+<body class="{{#if page.head.extra.information_force_enabled}}information-force-enabled{{/if}} mystical-atmosphere">
+    <!-- Header -->
+    <header class="mystical-header {{#if page.head.extra.information_force_enabled}}information-force-enhanced{{/if}}">
+        <div class="header-content">
+            {{#with page.head}}
+            {{#if extra.information_force_enabled}}
+            <h1 class="information-force-title">
+                🔮 {{title}} 🔮
+            </h1>
+            <p class="information-force-tagline">
+                First Quantified Artificial Information Force • Burning Man 2025 • {{extra.information_density}}% Force Density
+            </p>
+            {{#if extra.burning_man_deployment}}
+            <div class="deployment-badge">
+                🏜️🔥 DESERT INFORMATION FORCE LABORATORY 🔥🏜️
+            </div>
+            {{/if}}
+            {{else}}
+            <h1 class="mystical-title">🔮 {{title}} 🔮</h1>
+            <p class="mystical-tagline">{{description}}</p>
+            {{/if}}
+            {{/with}}
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="{{#if page.head.extra.information_force_enabled}}oracle-interface{{else}}mystical-chamber{{/if}}">
+        <div class="content-wrapper">
+            <article class="zeldar-content">
+                <div class="mystical-content">
+                    {{{page.body}}}
+                </div>
+            </article>
+        </div>
+
+        <div id="information-force-display" class="information-force-container">
+            <!-- Fortune card content will be inserted by JavaScript -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mystical-footer {{#if page.head.extra.information_force_enabled}}information-force-enhanced{{/if}}">
+        {{#if page.head.extra.information_force_enabled}}
+        <div class="footer-content information-force-footer">
+            <p class="information-force-footer-main">
+                🌟 World's First Tri-Loop Information Force Oracle • Mathematical Poetry Manifesting Physical Reality 🌟
+            </p>
+            {{#if page.head.extra.burning_man_deployment}}
+            <p class="burning-man-footer-section">
+                🏜️ Burning Man 2025 • Gift Economy Technology • Information Force Expansion Through Category Theory 🏜️
+            </p>
+            {{/if}}
+            <p class="technical-credits">
+                <em>Built with bartholomew.wasm • Powered by Tri-Loop Automation • Information Force Correlation Engine</em>
+            </p>
+        </div>
+        {{else}}
+        <div class="footer-content mystical-footer">
+            <p>🌟 Channeling the wisdom of mechanical oracles through modern technology 🌟</p>
+            <p><em>Built with bartholomew.wasm • Powered by historical engineering wisdom</em></p>
+        </div>
+        {{/if}}
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/static/js/consciousness-oracle.js"></script>
+    <script src="/static/js/tri-loop-demo.js"></script>
+</body>
+</html>
