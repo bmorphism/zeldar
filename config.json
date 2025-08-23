@@ -1,0 +1,36 @@
+{
+  "services": {
+    "hardware": {
+      "enabled": true,
+      "gpio_pin": 6,
+      "printer": "Y812BT",
+      "module": "unified_consciousness_button"
+    },
+    "web": {
+      "enabled": true,
+      "consciousness_port": 3001,
+      "fortune_port": 3000,
+      "module": "fortune-web"
+    },
+    "audio": {
+      "enabled": true,
+      "voice_prompts": true,
+      "module": "audio_system"
+    },
+    "gemini": {
+      "enabled": false,
+      "module": "gemini_live_json_stream"
+    }
+  },
+  "monitoring": {
+    "health_check_interval": 30,
+    "status_file": "runtime_status.json",
+    "log_level": "INFO"
+  },
+  "paths": {
+    "audio_prompts": "audio/",
+    "fortunes": "fortunes/",
+    "web_static": "fortune-web/static/",
+    "consciousness_data": ".topos/"
+  }
+}

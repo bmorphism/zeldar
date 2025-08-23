@@ -1,0 +1,35 @@
+[Unit]
+Description=ZELDAR Unified Consciousness Oracle System
+Documentation=https://github.com/bmorphism/zeldar
+After=network.target sound.target
+Wants=network.target
+
+[Service]
+Type=simple
+User=pi
+Group=pi
+WorkingDirectory=/home/pi/zeldar
+Environment=PATH=/home/pi/.local/bin:/usr/local/bin:/usr/bin:/bin
+Environment=PYTHONPATH=/home/pi/zeldar
+ExecStart=/usr/bin/python3 /home/pi/zeldar/main.py
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=zeldar-oracle
+
+# Security settings
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ReadWritePaths=/home/pi/zeldar /var/log /tmp
+ProtectHome=read-only
+
+# Resource limits
+LimitNOFILE=1024
+MemoryMax=512M
+CPUQuota=50%
+
+[Install]
+WantedBy=multi-user.target
