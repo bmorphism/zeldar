@@ -1,0 +1,159 @@
+{
+  "name": "Mechanical Fortune System Orchestration",
+  "category": "OrchestrationC", 
+  "type": "system_diagram",
+  "description": "Models the orchestration of mechanical, electrical, and digital subsystems in modern fortune-telling installations, bridging historical clockwork mechanisms with contemporary electronics",
+  "objects": {
+    "ClockworkMotion": {
+      "type": "mechanical_subsystem",
+      "properties": {
+        "technology_era": "1890s_1930s",
+        "precision": "cam_driven",
+        "power_source": "wound_spring",
+        "failure_mode": "gradual_degradation"
+      }
+    },
+    "ElectroMechanical": {
+      "type": "hybrid_subsystem",
+      "properties": {
+        "technology_era": "1940s_1970s", 
+        "precision": "relay_switched",
+        "power_source": "wall_current",
+        "failure_mode": "contact_oxidation"
+      }
+    },
+    "DigitalControl": {
+      "type": "electronic_subsystem",
+      "properties": {
+        "technology_era": "1980s_present",
+        "precision": "microprocessor",
+        "power_source": "regulated_dc",
+        "failure_mode": "software_corruption"
+      }
+    },
+    "AIOrchestration": {
+      "type": "intelligent_subsystem",
+      "properties": {
+        "technology_era": "2020s_present",
+        "precision": "llm_generated", 
+        "power_source": "cloud_api",
+        "failure_mode": "network_dependency"
+      }
+    },
+    "UserInterface": {
+      "type": "interaction_layer",
+      "properties": {
+        "modalities": ["visual", "audio", "tactile"],
+        "complexity": "theatrical_presentation",
+        "consistency": "character_persona"
+      }
+    },
+    "FortuneGeneration": {
+      "type": "content_layer",
+      "properties": {
+        "source": "database_or_algorithm",
+        "personalization": "contextual_adaptation", 
+        "delivery": "printed_card_and_speech"
+      }
+    }
+  },
+  "morphisms": {
+    "mechanical_evolution": {
+      "source": "ClockworkMotion",
+      "target": "ElectroMechanical",
+      "type": "technological_progression",
+      "properties": {
+        "improvement": "reliability_and_complexity",
+        "preservation": "theatrical_character"
+      }
+    },
+    "electronic_transition": {
+      "source": "ElectroMechanical", 
+      "target": "DigitalControl",
+      "type": "technological_progression",
+      "properties": {
+        "improvement": "programmability_and_precision",
+        "preservation": "mechanical_authenticity"
+      }
+    },
+    "ai_integration": {
+      "source": "DigitalControl",
+      "target": "AIOrchestration", 
+      "type": "technological_progression",
+      "properties": {
+        "improvement": "dynamic_content_generation",
+        "preservation": "mystical_presentation"
+      }
+    },
+    "motion_control": {
+      "source": "DigitalControl",
+      "target": "UserInterface",
+      "type": "system_coordination",
+      "properties": {
+        "synchronization": "timing_critical",
+        "fidelity": "lifelike_animation"
+      }
+    },
+    "content_delivery": {
+      "source": "FortuneGeneration",
+      "target": "UserInterface",
+      "type": "information_flow",
+      "properties": {
+        "format_adaptation": "multi_modal",
+        "timing_coordination": "narrative_paced"
+      }
+    },
+    "intelligent_generation": {
+      "source": "AIOrchestration",
+      "target": "FortuneGeneration",
+      "type": "content_creation",
+      "properties": {
+        "personalization": "contextual",
+        "creativity": "bounded_randomness"
+      }
+    }
+  },
+  "compositions": [
+    {
+      "name": "historical_evolution",
+      "morphisms": ["mechanical_evolution", "electronic_transition", "ai_integration"],
+      "result": "Complete technological progression",
+      "properties": {
+        "timespan": "130_years",
+        "core_preservation": "mystical_theater"
+      }
+    },
+    {
+      "name": "modern_system_integration", 
+      "morphisms": ["intelligent_generation", "content_delivery", "motion_control"],
+      "result": "Coordinated user experience",
+      "properties": {
+        "real_time_requirements": true,
+        "failure_graceful_degradation": true
+      }
+    }
+  ],
+  "catcolab_rendering": {
+    "layout": "layered_evolution",
+    "node_positioning": {
+      "ClockworkMotion": [0, 0],
+      "ElectroMechanical": [1, 0],
+      "DigitalControl": [2, 0],
+      "AIOrchestration": [3, 0],
+      "UserInterface": [2, 1],
+      "FortuneGeneration": [1, 1]
+    },
+    "edge_styling": {
+      "technological_progression": "bold_timeline_arrow",
+      "system_coordination": "control_flow_arrow", 
+      "information_flow": "data_flow_arrow",
+      "content_creation": "creative_flow_arrow"
+    },
+    "temporal_layers": {
+      "mechanical_era": "sepia_background",
+      "electronic_era": "blue_background", 
+      "digital_era": "green_background",
+      "ai_era": "purple_background"
+    }
+  }
+}

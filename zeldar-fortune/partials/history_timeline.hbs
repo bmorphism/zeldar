@@ -1,0 +1,257 @@
+<div class="timeline-container">
+    <div class="timeline-line"></div>
+    
+    <div class="timeline-era mechanical-era">
+        <div class="era-marker">
+            <div class="era-icon">🔧</div>
+            <div class="era-year">1867</div>
+        </div>
+        <div class="era-content">
+            <h4>Mechanical Era</h4>
+            <p><strong>1867-1900</strong></p>
+            <p>J. Parkes' first patent • Roover Brothers' political automatons • Spring-driven clockwork systems</p>
+        </div>
+    </div>
+    
+    <div class="timeline-era electromechanical-era">
+        <div class="era-marker">
+            <div class="era-icon">⚡</div>
+            <div class="era-year">1900</div>
+        </div>
+        <div class="era-content">
+            <h4>Electromechanical Era</h4>
+            <p><strong>1900-1950</strong></p>
+            <p>Mills Gypsy Fortune Teller • Solenoid animation • Mutoscope's Grandmother series</p>
+        </div>
+    </div>
+    
+    <div class="timeline-era animatronic-era">
+        <div class="era-marker">
+            <div class="era-icon">🤖</div>
+            <div class="era-year">1957</div>
+        </div>
+        <div class="era-content">
+            <h4>Animatronic Era</h4>
+            <p><strong>1950s+</strong></p>
+            <p>Genco Gypsy Grandma • Multi-axis movement • Breathing simulation • Modern digital revival</p>
+        </div>
+    </div>
+</div>
+
+<style>
+.timeline-container {
+    position: relative;
+    padding: 40px 0;
+    margin: 40px 0;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, 
+        #8B4513 0%, 
+        #CD853F 33%, 
+        #FFD700 66%, 
+        #DA70D6 100%);
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.timeline-era {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 50px 0;
+    opacity: 0;
+    animation: timelineReveal 0.8s ease-out forwards;
+}
+
+.timeline-era:nth-child(2) { animation-delay: 0.2s; }
+.timeline-era:nth-child(3) { animation-delay: 0.4s; }
+.timeline-era:nth-child(4) { animation-delay: 0.6s; }
+
+@keyframes timelineReveal {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mechanical-era {
+    flex-direction: row;
+}
+
+.electromechanical-era {
+    flex-direction: row-reverse;
+}
+
+.animatronic-era {
+    flex-direction: row;
+}
+
+.era-marker {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 15px;
+    border-radius: 50%;
+    border: 3px solid;
+    margin: 0 30px;
+    min-width: 80px;
+    height: 80px;
+    justify-content: center;
+}
+
+.mechanical-era .era-marker {
+    border-color: #8B4513;
+    background: radial-gradient(circle, rgba(139, 69, 19, 0.3), rgba(139, 69, 19, 0.1));
+}
+
+.electromechanical-era .era-marker {
+    border-color: #FFD700;
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.3), rgba(255, 215, 0, 0.1));
+}
+
+.animatronic-era .era-marker {
+    border-color: #DA70D6;
+    background: radial-gradient(circle, rgba(218, 112, 214, 0.3), rgba(218, 112, 214, 0.1));
+}
+
+.era-icon {
+    font-size: 1.8rem;
+    margin-bottom: 2px;
+}
+
+.era-year {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #D4AF37;
+}
+
+.era-content {
+    flex: 1;
+    max-width: 300px;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(139, 69, 19, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mechanical-era .era-content {
+    background: rgba(139, 69, 19, 0.1);
+    text-align: right;
+}
+
+.electromechanical-era .era-content {
+    background: rgba(255, 215, 0, 0.05);
+    text-align: left;
+}
+
+.animatronic-era .era-content {
+    background: rgba(218, 112, 214, 0.05);
+    text-align: right;
+}
+
+.era-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.era-content h4 {
+    color: #CD853F;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.era-content p {
+    margin: 5px 0;
+    line-height: 1.4;
+}
+
+.era-content p:first-of-type {
+    color: #D4AF37;
+    font-weight: bold;
+}
+
+.era-content p:last-child {
+    color: #DEB887;
+    font-size: 0.9rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .timeline-line {
+        left: 30px;
+    }
+    
+    .timeline-era {
+        flex-direction: row !important;
+        align-items: flex-start;
+    }
+    
+    .era-marker {
+        margin: 0 20px 0 0;
+        min-width: 60px;
+        height: 60px;
+        padding: 10px;
+    }
+    
+    .era-icon {
+        font-size: 1.4rem;
+    }
+    
+    .era-year {
+        font-size: 0.7rem;
+    }
+    
+    .era-content {
+        text-align: left !important;
+        max-width: none;
+        flex: 1;
+        margin-left: 10px;
+    }
+    
+    .era-content h4 {
+        font-size: 1rem;
+    }
+    
+    .era-content p:last-child {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline-container {
+        padding: 20px 0;
+        margin: 20px 0;
+    }
+    
+    .era-marker {
+        min-width: 50px;
+        height: 50px;
+        padding: 8px;
+    }
+    
+    .era-icon {
+        font-size: 1.2rem;
+    }
+    
+    .era-year {
+        font-size: 0.6rem;
+    }
+    
+    .era-content {
+        padding: 15px;
+    }
+}
+</style>

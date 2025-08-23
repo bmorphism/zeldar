@@ -1,0 +1,255 @@
+/* Additional mystical enhancements for Zeldar */
+
+/* Enhanced floating elements for deeper atmosphere */
+.mystical-atmosphere::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(2px 2px at 20px 30px, #D4AF37, transparent),
+        radial-gradient(2px 2px at 40px 70px, #FFD700, transparent),
+        radial-gradient(1px 1px at 90px 40px, #CD853F, transparent),
+        radial-gradient(1px 1px at 130px 80px, #DEB887, transparent);
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    animation: starfield 60s linear infinite;
+    opacity: 0.1;
+}
+
+@keyframes starfield {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-200px, -200px); }
+}
+
+/* Enhanced card interaction animations */
+.zeldar-fortune-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.zeldar-fortune-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent 30%, 
+        rgba(212, 175, 55, 0.1) 50%, 
+        transparent 70%
+    );
+    transform: rotate(45deg);
+    transition: transform 0.6s ease;
+    opacity: 0;
+}
+
+.zeldar-fortune-card:hover::before {
+    transform: rotate(45deg) translate(50%, 50%);
+    opacity: 1;
+}
+
+/* Mystical text effects */
+.mystical-title {
+    position: relative;
+}
+
+.mystical-title::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        45deg, 
+        transparent 30%, 
+        rgba(255, 215, 0, 0.3) 50%, 
+        transparent 70%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 3s ease-in-out infinite;
+    opacity: 0.7;
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+/* Enhanced timeline effects */
+.timeline-era::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulse 4s ease-in-out infinite;
+    z-index: 1;
+}
+
+.timeline-era:nth-child(even)::before {
+    animation-delay: 1s;
+}
+
+.timeline-era:nth-child(3)::before {
+    animation-delay: 2s;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.3;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+        opacity: 0.1;
+    }
+}
+
+/* Mystical loading states */
+.loading-mystical {
+    position: relative;
+    color: transparent;
+}
+
+.loading-mystical::before {
+    content: '✨ Channeling mystical energies... ✨';
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #D4AF37;
+    animation: mysticalPulse 2s ease-in-out infinite;
+}
+
+@keyframes mysticalPulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+/* Enhanced navigation hover effects */
+.nav-link {
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        transparent
+    );
+    transition: left 0.5s ease;
+}
+
+.nav-link:hover::before {
+    left: 100%;
+}
+
+/* Historical authenticity badge */
+.authenticity-seal {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border: 2px solid #8B4513;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(139, 69, 19, 0.8), rgba(139, 69, 19, 0.4));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    animation: rotate 20s linear infinite;
+    z-index: 1000;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.authenticity-seal:hover {
+    transform: scale(1.1);
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Mystical tooltips */
+.mystical-tooltip {
+    position: relative;
+    cursor: help;
+}
+
+.mystical-tooltip::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: #D4AF37;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #8B4513;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 1001;
+}
+
+.mystical-tooltip:hover::after {
+    opacity: 1;
+}
+
+/* Responsive mystical adjustments */
+@media (max-width: 768px) {
+    .mystical-atmosphere::before {
+        animation-duration: 40s;
+        opacity: 0.05;
+    }
+    
+    .authenticity-seal {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        bottom: 15px;
+        right: 15px;
+    }
+    
+    .timeline-era::before {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .mystical-atmosphere::before,
+    .timeline-era::before,
+    .authenticity-seal {
+        animation: none;
+    }
+    
+    .zeldar-fortune-card::before {
+        transition: none;
+    }
+}

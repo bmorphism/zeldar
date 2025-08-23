@@ -1,0 +1,408 @@
+{{> content_top }}
+
+<div class="history-page-container">
+    <div class="cyber-atmosphere">
+        <!-- Cyberpunk background elements for history pages -->
+        <div class="legacy-data-streams"></div>
+        <div class="archive-grid"></div>
+        <div class="temporal-particles"></div>
+    </div>
+    
+    <div class="content-wrapper">
+        {{#with page.head}}
+        <header class="history-header">
+            <h1 class="historical-title">{{title}}</h1>
+            {{#if description}}
+            <p class="historical-description">{{description}}</p>
+            {{/if}}
+            {{#if extra.date}}
+            <p class="historical-meta">Era: {{extra.date}}{{#if extra.period}} • Period: {{extra.period}}{{/if}}</p>
+            {{/if}}
+            
+            {{#if extra.key_innovations}}
+            <div class="innovation-badges">
+                <h4>Key Innovations:</h4>
+                <div class="badge-container">
+                    {{#each extra.key_innovations}}
+                    <span class="innovation-badge">{{this}}</span>
+                    {{/each}}
+                </div>
+            </div>
+            {{/if}}
+            
+            {{#if extra.major_manufacturers}}
+            <div class="manufacturer-list">
+                <h4>Major Manufacturers:</h4>
+                <div class="manufacturer-badges">
+                    {{#each extra.major_manufacturers}}
+                    <span class="manufacturer-badge">{{this}}</span>
+                    {{/each}}
+                </div>
+            </div>
+            {{/if}}
+        </header>
+        {{/with}}
+        
+        <nav class="era-navigation">
+            <a href="/history" class="nav-link overview">📜 Historical Overview</a>
+            <a href="/history/early-period" class="nav-link mechanical">🔧 Mechanical Era</a>
+            <a href="/history/electromechanical" class="nav-link electrical">⚡ Electromechanical Era</a>
+            <a href="/history/animatronics" class="nav-link animatronic">🤖 Animatronic Era</a>
+        </nav>
+        
+        <article class="historical-content">
+            {{{page.body}}}
+        </article>
+        
+        <footer class="historical-footer">
+            <div class="back-to-zeldar">
+                <a href="/" class="zeldar-return">← Return to Zeldar's Chamber</a>
+            </div>
+            <div class="historical-authenticity">
+                <small>⚙️ All technical specifications verified through historical automaton research and documentation.</small>
+            </div>
+        </footer>
+    </div>
+</div>
+
+<style>
+.history-page-container {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #2C1810 0%, #1a1a2e 50%, #0f3460 100%);
+    color: #DEB887;
+    font-family: 'Georgia', serif;
+    overflow-x: hidden;
+}
+
+.mystical-atmosphere {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.floating-gears::before,
+.floating-gears::after {
+    content: '⚙️';
+    position: absolute;
+    font-size: 1.5rem;
+    opacity: 0.08;
+    animation: historicalFloat 25s linear infinite;
+}
+
+.floating-gears::before {
+    top: 15%;
+    left: 5%;
+    animation-delay: -8s;
+}
+
+.floating-gears::after {
+    top: 70%;
+    right: 8%;
+    animation-delay: -18s;
+}
+
+.timeline-particles::before,
+.timeline-particles::after {
+    content: '🔧';
+    position: absolute;
+    font-size: 1rem;
+    opacity: 0.05;
+    animation: historicalFloat 30s linear infinite reverse;
+}
+
+.timeline-particles::before {
+    top: 40%;
+    left: 15%;
+    animation-delay: -12s;
+}
+
+.timeline-particles::after {
+    top: 80%;
+    right: 20%;
+    animation-delay: -22s;
+}
+
+@keyframes historicalFloat {
+    0% { transform: translateY(0px) rotate(0deg); opacity: 0.05; }
+    25% { opacity: 0.1; }
+    50% { transform: translateY(-30px) rotate(180deg); opacity: 0.05; }
+    75% { opacity: 0.08; }
+    100% { transform: translateY(0px) rotate(360deg); opacity: 0.05; }
+}
+
+.historical-mist {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 25% 75%, rgba(139, 69, 19, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 75% 25%, rgba(160, 82, 45, 0.05) 0%, transparent 50%);
+    animation: historicalMist 35s ease-in-out infinite;
+}
+
+@keyframes historicalMist {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 0.05; }
+}
+
+.content-wrapper {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.history-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    border: 1px solid rgba(139, 69, 19, 0.3);
+}
+
+.historical-title {
+    font-size: 2.5rem;
+    color: #CD853F;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    margin-bottom: 15px;
+}
+
+.historical-description {
+    font-size: 1.1rem;
+    color: #DEB887;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto 20px;
+}
+
+.historical-meta {
+    color: #BC8F8F;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+.innovation-badges, .manufacturer-list {
+    margin: 20px 0;
+}
+
+.innovation-badges h4, .manufacturer-list h4 {
+    color: #D4AF37;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.badge-container, .manufacturer-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.innovation-badge {
+    background: rgba(139, 69, 19, 0.3);
+    color: #F4A460;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    border: 1px solid rgba(139, 69, 19, 0.5);
+}
+
+.manufacturer-badge {
+    background: rgba(160, 82, 45, 0.3);
+    color: #DEB887;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    border: 1px solid rgba(160, 82, 45, 0.5);
+}
+
+.era-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    padding: 10px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.nav-link.overview {
+    background: rgba(105, 105, 105, 0.2);
+    color: #D3D3D3;
+    border: 1px solid rgba(105, 105, 105, 0.4);
+}
+
+.nav-link.mechanical {
+    background: rgba(139, 69, 19, 0.2);
+    color: #D2691E;
+    border: 1px solid rgba(139, 69, 19, 0.4);
+}
+
+.nav-link.electrical {
+    background: rgba(255, 215, 0, 0.1);
+    color: #FFD700;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.nav-link.animatronic {
+    background: rgba(138, 43, 226, 0.1);
+    color: #DA70D6;
+    border: 1px solid rgba(138, 43, 226, 0.3);
+}
+
+.nav-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.historical-content {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid rgba(139, 69, 19, 0.2);
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.historical-content h1 {
+    color: #CD853F;
+    border-bottom: 2px solid rgba(139, 69, 19, 0.5);
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+.historical-content h2 {
+    color: #D4AF37;
+    margin-top: 35px;
+    margin-bottom: 20px;
+}
+
+.historical-content h3 {
+    color: #DEB887;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.historical-content h4 {
+    color: #F4A460;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.historical-content ul, .historical-content ol {
+    margin: 15px 0;
+    padding-left: 25px;
+}
+
+.historical-content li {
+    margin: 8px 0;
+}
+
+.historical-content strong {
+    color: #FFD700;
+}
+
+.historical-content em {
+    color: #F4A460;
+}
+
+.historical-content blockquote {
+    border-left: 4px solid #8B4513;
+    padding-left: 20px;
+    margin: 20px 0;
+    font-style: italic;
+    background: rgba(139, 69, 19, 0.1);
+    padding: 15px 20px;
+    border-radius: 5px;
+}
+
+.historical-content hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(139, 69, 19, 0.5), transparent);
+    margin: 30px 0;
+}
+
+.historical-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-top: 1px solid rgba(139, 69, 19, 0.3);
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.zeldar-return {
+    color: #D4AF37;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.zeldar-return:hover {
+    color: #FFD700;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.historical-authenticity {
+    color: #BC8F8F;
+    text-align: right;
+    font-style: italic;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .historical-title {
+        font-size: 2rem;
+    }
+    
+    .content-wrapper {
+        padding: 20px 15px;
+    }
+    
+    .historical-content {
+        padding: 25px 20px;
+    }
+    
+    .era-navigation {
+        gap: 10px;
+    }
+    
+    .nav-link {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+    
+    .badge-container, .manufacturer-badges {
+        justify-content: center;
+    }
+    
+    .historical-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .historical-authenticity {
+        text-align: center;
+    }
+}
+</style>
+
+{{> content_bottom }}

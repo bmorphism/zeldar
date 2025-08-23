@@ -1,0 +1,5 @@
+(library
+ (public_name mcp)
+ (name mcp)
+ (libraries yojson lwt lwt.unix))
+

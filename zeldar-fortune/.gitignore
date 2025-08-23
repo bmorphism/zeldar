@@ -1,0 +1,58 @@
+# Spin/WebAssembly build outputs
+target/
+dist/
+.spin/
+
+# Bartholomew cache and temp files
+.bartholomew/
+cache/
+temp/
+
+# Environment and secrets
+.env
+.env.local
+secrets.toml
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Runtime generated files
+runtime/
+generated/
+
+# Backup files
+*.backup
+*.bak
+
+# Node modules if using additional tooling
+node_modules/
+package-lock.json
+yarn.lock
+
+# Temporary files
+tmp/
+.tmp/
+
+# Build artifacts specific to Spin
+spin.lock
+.wasmtime/
+
+# Site-specific generated content
+static/generated/
+public/
+
+# Fortune generation cache (if implemented)
+fortune-cache/
+.fortune-state

@@ -1,0 +1,5 @@
+(executable
+ (public_name mcp-example)
+ (name main)
+ (libraries mcp cmdliner lwt lwt.unix))
+

@@ -1,0 +1,3 @@
+[submodule "zk_haiku_proof/fresh_devnet_verification/verifier_project/lib/forge-std"]
+	path = zk_haiku_proof/fresh_devnet_verification/verifier_project/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std

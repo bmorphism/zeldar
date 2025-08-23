@@ -1,0 +1,142 @@
+{
+  "name": "User Interaction Patterns", 
+  "category": "InteractionC",
+  "type": "behavioral_diagram",
+  "description": "Models the behavioral patterns of user interaction with fortune-telling systems, inspired by Zoltar and historical mechanical oracles",
+  "objects": {
+    "Approach": {
+      "type": "user_state",
+      "properties": {
+        "curiosity_level": 0.8,
+        "commitment": "low",
+        "engagement": "visual"
+      }
+    },
+    "Payment": {
+      "type": "user_state",
+      "properties": {
+        "curiosity_level": 0.9,
+        "commitment": "medium", 
+        "engagement": "transactional"
+      }
+    },
+    "Question": {
+      "type": "user_state",
+      "properties": {
+        "curiosity_level": 1.0,
+        "commitment": "high",
+        "engagement": "mental"
+      }
+    },
+    "Reception": {
+      "type": "user_state",
+      "properties": {
+        "curiosity_level": 0.6,
+        "commitment": "completion",
+        "engagement": "interpretive"
+      }
+    },
+    "Idle": {
+      "type": "system_state",
+      "properties": {
+        "animation": "attract_mode",
+        "availability": true,
+        "energy_state": "standby"
+      }
+    },
+    "Active": {
+      "type": "system_state", 
+      "properties": {
+        "animation": "performance_mode",
+        "availability": false,
+        "energy_state": "engaged"
+      }
+    }
+  },
+  "morphisms": {
+    "attraction": {
+      "source": "Idle",
+      "target": "Approach",
+      "type": "system_to_user",
+      "properties": {
+        "trigger": "attract_messages",
+        "sensory_modality": "audio_visual"
+      }
+    },
+    "commitment": {
+      "source": "Approach",
+      "target": "Payment",
+      "type": "user_decision",
+      "properties": {
+        "barrier_type": "financial",
+        "decision_time": "short"
+      }
+    },
+    "activation": {
+      "source": "Payment",
+      "target": "Active", 
+      "type": "user_to_system",
+      "properties": {
+        "trigger": "coin_insertion", 
+        "system_response": "immediate"
+      }
+    },
+    "inquiry": {
+      "source": "Payment",
+      "target": "Question",
+      "type": "user_mental",
+      "properties": {
+        "cognitive_load": "introspective",
+        "temporal_scope": "life_concerns"
+      }
+    },
+    "performance": {
+      "source": "Active",
+      "target": "Reception",
+      "type": "system_to_user",
+      "properties": {
+        "duration": "30_seconds",
+        "modalities": ["visual", "audio", "tactile"],
+        "narrative_arc": "mystery_revelation"
+      }
+    },
+    "completion": {
+      "source": "Reception", 
+      "target": "Idle",
+      "type": "system_reset",
+      "properties": {
+        "cooldown_time": "5_seconds",
+        "state_cleanup": "full"
+      }
+    }
+  },
+  "compositions": [
+    {
+      "name": "full_interaction_cycle",
+      "morphisms": ["attraction", "commitment", "activation", "performance", "completion"],
+      "result": "Complete user journey",
+      "properties": {
+        "cycle_time": "60_seconds_average",
+        "success_rate": 0.7
+      }
+    }
+  ],
+  "catcolab_rendering": {
+    "layout": "circular_flow",
+    "node_positioning": {
+      "Idle": [0, 0],
+      "Approach": [1, 1],
+      "Payment": [2, 1], 
+      "Question": [2, 0],
+      "Active": [1, 0],
+      "Reception": [0, 1]
+    },
+    "edge_styling": {
+      "system_to_user": "thick_blue_arrow",
+      "user_to_system": "thick_green_arrow",
+      "user_decision": "thin_orange_arrow",
+      "user_mental": "dashed_purple_arrow",
+      "system_reset": "dotted_red_arrow"
+    }
+  }
+}
