@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3:*)",
+      "Read(//proc/**)",
+      "Bash(lscpu:*)",
+      "Bash(lsblk:*)",
+      "Bash(lsusb:*)",
+      "WebFetch(domain:github.com)",
+      "Bash(lpstat:*)",
+      "Bash(dmesg:*)",
+      "Read(//dev/usb/**)",
+      "Bash(git clone:*)",
+      "Bash(source:*)",
+      "Bash(pip install:*)",
+      "Bash(sudo usermod:*)",
+      "Bash(sudo chmod:*)"
+    ],
+    "deny": [],
+    "ask": [],
+    "additionalDirectories": [
+      "/dev/usb"
+    ]
+  }
+}
