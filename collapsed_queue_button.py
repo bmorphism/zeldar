@@ -30,8 +30,10 @@ class CollapsedQueueButton:
         # Job queue with collapsing logic
         self.job_queue = queue.Queue()
         self.worker_busy = False
-        self.collapse_window = 2.0  # 2 second window for collapsing events
+        self.base_collapse_window = 3.0  # Base collapse window
+        self.processing_extension = 30.0  # Extended window during processing
         self.last_job_time = 0
+        self.processing_job = False  # Track if currently processing
         
         # Stats tracking
         self.total_button_events = 0
@@ -45,16 +47,20 @@ class CollapsedQueueButton:
         self.state_file = Path('/tmp/collapsed_queue_state.json')
         self.load_state()
         
+        print(f"🔘 Initializing Collapsed Queue Button on GPIO {gpio_pin}...")
+        
         # Initialize button with NO debouncing - capture all events
         self.button = Button(gpio_pin, pull_up=True, bounce_time=None)
         self.button.when_pressed = self.on_raw_button_event
+        
+        print(f"✅ GPIO {gpio_pin} button initialized")
         
         # Start single worker thread
         self.worker_thread = threading.Thread(target=self.job_processor_worker, daemon=True)
         self.worker_thread.start()
         
-        print(f"🔘 Collapsed Queue Button initialized on GPIO {gpio_pin}")
-        print(f"📊 Raw events → Collapsed Queue ({self.collapse_window}s window) → Single worker")
+        print(f"🔘 Collapsed Queue Button READY on GPIO {gpio_pin}")
+        print(f"📊 Raw events → Collapsed Queue ({self.base_collapse_window}s/{self.processing_extension}s window) → Single worker")
         print(f"🖨️  ACTUAL PRINTING enabled - CUPS queue cleared")
         
     def on_raw_button_event(self):
@@ -63,13 +69,21 @@ class CollapsedQueueButton:
         event_time = time.time()
         job_id = f"JOB_{int(event_time * 1000)}"
         
-        # Check if we should collapse this event
+        # Dynamic collapse window - extend during processing
+        current_window = self.processing_extension if self.processing_job else self.base_collapse_window
         time_since_last_job = event_time - self.last_job_time
         
-        if time_since_last_job < self.collapse_window and not self.job_queue.empty():
+        # Collapse if within dynamic window OR if currently processing a job OR if queue not empty
+        should_collapse = (
+            time_since_last_job < current_window or 
+            self.processing_job or 
+            not self.job_queue.empty()
+        )
+        
+        if should_collapse and self.queued_jobs > 0:
             # Collapse this event - don't add new job
             self.collapsed_events += 1
-            print(f"🔄 Event #{self.total_button_events} COLLAPSED (within {self.collapse_window}s window)")
+            print(f"🔄 Event #{self.total_button_events} COLLAPSED (processing={self.processing_job}, queue={self.job_queue.qsize()}, window={current_window:.1f}s/{time_since_last_job:.1f}s)")
             print(f"   └─ {self.collapsed_events} total collapsed events")
         else:
             # Queue new job
@@ -100,6 +114,7 @@ class CollapsedQueueButton:
                 job = self.job_queue.get(timeout=1)
                 
                 self.worker_busy = True
+                self.processing_job = True
                 self.processed_jobs += 1
                 
                 job_id = job['job_id']
@@ -123,6 +138,7 @@ class CollapsedQueueButton:
                 # Mark job as done
                 self.job_queue.task_done()
                 self.worker_busy = False
+                self.processing_job = False
                 
                 print(f"📊 Stats: {self.successful_prints}✅ {self.failed_prints}❌ {self.collapsed_events}🔄 Queue: {self.job_queue.qsize()}")
                 self.save_state()
@@ -285,7 +301,8 @@ Consciousness tessellated ∞"""
             'total_button_events': self.total_button_events,
             'queue_size': self.job_queue.qsize(),
             'worker_busy': self.worker_busy,
-            'collapse_window': self.collapse_window,
+            'base_collapse_window': self.base_collapse_window,
+            'processing_extension': self.processing_extension,
             'stats': {
                 'queued_jobs': self.queued_jobs,
                 'processed_jobs': self.processed_jobs,
@@ -302,7 +319,7 @@ Consciousness tessellated ∞"""
         print("\n🚀 COLLAPSED QUEUE FORTUNE BUTTON SYSTEM")
         print("=" * 50) 
         print("APPROACH: Raw GPIO events → Collapsed queue → Single worker → ACTUAL PRINTING")
-        print(f"COLLAPSING: Events within {self.collapse_window}s window merged")
+        print(f"COLLAPSING: Events within {self.base_collapse_window}s/{self.processing_extension}s window merged")
         print("PRINTING: CUPS prioritized for actual thermal output")
         print("=" * 50)
         print("Press button to test collapsed queue processing...")
