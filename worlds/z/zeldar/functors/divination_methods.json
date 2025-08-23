@@ -1,0 +1,138 @@
+{
+  "name": "Divination Method Functors",
+  "category": "DivinationF",
+  "type": "functor_specification",
+  "description": "Functorial mappings between different divination methods, maintaining structural coherence while adapting presentation modalities",
+  "source_category": "AbstractDivination",
+  "target_category": "ConcreteFortune",
+  "functors": {
+    "MechanicalOracle": {
+      "description": "Maps abstract divination concepts to mechanical fortune-telling implementations",
+      "object_mapping": {
+        "Mystery": "HiddenMechanism",
+        "Revelation": "CardDispensing", 
+        "Wisdom": "PrewrittenFortune",
+        "Authority": "AnimatedFigure",
+        "Ritual": "CoinInsertion"
+      },
+      "morphism_mapping": {
+        "inquiry": "coin_activation",
+        "contemplation": "mechanical_animation",
+        "revelation": "card_delivery",
+        "interpretation": "fortune_reading"
+      },
+      "properties": {
+        "technology_basis": "clockwork_and_cams",
+        "interaction_metaphor": "consulting_oracle",
+        "authenticity": "theatrical_mysticism"
+      }
+    },
+    "DigitalFortuneTeller": {
+      "description": "Maps abstract divination to contemporary digital implementations",
+      "object_mapping": {
+        "Mystery": "AlgorithmicUnknown",
+        "Revelation": "GeneratedContent",
+        "Wisdom": "DatabaseKnowledge", 
+        "Authority": "AIPersona",
+        "Ritual": "TouchscreenInterface"
+      },
+      "morphism_mapping": {
+        "inquiry": "input_processing",
+        "contemplation": "algorithmic_computation",
+        "revelation": "output_generation",
+        "interpretation": "personalized_delivery"
+      },
+      "properties": {
+        "technology_basis": "neural_networks",
+        "interaction_metaphor": "consulting_ai_advisor",
+        "authenticity": "computational_intelligence"
+      }
+    },
+    "HybridZeldar": {
+      "description": "Maps abstract divination to hybrid mechanical-digital systems like modern Zoltar machines",
+      "object_mapping": {
+        "Mystery": "BlendedTechnologies",
+        "Revelation": "SynchronizedPresentation",
+        "Wisdom": "CuratedAndGenerated",
+        "Authority": "TraditionPlusInnovation", 
+        "Ritual": "ClassicInterfaceEnhanced"
+      },
+      "morphism_mapping": {
+        "inquiry": "multi_modal_activation",
+        "contemplation": "orchestrated_performance",
+        "revelation": "coordinated_delivery",
+        "interpretation": "contextualized_meaning"
+      },
+      "properties": {
+        "technology_basis": "mechanical_digital_fusion",
+        "interaction_metaphor": "timeless_oracle_evolved",
+        "authenticity": "historical_continuity_with_modern_capability"
+      }
+    }
+  },
+  "natural_transformations": {
+    "TechnologicalEvolution": {
+      "description": "Natural transformation capturing the evolution from mechanical to digital divination systems",
+      "components": {
+        "Mystery": "preservation_of_unknown_quality",
+        "Revelation": "enhancement_of_delivery_sophistication",
+        "Wisdom": "expansion_of_content_variety",
+        "Authority": "maintenance_of_mystical_presence",
+        "Ritual": "conservation_of_ceremonial_aspects"
+      },
+      "properties": {
+        "naturalness": "consistent_across_implementations",
+        "direction": "increasing_sophistication"
+      }
+    },
+    "ModalityAdaptation": {
+      "description": "Natural transformation adapting divination methods to different sensory modalities",
+      "components": {
+        "Visual": "card_displays_to_screen_presentations",
+        "Audio": "mechanical_sounds_to_synthesized_speech", 
+        "Tactile": "physical_cards_to_haptic_feedback",
+        "Temporal": "fixed_timing_to_adaptive_pacing"
+      },
+      "properties": {
+        "naturalness": "modality_independence",
+        "direction": "sensory_enrichment"
+      }
+    }
+  },
+  "compositions": [
+    {
+      "name": "full_evolution_path",
+      "functors": ["MechanicalOracle", "TechnologicalEvolution", "DigitalFortuneTeller"],
+      "result": "Complete historical progression functor",
+      "properties": {
+        "associativity": "verified",
+        "identity_preservation": "mystical_core_maintained"
+      }
+    }
+  ],
+  "catcolab_rendering": {
+    "layout": "functor_diagram",
+    "source_positioning": {
+      "Mystery": [0, 2],
+      "Revelation": [2, 2],
+      "Wisdom": [4, 2], 
+      "Authority": [1, 0],
+      "Ritual": [3, 0]
+    },
+    "target_positioning": {
+      "HiddenMechanism": [0, -2],
+      "CardDispensing": [2, -2],
+      "PrewrittenFortune": [4, -2],
+      "AnimatedFigure": [1, -4],
+      "CoinInsertion": [3, -4]
+    },
+    "functor_arrows": {
+      "object_mappings": "solid_functor_arrow",
+      "morphism_mappings": "dashed_functor_arrow"
+    },
+    "natural_transformations": {
+      "rendering": "curved_double_arrow",
+      "color_coding": "evolution_gradient"
+    }
+  }
+}

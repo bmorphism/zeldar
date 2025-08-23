@@ -1,0 +1,102 @@
+{
+  "project": {
+    "name": "Zeldar: Categorical Fortune-Telling System",
+    "version": "0.1.0",
+    "created": "2025-01-23",
+    "type": "categorical_modeling",
+    "status": "development"
+  },
+  "research_synthesis": {
+    "historical_context": {
+      "origins": "1860s mechanical fortune-telling machines by J. Parkes",
+      "golden_age": "1890s-1930s with companies like Roover Brothers",
+      "modern_evolution": "Contemporary Zoltar machines by Characters Unlimited",
+      "technological_progression": "Clockwork → Electro-mechanical → Digital → AI-enhanced"
+    },
+    "burning_man_connection": {
+      "discovered_projects": [
+        "FTM - Zardoz (2014) by FASTWURMS",
+        "Various fortune-teller installations seeking crew members",
+        "Interactive divination artworks in BRC"
+      ],
+      "installation_characteristics": "Nomadic, interactive, cybernetic witches theme",
+      "community_engagement": "DIY sensibility, social exchange, event architecture"
+    },
+    "technical_patterns": {
+      "mechanical_systems": "Cam-driven movements, card dispensing, clockwork timing",
+      "modern_implementations": "Arduino/Raspberry Pi, servo motors, thermal printing",
+      "ai_integration": "ChatGPT-powered dynamic fortune generation",
+      "interaction_paradigms": "Coin-operated, theatrical performance, mystical presentation"
+    }
+  },
+  "categorical_framework": {
+    "base_categories": {
+      "FortuneC": "Temporal knowledge states and transitions",
+      "InteractionC": "User-system behavioral patterns", 
+      "OrchestrationC": "Multi-subsystem coordination",
+      "DivinationF": "Functor category for divination method mappings"
+    },
+    "diagram_types": {
+      "temporal_flow": "Past/Present/Future temporal transitions with information revelation",
+      "interaction_patterns": "User journey through fortune-telling experience",
+      "mechanical_orchestration": "Technology evolution and system integration",
+      "divination_functors": "Mappings between abstract and concrete fortune-telling methods"
+    },
+    "key_morphisms": {
+      "temporal_transitions": "Memory, prediction, revelation, prophecy",
+      "user_interactions": "Attraction, commitment, inquiry, reception",
+      "system_coordination": "Motion control, content delivery, AI integration",
+      "method_mappings": "Mechanical → Digital transformations"
+    }
+  },
+  "catcolab_integration": {
+    "diagram_specifications": {
+      "format": "JSON with CatColab rendering instructions",
+      "layout_types": ["temporal_axis", "circular_flow", "layered_evolution", "functor_diagram"],
+      "node_positioning": "Coordinate-based with semantic meaning",
+      "edge_styling": "Type-differentiated visual encoding"
+    },
+    "rendering_features": {
+      "temporal_layers": "Era-based background coloring",
+      "interaction_flows": "Color-coded by system/user/decision type",
+      "evolution_gradients": "Natural transformation visualization",
+      "morphism_categories": "Visual distinction by mathematical role"
+    }
+  },
+  "practical_applications": {
+    "historical_preservation": "Documenting evolution of mechanical fortune-telling systems",
+    "modern_implementation": "Framework for designing interactive divination installations", 
+    "burning_man_installations": "Categorical approach to community-engaged fortune-telling art",
+    "educational_value": "Teaching category theory through familiar interactive systems"
+  },
+  "directory_structure": {
+    "worlds/z/zeldar/": "Main project directory",
+    "diagrams/": "CatColab diagram specifications in JSON",
+    "functors/": "Categorical functor definitions",
+    "objects/": "Category object specifications", 
+    "morphisms/": "Morphism type definitions",
+    "compositions/": "Complex diagram compositions",
+    ".topos/": "Metadata and research synthesis"
+  },
+  "next_steps": {
+    "catcolab_implementation": "Generate actual CatColab diagrams from JSON specifications",
+    "interactive_demos": "Create web-based categorical diagram exploration tools",
+    "physical_installation": "Build working Zeldar system demonstrating categorical principles",
+    "community_documentation": "Publish framework for other fortune-telling installations"
+  },
+  "research_sources": {
+    "exa_searches": [
+      "historical fortune teller robots automata mechanical divination machines history",
+      "fortune teller machine mechanical construction gears clockwork arcade penny automaton",
+      "arcade fortune teller machine restoration parts suppliers mechanical clockwork movement",
+      "Burning Man Zeldar fortune teller installation art project interactive",
+      "Zoltar Zeldar fortune teller machine arcade carnival interactive installation"
+    ],
+    "key_findings": {
+      "technical_evolution": "130+ year continuous development from clockwork to AI",
+      "psychological_appeal": "Anthropomorphic engagement, controlled randomness, theatrical performance",
+      "cultural_continuity": "Mystical presentation preserved across technological transitions",
+      "community_integration": "From penny arcades to maker spaces to art installations"
+    }
+  }
+}

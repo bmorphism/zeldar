@@ -1,0 +1,102 @@
+{
+  "name": "Temporal Fortune Flow",
+  "category": "FortuneC",
+  "type": "commutative_diagram",
+  "description": "Models the temporal transitions in fortune-telling from past knowledge through present revelation to future prediction",
+  "objects": {
+    "Past": {
+      "type": "knowledge_state",
+      "properties": {
+        "temporal_index": -1,
+        "certainty": 0.9,
+        "accessibility": "known"
+      }
+    },
+    "Present": {
+      "type": "knowledge_state", 
+      "properties": {
+        "temporal_index": 0,
+        "certainty": 1.0,
+        "accessibility": "experienced"
+      }
+    },
+    "Future": {
+      "type": "knowledge_state",
+      "properties": {
+        "temporal_index": 1,
+        "certainty": 0.3,
+        "accessibility": "predicted"
+      }
+    },
+    "Unknown": {
+      "type": "knowledge_state",
+      "properties": {
+        "temporal_index": "undefined",
+        "certainty": 0.0,
+        "accessibility": "hidden"
+      }
+    }
+  },
+  "morphisms": {
+    "memory": {
+      "source": "Past",
+      "target": "Present",
+      "type": "temporal_transition",
+      "properties": {
+        "information_preservation": 0.8,
+        "temporal_direction": "forward"
+      }
+    },
+    "prediction": {
+      "source": "Present", 
+      "target": "Future",
+      "type": "temporal_transition",
+      "properties": {
+        "information_preservation": 0.4,
+        "temporal_direction": "forward"
+      }
+    },
+    "revelation": {
+      "source": "Unknown",
+      "target": "Present", 
+      "type": "information_revelation",
+      "properties": {
+        "mystery_resolution": 0.7,
+        "divination_method": "mechanical_oracle"
+      }
+    },
+    "prophesy": {
+      "source": "Unknown",
+      "target": "Future",
+      "type": "information_revelation", 
+      "properties": {
+        "mystery_resolution": 0.3,
+        "divination_method": "mystical_projection"
+      }
+    }
+  },
+  "compositions": [
+    {
+      "name": "temporal_continuity",
+      "morphisms": ["memory", "prediction"],
+      "result": "Past -> Future",
+      "properties": {
+        "commutativity": "temporal_sequence",
+        "information_decay": 0.32
+      }
+    }
+  ],
+  "catcolab_rendering": {
+    "layout": "temporal_axis",
+    "node_positioning": {
+      "Past": [-1, 0],
+      "Present": [0, 0], 
+      "Future": [1, 0],
+      "Unknown": [0, -1]
+    },
+    "edge_styling": {
+      "temporal_transition": "solid_arrow",
+      "information_revelation": "dashed_arrow"
+    }
+  }
+}
