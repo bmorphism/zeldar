@@ -352,7 +352,18 @@ class IntelligentButton:
         category_name, fortunes = random.choice(categories)
         selected_fortune = random.choice(fortunes)
         
-        print(f"   🌙 Selected Moon Day {category_name}: '{selected_fortune[:50]}...'")
+        print(f"   🌙 Selected {category_name}: '{selected_fortune[:50]}...'")
+        
+        # Generate timestamp-based serial number
+        import hashlib
+        import time
+        from datetime import datetime
+        
+        timestamp = int(time.time() * 1000)  # Millisecond precision
+        fortune_hash = hashlib.sha256(selected_fortune.encode()).hexdigest()[:6].upper()
+        serial_number = f"{fortune_hash}-{str(timestamp)[-6:]}"
+        
+        print(f"   📊 Serial: {serial_number}")
         
         # Generate PDF fortune with guaranteed page fit and maximum legibility
         result = subprocess.run([
@@ -363,6 +374,8 @@ from reportlab.lib.units import mm
 from reportlab.lib import colors
 import qrcode
 import textwrap
+import hashlib
+from datetime import datetime
 
 # Create QR code
 qr = qrcode.QRCode(version=3, box_size=12, border=1)
@@ -371,9 +384,18 @@ qr.make(fit=True)
 qr_img = qr.make_image(fill_color="black", back_color="white")
 qr_img.save("/tmp/moon_qr.png")
 
+# Fortune details
+selected_fortune = """{selected_fortune}"""
+category_name = "{category_name}"  
+serial_number = "{serial_number}"
+timestamp = {timestamp}
+
+# Format timestamp for display
+formatted_time = datetime.fromtimestamp(timestamp/1000).strftime("%Y.%m.%d %H:%M")
+
 # Ultra-compact page sizing for maximum efficiency 
 page_width = 120 * mm  # Fixed thermal width
-fortune_text = """{selected_fortune}"""
+fortune_text = selected_fortune
 
 # Intelligent text wrapping - try different line lengths for best fit
 wrap_lengths = [50, 45, 40, 35, 30]  # Try longer lines first
@@ -414,11 +436,11 @@ header_text = "THE LAST FORTUNE TELLER"
 header_width = c.stringWidth(header_text, "Helvetica-Bold", header_font_size)
 c.drawString((page_width - header_width) / 2, page_height - 10 * mm, header_text)
 
-# Category
+# Timestamp instead of category
 c.setFont("Helvetica-Oblique", 4)
-category_text = "MOON DAY - {category_name}"
-category_width = c.stringWidth(category_text, "Helvetica-Oblique", 4)  
-c.drawString((page_width - category_width) / 2, page_height - 15 * mm, category_text)
+timestamp_text = formatted_time
+timestamp_width = c.stringWidth(timestamp_text, "Helvetica-Oblique", 4)  
+c.drawString((page_width - timestamp_width) / 2, page_height - 15 * mm, timestamp_text)
 
 # Tasteful layout with proper margins and spacing
 content_margin = 8 * mm   # 8mm content margin from border (5mm + 3mm internal)
@@ -476,9 +498,8 @@ c.drawImage("/tmp/moon_qr.png", qr_x, qr_y, width=qr_size, height=qr_size)
 
 # Serial number - centered at top
 c.setFont("Courier", 2.5)
-serial_text = "MOON_AUG25"
-serial_width = c.stringWidth(serial_text, "Courier", 2.5)
-c.drawString((page_width - serial_width) / 2, page_height - 7*mm, serial_text)
+serial_width = c.stringWidth(serial_number, "Courier", 2.5)
+c.drawString((page_width - serial_width) / 2, page_height - 7*mm, serial_number)
 
 c.save()
 '''
