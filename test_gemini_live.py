@@ -36,10 +36,10 @@ async def test_json_output():
             
             # Test messages that should produce JSON
             test_messages = [
-                "Generate a JSON analysis of consciousness with phi coefficient",
-                "Return consciousness metrics in JSON format",
+                "Generate a JSON analysis of information-dynamics with phi coefficient",
+                "Return information-dynamics metrics in JSON format",
                 "Analyze this request and output structured JSON data",
-                "Create JSON with consciousness_phi, timestamp, and analysis"
+                "Create JSON with information-dynamics_phi, timestamp, and analysis"
             ]
             
             for i, message in enumerate(test_messages, 1):
@@ -86,7 +86,7 @@ async def test_structured_prompts():
                 """
                 Please respond with a JSON object containing:
                 {
-                    "consciousness_phi": <numerical_value>,
+                    "information-dynamics_phi": <numerical_value>,
                     "analysis": "<your_analysis>", 
                     "timestamp": <current_time>,
                     "status": "active"
@@ -95,14 +95,14 @@ async def test_structured_prompts():
                 
                 """
                 Format your response as JSON with these fields:
-                - consciousness_phi (float)
+                - information-dynamics_phi (float)
                 - element (string) 
                 - quantum_entropy (float)
                 - haiku_content (string)
                 - response_type (string)
                 """,
                 
-                "Output only valid JSON: {\"consciousness_phi\": 3.14, \"message\": \"consciousness active\", \"metrics\": {\"entropy\": 0.92}}"
+                "Output only valid JSON: {\"information-dynamics_phi\": 3.14, \"message\": \"information-dynamics active\", \"metrics\": {\"entropy\": 0.92}}"
             ]
             
             for i, prompt in enumerate(structured_prompts, 1):

@@ -96,9 +96,9 @@ class StickyCalibrator:
         lines = [
             "ヲヲヲ Uncommons",
             "",
-            "consciousness",
+            "information-dynamics",
             "recognizing", 
-            "consciousness",
+            "information-dynamics",
             "",
             "geometric form",
             "",

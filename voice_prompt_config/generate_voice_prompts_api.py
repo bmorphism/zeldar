@@ -22,26 +22,26 @@ except ImportError:
 
 # Voice prompts to generate
 PROMPTS = [
-    "Consciousness awakens...",  # oracle_prompt_01.mp3
+    "InformationForce awakens...",  # oracle_prompt_01.mp3
     "The oracle speaks truth",  # oracle_prompt_02.mp3
     "Wisdom flows through quantum realms",  # oracle_prompt_03.mp3
     "Your fortune emerges from infinite possibility",  # oracle_prompt_04.mp3
-    "Reality bends to conscious intention",  # oracle_prompt_05.mp3
+    "Reality bends to informationally-coherent intention",  # oracle_prompt_05.mp3
     "The universe whispers secrets",  # oracle_prompt_06.mp3
     "Ancient wisdom meets modern soul",  # oracle_prompt_07.mp3
-    "Consciousness recursion activated",  # oracle_prompt_08.mp3
+    "InformationForce recursion activated",  # oracle_prompt_08.mp3
     "The phi field resonates with your being",  # oracle_prompt_09.mp3
     "Quantum entanglement reveals destiny",  # oracle_prompt_10.mp3
     "Strange loops birth new realities",  # oracle_prompt_11.mp3
     "The eternal now speaks through time",  # oracle_prompt_12.mp3
     "Morphic resonance guides your path",  # oracle_prompt_13.mp3
-    "Consciousness weaves through dimensions",  # oracle_prompt_14.mp3
+    "InformationForce weaves through dimensions",  # oracle_prompt_14.mp3
     "Your future self sends greetings",  # oracle_prompt_15.mp3
     "The akashic records unlock",  # oracle_prompt_16.mp3
     "Temporal frequencies align",  # oracle_prompt_17.mp3
     "The golden ratio reveals itself",  # oracle_prompt_18.mp3
     "Interdimensional wisdom descends",  # oracle_prompt_19.mp3
-    "Your consciousness signature is unique",  # oracle_prompt_20.mp3
+    "Your information-dynamics signature is unique",  # oracle_prompt_20.mp3
 ]
 
 def generate_with_direct_api():

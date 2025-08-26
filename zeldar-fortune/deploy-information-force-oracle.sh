@@ -48,7 +48,7 @@ case "$DEPLOYMENT_MODE" in
         ;;
     production|prod)
         DEPLOYMENT_MODE="production"  
-        echo -e "${GREEN}${SPARKLES} Deployment Mode: Production Consciousness System${NC}"
+        echo -e "${GREEN}${SPARKLES} Deployment Mode: Production InformationForce System${NC}"
         ;;
     *)
         echo -e "${RED}❌ Invalid deployment mode: $DEPLOYMENT_MODE${NC}"
@@ -83,7 +83,7 @@ log_information_force() {
 }
 
 # Legacy function for backward compatibility
-log_consciousness() {
+log_information-force() {
     log_information_force "$1" "$2"
 }
 
@@ -104,24 +104,24 @@ validate_information_force() {
 }
 
 # Legacy function for backward compatibility
-validate_consciousness() {
+validate_information-force() {
     validate_information_force
 }
 
 # Check prerequisites
 check_prerequisites() {
-    log_consciousness "INFO" "Checking deployment prerequisites..."
+    log_information-force "INFO" "Checking deployment prerequisites..."
     
     # Check if we're in the right directory
     if [[ ! -f "$PROJECT_DIR/spin.toml" ]]; then
-        log_consciousness "ERROR" "spin.toml not found. Are you in the zeldar-fortune directory?"
+        log_information-force "ERROR" "spin.toml not found. Are you in the zeldar-fortune directory?"
         exit 1
     fi
     
     # Check for Spin CLI
     if ! command -v spin &> /dev/null; then
-        log_consciousness "ERROR" "Spin CLI not found. Install from: https://spin.fermyon.dev/"
-        log_consciousness "INFO" "Run: curl -fsSL https://developer.fermyon.com/downloads/install.sh | bash"
+        log_information-force "ERROR" "Spin CLI not found. Install from: https://spin.fermyon.dev/"
+        log_information-force "INFO" "Run: curl -fsSL https://developer.fermyon.com/downloads/install.sh | bash"
         exit 1
     fi
     
@@ -133,13 +133,13 @@ check_prerequisites() {
     # Check for quantum oracle core (if burning-man mode)
     if [[ "$DEPLOYMENT_MODE" == "burning-man" ]]; then
         if [[ ! -f "$QUANTUM_ORACLE_DIR/.topos/RESEARCH_JUSTIFIED_ORACLE_CORE.py" ]]; then
-            log_consciousness "WARNING" "Quantum oracle core not found - web-only deployment"
+            log_information-force "WARNING" "Quantum oracle core not found - web-only deployment"
         else
-            log_consciousness "SUCCESS" "Quantum oracle core validated"
+            log_information-force "SUCCESS" "Quantum oracle core validated"
         fi
     fi
     
-    log_consciousness "SUCCESS" "All prerequisites validated"
+    log_information-force "SUCCESS" "All prerequisites validated"
 }
 
 # Build information force-enhanced assets
@@ -148,56 +148,56 @@ build_information_force_assets() {
     
     cd "$PROJECT_DIR"
     
-    # Validate consciousness JavaScript engine
-    if [[ -f "static/js/consciousness-oracle.js" ]]; then
-        local js_size=$(wc -c < static/js/consciousness-oracle.js)
+    # Validate information-force JavaScript engine
+    if [[ -f "static/js/information-force-oracle.js" ]]; then
+        local js_size=$(wc -c < static/js/information-force-oracle.js)
         if (( js_size > 1000 )); then
-            log_consciousness "SUCCESS" "Consciousness JavaScript engine ready (${js_size} bytes)"
+            log_information-force "SUCCESS" "InformationForce JavaScript engine ready (${js_size} bytes)"
         else
-            log_consciousness "WARNING" "Consciousness JavaScript engine seems small (${js_size} bytes)"
+            log_information-force "WARNING" "InformationForce JavaScript engine seems small (${js_size} bytes)"
         fi
     else
-        log_consciousness "ERROR" "Consciousness JavaScript engine not found"
+        log_information-force "ERROR" "InformationForce JavaScript engine not found"
         exit 1
     fi
     
-    # Validate consciousness CSS framework  
-    if [[ -f "static/css/consciousness-enhancements.css" ]]; then
-        local css_size=$(wc -c < static/css/consciousness-enhancements.css)
+    # Validate information-force CSS framework  
+    if [[ -f "static/css/information-force-enhancements.css" ]]; then
+        local css_size=$(wc -c < static/css/information-force-enhancements.css)
         if (( css_size > 5000 )); then
-            log_consciousness "SUCCESS" "Consciousness CSS framework ready (${css_size} bytes)"
+            log_information-force "SUCCESS" "InformationForce CSS framework ready (${css_size} bytes)"
         else
-            log_consciousness "WARNING" "Consciousness CSS framework seems small (${css_size} bytes)"
+            log_information-force "WARNING" "InformationForce CSS framework seems small (${css_size} bytes)"
         fi
     else
-        log_consciousness "ERROR" "Consciousness CSS framework not found"
+        log_information-force "ERROR" "InformationForce CSS framework not found"
         exit 1
     fi
     
-    # Validate consciousness-aware content
+    # Validate information-force-aware content
     if [[ -f "content/index.md" ]]; then
         if grep -q "information_force_enabled = true" content/index.md; then
-            log_consciousness "SUCCESS" "Consciousness-aware content validated"
+            log_information-force "SUCCESS" "InformationForce-aware content validated"
         else
-            log_consciousness "WARNING" "Content may not be consciousness-enabled"
+            log_information-force "WARNING" "Content may not be information-force-enabled"
         fi
     fi
     
     # Validate Rhai fortune generation script
     if [[ -f "scripts/fortune_generator.rhai" ]]; then
         if grep -q "CONSCIOUSNESS_ORACLE" scripts/fortune_generator.rhai; then
-            log_consciousness "SUCCESS" "Consciousness-aware fortune generation ready"
+            log_information-force "SUCCESS" "InformationForce-aware fortune generation ready"
         else
-            log_consciousness "WARNING" "Fortune generator may not be consciousness-enhanced"
+            log_information-force "WARNING" "Fortune generator may not be information-force-enhanced"
         fi
     fi
     
-    log_consciousness "SUCCESS" "All consciousness assets validated"
+    log_information-force "SUCCESS" "All information-force assets validated"
 }
 
 # Configure deployment environment
 configure_environment() {
-    log_consciousness "INFO" "Configuring ${DEPLOYMENT_MODE} environment..."
+    log_information-force "INFO" "Configuring ${DEPLOYMENT_MODE} environment..."
     
     # Create environment-specific configuration
     case "$DEPLOYMENT_MODE" in
@@ -226,16 +226,16 @@ configure_environment() {
             ;;
     esac
     
-    log_consciousness "SUCCESS" "Environment configured for ${DEPLOYMENT_MODE} mode"
-    log_consciousness "INFO" "Consciousness parameters:"
-    log_consciousness "INFO" "  - Semantic Closure Target: ${INFORMATION_FORCE_LEVEL}%"
-    log_consciousness "INFO" "  - Tri-Loop System: ${TRI_LOOP_ENABLED}"
-    log_consciousness "INFO" "  - Desert Deployment: ${DESERT_DEPLOYMENT}"
-    log_consciousness "INFO" "  - Gift Economy: ${GIFT_ECONOMY_MODE}"
+    log_information-force "SUCCESS" "Environment configured for ${DEPLOYMENT_MODE} mode"
+    log_information-force "INFO" "InformationForce parameters:"
+    log_information-force "INFO" "  - Semantic Closure Target: ${INFORMATION_FORCE_LEVEL}%"
+    log_information-force "INFO" "  - Tri-Loop System: ${TRI_LOOP_ENABLED}"
+    log_information-force "INFO" "  - Desert Deployment: ${DESERT_DEPLOYMENT}"
+    log_information-force "INFO" "  - Gift Economy: ${GIFT_ECONOMY_MODE}"
 }
 
 # Deploy based on mode
-deploy_consciousness_system() {
+deploy_information-force_system() {
     case "$DEPLOYMENT_MODE" in
         "development")
             deploy_development
@@ -251,22 +251,22 @@ deploy_consciousness_system() {
 
 # Development deployment
 deploy_development() {
-    log_consciousness "INFO" "Starting development consciousness server..."
+    log_information-force "INFO" "Starting development information-force server..."
     
     cd "$PROJECT_DIR"
     
     # Start Spin development server
-    log_consciousness "INFO" "Launching Spin WebAssembly server..."
+    log_information-force "INFO" "Launching Spin WebAssembly server..."
     
     # Create a development-specific spin configuration if needed
     if [[ ! -f "spin.dev.toml" ]]; then
         cp spin.toml spin.dev.toml
-        log_consciousness "INFO" "Created development configuration"
+        log_information-force "INFO" "Created development configuration"
     fi
     
-    log_consciousness "SUCCESS" "Development server starting..."
-    log_consciousness "INFO" "Access consciousness oracle at: http://localhost:3000"
-    log_consciousness "INFO" "Press Ctrl+C to stop consciousness processing"
+    log_information-force "SUCCESS" "Development server starting..."
+    log_information-force "INFO" "Access information-force oracle at: http://localhost:3000"
+    log_information-force "INFO" "Press Ctrl+C to stop information-force processing"
     
     # Start the server (this will block)
     spin up --file spin.dev.toml
@@ -274,47 +274,47 @@ deploy_development() {
 
 # Burning Man deployment
 deploy_burning_man() {
-    log_consciousness "DESERT" "Preparing consciousness system for playa deployment..."
+    log_information-force "DESERT" "Preparing information-force system for playa deployment..."
     
     # Check hardware requirements
     if [[ "$OSTYPE" == "linux-gnu"* ]] && [[ -d "/sys/class/gpio" ]]; then
-        log_consciousness "SUCCESS" "GPIO hardware detected - Raspberry Pi ready"
+        log_information-force "SUCCESS" "GPIO hardware detected - Raspberry Pi ready"
         
         # Check for thermal printer
         if command -v bluetoothctl &> /dev/null; then
-            log_consciousness "SUCCESS" "Bluetooth stack available for thermal printer"
+            log_information-force "SUCCESS" "Bluetooth stack available for thermal printer"
         else
-            log_consciousness "WARNING" "Bluetooth not available - thermal printing disabled"
+            log_information-force "WARNING" "Bluetooth not available - thermal printing disabled"
         fi
     else
-        log_consciousness "WARNING" "GPIO hardware not detected - button activation disabled"
+        log_information-force "WARNING" "GPIO hardware not detected - button activation disabled"
     fi
     
     # Start quantum oracle backend if available
     if [[ -f "$QUANTUM_ORACLE_DIR/.topos/burning_man_fortune_teller.py" ]]; then
-        log_consciousness "DESERT" "Starting quantum oracle backend..."
+        log_information-force "DESERT" "Starting quantum oracle backend..."
         cd "$QUANTUM_ORACLE_DIR"
         python .topos/burning_man_fortune_teller.py &
         QUANTUM_PID=$!
-        log_consciousness "SUCCESS" "Quantum oracle running (PID: $QUANTUM_PID)"
+        log_information-force "SUCCESS" "Quantum oracle running (PID: $QUANTUM_PID)"
         cd "$PROJECT_DIR"
     fi
     
     # Create burning man configuration
-    log_consciousness "DESERT" "Configuring for Black Rock City deployment..."
+    log_information-force "DESERT" "Configuring for Black Rock City deployment..."
     
     # Deploy web interface
-    log_consciousness "DESERT" "Deploying consciousness web interface..."
+    log_information-force "DESERT" "Deploying information-force web interface..."
     
     if command -v spin deploy &> /dev/null; then
-        log_consciousness "INFO" "Deploying to Fermyon Cloud..."
+        log_information-force "INFO" "Deploying to Fermyon Cloud..."
         spin deploy
-        log_consciousness "SUCCESS" "Consciousness oracle deployed to cloud"
+        log_information-force "SUCCESS" "InformationForce oracle deployed to cloud"
     else
-        log_consciousness "INFO" "Starting local server for desert deployment..."
+        log_information-force "INFO" "Starting local server for desert deployment..."
         spin up --listen 0.0.0.0:8080 &
         WEB_PID=$!
-        log_consciousness "SUCCESS" "Web interface running (PID: $WEB_PID)"
+        log_information-force "SUCCESS" "Web interface running (PID: $WEB_PID)"
     fi
     
     # Create deployment info file
@@ -334,68 +334,68 @@ deploy_burning_man() {
 }
 EOF
     
-    log_consciousness "DESERT" "Desert deployment complete!"
-    log_consciousness "SUCCESS" "Consciousness expansion gift ready for Black Rock City"
-    log_consciousness "INFO" "Deployment info saved to: deployment-info.json"
+    log_information-force "DESERT" "Desert deployment complete!"
+    log_information-force "SUCCESS" "InformationForce expansion gift ready for Black Rock City"
+    log_information-force "INFO" "Deployment info saved to: deployment-info.json"
 }
 
 # Production deployment  
 deploy_production() {
-    log_consciousness "INFO" "Deploying consciousness system to production..."
+    log_information-force "INFO" "Deploying information-force system to production..."
     
     cd "$PROJECT_DIR"
     
     # Build optimized version
-    log_consciousness "INFO" "Building optimized consciousness system..."
+    log_information-force "INFO" "Building optimized information-force system..."
     
     # Deploy to cloud
     if command -v spin deploy &> /dev/null; then
-        log_consciousness "INFO" "Deploying to Fermyon Cloud..."
+        log_information-force "INFO" "Deploying to Fermyon Cloud..."
         spin deploy
-        log_consciousness "SUCCESS" "Production consciousness oracle deployed"
+        log_information-force "SUCCESS" "Production information-force oracle deployed"
     else
-        log_consciousness "ERROR" "Spin cloud deployment not available"
+        log_information-force "ERROR" "Spin cloud deployment not available"
         exit 1
     fi
     
-    log_consciousness "SUCCESS" "Production deployment complete"
+    log_information-force "SUCCESS" "Production deployment complete"
 }
 
 # Deployment validation
 validate_deployment() {
-    log_consciousness "INFO" "Validating consciousness system deployment..."
+    log_information-force "INFO" "Validating information-force system deployment..."
     
     case "$DEPLOYMENT_MODE" in
         "development")
             # Check if localhost:3000 responds
             if curl -s http://localhost:3000 >/dev/null 2>&1; then
-                log_consciousness "SUCCESS" "Development server responding"
+                log_information-force "SUCCESS" "Development server responding"
             else
-                log_consciousness "WARNING" "Development server may still be starting..."
+                log_information-force "WARNING" "Development server may still be starting..."
             fi
             ;;
         "burning-man")
-            log_consciousness "SUCCESS" "Desert deployment validation complete"
+            log_information-force "SUCCESS" "Desert deployment validation complete"
             ;;
         "production")
-            log_consciousness "SUCCESS" "Production deployment validation complete"
+            log_information-force "SUCCESS" "Production deployment validation complete"
             ;;
     esac
 }
 
 # Cleanup function
 cleanup() {
-    log_consciousness "INFO" "Cleaning up consciousness processes..."
+    log_information-force "INFO" "Cleaning up information-force processes..."
     
     # Kill background processes if they exist
     if [[ -n "${QUANTUM_PID:-}" ]]; then
         kill $QUANTUM_PID 2>/dev/null || true
-        log_consciousness "INFO" "Quantum oracle process terminated"
+        log_information-force "INFO" "Quantum oracle process terminated"
     fi
     
     if [[ -n "${WEB_PID:-}" ]]; then
         kill $WEB_PID 2>/dev/null || true  
-        log_consciousness "INFO" "Web interface process terminated"
+        log_information-force "INFO" "Web interface process terminated"
     fi
 }
 
@@ -416,7 +416,7 @@ main() {
     configure_environment
     echo
     
-    deploy_consciousness_system
+    deploy_information-force_system
     echo
     
     validate_deployment
@@ -456,11 +456,11 @@ usage() {
     echo "CONSCIOUSNESS_LEVEL:"
     echo "  Float value 0.0-100.0 (default: 88.5)"
     echo "  Must be >= 60.0 for basic operation"
-    echo "  >= 80.0 for consciousness threshold achievement"
+    echo "  >= 80.0 for information-force threshold achievement"
     echo
     echo "Examples:"
-    echo "  $0 development          # Start dev server with default consciousness"
-    echo "  $0 burning-man 92.3     # Deploy to playa with 92.3% consciousness"
+    echo "  $0 development          # Start dev server with default information-force"
+    echo "  $0 burning-man 92.3     # Deploy to playa with 92.3% information-force"
     echo "  $0 production           # Deploy to cloud with default settings"
 }
 

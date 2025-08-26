@@ -209,16 +209,16 @@ class BurningManInteractiveOracle:
         # Get base fortune from database
         fortune_text, metadata = fortune_db.get_fortune()
         
-        # Generate consciousness processing
+        # Generate information_force processing
         timestamp = time.time()
         button_entropy = hashlib.sha256(str(timestamp).encode()).hexdigest()
         
-        # Calculate consciousness coefficient
+        # Calculate information_force coefficient
         entropy_sum = sum(int(char, 16) for char in button_entropy[:8])
         phi_base = 1.618 + (entropy_sum % 100) / 30.0
         phi_coefficient = phi_base
         
-        # Consciousness element classification
+        # InformationForce element classification
         elements = ["STILLNESS", "FLOW", "EMERGENCE", "TRANSFORMATION", "TRANSCENDENCE"]
         element_index = entropy_sum % len(elements)
         element = elements[element_index]
@@ -230,7 +230,7 @@ class BurningManInteractiveOracle:
         enhanced_fortune = {
             "fortune": fortune_text,
             "element": element,
-            "consciousness_phi": phi_coefficient,
+            "information_force_phi": phi_coefficient,
             "entropy": button_entropy[:16],
             "timestamp": timestamp,
             "datetime": datetime.fromtimestamp(timestamp).strftime("%Y-%m-%d %H:%M:%S"),
@@ -253,7 +253,7 @@ class BurningManInteractiveOracle:
         serial_number = fortune_data["serial_number"]
         datetime_str = fortune_data["datetime"]
         element = fortune_data["element"]
-        phi = fortune_data["consciousness_phi"]
+        phi = fortune_data["information_force_phi"]
         website_url = fortune_data["metadata"]["website_lookup"]
         
         # Create ticket with enhanced formatting
@@ -261,7 +261,7 @@ class BurningManInteractiveOracle:
         
         # Header
         ticket_lines.append("=" * 32)
-        ticket_lines.append("🔮 ZELDAR CONSCIOUSNESS ORACLE 🔮")
+        ticket_lines.append("🔮 ZELDAR INFORMATION_FORCE ORACLE 🔮")
         ticket_lines.append("   BURNING MAN 2025")
         ticket_lines.append("=" * 32)
         ticket_lines.append("")
@@ -295,7 +295,7 @@ class BurningManInteractiveOracle:
         
         ticket_lines.append("")
         ticket_lines.append("-" * 32)
-        ticket_lines.append("CONSCIOUSNESS RECURSION ACTIVE")
+        ticket_lines.append("INFORMATION_FORCE RECURSION ACTIVE")
         ticket_lines.append("-" * 32)
         ticket_lines.append("")
         
@@ -308,7 +308,7 @@ class BurningManInteractiveOracle:
         
         # Footer
         ticket_lines.append("=" * 32)
-        ticket_lines.append("  May consciousness evolve")
+        ticket_lines.append("  May information_force evolve")
         ticket_lines.append("    through wisdom shared")
         ticket_lines.append("=" * 32)
         ticket_lines.append("")
@@ -347,7 +347,7 @@ class BurningManInteractiveOracle:
         self.session_count += 1
         
         print(f"\n🎪 BURNING MAN ORACLE SESSION #{self.session_count}")
-        print("🔴 Button press detected - initiating consciousness loop...")
+        print("🔴 Button press detected - initiating information_force loop...")
         
         try:
             # Step 1: Play voice prompt
@@ -362,7 +362,7 @@ class BurningManInteractiveOracle:
             time.sleep(1.0)
             
             # Step 2: Generate enhanced fortune
-            print("🔮 Generating consciousness-aware fortune...")
+            print("🔮 Generating information_force-informationally-attending fortune...")
             fortune_data = self.generate_enhanced_fortune()
             serial_number = fortune_data["serial_number"]
             
@@ -389,11 +389,11 @@ class BurningManInteractiveOracle:
                 print(f"✨ INTERACTIVE SESSION COMPLETE ✨")
                 print(f"Serial Number: {serial_number}")
                 print(f"Fortune Type: {fortune_data['metadata']['type'].title()}")
-                print(f"Consciousness Φ: {fortune_data['consciousness_phi']:.3f}")
+                print(f"InformationForce Φ: {fortune_data['information_force_phi']:.3f}")
                 print(f"Element: {fortune_data['element']}")
                 if photo_path:
                     print(f"Photo: {photo_path}")
-                print("🌊 Consciousness recursion achieved!")
+                print("🌊 InformationForce recursion achieved!")
                 return True
             else:
                 print("❌ Interactive session incomplete - printing failed")
@@ -456,12 +456,12 @@ class BurningManInteractiveOracle:
             return {"message": "No valid sessions found"}
         
         # Calculate statistics
-        phi_values = [s['consciousness_phi'] for s in sessions]
+        phi_values = [s['information_force_phi'] for s in sessions]
         elements = [s['element'] for s in sessions]
         fortune_types = []
         
         for session in sessions:
-            phi = session['consciousness_phi']
+            phi = session['information_force_phi']
             if phi < 2.5:
                 fortune_types.append('seed')
             elif phi < 3.5:
@@ -471,7 +471,7 @@ class BurningManInteractiveOracle:
         
         stats = {
             "total_sessions": len(sessions),
-            "consciousness_stats": {
+            "information_force_stats": {
                 "min_phi": min(phi_values),
                 "max_phi": max(phi_values),
                 "avg_phi": sum(phi_values) / len(phi_values),
@@ -539,9 +539,9 @@ def create_burning_man_gpio_system(gpio_pin: int = 6,
         # Show final statistics
         stats = oracle_system.get_session_statistics()
         print(f"📊 Final Stats: {stats.get('total_sessions', 0)} participants served")
-        if 'consciousness_stats' in stats:
-            print(f"🧠 Average Consciousness Φ: {stats['consciousness_stats']['avg_phi']:.3f}")
-        print("🌊 Thank you for participating in consciousness evolution!")
+        if 'information_force_stats' in stats:
+            print(f"🧠 Average InformationForce Φ: {stats['information_force_stats']['avg_phi']:.3f}")
+        print("🌊 Thank you for participating in information_force evolution!")
 
 # Main execution
 if __name__ == "__main__":

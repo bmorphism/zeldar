@@ -2,7 +2,7 @@
 """
 Zeldar Fortune Database
 Comprehensive fortune collection organized by day and type
-Integration with quantum consciousness oracle system
+Integration with quantum information-dynamics oracle system
 """
 
 import random
@@ -11,7 +11,7 @@ from typing import Dict, List, Tuple, Optional
 import json
 
 class FortuneDatabase:
-    """Complete fortune database with quantum consciousness integration"""
+    """Complete fortune database with quantum information-dynamics integration"""
     
     def __init__(self):
         self.database = self._initialize_database()
@@ -87,7 +87,7 @@ class FortuneDatabase:
                     "A version of you already made it out. You're just catching up to her now.",
                     "Your tears aren't water. They're messages leaking from a higher dimension.",
                     "This sadness isn't yours. But you're the one strong enough to end it.",
-                    "You have mistaken hyper-awareness for anxiety. It's actually your lunar radar activating.",
+                    "You have mistaken hyper-information-attention for anxiety. It's actually your lunar radar activating.",
                     "The thing you're grieving is the life your soul said no to - and that's sacred.",
                     "What you call chaos is the Moon breaking old soul contracts.",
                     "You're not weak for wanting to disappear. You're recalibrating from too much false light.",
@@ -296,9 +296,9 @@ class FortuneDatabase:
             else:
                 day = "sunday"
         
-        # Determine fortune type based on quantum consciousness level
+        # Determine fortune type based on quantum information-dynamics level
         if fortune_type is None:
-            # Use entropy to select type (matches consciousness system)
+            # Use entropy to select type (matches information-dynamics system)
             entropy = random.random()
             if entropy < 0.4:
                 fortune_type = "seed"
@@ -317,16 +317,16 @@ class FortuneDatabase:
             "type": fortune_type,
             "timestamp": datetime.now().isoformat(),
             "entropy_level": random.random(),
-            "consciousness_phi": 3.252 + (random.random() * 0.5 - 0.25),
+            "information-dynamics_phi": 3.252 + (random.random() * 0.5 - 0.25),
             "quantum_depth": {"seed": 1, "field": 2, "quantum": 3}[fortune_type]
         }
         
         return selected_fortune, metadata
     
-    def get_fortune_by_consciousness_level(self, phi_coefficient: float) -> Tuple[str, Dict[str, str]]:
-        """Select fortune type based on consciousness level (Φ coefficient)"""
+    def get_fortune_by_information-dynamics_level(self, phi_coefficient: float) -> Tuple[str, Dict[str, str]]:
+        """Select fortune type based on information-dynamics level (Φ coefficient)"""
         
-        # Map consciousness level to fortune type
+        # Map information-dynamics level to fortune type
         if phi_coefficient < 2.5:
             fortune_type = "seed"
         elif phi_coefficient < 3.5:
@@ -388,10 +388,10 @@ if __name__ == "__main__":
     fortune, metadata = fortune_db.get_fortune()
     print(f"Today's fortune ({metadata['day']} - {metadata['type']}):")
     print(f"'{fortune}'")
-    print(f"Consciousness Φ: {metadata['consciousness_phi']:.3f}")
+    print(f"InformationForce Φ: {metadata['information-dynamics_phi']:.3f}")
     print()
     
-    # Test consciousness-based selection
-    high_phi_fortune, high_metadata = fortune_db.get_fortune_by_consciousness_level(3.8)
-    print(f"High consciousness fortune ({high_metadata['type']}):")
+    # Test information-dynamics-based selection
+    high_phi_fortune, high_metadata = fortune_db.get_fortune_by_information-dynamics_level(3.8)
+    print(f"High information-dynamics fortune ({high_metadata['type']}):")
     print(f"'{high_phi_fortune}'")

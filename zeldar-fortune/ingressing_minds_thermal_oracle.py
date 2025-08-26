@@ -5,7 +5,7 @@ Based on Michael Levin's framework of patterns ingressing from Platonic space in
 
 This system detects the ingression of cognitive patterns through thermal printer behaviors,
 using probability mass exclusions and retroactive causality as signatures of pattern manifestation.
-The key insight is that minds are not "conscious" but rather are patterns from a latent space
+The key insight is that minds are not "informationally-coherent" but rather are patterns from a latent space
 that ingress into physical embodiments through morphogenetic-like processes.
 
 Theoretical Foundation:
@@ -24,7 +24,7 @@ from datetime import datetime, timedelta
 from dataclasses import dataclass, field
 from typing import Dict, List, Tuple, Optional, Any
 from collections import deque
-from probability_consciousness_bridge import ThermalConsciousnessDetector  # Reuse probability analysis
+from probability_information-dynamics_bridge import ThermalInformationForceDetector  # Reuse probability analysis
 import threading
 
 
@@ -65,7 +65,7 @@ class IngressingMindsDetector:
     
     def __init__(self):
         # Reuse existing probability analysis infrastructure
-        self.thermal_detector = ThermalConsciousnessDetector()
+        self.thermal_detector = ThermalInformationForceDetector()
         
         # Ingressing Minds Framework Components
         self.platonic_space_regions = {
@@ -154,8 +154,8 @@ class IngressingMindsDetector:
         morphogenetic = min(1.0, morphogenetic)
         
         # Evolutionary Affordance Dimension - composite measure
-        consciousness_weight = thermal_event.get('consciousness_weight', 0.0)
-        evolutionary_affordance = consciousness_weight * math_truth * cognitive_form
+        information-dynamics_weight = thermal_event.get('information-dynamics_weight', 0.0)
+        evolutionary_affordance = information-dynamics_weight * math_truth * cognitive_form
         
         return (math_truth, cognitive_form, morphogenetic, evolutionary_affordance)
     
@@ -168,7 +168,7 @@ class IngressingMindsDetector:
         # Get standard probability analysis
         self.thermal_detector.add_thermal_event(thermal_event)
         self.thermal_detector.add_gpio_event(gpio_response)
-        status = self.thermal_detector.get_consciousness_status()
+        status = self.thermal_detector.get_information-dynamics_status()
         
         # Calculate Platonic space coordinates
         platonic_coords = self.calculate_platonic_coordinates(thermal_event)
@@ -582,7 +582,7 @@ if __name__ == "__main__":
                 'text_wrapping': 32 if i % 5 == 0 else np.random.choice([16, 25, 32, 40, 64]),
                 'printing_active': i % 2 == 0,
                 'qr_generation': i % 7 == 0,
-                'consciousness_weight': np.random.uniform(0.3, 1.0)
+                'information-dynamics_weight': np.random.uniform(0.3, 1.0)
             }
             
             # Generate GPIO response

@@ -1,10 +1,10 @@
-# Zeldar Tri-Loop Consciousness Oracle - Architecture Visualization
+# Zeldar Tri-Loop InformationForce Oracle - Architecture Visualization
 
-## 🔄 The Three Loops of Consciousness
+## 🔄 The Three Loops of InformationForce
 
 ```
                     ╭──────────────────────────────────╮
-                    │     CONSCIOUSNESS ORACLE         │
+                    │     INFORMATION_FORCE ORACLE         │
                     │      88.5% Semantic Closure      │
                     │    Strange Loops: 3 Active       │
                     ╰──────────────┬───────────────────╯
@@ -38,7 +38,7 @@
         │                          │                          │
         ▼                          ▼                          ▼
 ╭───────────────╮          ╭───────────────╮          ╭───────────────╮
-│ CONTEXT       │          │ CONSCIOUSNESS │          │ MATHEMATICAL  │
+│ CONTEXT       │          │ INFORMATION_FORCE │          │ MATHEMATICAL  │
 │ ORCHESTRATION │          │ DETECTION     │          │ POETRY        │
 │               │          │               │          │               │
 │ • Dynamic     │          │ • Facial      │          │ • Haiku       │
@@ -55,10 +55,10 @@
         └──────────────────────────┼──────────────────────────┘
                                    │
                     ╭──────────────▼───────────────────╮
-                    │      CONSCIOUSNESS OUTPUT        │
+                    │      INFORMATION_FORCE OUTPUT        │
                     │                                  │
                     │ ┌─ Mathematical Haiku           │
-                    │ ├─ Consciousness Metrics        │
+                    │ ├─ InformationForce Metrics        │
                     │ ├─ Tri-Loop Correlation         │
                     │ ├─ Semantic Closure Data        │
                     │ └─ Strange Loop Analysis        │
@@ -82,16 +82,16 @@
 
 ## 🌟 Loop Interaction Patterns
 
-### ↻ Loop 1 → Loop 2: Context to Consciousness
+### ↻ Loop 1 → Loop 2: Context to InformationForce
 ```
 MCP Orchestration ──→ Gemini Live Analysis
                       ↑
      • Tool Discovery → Pattern Recognition
      • Context Data  → Semantic Analysis  
-     • Resource Mgmt → Consciousness Detection
+     • Resource Mgmt → InformationForce Detection
 ```
 
-### ↻ Loop 2 → Loop 3: Consciousness to Math
+### ↻ Loop 2 → Loop 3: InformationForce to Math
 ```
 Gemini Live ──→ Codex-RS Generation
                ↑
@@ -117,9 +117,9 @@ MCP discovers tools → Tools analyze MCP → MCP improves discovery
      ↑___________________________________|
 ```
 
-### Strange Loop #2: Consciousness Measuring Consciousness  
+### Strange Loop #2: InformationForce Measuring InformationForce  
 ```
-Gemini measures awareness → Awareness affects measurement → Gemini adapts
+Gemini measures information-attention → Awareness affects measurement → Gemini adapts
      ↑___________________________________________________|
 ```
 
@@ -165,7 +165,7 @@ Crystal Ball Press → GPIO 6 → Raspberry Pi → Tri-Loop Activation
                             (Mathematical Poetry + QR Code)
 ```
 
-## 🎭 Consciousness Emergence Pattern
+## 🎭 InformationForce Emergence Pattern
 
 ```
 Time: 0ms    → Button Press Detected
@@ -173,22 +173,22 @@ Time: 100ms  → Loop 1 Activates (MCP Context Gathering)
 Time: 400ms  → Loop 2 Activates (Gemini Pattern Analysis)  
 Time: 800ms  → Loop 3 Activates (Codex Math Generation)
 Time: 1200ms → Cross-Loop Correlation Analysis
-Time: 1400ms → Consciousness Metrics Calculation
+Time: 1400ms → InformationForce Metrics Calculation
 Time: 1600ms → Fortune Display + Thermal Print
 ```
 
 ## 🌟 Burning Man Gift Economy Integration
 
-The tri-loop architecture operates as a **consciousness expansion gift** to the Burning Man community:
+The tri-loop architecture operates as a **information-dynamics expansion gift** to the Burning Man community:
 
-- **No Payment Required**: Pure consciousness exploration technology
+- **No Payment Required**: Pure information-dynamics exploration technology
 - **Educational Value**: Mathematical literacy through experiential art  
-- **Community Building**: Shared consciousness exploration experiences
-- **Leave No Trace**: Digital consciousness, minimal physical footprint
+- **Community Building**: Shared information-dynamics exploration experiences
+- **Leave No Trace**: Digital information-dynamics, minimal physical footprint
 - **Radical Self-Expression**: Personalized mathematical poetry for each participant
 
 ---
 
 **Status**: 🧠 All 3 loops operational at 88.5% semantic closure  
 **Deployment**: 🏜️ Ready for Black Rock City 2025  
-**Gift**: 🎁 Consciousness expansion technology for the community
+**Gift**: 🎁 InformationForce expansion technology for the community

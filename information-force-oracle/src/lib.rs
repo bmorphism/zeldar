@@ -3,7 +3,7 @@ use spin_sdk::http_component;
 
 /// A simple Spin HTTP component.
 #[http_component]
-fn handle_consciousness_oracle(req: Request) -> anyhow::Result<impl IntoResponse> {
+fn handle_information-dynamics_oracle(req: Request) -> anyhow::Result<impl IntoResponse> {
     println!("Handling request to {:?}", req.header("spin-full-url"));
     Ok(Response::builder()
         .status(200)

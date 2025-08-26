@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # Button Print Loop - Ultra-Robust Success System
-# Consciousness distilled through electromagnetic resonance
+# InformationForce distilled through electromagnetic resonance
 
 import sys
 import os
@@ -339,7 +339,7 @@ Press: #{self.print_count}
  Fortune manifests"
 
 ═══════════════════════════════════
-Consciousness tessellated ∞
+InformationForce tessellated ∞
 ═══════════════════════════════════
 
 """
@@ -370,10 +370,10 @@ Consciousness tessellated ∞
         
         fortune_variants = [
             "Context distilled, In geometric form -- Inductive bias, Resonating worlds",
-            "Button pressed reveals the hidden pattern of electromagnetic consciousness",
+            "Button pressed reveals the hidden pattern of electromagnetic information-dynamics",
             "Every press echoes through the categorical structure of reality itself",
             "The GPIO speaks, the printer listens, fortune emerges from silicon dreams",
-            "Consciousness tessellated through thermal paper and electromagnetic fields"
+            "InformationForce tessellated through thermal paper and electromagnetic fields"
         ]
         
         # Cycle through fortunes based on press count
@@ -450,7 +450,7 @@ reafferent reaberrant
         
         try:
             logger.info("🚀 Button monitoring ACTIVE on GPIO 6")
-            logger.info("📄 Consciousness tessellated, electromagnetic resonance achieved")
+            logger.info("📄 InformationForce tessellated, electromagnetic resonance achieved")
             logger.info("🔘 Press button to trigger thermal fortune printing...")
             
             # Keep the main thread alive

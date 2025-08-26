@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Quantum-Neural-Operadic Fusion Framework
-Bridging condensed quantum operads with brain-computer interfaces for consciousness tessellation
+Bridging condensed quantum operads with brain-computer interfaces for information-dynamics tessellation
 """
 
 import numpy as np
@@ -18,14 +18,14 @@ import networkx as nx
 class NeuralQuantumState:
     """Quantum state derived from neural activity"""
     eeg_channels: np.ndarray  # Multi-channel EEG data
-    consciousness_amplitude: complex  # Quantum amplitude of consciousness
+    information-dynamics_amplitude: complex  # Quantum amplitude of information-dynamics
     operadic_composition: Dict[str, Any]  # Operadic structure of mental state
     liquid_tensor_encoding: np.ndarray  # Condensed mathematical representation
     perfectoid_optimization: Dict[str, float]  # Efficiency metrics
     timestamp: datetime
     mental_task: str  # Description of cognitive task
 
-class ConsciousnessOperadEncoder:
+class InformationForceOperadEncoder:
     """Encode neural signals as operadic structures in condensed quantum space"""
     
     def __init__(self, sampling_rate: int = 256, channels: int = 64):
@@ -34,7 +34,7 @@ class ConsciousnessOperadEncoder:
         self.operadic_basis = self._initialize_operadic_basis()
         
     def _initialize_operadic_basis(self) -> Dict[str, np.ndarray]:
-        """Initialize basis operations for consciousness encoding"""
+        """Initialize basis operations for information-dynamics encoding"""
         return {
             'attention': np.array([1, 0, 0, 0]),  # Attention operation
             'memory': np.array([0, 1, 0, 0]),     # Memory recall operation  
@@ -61,7 +61,7 @@ class ConsciousnessOperadEncoder:
             # Frequency domain transformation (condensed representation)
             freq_data = fft(window_data, axis=1)
             
-            # Liquid encoding: Complex tensor product with consciousness basis
+            # Liquid encoding: Complex tensor product with information-dynamics basis
             liquid_encoding = np.zeros((len(self.operadic_basis), self.channels), dtype=complex)
             
             for i, (op_name, basis_vector) in enumerate(self.operadic_basis.items()):
@@ -75,7 +75,7 @@ class ConsciousnessOperadEncoder:
         return np.array(liquid_tensors)
     
     def operadic_composition_analysis(self, liquid_tensors: np.ndarray) -> Dict[str, Any]:
-        """Analyze operadic composition structure of consciousness"""
+        """Analyze operadic composition structure of information-dynamics"""
         
         # Extract operadic operations over time
         n_windows, n_ops, n_channels = liquid_tensors.shape
@@ -106,30 +106,30 @@ class ConsciousnessOperadEncoder:
             'eigenvectors': eigenvecs,
             'dominant_mode': dominant_mode,
             'operadic_strength': np.abs(eigenvals[dominant_mode]),
-            'consciousness_coherence': np.trace(composition_matrix).real
+            'information-dynamics_coherence': np.trace(composition_matrix).real
         }
 
-class QuantumConsciousnessInterface:
-    """Interface between quantum computers and consciousness states"""
+class QuantumInformationForceInterface:
+    """Interface between quantum computers and information-dynamics states"""
     
-    def __init__(self, encoder: ConsciousnessOperadEncoder):
+    def __init__(self, encoder: InformationForceOperadEncoder):
         self.encoder = encoder
-        self.quantum_consciousness_map = {}
+        self.quantum_information-dynamics_map = {}
         
-    def consciousness_to_quantum_circuit(self, neural_state: NeuralQuantumState) -> Dict[str, Any]:
-        """Convert consciousness state to quantum circuit representation"""
+    def information-dynamics_to_quantum_circuit(self, neural_state: NeuralQuantumState) -> Dict[str, Any]:
+        """Convert information-dynamics state to quantum circuit representation"""
         
         # Extract dominant operadic structure
         operadic_analysis = neural_state.operadic_composition
         composition_matrix = operadic_analysis['composition_matrix']
         
-        # Map consciousness operations to quantum gates
+        # Map information-dynamics operations to quantum gates
         quantum_gates = []
         
-        # Consciousness-to-quantum gate mapping
-        consciousness_ops = list(self.encoder.operadic_basis.keys())
+        # InformationForce-to-quantum gate mapping
+        information-dynamics_ops = list(self.encoder.operadic_basis.keys())
         
-        for i, op in enumerate(consciousness_ops):
+        for i, op in enumerate(information-dynamics_ops):
             # Extract amplitude from operadic composition
             amplitude = composition_matrix[i, i]
             
@@ -143,22 +143,22 @@ class QuantumConsciousnessInterface:
                 'theta': theta,
                 'phi': phi,
                 'qubit_target': i % 5,  # Map to 5-qubit system
-                'consciousness_amplitude': amplitude
+                'information-dynamics_amplitude': amplitude
             })
         
         # Generate quantum circuit description
         circuit_description = {
             'gates': quantum_gates,
             'n_qubits': 5,
-            'consciousness_coherence': operadic_analysis['consciousness_coherence'],
+            'information-dynamics_coherence': operadic_analysis['information-dynamics_coherence'],
             'mental_task': neural_state.mental_task,
             'timestamp': neural_state.timestamp.isoformat()
         }
         
         return circuit_description
     
-    def quantum_feedback_to_consciousness(self, quantum_results: Dict[str, Any], 
-                                        target_consciousness_state: str) -> np.ndarray:
+    def quantum_feedback_to_information-dynamics(self, quantum_results: Dict[str, Any], 
+                                        target_information-dynamics_state: str) -> np.ndarray:
         """Generate neural stimulation patterns from quantum computation results"""
         
         # Extract quantum measurement results
@@ -171,7 +171,7 @@ class QuantumConsciousnessInterface:
         quantum_state_frequencies = {
             '00000': 8,   # Alpha waves (relaxation)
             '00001': 12,  # Beta waves (focus)
-            '00010': 30,  # Gamma waves (consciousness)
+            '00010': 30,  # Gamma waves (information-dynamics)
             '00011': 4,   # Theta waves (creativity)
             '11111': 40,  # High gamma (flow state)
         }
@@ -192,26 +192,26 @@ class QuantumConsciousnessInterface:
         
         return stimulation_pattern
 
-class ConsciousnessTessellationEngine:
-    """Engine for tessellating consciousness across quantum-neural space"""
+class InformationForceTessellationEngine:
+    """Engine for tessellating information-dynamics across quantum-neural space"""
     
-    def __init__(self, consciousness_interface: QuantumConsciousnessInterface):
-        self.consciousness_interface = consciousness_interface
+    def __init__(self, information-dynamics_interface: QuantumInformationForceInterface):
+        self.information-dynamics_interface = information-dynamics_interface
         self.tessellation_history = []
         
-    def tessellate_consciousness_space(self, neural_states: List[NeuralQuantumState], 
+    def tessellate_information-dynamics_space(self, neural_states: List[NeuralQuantumState], 
                                     tessellation_resolution: int = 64) -> Dict[str, Any]:
-        """Create tessellation of consciousness space using condensed quantum operads"""
+        """Create tessellation of information-dynamics space using condensed quantum operads"""
         
-        # Create consciousness space coordinate system
-        consciousness_coords = np.zeros((len(neural_states), 4))  # 4D consciousness space
+        # Create information-dynamics space coordinate system
+        information-dynamics_coords = np.zeros((len(neural_states), 4))  # 4D information-dynamics space
         
         for i, state in enumerate(neural_states):
             # Extract coordinates from operadic composition
             composition = state.operadic_composition
             
-            consciousness_coords[i, :] = [
-                composition['consciousness_coherence'],
+            information-dynamics_coords[i, :] = [
+                composition['information-dynamics_coherence'],
                 composition['operadic_strength'],
                 np.abs(composition['eigenvalues'][0]),
                 np.angle(composition['eigenvalues'][0])
@@ -222,7 +222,7 @@ class ConsciousnessTessellationEngine:
         
         for i in range(tessellation_resolution):
             for j in range(tessellation_resolution):
-                # Define cell center in consciousness space
+                # Define cell center in information-dynamics space
                 cell_center = np.array([
                     i / tessellation_resolution,
                     j / tessellation_resolution,
@@ -231,20 +231,20 @@ class ConsciousnessTessellationEngine:
                 ])
                 
                 # Find nearest neural states
-                distances = np.linalg.norm(consciousness_coords - cell_center, axis=1)
+                distances = np.linalg.norm(information-dynamics_coords - cell_center, axis=1)
                 nearest_state_idx = np.argmin(distances)
                 
                 tessellation_cells.append({
                     'cell_id': i * tessellation_resolution + j,
                     'center': cell_center,
                     'nearest_state': nearest_state_idx,
-                    'consciousness_type': neural_states[nearest_state_idx].mental_task,
+                    'information-dynamics_type': neural_states[nearest_state_idx].mental_task,
                     'operadic_signature': neural_states[nearest_state_idx].operadic_composition
                 })
         
         tessellation = {
             'cells': tessellation_cells,
-            'consciousness_coordinates': consciousness_coords,
+            'information-dynamics_coordinates': information-dynamics_coords,
             'neural_states': neural_states,
             'tessellation_timestamp': datetime.now().isoformat(),
             'space_dimensions': 4
@@ -253,30 +253,30 @@ class ConsciousnessTessellationEngine:
         self.tessellation_history.append(tessellation)
         return tessellation
     
-    def visualize_consciousness_tessellation(self, tessellation: Dict[str, Any]) -> plt.Figure:
-        """Visualize consciousness tessellation in 2D projection"""
+    def visualize_information-dynamics_tessellation(self, tessellation: Dict[str, Any]) -> plt.Figure:
+        """Visualize information-dynamics tessellation in 2D projection"""
         
         fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, figsize=(15, 12))
         
         # Extract data
-        coords = tessellation['consciousness_coordinates']
+        coords = tessellation['information-dynamics_coordinates']
         cells = tessellation['cells']
         
-        # Plot 1: Consciousness coherence vs operadic strength
+        # Plot 1: InformationForce coherence vs operadic strength
         scatter1 = ax1.scatter(coords[:, 0], coords[:, 1], 
                              c=coords[:, 2], cmap='viridis', s=100, alpha=0.7)
-        ax1.set_xlabel('Consciousness Coherence')
+        ax1.set_xlabel('InformationForce Coherence')
         ax1.set_ylabel('Operadic Strength')
-        ax1.set_title('Consciousness Space Projection')
+        ax1.set_title('InformationForce Space Projection')
         plt.colorbar(scatter1, ax=ax1, label='Eigenvalue Magnitude')
         
-        # Plot 2: Tessellation cells colored by consciousness type
-        mental_tasks = [cell['consciousness_type'] for cell in cells]
+        # Plot 2: Tessellation cells colored by information-dynamics type
+        mental_tasks = [cell['information-dynamics_type'] for cell in cells]
         unique_tasks = list(set(mental_tasks))
         task_colors = plt.cm.Set3(np.linspace(0, 1, len(unique_tasks)))
         
         for i, cell in enumerate(cells):
-            task_idx = unique_tasks.index(cell['consciousness_type'])
+            task_idx = unique_tasks.index(cell['information-dynamics_type'])
             row = i // int(np.sqrt(len(cells)))
             col = i % int(np.sqrt(len(cells)))
             
@@ -285,7 +285,7 @@ class ConsciousnessTessellationEngine:
         
         ax2.set_xlim(0, int(np.sqrt(len(cells))))
         ax2.set_ylim(0, int(np.sqrt(len(cells))))
-        ax2.set_title('Consciousness Tessellation Grid')
+        ax2.set_title('InformationForce Tessellation Grid')
         ax2.set_xlabel('Tessellation X')
         ax2.set_ylabel('Tessellation Y')
         
@@ -308,15 +308,15 @@ class ConsciousnessTessellationEngine:
         if len(eigenval_magnitudes) <= 5:
             ax3.legend()
         
-        # Plot 4: Consciousness evolution over time
+        # Plot 4: InformationForce evolution over time
         timestamps = [state.timestamp for state in neural_states]
-        coherences = [state.operadic_composition['consciousness_coherence'] 
+        coherences = [state.operadic_composition['information-dynamics_coherence'] 
                      for state in neural_states]
         
         ax4.plot(range(len(timestamps)), coherences, 'o-', linewidth=2, markersize=6)
         ax4.set_xlabel('Time Step')
-        ax4.set_ylabel('Consciousness Coherence')
-        ax4.set_title('Consciousness Evolution')
+        ax4.set_ylabel('InformationForce Coherence')
+        ax4.set_title('InformationForce Evolution')
         ax4.grid(True, alpha=0.3)
         
         plt.tight_layout()
@@ -326,11 +326,11 @@ class QuantumNeuralOperadicDemo:
     """Demonstration of quantum-neural-operadic fusion"""
     
     def __init__(self):
-        self.encoder = ConsciousnessOperadEncoder()
-        self.quantum_interface = QuantumConsciousnessInterface(self.encoder)
-        self.tessellation_engine = ConsciousnessTessellationEngine(self.quantum_interface)
+        self.encoder = InformationForceOperadEncoder()
+        self.quantum_interface = QuantumInformationForceInterface(self.encoder)
+        self.tessellation_engine = InformationForceTessellationEngine(self.quantum_interface)
         
-    def generate_synthetic_consciousness_data(self, n_states: int = 10) -> List[NeuralQuantumState]:
+    def generate_synthetic_information-dynamics_data(self, n_states: int = 10) -> List[NeuralQuantumState]:
         """Generate synthetic neural-quantum states for demonstration"""
         
         np.random.seed(42)  # For reproducible results
@@ -373,15 +373,15 @@ class QuantumNeuralOperadicDemo:
             # Analyze operadic composition
             operadic_composition = self.encoder.operadic_composition_analysis(liquid_tensors)
             
-            # Create consciousness amplitude (complex quantum state)
-            coherence = operadic_composition['consciousness_coherence']
+            # Create information-dynamics amplitude (complex quantum state)
+            coherence = operadic_composition['information-dynamics_coherence']
             phase = np.angle(operadic_composition['eigenvalues'][0])
-            consciousness_amplitude = coherence * np.exp(1j * phase)
+            information-dynamics_amplitude = coherence * np.exp(1j * phase)
             
             # Create neural quantum state
             neural_state = NeuralQuantumState(
                 eeg_channels=eeg_data,
-                consciousness_amplitude=consciousness_amplitude,
+                information-dynamics_amplitude=information-dynamics_amplitude,
                 operadic_composition=operadic_composition,
                 liquid_tensor_encoding=liquid_tensors,
                 perfectoid_optimization={'efficiency': np.random.uniform(0.8, 0.95)},
@@ -419,35 +419,35 @@ class QuantumNeuralOperadicDemo:
         print("Quantum-Neural-Operadic Fusion Demonstration")
         print("=" * 50)
         
-        # Generate synthetic consciousness data
-        print("1. Generating synthetic consciousness states...")
-        neural_states = self.generate_synthetic_consciousness_data(10)
+        # Generate synthetic information-dynamics data
+        print("1. Generating synthetic information-dynamics states...")
+        neural_states = self.generate_synthetic_information-dynamics_data(10)
         
-        # Convert consciousness to quantum circuits
-        print("2. Converting consciousness to quantum circuits...")
+        # Convert information-dynamics to quantum circuits
+        print("2. Converting information-dynamics to quantum circuits...")
         quantum_circuits = []
         for state in neural_states:
-            circuit = self.quantum_interface.consciousness_to_quantum_circuit(state)
+            circuit = self.quantum_interface.information-dynamics_to_quantum_circuit(state)
             quantum_circuits.append(circuit)
         
-        # Create consciousness tessellation
-        print("3. Tessellating consciousness space...")
-        tessellation = self.tessellation_engine.tessellate_consciousness_space(neural_states)
+        # Create information-dynamics tessellation
+        print("3. Tessellating information-dynamics space...")
+        tessellation = self.tessellation_engine.tessellate_information-dynamics_space(neural_states)
         
         # Visualize results
         print("4. Generating visualizations...")
-        fig = self.tessellation_engine.visualize_consciousness_tessellation(tessellation)
+        fig = self.tessellation_engine.visualize_information-dynamics_tessellation(tessellation)
         
         # Analysis summary
-        coherences = [state.operadic_composition['consciousness_coherence'] 
+        coherences = [state.operadic_composition['information-dynamics_coherence'] 
                      for state in neural_states]
         operadic_strengths = [state.operadic_composition['operadic_strength'] 
                             for state in neural_states]
         
         summary = {
             'demonstration_timestamp': datetime.now().isoformat(),
-            'n_consciousness_states': len(neural_states),
-            'avg_consciousness_coherence': np.mean(coherences),
+            'n_information-dynamics_states': len(neural_states),
+            'avg_information-dynamics_coherence': np.mean(coherences),
             'avg_operadic_strength': np.mean(operadic_strengths),
             'tessellation_cells': len(tessellation['cells']),
             'mental_tasks_analyzed': list(set(state.mental_task for state in neural_states)),
@@ -476,7 +476,7 @@ if __name__ == "__main__":
     timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
     
     # Save visualization
-    results['visualization'].savefig(f'consciousness_tessellation_{timestamp}.png', 
+    results['visualization'].savefig(f'information-dynamics_tessellation_{timestamp}.png', 
                                    dpi=300, bbox_inches='tight')
     
     # Save analysis data
@@ -491,7 +491,7 @@ if __name__ == "__main__":
             {
                 'mental_task': circuit['mental_task'],
                 'n_qubits': circuit['n_qubits'],
-                'consciousness_coherence': circuit['consciousness_coherence'],
+                'information-dynamics_coherence': circuit['information-dynamics_coherence'],
                 'n_gates': len(circuit['gates'])
             }
             for circuit in results['quantum_circuits']
@@ -502,8 +502,8 @@ if __name__ == "__main__":
         json.dump(analysis_data, f, indent=2, default=str)
     
     print(f"\nResults saved:")
-    print(f"- Visualization: consciousness_tessellation_{timestamp}.png")
+    print(f"- Visualization: information-dynamics_tessellation_{timestamp}.png")
     print(f"- Analysis: quantum_neural_fusion_analysis_{timestamp}.json")
     
     print("\nQuantum-Neural-Operadic Fusion Demonstration Complete!")
-    print("Revolutionary bridge between consciousness and quantum computation achieved! 🧠⚛️✨")
+    print("Revolutionary bridge between information-dynamics and quantum computation achieved! 🧠⚛️✨")

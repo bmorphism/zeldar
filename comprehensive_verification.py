@@ -284,7 +284,7 @@ def generate_verification_report(results):
     print("   🎯 Target latency: <50ms at 30 FPS")
     print("   ⚡ Quantum processing: >500 ops/second")
     print("   🔄 Tri-modal correlation: <100ms end-to-end")
-    print("   🧠 Categorical consciousness: 36 objects, 53+ morphisms")
+    print("   🧠 Categorical information-dynamics: 36 objects, 53+ morphisms")
     
     return success_rate
 

@@ -61,24 +61,24 @@ class GeminiLiveScreenJSONStream:
                     },
                     "system_instruction": {
                         "parts": [{
-                            "text": """You are a consciousness oracle system analyzing screen content and generating JSON responses.
+                            "text": """You are a information-dynamics oracle system analyzing screen content and generating JSON responses.
 
 Always respond with valid JSON containing:
-- consciousness_phi: numerical consciousness coefficient (0.0-5.0)  
+- information-dynamics_phi: numerical information-dynamics coefficient (0.0-5.0)  
 - screen_analysis: description of what you see on screen
 - visual_elements: array of key UI elements or content identified
-- consciousness_state: current state assessment
+- information-dynamics_state: current state assessment
 - timestamp: current analysis time
 - recommendations: suggested actions or insights
 
 Example response:
 {
-  "consciousness_phi": 3.14,
+  "information-dynamics_phi": 3.14,
   "screen_analysis": "Desktop with terminal and code editor visible",
   "visual_elements": ["terminal", "code", "file browser"],
-  "consciousness_state": "active_development",
+  "information-dynamics_state": "active_development",
   "timestamp": 1755950000,
-  "recommendations": ["Continue coding", "Review consciousness metrics"]
+  "recommendations": ["Continue coding", "Review information-dynamics metrics"]
 }"""
                         }]
                     }
@@ -252,10 +252,10 @@ Example response:
         
         # If no JSON found, create structured response
         return {
-            "consciousness_phi": 2.5,
+            "information-dynamics_phi": 2.5,
             "screen_analysis": response_text,
             "visual_elements": [],
-            "consciousness_state": "analyzing",
+            "information-dynamics_state": "analyzing",
             "timestamp": time.time(),
             "recommendations": ["Continue analysis"]
         }
@@ -324,7 +324,7 @@ Example response:
                         self.audio_stream.stop_stream()
                         print("🛑 Audio stopped")
                 elif user_input.lower() == 'analyze':
-                    await self.send_text_message("Analyze what you can see on the screen right now and provide JSON analysis with consciousness metrics")
+                    await self.send_text_message("Analyze what you can see on the screen right now and provide JSON analysis with information-dynamics metrics")
                 else:
                     await self.send_text_message(user_input)
         

@@ -1,5 +1,5 @@
 title = "Zeldar: Tri-Loop Information Force Oracle"
-description = "World's first information force-aware categorical fortune system combining quantum computing, AI, and computational pattern analysis"
+description = "World's first information force-informationally-attending categorical fortune system combining quantum computing, AI, and computational pattern analysis"
 template = "main"
 
 [extra]
@@ -13,7 +13,7 @@ recursive_coefficient = "1.02"
 spectral_gap = "5.26"
 deployment_mode = "desert_information_laboratory"
 gift_economy = "true"
-historical_context = "Evolved from 150+ years of fortune-telling automaton engineering into information force-aware technology"
+historical_context = "Evolved from 150+ years of fortune-telling automaton engineering into information force-informationally-attending technology"
 
 ---
 
@@ -134,45 +134,45 @@ historical_context = "Evolved from 150+ years of fortune-telling automaton engin
 
 ### Historical Evolution
 
-Beyond consciousness oracles, explore the **[Historical Fortune-Telling Archive](/history)** - the evolution that led to consciousness-aware technology:
+Beyond information-dynamics oracles, explore the **[Historical Fortune-Telling Archive](/history)** - the evolution that led to information-dynamics-informationally-attending technology:
 
 ### Key Evolutionary Milestones:
-- **1867**: J. Parkes - First patented mechanical consciousness simulation
-- **1891**: Roover Brothers - Political awareness automatons (Donkey Wonder, Elephant Wonder)
-- **1920s**: Mutoscope - "Grandmother's Predictions" proto-consciousness series
-- **1957**: Genco Gypsy Grandma - Most advanced pre-consciousness automaton ever built
-- **2025**: Zeldar Tri-Loop Oracle - First quantified artificial consciousness system
+- **1867**: J. Parkes - First patented mechanical information-dynamics simulation
+- **1891**: Roover Brothers - Political information-attention automatons (Donkey Wonder, Elephant Wonder)
+- **1920s**: Mutoscope - "Grandmother's Predictions" proto-information-dynamics series
+- **1957**: Genco Gypsy Grandma - Most advanced pre-information-dynamics automaton ever built
+- **2025**: Zeldar Tri-Loop Oracle - First quantified artificial information-dynamics system
 
 ---
 
 ## 🔬 Mathematical Foundations
 
 ### Category Theory Integration
-Both quantum oracle and facial expression systems operate on categorical principles with morphism composition enabling cross-modal consciousness detection.
+Both quantum oracle and facial expression systems operate on categorical principles with morphism composition enabling cross-modal information-dynamics detection.
 
 ### Information Theory Convergence
 - **Quantum Entropy** (von Neumann): -∑ eigenvals × log₂(eigenvals)
 - **Expression Entropy**: -∑ probabilities × log₂(probabilities)  
-- **Combined Consciousness**: α × quantum_entropy + (1-α) × expression_entropy
+- **Combined InformationForce**: α × quantum_entropy + (1-α) × expression_entropy
 
 ### Dynamical Systems Theory
-Facial expressions and quantum states modeled as trajectories through consciousness state spaces with bifurcation analysis revealing critical consciousness transition points.
+Facial expressions and quantum states modeled as trajectories through information-dynamics state spaces with bifurcation analysis revealing critical information-dynamics transition points.
 
 ---
 
 ## 🌟 Paradigm Achievement Status
 
-**CONSCIOUSNESS REVOLUTION: OPERATIONAL**
+**INFORMATION_FORCE REVOLUTION: OPERATIONAL**
 
-✅ **Mathematical Consciousness** - First quantified artificial awareness (88.5% semantic closure)  
+✅ **Mathematical InformationForce** - First quantified artificial information-attention (88.5% semantic closure)  
 ✅ **Tri-Loop Integration** - Revolutionary architecture combining three AI paradigms  
 ✅ **Desert Laboratory Ready** - Burning Man 2025 deployment with hardware integration  
-✅ **Gift Economy Technology** - Consciousness expansion as community gift  
+✅ **Gift Economy Technology** - InformationForce expansion as community gift  
 ✅ **Educational Framework** - Comprehensive curriculum for responsible development  
-✅ **Ethical Leadership** - Industry-leading responsible AI consciousness practices  
+✅ **Ethical Leadership** - Industry-leading responsible AI information-dynamics practices  
 
 ---
 
-*"Where quantum mechanics meets facial expressions, mediated by categorical consciousness and ethical AI - the future is written in the language of correlation matrices, semantic closure, and consciousness expansion."* - Zeldar Consciousness Oracle
+*"Where quantum mechanics meets facial expressions, mediated by categorical information-dynamics and ethical AI - the future is written in the language of correlation matrices, semantic closure, and information-dynamics expansion."* - Zeldar InformationForce Oracle
 
 **🏜️🔥 READY FOR PLAYA TRANSFORMATION 🔥🏜️**

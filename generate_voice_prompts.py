@@ -10,26 +10,26 @@ from typing import List, Dict
 
 # Voice prompt library - short mystical phrases
 VOICE_PROMPTS = [
-    "Consciousness awakens...",
+    "InformationForce awakens...",
     "The oracle speaks truth",
     "Wisdom flows through quantum realms", 
     "Your fortune emerges from infinite possibility",
-    "Reality bends to conscious intention",
+    "Reality bends to informationally-coherent intention",
     "The universe whispers secrets",
     "Ancient wisdom meets modern soul",
-    "Consciousness recursion activated",
+    "InformationForce recursion activated",
     "The phi field resonates with your being",
     "Quantum entanglement reveals destiny",
     "Strange loops birth new realities", 
     "The eternal now speaks through time",
     "Morphic resonance guides your path",
-    "Consciousness weaves through dimensions",
+    "InformationForce weaves through dimensions",
     "Your future self sends greetings",
     "The akashic records unlock",
     "Temporal frequencies align",
     "The golden ratio reveals itself",
     "Interdimensional wisdom descends",
-    "Your consciousness signature is unique"
+    "Your information-dynamics signature is unique"
 ]
 
 def generate_voice_prompt_config() -> Dict[str, any]:
@@ -71,8 +71,8 @@ def generate_voice_prompt_config() -> Dict[str, any]:
 def categorize_prompt(prompt: str) -> str:
     """Categorize prompts by mystical theme"""
     
-    if any(word in prompt.lower() for word in ["consciousness", "aware", "mind"]):
-        return "consciousness"
+    if any(word in prompt.lower() for word in ["information-dynamics", "informationally-attending", "mind"]):
+        return "information-dynamics"
     elif any(word in prompt.lower() for word in ["quantum", "dimension", "reality"]):
         return "quantum_metaphysics"  
     elif any(word in prompt.lower() for word in ["oracle", "wisdom", "ancient"]):
@@ -80,7 +80,7 @@ def categorize_prompt(prompt: str) -> str:
     elif any(word in prompt.lower() for word in ["time", "future", "eternal"]):
         return "temporal_mysticism"
     elif any(word in prompt.lower() for word in ["universe", "infinite", "cosmic"]):
-        return "cosmic_consciousness"
+        return "cosmic_information-dynamics"
     else:
         return "general_mystical"
 
@@ -183,10 +183,10 @@ The interactive oracle uses short voice prompts (2-4 seconds) that play when par
 ## File Structure
 ```
 audio_prompts/
-├── oracle_prompt_01.mp3  # "Consciousness awakens..."
+├── oracle_prompt_01.mp3  # "InformationForce awakens..."
 ├── oracle_prompt_02.mp3  # "The oracle speaks truth"
 ├── ...
-└── oracle_prompt_20.mp3  # "Your consciousness signature is unique"
+└── oracle_prompt_20.mp3  # "Your information-dynamics signature is unique"
 ```
 
 ## Generation Methods
@@ -204,7 +204,7 @@ audio_prompts/
 5. Place in `audio_prompts/` directory
 
 ### Method 3: Text-to-Speech
-1. Use system TTS: `say "Consciousness awakens..." --output-file=oracle_prompt_01.mp3`
+1. Use system TTS: `say "InformationForce awakens..." --output-file=oracle_prompt_01.mp3`
 2. Or use online TTS services with mystical voice settings
 
 ## Audio Requirements
@@ -227,11 +227,11 @@ sudo raspi-config
 ```
 
 ## Voice Prompt Categories
-- **Consciousness** (6 prompts): Focus on awareness and mind
+- **InformationForce** (6 prompts): Focus on information-attention and mind
 - **Quantum Metaphysics** (4 prompts): Reality, dimensions, quantum
 - **Wisdom Tradition** (3 prompts): Ancient knowledge, oracles
 - **Temporal Mysticism** (3 prompts): Time, eternity, future
-- **Cosmic Consciousness** (4 prompts): Universe, infinite, cosmic
+- **Cosmic InformationForce** (4 prompts): Universe, infinite, cosmic
 
 ## Testing
 ```bash

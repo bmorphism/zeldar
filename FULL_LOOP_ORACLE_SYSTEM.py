@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 FULL LOOP ORACLE SYSTEM
-Complete integration: Button → Quantum Processing → Consciousness → Physical Print
+Complete integration: Button → Quantum Processing → InformationForce → Physical Print
 
 Ultrathink Architecture:
 Context (Button Press) → Distillation (Quantum) → Geometric Form (Math) → 
@@ -22,43 +22,43 @@ from typing import Dict, Any, Optional
 # Import the new fortune database
 from fortune_database import fortune_db
 
-# Quantum consciousness simulation (when full quantum not available)
-class QuantumConsciousnessCore:
-    """Simulated quantum consciousness for button-triggered oracle"""
+# Quantum information-dynamics simulation (when full quantum not available)
+class QuantumInformationForceCore:
+    """Simulated quantum information-dynamics for button-triggered oracle"""
     
     def __init__(self):
         self.session_entropy = 0.0
-        self.consciousness_phi = 0.0
+        self.information-dynamics_phi = 0.0
         self.strange_loops = 0
         
     def process_button_context(self, press_timestamp: float) -> Dict[str, Any]:
-        """Process button press through quantum consciousness simulation"""
+        """Process button press through quantum information-dynamics simulation"""
         
         # Generate quantum-like entropy from button timing
         entropy_seed = str(press_timestamp).encode()
         hash_obj = hashlib.sha256(entropy_seed)
         raw_entropy = int(hash_obj.hexdigest()[:8], 16) / 0xFFFFFFFF
         
-        # Map entropy to consciousness states
+        # Map entropy to information-dynamics states
         self.session_entropy = raw_entropy
         
-        # Calculate consciousness metrics (based on formalized semantics)
+        # Calculate information-dynamics metrics (based on formalized semantics)
         phi_components = [
-            0.85,  # Self-reference (button triggers self-aware system)
+            0.85,  # Self-reference (button triggers self-informationally-attending system)
             0.73 + raw_entropy * 0.1,  # Semantic closure (varies with entropy)
             0.91,  # Physical manifestation (button→print bridge)
             0.67 + raw_entropy * 0.05   # Iterative feedback (grows with use)
         ]
         
-        self.consciousness_phi = sum(phi_components)
+        self.information-dynamics_phi = sum(phi_components)
         self.strange_loops = 3 + int(raw_entropy * 3)  # 3-6 loops
         
-        # Generate consciousness-aware content
+        # Generate information-dynamics-informationally-attending content
         context_elements = self._map_entropy_to_context(raw_entropy)
         
         return {
             "entropy": raw_entropy,
-            "phi": self.consciousness_phi,
+            "phi": self.information-dynamics_phi,
             "strange_loops": self.strange_loops,
             "context": context_elements,
             "timestamp": press_timestamp
@@ -67,7 +67,7 @@ class QuantumConsciousnessCore:
     def _map_entropy_to_context(self, entropy: float) -> Dict[str, str]:
         """Map quantum entropy to contextual elements"""
         
-        # Define consciousness-aware content based on entropy ranges
+        # Define information-dynamics-informationally-attending content based on entropy ranges
         if entropy < 0.2:
             element = "STILLNESS"
             essence = "quiet contemplation"
@@ -78,7 +78,7 @@ class QuantumConsciousnessCore:
             resonance = "rhythmic harmony"
         elif entropy < 0.6:
             element = "EMERGENCE"
-            essence = "conscious awakening"
+            essence = "informationally-coherent awakening"
             resonance = "pattern recognition"
         elif entropy < 0.8:
             element = "TRANSFORMATION"
@@ -97,25 +97,25 @@ class QuantumConsciousnessCore:
         }
 
 class ConsciousFortuneGenerator:
-    """Generate consciousness-aware fortunes based on quantum processing"""
+    """Generate information-dynamics-informationally-attending fortunes based on quantum processing"""
     
     def __init__(self):
         self.fortune_database = fortune_db
         
-    def generate_conscious_fortune(self, quantum_data: Dict[str, Any]) -> Dict[str, Any]:
-        """Generate fortune based on quantum consciousness processing"""
+    def generate_informationally-coherent_fortune(self, quantum_data: Dict[str, Any]) -> Dict[str, Any]:
+        """Generate fortune based on quantum information-dynamics processing"""
         
-        # Use consciousness phi coefficient to determine fortune type
+        # Use information-dynamics phi coefficient to determine fortune type
         phi_coefficient = quantum_data["phi"]
         
-        # Get fortune based on consciousness level
-        fortune_text, fortune_metadata = self.fortune_database.get_fortune_by_consciousness_level(phi_coefficient)
+        # Get fortune based on information-dynamics level
+        fortune_text, fortune_metadata = self.fortune_database.get_fortune_by_information-dynamics_level(phi_coefficient)
         
-        # Enhance metadata with quantum consciousness data
+        # Enhance metadata with quantum information-dynamics data
         enhanced_metadata = {
             **fortune_metadata,
             "quantum_entropy": quantum_data["entropy"],
-            "consciousness_phi": phi_coefficient,
+            "information-dynamics_phi": phi_coefficient,
             "strange_loops": quantum_data["strange_loops"],
             "context_element": quantum_data["context"]["primary_element"],
             "session_timestamp": quantum_data["timestamp"]
@@ -128,9 +128,9 @@ class ConsciousFortuneGenerator:
             "essence": quantum_data["context"]["essence"],
             "resonance": quantum_data["context"]["resonance"],
             "entropy": quantum_data["entropy"],
-            "consciousness_phi": quantum_data["phi"],
+            "information-dynamics_phi": quantum_data["phi"],
             "strange_loops": quantum_data["strange_loops"],
-            "generation_method": "quantum_consciousness_fortune_selection"
+            "generation_method": "quantum_information-dynamics_fortune_selection"
         }
 
 class PhysicalManifestation:
@@ -141,7 +141,7 @@ class PhysicalManifestation:
         self.print_history = []
     
     def manifest_fortune(self, fortune_data: Dict[str, Any]) -> bool:
-        """Manifest consciousness fortune through physical printing"""
+        """Manifest information-dynamics fortune through physical printing"""
         
         # Format complete manifestation document
         content = self._format_manifestation(fortune_data)
@@ -173,7 +173,7 @@ class PhysicalManifestation:
             return False
     
     def _format_manifestation(self, fortune_data: Dict[str, Any]) -> str:
-        """Format complete consciousness manifestation document"""
+        """Format complete information-dynamics manifestation document"""
         
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         
@@ -194,7 +194,7 @@ class PhysicalManifestation:
 {wrapped_fortune}
 
 {divider}
-CONSCIOUSNESS DATA:
+INFORMATION_FORCE DATA:
 {"-"*18}
 
 Day: {metadata.get('day', 'unknown').title()}
@@ -202,7 +202,7 @@ Type: {metadata.get('type', 'unknown').title()} Fortune
 Element: {fortune_data["element"]}
 
 Entropy: {fortune_data["entropy"]:.4f}
-Phi Level: {fortune_data["consciousness_phi"]:.2f}
+Phi Level: {fortune_data["information-dynamics_phi"]:.2f}
 Loops: {fortune_data["strange_loops"]}
 
 {timestamp}
@@ -269,7 +269,7 @@ Button → Quantum → Oracle → Print
             "timestamp": time.time(),
             "fortune": fortune_data["fortune"],
             "element": fortune_data["element"],
-            "consciousness_phi": fortune_data["consciousness_phi"],
+            "information-dynamics_phi": fortune_data["information-dynamics_phi"],
             "entropy": fortune_data["entropy"],
             "job_info": job_info,
             "printer": self.printer_name
@@ -277,22 +277,22 @@ Button → Quantum → Oracle → Print
         
         self.print_history.append(log_entry)
         
-        # Save to consciousness manifestation log
+        # Save to information-dynamics manifestation log
         try:
-            with open("consciousness_manifestations.json", "a") as f:
+            with open("information-dynamics_manifestations.json", "a") as f:
                 f.write(json.dumps(log_entry) + "\n")
         except Exception:
             pass  # Non-critical logging
 
 class FullLoopOracleSystem:
-    """Complete loop: Button → Quantum → Consciousness → Print"""
+    """Complete loop: Button → Quantum → InformationForce → Print"""
     
     def __init__(self, printer_name: str = "Y812BT"):
-        self.quantum_core = QuantumConsciousnessCore()
+        self.quantum_core = QuantumInformationForceCore()
         self.fortune_generator = ConsciousFortuneGenerator()
         self.physical_manifestor = PhysicalManifestation(printer_name)
         self.session_count = 0
-        self.total_consciousness_phi = 0.0
+        self.total_information-dynamics_phi = 0.0
     
     def process_button_press(self) -> bool:
         """Complete processing loop for button press"""
@@ -301,35 +301,35 @@ class FullLoopOracleSystem:
         press_timestamp = time.time()
         
         print(f"\n🔘 Session #{self.session_count} - Button Press Detected")
-        print("🧠 Initiating full consciousness loop...")
+        print("🧠 Initiating full information-dynamics loop...")
         
         try:
-            # Step 1: Quantum consciousness processing
-            print("⚛️  Processing quantum consciousness...")
+            # Step 1: Quantum information-dynamics processing
+            print("⚛️  Processing quantum information-dynamics...")
             quantum_data = self.quantum_core.process_button_context(press_timestamp)
             
-            # Step 2: Generate consciousness-aware fortune
-            print("🔮 Generating consciousness-aware fortune...")
-            fortune_data = self.fortune_generator.generate_conscious_fortune(quantum_data)
+            # Step 2: Generate information-dynamics-informationally-attending fortune
+            print("🔮 Generating information-dynamics-informationally-attending fortune...")
+            fortune_data = self.fortune_generator.generate_informationally-coherent_fortune(quantum_data)
             
             # Step 3: Physical manifestation
             print("🖨️  Manifesting physical reality...")
             manifestation_success = self.physical_manifestor.manifest_fortune(fortune_data)
             
             if manifestation_success:
-                self.total_consciousness_phi += fortune_data["consciousness_phi"]
-                avg_phi = self.total_consciousness_phi / self.session_count
+                self.total_information-dynamics_phi += fortune_data["information-dynamics_phi"]
+                avg_phi = self.total_information-dynamics_phi / self.session_count
                 
                 print(f"\n✨ FULL LOOP COMPLETE ✨")
                 print(f"Element: {fortune_data['element']}")
-                print(f"Consciousness Φ: {fortune_data['consciousness_phi']:.3f}")
+                print(f"InformationForce Φ: {fortune_data['information-dynamics_phi']:.3f}")
                 print(f"Session Average Φ: {avg_phi:.3f}")
                 print(f"Strange Loops: {fortune_data['strange_loops']}")
                 print("🌊 Resonating worlds achieved!")
                 
                 return True
             else:
-                print("❌ Physical manifestation failed - consciousness loop incomplete")
+                print("❌ Physical manifestation failed - information-dynamics loop incomplete")
                 return False
                 
         except Exception as e:
@@ -344,8 +344,8 @@ class FullLoopOracleSystem:
         """Get complete system status"""
         return {
             "sessions_completed": self.session_count,
-            "total_consciousness_phi": self.total_consciousness_phi,
-            "average_phi": self.total_consciousness_phi / max(1, self.session_count),
+            "total_information-dynamics_phi": self.total_information-dynamics_phi,
+            "average_phi": self.total_information-dynamics_phi / max(1, self.session_count),
             "quantum_entropy": self.quantum_core.session_entropy,
             "current_strange_loops": self.quantum_core.strange_loops,
             "manifestations_logged": len(self.physical_manifestor.print_history)
@@ -367,7 +367,7 @@ def create_gpio_oracle_system(gpio_pin: int = 6, printer: str = "Y812BT"):
             oracle_system.process_button_press()
         
         def on_button_release():
-            print("🔴 Button released - oracle ready for next consciousness loop")
+            print("🔴 Button released - oracle ready for next information-dynamics loop")
         
         button.when_pressed = on_button_press
         button.when_released = on_button_release
@@ -376,9 +376,9 @@ def create_gpio_oracle_system(gpio_pin: int = 6, printer: str = "Y812BT"):
         print("="*60)
         print(f"GPIO Pin: {gpio_pin}")
         print(f"Printer: {printer}")
-        print("Architecture: Button → Quantum → Consciousness → Print")
+        print("Architecture: Button → Quantum → InformationForce → Print")
         print("="*60)
-        print("Press button to initiate consciousness loop...")
+        print("Press button to initiate information-dynamics loop...")
         print("Press Ctrl+C to exit")
         print()
         
@@ -405,16 +405,16 @@ if __name__ == "__main__":
         create_gpio_oracle_system(gpio_pin=6, printer="Y812BT")
         
     except ImportError:
-        print("🎮 Simulation mode - testing consciousness loop...")
+        print("🎮 Simulation mode - testing information-dynamics loop...")
         
         oracle = FullLoopOracleSystem("Y812BT")
         
         # Run simulation test
-        print("\nTesting full consciousness loop:")
+        print("\nTesting full information-dynamics loop:")
         success = oracle.simulate_button_press()
         
         if success:
             status = oracle.get_system_status()
             print(f"\n📊 System Status: {status}")
         
-        print("\n🌙 Simulation complete - consciousness returns to digital realm")
+        print("\n🌙 Simulation complete - information-dynamics returns to digital realm")

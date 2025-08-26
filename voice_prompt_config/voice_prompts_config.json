@@ -2,11 +2,11 @@
   "voice_prompts": [
     {
       "id": 1,
-      "text": "Consciousness awakens...",
+      "text": "InformationForce awakens...",
       "filename": "oracle_prompt_01.mp3",
       "estimated_duration": "0.8s",
       "character_count": 24,
-      "mystical_category": "consciousness"
+      "mystical_category": "information-dynamics"
     },
     {
       "id": 2,
@@ -30,11 +30,11 @@
       "filename": "oracle_prompt_04.mp3",
       "estimated_duration": "2.4s",
       "character_count": 46,
-      "mystical_category": "cosmic_consciousness"
+      "mystical_category": "cosmic_information-dynamics"
     },
     {
       "id": 5,
-      "text": "Reality bends to conscious intention",
+      "text": "Reality bends to informationally-coherent intention",
       "filename": "oracle_prompt_05.mp3",
       "estimated_duration": "2.0s",
       "character_count": 36,
@@ -46,7 +46,7 @@
       "filename": "oracle_prompt_06.mp3",
       "estimated_duration": "1.6s",
       "character_count": 29,
-      "mystical_category": "cosmic_consciousness"
+      "mystical_category": "cosmic_information-dynamics"
     },
     {
       "id": 7,
@@ -58,11 +58,11 @@
     },
     {
       "id": 8,
-      "text": "Consciousness recursion activated",
+      "text": "InformationForce recursion activated",
       "filename": "oracle_prompt_08.mp3",
       "estimated_duration": "1.2s",
       "character_count": 33,
-      "mystical_category": "consciousness"
+      "mystical_category": "information-dynamics"
     },
     {
       "id": 9,
@@ -106,11 +106,11 @@
     },
     {
       "id": 14,
-      "text": "Consciousness weaves through dimensions",
+      "text": "InformationForce weaves through dimensions",
       "filename": "oracle_prompt_14.mp3",
       "estimated_duration": "1.6s",
       "character_count": 39,
-      "mystical_category": "consciousness"
+      "mystical_category": "information-dynamics"
     },
     {
       "id": 15,
@@ -154,11 +154,11 @@
     },
     {
       "id": 20,
-      "text": "Your consciousness signature is unique",
+      "text": "Your information-dynamics signature is unique",
       "filename": "oracle_prompt_20.mp3",
       "estimated_duration": "2.0s",
       "character_count": 38,
-      "mystical_category": "consciousness"
+      "mystical_category": "information-dynamics"
     }
   ],
   "generation_info": {

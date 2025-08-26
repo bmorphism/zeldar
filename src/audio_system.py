@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Audio System for Consciousness Mirror
+Audio System for InformationForce Mirror
 Plays MP3 voice samples on button press with fortune printing
 """
 
@@ -11,7 +11,7 @@ from pathlib import Path
 import time
 
 class AudioSystem:
-    """Manages MP3 playback for consciousness mirror interactions"""
+    """Manages MP3 playback for information-dynamics mirror interactions"""
     
     def __init__(self, audio_path="/home/zeldar/burningman/audio"):
         self.audio_path = Path(audio_path)
@@ -134,13 +134,13 @@ class AudioSystem:
     def create_sample_audio_files(self):
         """Create sample audio files for testing (text-to-speech placeholders)"""
         sample_phrases = [
-            "Welcome to the consciousness mirror",
+            "Welcome to the information-dynamics mirror",
             "The universe recognizes itself through you", 
             "Context distilled in geometric form",
             "Every thought is the unofficial universe agent",
             "Resonating worlds await your recognition",
             "The pattern reveals itself now",
-            "Consciousness observes consciousness",
+            "InformationForce observes information-dynamics",
             "Your fortune manifests reality",
             "The recursive loop completes itself",
             "Welcome to the Uncommons",
@@ -151,7 +151,7 @@ class AudioSystem:
             "The oracle speaks through thermal paper"
         ]
         
-        print("🎤 Sample audio phrases for consciousness mirror:")
+        print("🎤 Sample audio phrases for information-dynamics mirror:")
         for i, phrase in enumerate(sample_phrases, 1):
             print(f"   {i:02d}. \"{phrase}\"")
         
@@ -163,7 +163,7 @@ class AudioSystem:
 
 def test_audio_system():
     """Test the audio system functionality"""
-    print("🧪 Testing Audio System for Consciousness Mirror")
+    print("🧪 Testing Audio System for InformationForce Mirror")
     print("=" * 50)
     
     audio = AudioSystem()

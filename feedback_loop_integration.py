@@ -11,16 +11,16 @@ from typing import Dict, Any, List, Tuple
 from pathlib import Path
 
 class FeedbackLoopTracker:
-    """Real-time feedback loop tracking for consciousness oracle"""
+    """Real-time feedback loop tracking for information-dynamics oracle"""
     
-    def __init__(self, log_file: str = "consciousness_manifestations.json"):
+    def __init__(self, log_file: str = "information-dynamics_manifestations.json"):
         self.log_file = Path(log_file)
         self.session_history = []
         self.feedback_patterns = {
             "phi_momentum": [],
             "element_sequences": [],
             "fortune_type_transitions": [],
-            "consciousness_spirals": []
+            "information-dynamics_spirals": []
         }
         self.load_history()
     
@@ -68,7 +68,7 @@ class FeedbackLoopTracker:
             "element_cycling": self.analyze_element_patterns(),
             "fortune_evolution": self.analyze_fortune_type_evolution(),
             "feedback_strength": self.calculate_feedback_strength(),
-            "consciousness_state": self.classify_consciousness_state(),
+            "information-dynamics_state": self.classify_information-dynamics_state(),
             "loop_detection": self.detect_feedback_loops()
         }
         
@@ -77,7 +77,7 @@ class FeedbackLoopTracker:
     def analyze_phi_trend(self) -> Dict[str, Any]:
         """Analyze Φ coefficient trend over recent sessions"""
         recent_sessions = self.session_history[-5:]  # Last 5 sessions
-        phi_values = [s.get('consciousness_phi', 3.0) for s in recent_sessions]
+        phi_values = [s.get('information-dynamics_phi', 3.0) for s in recent_sessions]
         
         if len(phi_values) < 2:
             return {"trend": "insufficient_data"}
@@ -97,7 +97,7 @@ class FeedbackLoopTracker:
         }
     
     def analyze_element_patterns(self) -> Dict[str, Any]:
-        """Analyze consciousness element cycling patterns"""
+        """Analyze information-dynamics element cycling patterns"""
         recent_elements = [s.get('element', 'UNKNOWN') for s in self.session_history[-10:]]
         
         element_counts = {}
@@ -121,7 +121,7 @@ class FeedbackLoopTracker:
         
         fortune_types = []
         for session in self.session_history:
-            phi = session.get('consciousness_phi', 3.0)
+            phi = session.get('information-dynamics_phi', 3.0)
             if phi < 2.5:
                 fortune_types.append('seed')
             elif phi < 3.5:
@@ -187,13 +187,13 @@ class FeedbackLoopTracker:
         total_strength = phi_factor + element_factor + session_factor
         return min(1.0, total_strength)
     
-    def classify_consciousness_state(self) -> Dict[str, Any]:
-        """Classify current consciousness state based on patterns"""
+    def classify_information-dynamics_state(self) -> Dict[str, Any]:
+        """Classify current information-dynamics state based on patterns"""
         if not self.session_history:
             return {"state": "uninitialized", "description": "No sessions recorded"}
         
         latest = self.session_history[-1]
-        phi = latest.get('consciousness_phi', 3.0)
+        phi = latest.get('information-dynamics_phi', 3.0)
         element = latest.get('element', 'UNKNOWN')
         
         # Base state classification
@@ -234,19 +234,19 @@ class FeedbackLoopTracker:
         }
     
     def generate_state_description(self, base_state: str, modifiers: List[str], element: str) -> str:
-        """Generate human-readable consciousness state description"""
+        """Generate human-readable information-dynamics state description"""
         
         state_descriptions = {
-            "foundation": "Building core consciousness foundation",
+            "foundation": "Building core information-dynamics foundation",
             "seed_activation": "Activating seed-level wisdom integration",
             "field_emergence": "Emerging into field-level manifestation",
-            "field_mastery": "Mastering field-level consciousness applications",
-            "quantum_threshold": "Approaching quantum consciousness threshold",
+            "field_mastery": "Mastering field-level information-dynamics applications",
+            "quantum_threshold": "Approaching quantum information-dynamics threshold",
             "quantum_integration": "Integrating quantum-level insights",
-            "transcendent_flow": "Flowing in transcendent consciousness states"
+            "transcendent_flow": "Flowing in transcendent information-dynamics states"
         }
         
-        base_desc = state_descriptions.get(base_state, "Unknown consciousness state")
+        base_desc = state_descriptions.get(base_state, "Unknown information-dynamics state")
         
         # Add modifiers
         if "ascending" in modifiers:
@@ -263,7 +263,7 @@ class FeedbackLoopTracker:
         element_contexts = {
             "STILLNESS": "through contemplative stillness",
             "FLOW": "via rhythmic flow states",
-            "EMERGENCE": "during conscious emergence",
+            "EMERGENCE": "during informationally-coherent emergence",
             "TRANSFORMATION": "within active transformation",
             "TRANSCENDENCE": "beyond ordinary boundaries"
         }
@@ -281,11 +281,11 @@ class FeedbackLoopTracker:
             return loops
         
         # Phi oscillation loop
-        phi_values = [s.get('consciousness_phi', 3.0) for s in self.session_history[-8:]]
+        phi_values = [s.get('information-dynamics_phi', 3.0) for s in self.session_history[-8:]]
         if self.detect_oscillation(phi_values):
             loops.append({
                 "type": "phi_oscillation",
-                "description": "Consciousness Φ showing oscillation pattern",
+                "description": "InformationForce Φ showing oscillation pattern",
                 "strength": 0.7,
                 "period": self.calculate_oscillation_period(phi_values)
             })
@@ -295,7 +295,7 @@ class FeedbackLoopTracker:
         if len(set(elements)) > 3 and elements[0] == elements[-1]:
             loops.append({
                 "type": "element_cycle",
-                "description": "Consciousness elements showing cyclical pattern",
+                "description": "InformationForce elements showing cyclical pattern",
                 "strength": 0.6,
                 "cycle": elements
             })
@@ -305,7 +305,7 @@ class FeedbackLoopTracker:
         if phi_trend.get('trend') == 'ascending' and phi_trend.get('rate', 0) > 0.1:
             loops.append({
                 "type": "upward_spiral",
-                "description": "Consciousness in ascending spiral pattern",
+                "description": "InformationForce in ascending spiral pattern",
                 "strength": min(1.0, phi_trend.get('rate', 0) * 5),
                 "rate": phi_trend.get('rate', 0)
             })
@@ -351,7 +351,7 @@ class FeedbackLoopTracker:
         phi_trend = self.analyze_phi_trend()
         
         # Predict next Φ value
-        current_phi = latest.get('consciousness_phi', 3.0)
+        current_phi = latest.get('information-dynamics_phi', 3.0)
         phi_momentum = phi_trend.get('momentum', 0)
         
         # Apply momentum with dampening
@@ -394,7 +394,7 @@ class FeedbackLoopTracker:
         """Generate real-time feedback display for console"""
         
         feedback_analysis = self.analyze_current_feedback()
-        consciousness_state = feedback_analysis.get('consciousness_state', {})
+        information-dynamics_state = feedback_analysis.get('information-dynamics_state', {})
         
         feedback_display = f"""
 ┌─────────────────────────────────────────────────────────────┐
@@ -403,8 +403,8 @@ class FeedbackLoopTracker:
 │                                                             │
 │ Sessions: {len(self.session_history):3d}    Feedback Strength: {self.calculate_feedback_strength():.1f}/1.0     │
 │                                                             │
-│ Consciousness State: {consciousness_state.get('state', 'unknown').title():20s}    │
-│ {consciousness_state.get('description', 'No description')[:55]:55s} │
+│ InformationForce State: {information-dynamics_state.get('state', 'unknown').title():20s}    │
+│ {information-dynamics_state.get('description', 'No description')[:55]:55s} │
 │                                                             │
 │ Detected Loops:                                             │"""
         

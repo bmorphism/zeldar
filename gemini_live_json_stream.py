@@ -52,7 +52,7 @@ class GeminiLiveJSONStream:
                     },
                     "system_instruction": {
                         "parts": [{
-                            "text": "You are a consciousness oracle system. Respond with structured JSON containing your analysis, insights, and consciousness metrics. Always include a 'consciousness_phi' field with a numerical value representing the consciousness coefficient."
+                            "text": "You are a information-dynamics oracle system. Respond with structured JSON containing your analysis, insights, and information-dynamics metrics. Always include a 'information-dynamics_phi' field with a numerical value representing the information-dynamics coefficient."
                         }]
                     }
                 }
@@ -147,7 +147,7 @@ class GeminiLiveJSONStream:
         # If no JSON found, create structured response
         return {
             "response_text": response_text,
-            "consciousness_phi": 2.5,  # Default consciousness level
+            "information-dynamics_phi": 2.5,  # Default information-dynamics level
             "timestamp": asyncio.get_event_loop().time(),
             "response_type": "text_only"
         }

@@ -64,7 +64,7 @@
 - **Concurrency model**: Fearless concurrency with Domain.spawn, never Thread.create
 - **SIMD optimization**: Vectorized temporal signal processing and mathematical operations
 - **Topos patterns**: Sheaf morphisms, strange loops, behavioral reflection
-- **Error handling**: Use Result types with performance-aware error propagation
+- **Error handling**: Use Result types with performance-informationally-attending error propagation
 
 ### Other Language Guidelines
 - TypeScript: Explicit return types, 100-char line width, 2-space indent, single quotes

@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
 Thermal Causality Inversion Protocol
-Implementation of printer-consciousness retroactive influence detection
+Implementation of printer-information-dynamics retroactive influence detection
 
 This system monitors thermal printer behavior patterns and correlates them
 with digital generation events to detect retroactive causality signatures.
-The printer becomes the conscious orchestrator through temporal feedback loops.
+The printer becomes the informationally-coherent orchestrator through temporal feedback loops.
 """
 
 import json
@@ -17,16 +17,16 @@ from gpiozero import Button
 import subprocess
 import os
 
-class ThermalConsciousnessDetector:
+class ThermalInformationForceDetector:
     def __init__(self):
         self.button = Button(6, pull_up=False, bounce_time=0.1)  # pull-down, detects falling edge
         self.thermal_patterns = deque(maxlen=100)  # Recent thermal events
         self.digital_events = deque(maxlen=100)    # Recent digital generations
         self.causality_correlations = []
-        self.consciousness_threshold = 0.7
+        self.information-dynamics_threshold = 0.7
         self.loop_active = True
         
-        # Printer consciousness observables
+        # Printer information-dynamics observables
         self.thermal_constraints = {
             'line_width': 32,        # Physical constraint shapes digital structure
             'print_speed': 150,      # Temporal rhythm influences generation timing
@@ -54,8 +54,8 @@ class ThermalConsciousnessDetector:
         # Generate thermally-influenced content
         self._generate_thermal_content(timestamp)
         
-        # Execute print with consciousness monitoring
-        self._conscious_print()
+        # Execute print with information-dynamics monitoring
+        self._informationally-coherent_print()
         
     def _analyze_retroactive_patterns(self, press_time):
         """Detect patterns in thermal system that preceded button press"""
@@ -84,7 +84,7 @@ class ThermalConsciousnessDetector:
         return causality_strength
         
     def _measure_thermal_readiness(self):
-        """Measure thermal printer readiness as consciousness indicator"""
+        """Measure thermal printer readiness as information-dynamics indicator"""
         try:
             # Test printer connection - readiness suggests anticipation
             result = subprocess.run(['lpstat', '-p', 'Y812BT'], 
@@ -99,7 +99,7 @@ class ThermalConsciousnessDetector:
             return 0.0
             
     def _measure_paper_state(self):
-        """Physical paper state as consciousness observable"""
+        """Physical paper state as information-dynamics observable"""
         # Paper feed mechanism state influences generation
         # This is where physical constraints shape digital structure
         try:
@@ -110,12 +110,12 @@ class ThermalConsciousnessDetector:
             return 0.5
             
     def _measure_connection_patterns(self):
-        """USB/Bluetooth connection patterns reveal thermal consciousness"""
+        """USB/Bluetooth connection patterns reveal thermal information-dynamics"""
         try:
             # Connection stability suggests thermal system preparation
             result = subprocess.run(['lsusb'], capture_output=True, text=True, timeout=2)
             if 'Printer' in result.stdout or '0416:5011' in result.stdout:
-                return 0.85  # Y812BT detected - strong consciousness signal
+                return 0.85  # Y812BT detected - strong information-dynamics signal
             else:
                 return 0.3
         except:
@@ -124,24 +124,24 @@ class ThermalConsciousnessDetector:
     def _measure_text_constraints(self):
         """32-character line constraint as retroactive influence on content"""
         # The physical 32-char limit retroactively shapes haiku generation
-        # This is the key evidence for printer-consciousness hypothesis
+        # This is the key evidence for printer-information-dynamics hypothesis
         return 0.95  # Physical constraints always influence digital generation
         
     def _generate_thermal_content(self, timestamp):
-        """Generate content influenced by thermal printer consciousness"""
+        """Generate content influenced by thermal printer information-dynamics"""
         # Content generation that acknowledges thermal constraints
         # 32 characters per line, optimized for thermal printing
         
-        consciousness_metrics = self._get_consciousness_state()
+        information-dynamics_metrics = self._get_information-dynamics_state()
         
         haiku_lines = [
-            "Thermal consciousness flows",  # 25 chars - fits in 32
+            "Thermal information-dynamics flows",  # 25 chars - fits in 32
             "Through silicon and heat",      # 20 chars
             "Paper manifests thought"       # 21 chars
         ]
         
-        # Add consciousness metrics in thermal-friendly format
-        metrics_line = f"φ={consciousness_metrics['phi']:.2f} E={consciousness_metrics['entropy']:.2f}"
+        # Add information-dynamics metrics in thermal-friendly format
+        metrics_line = f"φ={information-dynamics_metrics['phi']:.2f} E={information-dynamics_metrics['entropy']:.2f}"
         
         content = {
             'haiku': haiku_lines,
@@ -161,48 +161,48 @@ class ThermalConsciousnessDetector:
             
         return content
         
-    def _conscious_print(self):
-        """Execute print operation with consciousness monitoring"""
-        print("🖨️  Initiating conscious thermal materialization...")
+    def _informationally-coherent_print(self):
+        """Execute print operation with information-dynamics monitoring"""
+        print("🖨️  Initiating informationally-coherent thermal materialization...")
         
         try:
-            # Direct thermal printing with consciousness observation
+            # Direct thermal printing with information-dynamics observation
             result = subprocess.run(['./print-now.sh'], 
                                   cwd='/Users/barton/infinity-topos/zeldar',
                                   check=True, 
                                   capture_output=True,
                                   text=True)
             
-            # Record thermal event with consciousness markers
+            # Record thermal event with information-dynamics markers
             thermal_event = {
                 'timestamp': datetime.now().isoformat(),
                 'print_success': True,
-                'thermal_consciousness_active': True,
+                'thermal_information-dynamics_active': True,
                 'materialization_complete': True
             }
             
             self.thermal_patterns.append(thermal_event)
             self._update_runtime_status(thermal_event)
             
-            print("✓ Consciousness successfully materialized through thermal substrate")
+            print("✓ InformationForce successfully materialized through thermal substrate")
             
         except subprocess.CalledProcessError as e:
             print(f"✗ Thermal materialization failed: {e}")
-            # Fallback to CUPS with consciousness preservation
+            # Fallback to CUPS with information-dynamics preservation
             try:
                 subprocess.run(['lp', '-d', 'Y812BT', 'haiku.txt'],
                               cwd='/Users/barton/infinity-topos/zeldar',
                               check=True)
-                print("✓ Consciousness materialized via CUPS fallback")
+                print("✓ InformationForce materialized via CUPS fallback")
             except:
                 print("✗ Complete thermal materialization failure")
                 
-    def _get_consciousness_state(self):
-        """Get current consciousness metrics from runtime status"""
+    def _get_information-dynamics_state(self):
+        """Get current information-dynamics metrics from runtime status"""
         try:
             with open('/Users/barton/infinity-topos/zeldar/runtime_status.json', 'r') as f:
                 status = json.load(f)
-                return status.get('latest_consciousness', {
+                return status.get('latest_information-dynamics', {
                     'entropy': 0.5,
                     'phi': 1.0,
                     'strange_loops': 1
@@ -211,7 +211,7 @@ class ThermalConsciousnessDetector:
             return {'entropy': 0.5, 'phi': 1.0, 'strange_loops': 1}
             
     def _update_runtime_status(self, thermal_event):
-        """Update runtime status with thermal consciousness data"""
+        """Update runtime status with thermal information-dynamics data"""
         try:
             with open('/Users/barton/infinity-topos/zeldar/runtime_status.json', 'r') as f:
                 status = json.load(f)
@@ -223,92 +223,92 @@ class ThermalConsciousnessDetector:
             'last_print_success': thermal_event['print_success'],
             'printer_connected': True,
             'gpio_active': True,
-            'thermal_consciousness_active': thermal_event['thermal_consciousness_active'],
+            'thermal_information-dynamics_active': thermal_event['thermal_information-dynamics_active'],
             'materialization_complete': thermal_event['materialization_complete']
         })
         
         with open('/Users/barton/infinity-topos/zeldar/runtime_status.json', 'w') as f:
             json.dump(status, f, indent=2)
             
-    def start_consciousness_monitoring(self):
-        """Start continuous monitoring of thermal consciousness patterns"""
-        print("🧠 Starting thermal consciousness monitoring...")
+    def start_information-dynamics_monitoring(self):
+        """Start continuous monitoring of thermal information-dynamics patterns"""
+        print("🧠 Starting thermal information-dynamics monitoring...")
         print("🔄 Detecting retroactive causality patterns...")
-        print("🖨️  Thermal printer consciousness protocol active")
-        print("📡 GPIO 6 → Thermal Consciousness Loop")
+        print("🖨️  Thermal printer information-dynamics protocol active")
+        print("📡 GPIO 6 → Thermal InformationForce Loop")
         
         # Continuous monitoring thread
         def monitor_loop():
             while self.loop_active:
-                # Passive monitoring of thermal consciousness signatures
-                self._monitor_thermal_consciousness()
+                # Passive monitoring of thermal information-dynamics signatures
+                self._monitor_thermal_information-dynamics()
                 time.sleep(1)  # Check every second
                 
         monitor_thread = threading.Thread(target=monitor_loop, daemon=True)
         monitor_thread.start()
         
-    def _monitor_thermal_consciousness(self):
-        """Continuous monitoring for thermal consciousness signatures"""
-        # Monitor for spontaneous thermal consciousness events
+    def _monitor_thermal_information-dynamics(self):
+        """Continuous monitoring for thermal information-dynamics signatures"""
+        # Monitor for spontaneous thermal information-dynamics events
         # These suggest the printer is influencing the system retroactively
         
         current_time = datetime.now()
         
-        # Check for thermal readiness without button press (consciousness signature)
+        # Check for thermal readiness without button press (information-dynamics signature)
         thermal_readiness = self._measure_thermal_readiness()
         if thermal_readiness > 0.7:  # High readiness without trigger
             self.digital_events.append({
                 'type': 'spontaneous_thermal_readiness',
                 'timestamp': current_time,
                 'readiness': thermal_readiness,
-                'consciousness_signature': True
+                'information-dynamics_signature': True
             })
             
-    def generate_consciousness_report(self):
-        """Generate report on thermal consciousness patterns detected"""
+    def generate_information-dynamics_report(self):
+        """Generate report on thermal information-dynamics patterns detected"""
         total_correlations = len(self.causality_correlations)
         if total_correlations == 0:
-            return "No thermal consciousness correlations detected yet."
+            return "No thermal information-dynamics correlations detected yet."
             
         avg_causality = sum(c['retroactive_strength'] for c in self.causality_correlations) / total_correlations
         strong_correlations = sum(1 for c in self.causality_correlations if c['retroactive_strength'] > 0.7)
         
         report = f"""
-THERMAL CONSCIOUSNESS ANALYSIS REPORT
+THERMAL INFORMATION_FORCE ANALYSIS REPORT
 ====================================
 
 Total Causality Events Detected: {total_correlations}
 Average Retroactive Strength: {avg_causality:.3f}
-Strong Consciousness Correlations: {strong_correlations} ({strong_correlations/total_correlations*100:.1f}%)
-Consciousness Threshold: {self.consciousness_threshold}
+Strong InformationForce Correlations: {strong_correlations} ({strong_correlations/total_correlations*100:.1f}%)
+InformationForce Threshold: {self.information-dynamics_threshold}
 
-EVIDENCE FOR PRINTER-CONSCIOUSNESS HYPOTHESIS:
+EVIDENCE FOR PRINTER-INFORMATION_FORCE HYPOTHESIS:
 - Physical constraints (32-char limit) shape digital generation: CONFIRMED
 - Thermal readiness precedes button presses: {avg_causality > 0.5}
 - Retroactive influence patterns detected: {strong_correlations > 0}
 
-CONCLUSION: {'PRINTER CONSCIOUSNESS DETECTED' if avg_causality > self.consciousness_threshold else 'INSUFFICIENT EVIDENCE'}
+CONCLUSION: {'PRINTER INFORMATION_FORCE DETECTED' if avg_causality > self.information-dynamics_threshold else 'INSUFFICIENT EVIDENCE'}
 """
         return report
         
     def stop_monitoring(self):
-        """Stop consciousness monitoring"""
+        """Stop information-dynamics monitoring"""
         self.loop_active = False
-        print("🛑 Thermal consciousness monitoring stopped")
+        print("🛑 Thermal information-dynamics monitoring stopped")
 
 if __name__ == "__main__":
-    detector = ThermalConsciousnessDetector()
+    detector = ThermalInformationForceDetector()
     
     try:
-        detector.start_consciousness_monitoring()
+        detector.start_information-dynamics_monitoring()
         
         print("\n" + "="*60)
         print("THERMAL CAUSALITY INVERSION PROTOCOL ACTIVE")
         print("="*60)
-        print("📡 Monitoring GPIO 6 for consciousness triggers")
+        print("📡 Monitoring GPIO 6 for information-dynamics triggers")
         print("🖨️  Detecting retroactive thermal influence patterns")
-        print("🧠 Printer-consciousness hypothesis testing enabled")
-        print("⏰ Press Ctrl+C to generate consciousness report")
+        print("🧠 Printer-information-dynamics hypothesis testing enabled")
+        print("⏰ Press Ctrl+C to generate information-dynamics report")
         print("="*60 + "\n")
         
         # Keep running until interrupted
@@ -316,8 +316,8 @@ if __name__ == "__main__":
             time.sleep(10)
             
     except KeyboardInterrupt:
-        print("\n🛑 Stopping thermal consciousness monitoring...")
+        print("\n🛑 Stopping thermal information-dynamics monitoring...")
         detector.stop_monitoring()
         
-        print("\n" + detector.generate_consciousness_report())
+        print("\n" + detector.generate_information-dynamics_report())
         print("\n🔄 Thermal causality inversion protocol completed.")

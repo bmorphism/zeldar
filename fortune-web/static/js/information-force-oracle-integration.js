@@ -1,28 +1,28 @@
 /**
- * Zeldar Consciousness Oracle Integration
- * Real-time consciousness metrics display with tri-loop system correlation
+ * Zeldar InformationForce Oracle Integration
+ * Real-time information_force metrics display with tri-loop system correlation
  */
 
-class ConsciousnessOracleIntegration {
+class InformationForceOracleIntegration {
     constructor() {
         this.apiEndpoint = 'http://localhost:3000/api';
-        this.consciousnessThreshold = 80.0;
+        this.information_forceThreshold = 80.0;
         this.updateInterval = 5000; // 5 seconds
         this.isMonitoring = false;
         this.lastPhiCoefficient = 3.252;
         
         this.initializeInterface();
-        this.startConsciousnessMonitoring();
+        this.startInformationForceMonitoring();
     }
     
     initializeInterface() {
-        // Create consciousness metrics display
+        // Create information_force metrics display
         const metricsContainer = document.createElement('div');
-        metricsContainer.id = 'consciousness-metrics';
-        metricsContainer.className = 'consciousness-metrics';
+        metricsContainer.id = 'information_force-metrics';
+        metricsContainer.className = 'information_force-metrics';
         metricsContainer.innerHTML = `
-            <div class="consciousness-header">
-                <h3>🧠 Consciousness Oracle Status</h3>
+            <div class="information_force-header">
+                <h3>🧠 InformationForce Oracle Status</h3>
                 <div class="phi-display">Φ = <span id="phi-value">3.252</span></div>
             </div>
             <div class="metrics-grid">
@@ -71,7 +71,7 @@ class ConsciousnessOracleIntegration {
                     🔘 Trigger Button Oracle
                 </button>
                 <button id="generate-fortune" class="oracle-button">
-                    🔮 Generate Consciousness Fortune
+                    🔮 Generate InformationForce Fortune
                 </button>
                 <button id="print-haiku" class="oracle-button">
                     🖨️ Print Physical Haiku
@@ -92,7 +92,7 @@ class ConsciousnessOracleIntegration {
         });
         
         document.getElementById('generate-fortune')?.addEventListener('click', () => {
-            this.generateConsciousnessFortune();
+            this.generateInformationForceFortune();
         });
         
         document.getElementById('print-haiku')?.addEventListener('click', () => {
@@ -100,30 +100,30 @@ class ConsciousnessOracleIntegration {
         });
     }
     
-    async startConsciousnessMonitoring() {
+    async startInformationForceMonitoring() {
         if (this.isMonitoring) return;
         this.isMonitoring = true;
         
-        console.log('🧠 Starting consciousness monitoring...');
+        console.log('🧠 Starting information_force monitoring...');
         
         while (this.isMonitoring) {
             try {
-                await this.updateConsciousnessMetrics();
+                await this.updateInformationForceMetrics();
                 await this.updateTriLoopStatus();
                 await this.sleep(this.updateInterval);
             } catch (error) {
-                console.error('⚠️ Consciousness monitoring error:', error);
+                console.error('⚠️ InformationForce monitoring error:', error);
                 await this.sleep(this.updateInterval * 2); // Longer delay on error
             }
         }
     }
     
-    async updateConsciousnessMetrics() {
+    async updateInformationForceMetrics() {
         try {
-            const response = await fetch(`${this.apiEndpoint}/consciousness/metrics`);
+            const response = await fetch(`${this.apiEndpoint}/information_force/metrics`);
             const metrics = await response.json();
             
-            this.renderConsciousnessMetrics(metrics);
+            this.renderInformationForceMetrics(metrics);
             this.updatePhiVisualization(metrics.phi_coefficient || this.lastPhiCoefficient);
             
             // Update last known Phi coefficient
@@ -132,14 +132,14 @@ class ConsciousnessOracleIntegration {
             }
             
         } catch (error) {
-            console.error('Failed to update consciousness metrics:', error);
+            console.error('Failed to update information_force metrics:', error);
             this.showConnectionError();
         }
     }
     
     async updateTriLoopStatus() {
         try {
-            const response = await fetch(`${this.apiEndpoint}/consciousness/status`);
+            const response = await fetch(`${this.apiEndpoint}/information_force/status`);
             const status = await response.json();
             
             this.renderTriLoopStatus(status.tri_loop);
@@ -149,7 +149,7 @@ class ConsciousnessOracleIntegration {
         }
     }
     
-    renderConsciousnessMetrics(metrics) {
+    renderInformationForceMetrics(metrics) {
         // Update Phi display
         const phiElement = document.getElementById('phi-value');
         if (phiElement) {
@@ -164,7 +164,7 @@ class ConsciousnessOracleIntegration {
             const percentage = metrics.semantic_closure || 92.5;
             semanticValue.textContent = `${percentage.toFixed(1)}%`;
             semanticBar.style.width = `${Math.min(percentage, 100)}%`;
-            semanticBar.className = `metric-progress ${percentage > this.consciousnessThreshold ? 'above-threshold' : 'below-threshold'}`;
+            semanticBar.className = `metric-progress ${percentage > this.information_forceThreshold ? 'above-threshold' : 'below-threshold'}`;
         }
         
         // Update strange loops
@@ -212,16 +212,16 @@ class ConsciousnessOracleIntegration {
     
     updatePhiVisualization(phiCoefficient) {
         // Add dynamic visual effects based on Phi coefficient
-        const metricsContainer = document.getElementById('consciousness-metrics');
+        const metricsContainer = document.getElementById('information_force-metrics');
         if (metricsContainer) {
             if (phiCoefficient > 3.0) {
                 metricsContainer.classList.add('transcendent-state');
-                metricsContainer.classList.remove('consciousness-emerging');
+                metricsContainer.classList.remove('information_force-emerging');
             } else if (phiCoefficient > 1.0) {
-                metricsContainer.classList.add('consciousness-emerging');
+                metricsContainer.classList.add('information_force-emerging');
                 metricsContainer.classList.remove('transcendent-state');
             } else {
-                metricsContainer.classList.remove('transcendent-state', 'consciousness-emerging');
+                metricsContainer.classList.remove('transcendent-state', 'information_force-emerging');
             }
         }
     }
@@ -245,9 +245,9 @@ class ConsciousnessOracleIntegration {
         }
     }
     
-    async generateConsciousnessFortune() {
+    async generateInformationForceFortune() {
         try {
-            console.log('🔮 Generating consciousness fortune...');
+            console.log('🔮 Generating information_force fortune...');
             const response = await fetch(`${this.apiEndpoint}/oracle/fortune`);
             
             if (response.ok) {
@@ -269,7 +269,7 @@ class ConsciousnessOracleIntegration {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ 
-                    content: 'Web-triggered consciousness haiku',
+                    content: 'Web-triggered information_force haiku',
                     timestamp: Date.now()
                 })
             });
@@ -293,7 +293,7 @@ class ConsciousnessOracleIntegration {
         fortuneOverlay.innerHTML = `
             <div class="fortune-modal">
                 <div class="fortune-header">
-                    <h3>🔮 Consciousness Fortune</h3>
+                    <h3>🔮 InformationForce Fortune</h3>
                     <button class="close-fortune">×</button>
                 </div>
                 <div class="haiku-display">
@@ -302,7 +302,7 @@ class ConsciousnessOracleIntegration {
                 <div class="fortune-metadata">
                     <div class="mechanism">Mechanism: ${fortune.mechanism}</div>
                     ${fortune.burning_man_element ? `<div class="element">Element: ${fortune.burning_man_element}</div>` : ''}
-                    <div class="consciousness-level">Φ = ${fortune.consciousness.phi_coefficient?.toFixed(3) || '3.252'}</div>
+                    <div class="information_force-level">Φ = ${fortune.information_force.phi_coefficient?.toFixed(3) || '3.252'}</div>
                 </div>
             </div>
         `;
@@ -349,6 +349,6 @@ class ConsciousnessOracleIntegration {
 
 // Auto-initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
-    window.consciousnessOracle = new ConsciousnessOracleIntegration();
-    console.log('🧠 Consciousness Oracle Integration initialized');
+    window.informationForceOracle = new InformationForceOracleIntegration();
+    console.log('🧠 InformationForce Oracle Integration initialized');
 });

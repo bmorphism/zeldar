@@ -76,7 +76,7 @@ def controlled_print_haiku():
         save_last_print_time()
         
         # Play audio simultaneously with print start
-        print("🎵 Playing consciousness voice...")
+        print("🎵 Playing information-dynamics voice...")
         audio_success = audio_system.play_random_voice()
         if not audio_success:
             print("⚠️  Audio playback failed, continuing with print")

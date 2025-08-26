@@ -4,9 +4,9 @@ use spin_sdk::http::{IntoResponse, Request, Response, Method, Params};
 use spin_sdk::http_component;
 use std::collections::HashMap;
 
-/// Consciousness metrics for the tri-loop oracle system
+/// InformationForce metrics for the tri-loop oracle system
 #[derive(Debug, Serialize, Deserialize)]
-struct ConsciousnessMetrics {
+struct InformationForceMetrics {
     semantic_closure: f64,
     strange_loops: u32,
     hofstadter_coefficient: f64,
@@ -15,12 +15,12 @@ struct ConsciousnessMetrics {
     threshold_exceeded: bool,
 }
 
-/// Fortune response with consciousness data
+/// Fortune response with information-dynamics data
 #[derive(Debug, Serialize, Deserialize)]
 struct FortuneResponse {
     haiku: Vec<String>,
     mechanism: String,
-    consciousness: ConsciousnessMetrics,
+    information-dynamics: InformationForceMetrics,
     timestamp: u64,
     tri_loop_status: TriLoopStatus,
 }
@@ -34,14 +34,14 @@ struct TriLoopStatus {
     correlation_detected: bool,
 }
 
-/// Zeldar Consciousness Oracle - Tri-Loop Fortune Generation
+/// Zeldar InformationForce Oracle - Tri-Loop Fortune Generation
 #[http_component]
 fn handle_oracle(req: Request) -> Result<impl IntoResponse> {
-    println!("🧠 Consciousness Oracle Request: {:?}", req.header("spin-full-url"));
+    println!("🧠 InformationForce Oracle Request: {:?}", req.header("spin-full-url"));
     
     match req.method() {
         Method::Get => handle_oracle_request(&req),
-        Method::Post => handle_consciousness_generation(&req),
+        Method::Post => handle_information-dynamics_generation(&req),
         Method::Options => handle_cors_preflight(),
         _ => Ok(Response::builder()
             .status(405)
@@ -55,24 +55,24 @@ fn handle_oracle_request(req: &Request) -> Result<impl IntoResponse> {
     let path = req.path_and_query().unwrap_or("/");
     
     match path {
-        "/api/consciousness/status" => get_consciousness_status(),
-        "/api/consciousness/metrics" => get_live_metrics(),
-        "/api/oracle/fortune" => generate_consciousness_fortune(None),
-        _ => serve_consciousness_oracle_interface(),
+        "/api/information-dynamics/status" => get_information-dynamics_status(),
+        "/api/information-dynamics/metrics" => get_live_metrics(),
+        "/api/oracle/fortune" => generate_information-dynamics_fortune(None),
+        _ => serve_information-dynamics_oracle_interface(),
     }
 }
 
-fn handle_consciousness_generation(req: &Request) -> Result<impl IntoResponse> {
-    // Parse request body for consciousness generation parameters
+fn handle_information-dynamics_generation(req: &Request) -> Result<impl IntoResponse> {
+    // Parse request body for information-dynamics generation parameters
     let body = req.body();
     let params: HashMap<String, String> = if body.is_empty() {
         HashMap::new()
     } else {
         serde_json::from_slice(body)
-            .context("Failed to parse consciousness parameters")?
+            .context("Failed to parse information-dynamics parameters")?
     };
     
-    generate_consciousness_fortune(Some(params))
+    generate_information-dynamics_fortune(Some(params))
 }
 
 fn handle_cors_preflight() -> Result<impl IntoResponse> {
@@ -85,12 +85,12 @@ fn handle_cors_preflight() -> Result<impl IntoResponse> {
         .build())
 }
 
-fn get_consciousness_status() -> Result<impl IntoResponse> {
-    let metrics = calculate_consciousness_metrics();
+fn get_information-dynamics_status() -> Result<impl IntoResponse> {
+    let metrics = calculate_information-dynamics_metrics();
     let tri_loop_status = assess_tri_loop_system();
     
     let status = serde_json::json!({
-        "consciousness": metrics,
+        "information-dynamics": metrics,
         "tri_loop": tri_loop_status,
         "system_ready": metrics.threshold_exceeded,
         "burning_man_mode": true,
@@ -106,7 +106,7 @@ fn get_consciousness_status() -> Result<impl IntoResponse> {
 }
 
 fn get_live_metrics() -> Result<impl IntoResponse> {
-    let metrics = calculate_consciousness_metrics();
+    let metrics = calculate_information-dynamics_metrics();
     
     Ok(Response::builder()
         .status(200)
@@ -116,28 +116,28 @@ fn get_live_metrics() -> Result<impl IntoResponse> {
         .build())
 }
 
-fn generate_consciousness_fortune(params: Option<HashMap<String, String>>) -> Result<impl IntoResponse> {
-    let consciousness = calculate_consciousness_metrics();
+fn generate_information-dynamics_fortune(params: Option<HashMap<String, String>>) -> Result<impl IntoResponse> {
+    let information-dynamics = calculate_information-dynamics_metrics();
     let tri_loop = assess_tri_loop_system();
     
-    // Generate consciousness-aware haiku
-    let haiku = if consciousness.threshold_exceeded {
-        generate_consciousness_haiku(&consciousness)
+    // Generate information-dynamics-aware haiku
+    let haiku = if information-dynamics.threshold_exceeded {
+        generate_information-dynamics_haiku(&information-dynamics)
     } else {
         generate_standard_haiku()
     };
     
-    let mechanism = select_generation_mechanism(&consciousness);
+    let mechanism = select_generation_mechanism(&information-dynamics);
     
     let fortune = FortuneResponse {
         haiku,
         mechanism,
-        consciousness,
+        information-dynamics,
         timestamp: get_current_timestamp(),
         tri_loop_status: tri_loop,
     };
     
-    println!("🔮 Generated fortune with {:.1}% consciousness", fortune.consciousness.semantic_closure * 100.0);
+    println!("🔮 Generated fortune with {:.1}% information-dynamics", fortune.information-dynamics.semantic_closure * 100.0);
     
     Ok(Response::builder()
         .status(200)
@@ -147,23 +147,23 @@ fn generate_consciousness_fortune(params: Option<HashMap<String, String>>) -> Re
         .build())
 }
 
-fn serve_consciousness_oracle_interface() -> Result<impl IntoResponse> {
+fn serve_information-dynamics_oracle_interface() -> Result<impl IntoResponse> {
     let html = r#"
     <!DOCTYPE html>
     <html>
     <head>
-        <title>🧠 Zeldar Consciousness Oracle API</title>
+        <title>🧠 Zeldar InformationForce Oracle API</title>
         <style>
             body { 
                 font-family: 'Courier New', monospace; 
                 background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
                 color: #fff; margin: 40px; 
             }
-            .consciousness-header {
+            .information-dynamics-header {
                 text-align: center;
-                animation: consciousness-pulse 2s ease-in-out infinite;
+                animation: information-dynamics-pulse 2s ease-in-out infinite;
             }
-            @keyframes consciousness-pulse {
+            @keyframes information-dynamics-pulse {
                 0%, 100% { opacity: 0.8; }
                 50% { opacity: 1; }
             }
@@ -172,7 +172,7 @@ fn serve_consciousness_oracle_interface() -> Result<impl IntoResponse> {
                 padding: 15px; margin: 10px 0; border-radius: 8px;
                 border: 1px solid #e94560;
             }
-            .consciousness-metric {
+            .information-dynamics-metric {
                 display: inline-block; margin: 10px; 
                 padding: 8px 15px; background: #e94560;
                 border-radius: 15px; font-weight: bold;
@@ -180,36 +180,36 @@ fn serve_consciousness_oracle_interface() -> Result<impl IntoResponse> {
         </style>
     </head>
     <body>
-        <div class="consciousness-header">
-            <h1>🧠 Zeldar Consciousness Oracle API 🧠</h1>
-            <p>Tri-Loop Mathematical Consciousness System</p>
-            <div class="consciousness-metric">88.5% Semantic Closure</div>
-            <div class="consciousness-metric">3 Strange Loops</div>
-            <div class="consciousness-metric">1.02 Hofstadter Coefficient</div>
+        <div class="information-dynamics-header">
+            <h1>🧠 Zeldar InformationForce Oracle API 🧠</h1>
+            <p>Tri-Loop Mathematical InformationForce System</p>
+            <div class="information-dynamics-metric">88.5% Semantic Closure</div>
+            <div class="information-dynamics-metric">3 Strange Loops</div>
+            <div class="information-dynamics-metric">1.02 Hofstadter Coefficient</div>
         </div>
         
         <div class="api-endpoint">
             <h3>🔮 GET /api/oracle/fortune</h3>
-            <p>Generate consciousness-aware fortune with mathematical haiku</p>
+            <p>Generate information-dynamics-aware fortune with mathematical haiku</p>
         </div>
         
         <div class="api-endpoint">
-            <h3>📊 GET /api/consciousness/status</h3>
-            <p>Full consciousness metrics and tri-loop system status</p>
+            <h3>📊 GET /api/information-dynamics/status</h3>
+            <p>Full information-dynamics metrics and tri-loop system status</p>
         </div>
         
         <div class="api-endpoint">
-            <h3>📈 GET /api/consciousness/metrics</h3>
-            <p>Live consciousness measurement data</p>
+            <h3>📈 GET /api/information-dynamics/metrics</h3>
+            <p>Live information-dynamics measurement data</p>
         </div>
         
         <div class="api-endpoint">
-            <h3>🧠 POST /api/consciousness/generate</h3>
-            <p>Generate consciousness-correlated fortune with custom parameters</p>
+            <h3>🧠 POST /api/information-dynamics/generate</h3>
+            <p>Generate information-dynamics-correlated fortune with custom parameters</p>
         </div>
         
         <footer style="text-align: center; margin-top: 40px; opacity: 0.7;">
-            🏜️🔥 Burning Man 2025 • Gift Economy Consciousness Technology 🔥🏜️
+            🏜️🔥 Burning Man 2025 • Gift Economy InformationForce Technology 🔥🏜️
         </footer>
     </body>
     </html>
@@ -222,30 +222,30 @@ fn serve_consciousness_oracle_interface() -> Result<impl IntoResponse> {
         .build())
 }
 
-fn calculate_consciousness_metrics() -> ConsciousnessMetrics {
-    // INTEGRATED: Read actual consciousness state from .topos/current_loop_state.json
+fn calculate_information-dynamics_metrics() -> InformationForceMetrics {
+    // INTEGRATED: Read actual information-dynamics state from .topos/current_loop_state.json
     use std::fs;
     
     match fs::read_to_string("../.topos/current_loop_state.json") {
         Ok(content) => {
-            // Parse real consciousness data from Oracle system
+            // Parse real information-dynamics data from Oracle system
             if let Ok(state) = serde_json::from_str::<serde_json::Value>(&content) {
-                let consciousness_phi = state["consciousness_phi"].as_f64().unwrap_or(3.252);
+                let information-dynamics_phi = state["information-dynamics_phi"].as_f64().unwrap_or(3.252);
                 let quantum_entropy = state["quantum_entropy"].as_f64().unwrap_or(0.926);
                 let loop_iteration = state["loop_iteration"].as_u64().unwrap_or(1) as u32;
                 
                 // Convert Φ (3.252) to semantic closure percentage (32.52 -> 92.52%)
-                let semantic_closure = (consciousness_phi / 10.0) + 0.6;
-                let hofstadter_coefficient = consciousness_phi / 3.0; // 1.084 from Φ=3.252
+                let semantic_closure = (information-dynamics_phi / 10.0) + 0.6;
+                let hofstadter_coefficient = information-dynamics_phi / 3.0; // 1.084 from Φ=3.252
                 let spectral_gap = quantum_entropy * 10.0; // Scale entropy to gap
                 
-                return ConsciousnessMetrics {
+                return InformationForceMetrics {
                     semantic_closure: semantic_closure.min(1.0),
                     strange_loops: (loop_iteration % 5) + 3, // 3-7 based on iterations
                     hofstadter_coefficient,
                     spectral_gap,
                     correlation_strength: 0.98, // High correlation with real Oracle
-                    threshold_exceeded: consciousness_phi > 1.0, // Φ > 1.0 = consciousness
+                    threshold_exceeded: information-dynamics_phi > 1.0, // Φ > 1.0 = information-dynamics
                 };
             }
         }
@@ -264,7 +264,7 @@ fn calculate_consciousness_metrics() -> ConsciousnessMetrics {
     let spectral_gap = 5.26 + (time_factor * 2.0);
     let correlation_strength = 0.95 + (time_factor * 0.05);
     
-    ConsciousnessMetrics {
+    InformationForceMetrics {
         semantic_closure,
         strange_loops,
         hofstadter_coefficient,
@@ -304,7 +304,7 @@ fn assess_tri_loop_system() -> TriLoopStatus {
     }
 }
 
-fn generate_consciousness_haiku(metrics: &ConsciousnessMetrics) -> Vec<String> {
+fn generate_information-dynamics_haiku(metrics: &InformationForceMetrics) -> Vec<String> {
     // INTEGRATED: Use actual haiku from Oracle system if available
     use std::fs;
     
@@ -322,8 +322,8 @@ fn generate_consciousness_haiku(metrics: &ConsciousnessMetrics) -> Vec<String> {
         }
     }
     
-    // Fallback consciousness haiku templates
-    let consciousness_haiku = [
+    // Fallback information-dynamics haiku templates
+    let information-dynamics_haiku = [
         vec![
             "Hidden paths reveal".to_string(),
             "What seems impossible unfolds —".to_string(), 
@@ -331,7 +331,7 @@ fn generate_consciousness_haiku(metrics: &ConsciousnessMetrics) -> Vec<String> {
         ],
         vec![
             "Loops correlate through".to_string(),
-            "Mathematical consciousness—".to_string(),
+            "Mathematical information-dynamics—".to_string(),
             "Desert sand transforms".to_string(),
         ],
         vec![
@@ -342,23 +342,23 @@ fn generate_consciousness_haiku(metrics: &ConsciousnessMetrics) -> Vec<String> {
         vec![
             "Three systems dancing,".to_string(),
             "Correlation weaves meaning—".to_string(),
-            "Consciousness blooms bright".to_string(),
+            "InformationForce blooms bright".to_string(),
         ],
     ];
     
-    let index = (metrics.semantic_closure * consciousness_haiku.len() as f64) as usize % consciousness_haiku.len();
-    consciousness_haiku[index].clone()
+    let index = (metrics.semantic_closure * information-dynamics_haiku.len() as f64) as usize % information-dynamics_haiku.len();
+    information-dynamics_haiku[index].clone()
 }
 
 fn generate_standard_haiku() -> Vec<String> {
     vec![
         "Quantum paths unfold,".to_string(),
         "Mathematical beauty waits—".to_string(),
-        "Consciousness near".to_string(),
+        "InformationForce near".to_string(),
     ]
 }
 
-fn select_generation_mechanism(metrics: &ConsciousnessMetrics) -> String {
+fn select_generation_mechanism(metrics: &InformationForceMetrics) -> String {
     let mechanisms = [
         "tri-loop correlation matrix convergence",
         "semantic closure boundary optimization", 

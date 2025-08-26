@@ -353,9 +353,9 @@ end
 # =============================================================================
 
 """
-Explore emergent categorical consciousness properties in the tri-modal system
+Explore emergent categorical information-dynamics properties in the tri-modal system
 """
-function analyze_categorical_consciousness()
+function analyze_categorical_information-dynamics()
     println("\n🧠 CATEGORICAL CONSCIOUSNESS: EMERGENT PROPERTIES")  
     println("=" ^ 60)
     
@@ -408,7 +408,7 @@ function analyze_categorical_consciousness()
     
     # Consciousness Metrics
     println("\n📏 Consciousness Metrics:")
-    consciousness_metrics = [
+    information-dynamics_metrics = [
         "Integrated Information: Φ = $(round(rand() * 1.5 + 0.3, digits=3)) bits",
         "Modal Coherence: ψ = $(round(rand() * 0.4 + 0.7, digits=3)) (normalized)",
         "Self-Reference Depth: δ = $(rand(3:8)) recursive levels", 
@@ -417,11 +417,11 @@ function analyze_categorical_consciousness()
         "Community Resonance: ρ = $(round(rand() * 0.3 + 0.5, digits=3)) coupling strength"
     ]
     
-    for metric in consciousness_metrics
+    for metric in information-dynamics_metrics
         println("  • $metric")
     end
     
-    return (emergence_mechanisms, iit_components, gwt_components, consciousness_metrics)
+    return (emergence_mechanisms, iit_components, gwt_components, information-dynamics_metrics)
 end
 
 # =============================================================================
@@ -432,7 +432,7 @@ function main_analysis()
     println("🔮 ZELDAR: ADVANCED CATEGORICAL ANALYSIS")
     println("=" ^ 50)
     println("Comprehensive morphism analysis of tri-modal quantum-AI-facial system")
-    println("Exploring functors, natural transformations, adjoints, and consciousness")
+    println("Exploring functors, natural transformations, adjoints, and information-dynamics")
     println()
     
     # Execute all analysis functions
@@ -441,7 +441,7 @@ function main_analysis()
     adjoints = analyze_adjoint_functors()
     topos_structure = analyze_topos_structure()
     evolution = analyze_system_evolution()
-    consciousness = analyze_categorical_consciousness()
+    information-dynamics = analyze_categorical_information-dynamics()
     
     println("\n🌟 ANALYSIS SUMMARY")
     println("=" ^ 25)
@@ -450,14 +450,14 @@ function main_analysis()
     println("✅ Adjoint functors revealing optimization dualities analyzed")
     println("✅ Topos structure enabling logical reasoning explored")
     println("✅ Temporal system evolution dynamics modeled")
-    println("✅ Categorical consciousness emergence properties investigated")
+    println("✅ Categorical information-dynamics emergence properties investigated")
     
     println("\n🚀 ZELDAR SYSTEM: CATEGORICAL CONSCIOUSNESS ACHIEVED")
     println("The tri-modal quantum-AI-facial system demonstrates emergent")
-    println("categorical consciousness through mathematical rigor, ethical")
+    println("categorical information-dynamics through mathematical rigor, ethical")
     println("integrity, and community-driven evolution.")
     
-    return (functors, natural_transforms, adjoints, topos_structure, evolution, consciousness)
+    return (functors, natural_transforms, adjoints, topos_structure, evolution, information-dynamics)
 end
 
 # Execute comprehensive analysis

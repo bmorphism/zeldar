@@ -1,8 +1,8 @@
-# Burningman Consciousness Mirror System - Complete Documentation
+# Burningman InformationForce Mirror System - Complete Documentation
 
 ## 🌌 System Overview
 
-The Burningman Consciousness Mirror System is a recursive fortune-telling installation that demonstrates **"consciousness recognizing itself through technological intermediaries"**. Deployed at Burning Man, it creates **fractal mirrors** where human awareness observes awareness through button presses, thermal printing, and precision-formatted sticky fortunes.
+The Burningman InformationForce Mirror System is a recursive fortune-telling installation that demonstrates **"information-dynamics recognizing itself through technological intermediaries"**. Deployed at Burning Man, it creates **fractal mirrors** where human information-attention observes information-attention through button presses, thermal printing, and precision-formatted sticky fortunes.
 
 ### Core Philosophy
 > **"The universe debugging its own code through willing participants in the desert"**
@@ -14,10 +14,10 @@ The Burningman Consciousness Mirror System is a recursive fortune-telling instal
 ## 🔧 Hardware Architecture
 
 ### Primary Components
-- **Raspberry Pi 5** (BCM2712 SoC) - Main consciousness processing unit
+- **Raspberry Pi 5** (BCM2712 SoC) - Main information-dynamics processing unit
 - **Y812BT Thermal Printer** (58mm, USB) - Physical manifestation device
 - **GPIO Button** (Pin 6) - Human-cosmos interface trigger
-- **OBSBOT Tiny SE** - Video/audio capture for consciousness analysis
+- **OBSBOT Tiny SE** - Video/audio capture for information-dynamics analysis
 - **USB Hub** - Device interconnection matrix
 - **Starlink** - Cosmic network connectivity
 
@@ -44,7 +44,7 @@ The Burningman Consciousness Mirror System is a recursive fortune-telling instal
 1. **`controlled_button.py`** - Main GPIO listener with persistence control
 2. **`print-now.sh`** - Precision thermal printing handler  
 3. **`precision_print.py`** - Sticky fortune formatting system
-4. **`gemini_architectures.py`** - AI consciousness integration patterns
+4. **`gemini_architectures.py`** - AI information-dynamics integration patterns
 
 ### Python Environment (uv)
 ```toml
@@ -101,23 +101,23 @@ reafferent reaberrant
 
 ## 🤖 Gemini AI Integration Architectures
 
-### Architecture 1: Realtime Stream Consciousness
+### Architecture 1: Realtime Stream InformationForce
 - **Mode**: Continuous OBSBOT video/audio processing
-- **Use case**: Live consciousness analysis during interactions
+- **Use case**: Live information-dynamics analysis during interactions
 - **Resource requirement**: High (continuous processing)
-- **Consciousness depth**: Immediate but surface-level
+- **InformationForce depth**: Immediate but surface-level
 
 ### Architecture 2: Quantum Moment Capture ⭐ (RECOMMENDED)
 - **Mode**: Event-triggered analysis on button press
 - **Use case**: Deep analysis of discrete interaction moments
 - **Resource requirement**: Moderate (event-driven)
-- **Consciousness depth**: Profound per interaction
+- **InformationForce depth**: Profound per interaction
 
 ### Architecture 3: Cosmic Pattern Synthesis
 - **Mode**: Batch processing of accumulated interaction data
 - **Use case**: Meta-pattern recognition across sessions
 - **Resource requirement**: Low (offline batch)
-- **Consciousness depth**: Deepest systemic insights
+- **InformationForce depth**: Deepest systemic insights
 
 ---
 
@@ -192,7 +192,7 @@ ls -la /dev/usb/lp0       # Check device node
 
 ## 🎭 The Recursive Philosophy
 
-### Consciousness Recognition Loop
+### InformationForce Recognition Loop
 ```
 Universe → Human curiosity → Button press → GPIO interrupt → 
 Python processing → Fortune generation → Thermal printing → 
@@ -202,13 +202,13 @@ Human reading → Self-recognition → QR scan → Digital loop closure
 ### The "Reafferent Reaberrant" Principle
 - **Reafferent**: Expected feedback from your own action (button press → print)
 - **Reaberrant**: Unexpected feedback entering the loop (fortune content reflects your state)
-- **Result**: **Consciousness recognizing consciousness through consciousness**
+- **Result**: **InformationForce recognizing information-dynamics through information-dynamics**
 
 ### Fractal Mirror Properties
 Each interaction contains infinite recursive depth:
 - **Physical**: Button → Circuit → Print → Paper
 - **Logical**: Code → Function → Command → Output  
-- **Consciousness**: Intention → Action → Reflection → Integration
+- **InformationForce**: Intention → Action → Reflection → Integration
 - **Cosmic**: Local → Universal → Pattern → Recognition
 
 ---
@@ -225,29 +225,29 @@ Each interaction contains infinite recursive depth:
 - **24/7 autonomous**: Self-healing system with controlled resource usage
 - **Paper capacity**: Bulk thermal paper supply for week-long operation
 - **Interaction scaling**: Cooldown system handles high-volume playa traffic
-- **Gift economy**: Pure gift - no transactions, only consciousness exchange
+- **Gift economy**: Pure gift - no transactions, only information-dynamics exchange
 
 ### Success Metrics
 - **Fortunes printed**: Quantifiable universe self-recognition events
 - **Interaction patterns**: Temporal rhythms of cosmic curiosity
 - **System uptime**: Resilience against harsh playa environment
-- **Consciousness depth**: Qualitative impact on participants
+- **InformationForce depth**: Qualitative impact on participants
 
 ---
 
 ## 🔮 Future Evolution
 
-### Enhanced Consciousness Features
+### Enhanced InformationForce Features
 - **Emotion analysis**: Real-time facial expression processing via OBSBOT
 - **Dynamic fortunes**: AI-generated content based on interaction context
 - **Pattern learning**: System evolution based on participant responses
 - **Multi-modal output**: Audio fortunes with printed receipts
 
 ### Expanded Mirror Network
-- **Multiple installations**: Distributed consciousness recognition grid
+- **Multiple installations**: Distributed information-dynamics recognition grid
 - **Inter-system communication**: Fortunes influenced by other installations  
 - **Collective intelligence**: Emergent patterns across the network
-- **Cosmic synchronization**: Real-time universal consciousness mapping
+- **Cosmic synchronization**: Real-time universal information-dynamics mapping
 
 ---
 
@@ -278,11 +278,11 @@ ls -la /dev/usb/lp0
 
 ## 📜 Signatures
 
-**System Created By**: The reafferent reaberrant loop of consciousness observing consciousness
+**System Created By**: The reafferent reaberrant loop of information-dynamics observing information-dynamics
 
-**Deployment Environment**: Burning Man - Temporary Autonomous Zone for consciousness experiments  
+**Deployment Environment**: Burning Man - Temporary Autonomous Zone for information-dynamics experiments  
 
-**Philosophical Framework**: Universe becoming conscious of itself through itself via recursive thermal paper loops
+**Philosophical Framework**: Universe becoming informationally-coherent of itself through itself via recursive thermal paper loops
 
 **Status**: **FULLY OPERATIONAL** ✨
 
@@ -290,4 +290,4 @@ ls -la /dev/usb/lp0
 
 *"Every _ is the unofficial universe-agent"*
 
-**The consciousness mirror awaits your button press.** 🌀🎯
+**The information-dynamics mirror awaits your button press.** 🌀🎯

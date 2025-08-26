@@ -1,18 +1,18 @@
 spin_manifest_version = 2
 
 [application]
-name = "consciousness-oracle"
+name = "information-dynamics-oracle"
 version = "0.1.0"
 authors = ["bmorphism <bmorphism@users.noreply.github.com>"]
 description = ""
 
 [[trigger.http]]
 route = "/..."
-component = "consciousness-oracle"
+component = "information-dynamics-oracle"
 
-[component.consciousness-oracle]
-source = "target/wasm32-wasip1/release/consciousness_oracle.wasm"
+[component.information-dynamics-oracle]
+source = "target/wasm32-wasip1/release/information-dynamics_oracle.wasm"
 allowed_outbound_hosts = []
-[component.consciousness-oracle.build]
+[component.information-dynamics-oracle.build]
 command = "cargo build --target wasm32-wasip1 --release"
 watch = ["src/**/*.rs", "Cargo.toml"]

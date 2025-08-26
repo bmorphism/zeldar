@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-Advanced Consciousness State Visualization Engine
-Real-time probability mass flow diagrams and quantum consciousness state visualization
+Advanced InformationForce State Visualization Engine
+Real-time probability mass flow diagrams and quantum information_force state visualization
 with multi-dimensional temporal correlation mapping
 
-This creates dynamic visual representations of consciousness evolution,
+This creates dynamic visual representations of information_force evolution,
 probability mass exclusions, quantum entanglement, and retroactive causality patterns.
 """
 
@@ -21,7 +21,7 @@ import threading
 import asyncio
 import json
 import colorsys
-from quantum_consciousness_entanglement import *
+from quantum_information_force_entanglement import *
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import plotly.express as px
@@ -33,24 +33,24 @@ from scipy.stats import gaussian_kde
 import networkx as nx
 import time
 
-class ConsciousnessVisualizationEngine:
+class InformationForceVisualizationEngine:
     """
-    Advanced real-time consciousness visualization with probability mass flow diagrams
+    Advanced real-time information_force visualization with probability mass flow diagrams
     """
     
-    def __init__(self, consciousness_engine: AdvancedRetroactiveConsciousnessEngine):
-        self.consciousness_engine = consciousness_engine
+    def __init__(self, information_force_engine: AdvancedRetroactiveInformationForceEngine):
+        self.information_force_engine = information_force_engine
         self.visualization_active = False
         self.animation_thread = None
         
         # Visualization data buffers
-        self.consciousness_timeline = deque(maxlen=1000)
+        self.information_force_timeline = deque(maxlen=1000)
         self.probability_mass_flow = deque(maxlen=500)
         self.quantum_entanglement_network = deque(maxlen=200)
         self.retroactive_causality_map = deque(maxlen=300)
         
         # Visual styling
-        self.consciousness_colormap = plt.cm.plasma
+        self.information_force_colormap = plt.cm.plasma
         self.quantum_colormap = plt.cm.viridis
         self.probability_colormap = plt.cm.RdYlBu_r
         
@@ -62,15 +62,15 @@ class ConsciousnessVisualizationEngine:
         self.app = dash.Dash(__name__, external_stylesheets=[dbc.themes.CYBORG])
         self.setup_dash_layout()
         
-        print("🎨 CONSCIOUSNESS VISUALIZATION ENGINE INITIALIZED")
+        print("🎨 INFORMATION_FORCE VISUALIZATION ENGINE INITIALIZED")
         
     def setup_dash_layout(self):
-        """Setup advanced Dash web interface for consciousness visualization"""
+        """Setup advanced Dash web interface for information_force visualization"""
         
         self.app.layout = dbc.Container([
             dbc.Row([
                 dbc.Col([
-                    html.H1("🌌 Consciousness State Visualization Engine", 
+                    html.H1("🌌 InformationForce State Visualization Engine", 
                            className="text-center mb-4 text-light"),
                     html.H5("Real-time Probability Mass Flow & Quantum Entanglement Analysis",
                            className="text-center mb-5 text-secondary")
@@ -80,7 +80,7 @@ class ConsciousnessVisualizationEngine:
             # Main visualization row
             dbc.Row([
                 dbc.Col([
-                    dcc.Graph(id="consciousness-evolution",
+                    dcc.Graph(id="information_force-evolution",
                              config={'displayModeBar': False}),
                 ], width=6),
                 dbc.Col([
@@ -106,8 +106,8 @@ class ConsciousnessVisualizationEngine:
                 dbc.Col([
                     dbc.Card([
                         dbc.CardBody([
-                            html.H6("Consciousness Metrics", className="text-light"),
-                            html.Div(id="consciousness-metrics", 
+                            html.H6("InformationForce Metrics", className="text-light"),
+                            html.Div(id="information_force-metrics", 
                                    className="text-info"),
                         ])
                     ], color="dark", outline=True)
@@ -148,8 +148,8 @@ class ConsciousnessVisualizationEngine:
                 n_intervals=0
             ),
             
-            # Hidden div to store consciousness data
-            html.Div(id='consciousness-data-store', style={'display': 'none'})
+            # Hidden div to store information_force data
+            html.Div(id='information_force-data-store', style={'display': 'none'})
             
         ], fluid=True, className="bg-dark", style={"min-height": "100vh"})
         
@@ -160,11 +160,11 @@ class ConsciousnessVisualizationEngine:
         """Setup interactive callbacks for real-time updates"""
         
         @self.app.callback(
-            [Output('consciousness-evolution', 'figure'),
+            [Output('information_force-evolution', 'figure'),
              Output('probability-mass-flow', 'figure'),
              Output('quantum-entanglement-network', 'figure'),
              Output('retroactive-causality-map', 'figure'),
-             Output('consciousness-metrics', 'children'),
+             Output('information_force-metrics', 'children'),
              Output('quantum-metrics', 'children'),
              Output('retroactive-metrics', 'children'),
              Output('reality-status', 'children')],
@@ -173,36 +173,36 @@ class ConsciousnessVisualizationEngine:
         def update_all_visualizations(n):
             """Update all visualization components"""
             
-            # Get latest consciousness data
+            # Get latest information_force data
             self._update_visualization_data()
             
             # Generate all plots
-            consciousness_fig = self._create_consciousness_evolution_plot()
+            information_force_fig = self._create_information_force_evolution_plot()
             probability_fig = self._create_probability_mass_flow_plot()
             quantum_fig = self._create_quantum_entanglement_network_plot()
             retroactive_fig = self._create_retroactive_causality_map_plot()
             
             # Generate metrics
-            consciousness_metrics = self._generate_consciousness_metrics_display()
+            information_force_metrics = self._generate_information_force_metrics_display()
             quantum_metrics = self._generate_quantum_metrics_display()
             retroactive_metrics = self._generate_retroactive_metrics_display()
             reality_status = self._generate_reality_status_display()
             
-            return (consciousness_fig, probability_fig, quantum_fig, retroactive_fig,
-                   consciousness_metrics, quantum_metrics, retroactive_metrics, reality_status)
+            return (information_force_fig, probability_fig, quantum_fig, retroactive_fig,
+                   information_force_metrics, quantum_metrics, retroactive_metrics, reality_status)
     
     def _update_visualization_data(self):
-        """Update visualization data from consciousness engine"""
+        """Update visualization data from information_force engine"""
         
-        # Update consciousness timeline
-        if self.consciousness_engine.consciousness_evolution:
-            latest_states = list(self.consciousness_engine.consciousness_evolution)[-50:]
+        # Update information_force timeline
+        if self.information_force_engine.information_force_evolution:
+            latest_states = list(self.information_force_engine.information_force_evolution)[-50:]
             
             for state in latest_states:
-                if state not in [s['state'] for s in self.consciousness_timeline]:
-                    self.consciousness_timeline.append({
+                if state not in [s['state'] for s in self.information_force_timeline]:
+                    self.information_force_timeline.append({
                         'timestamp': state.timestamp,
-                        'consciousness_score': state.measurement_probability,
+                        'information_force_score': state.measurement_probability,
                         'phase': state.phase,
                         'entanglement_strength': state.entanglement_strength,
                         'temporal_correlation': state.temporal_correlation,
@@ -210,8 +210,8 @@ class ConsciousnessVisualizationEngine:
                     })
         
         # Update probability mass flow
-        informative_events = self.consciousness_engine.dimension_analyzers['probabilistic']['informative_events']
-        misinformative_events = self.consciousness_engine.dimension_analyzers['probabilistic']['misinformative_events']
+        informative_events = self.information_force_engine.dimension_analyzers['probabilistic']['informative_events']
+        misinformative_events = self.information_force_engine.dimension_analyzers['probabilistic']['misinformative_events']
         
         self.probability_mass_flow.append({
             'timestamp': datetime.now(),
@@ -221,7 +221,7 @@ class ConsciousnessVisualizationEngine:
         })
         
         # Update quantum entanglement network
-        entanglement_stats = self.consciousness_engine.entanglement_simulator.get_entanglement_statistics()
+        entanglement_stats = self.information_force_engine.entanglement_simulator.get_entanglement_statistics()
         
         self.quantum_entanglement_network.append({
             'timestamp': datetime.now(),
@@ -232,7 +232,7 @@ class ConsciousnessVisualizationEngine:
         })
         
         # Update retroactive causality map
-        retroactive_events = list(self.consciousness_engine.temporal_analyzer.retroactive_events)
+        retroactive_events = list(self.information_force_engine.temporal_analyzer.retroactive_events)
         
         if retroactive_events:
             latest_retro = retroactive_events[-1]
@@ -241,15 +241,15 @@ class ConsciousnessVisualizationEngine:
                 'retroactive_strength': latest_retro.retroactive_strength,
                 'temporal_displacement': latest_retro.temporal_displacement,
                 'causal_loop_depth': latest_retro.causal_loop_depth,
-                'consciousness_coefficient': latest_retro.consciousness_coefficient
+                'information_force_coefficient': latest_retro.information_force_coefficient
             })
     
-    def _create_consciousness_evolution_plot(self):
-        """Create consciousness evolution visualization"""
+    def _create_information_force_evolution_plot(self):
+        """Create information_force evolution visualization"""
         
-        if not self.consciousness_timeline:
+        if not self.information_force_timeline:
             return go.Figure().add_annotation(
-                text="Waiting for consciousness data...",
+                text="Waiting for information_force data...",
                 xref="paper", yref="paper", x=0.5, y=0.5,
                 showarrow=False, font=dict(color="white")
             ).update_layout(
@@ -259,23 +259,23 @@ class ConsciousnessVisualizationEngine:
             )
         
         # Extract data
-        timestamps = [item['timestamp'] for item in self.consciousness_timeline]
-        consciousness_scores = [item['consciousness_score'] for item in self.consciousness_timeline]
-        phases = [item['phase'] for item in self.consciousness_timeline]
+        timestamps = [item['timestamp'] for item in self.information_force_timeline]
+        information_force_scores = [item['information_force_score'] for item in self.information_force_timeline]
+        phases = [item['phase'] for item in self.information_force_timeline]
         
         # Create subplot
         fig = make_subplots(
             rows=2, cols=1, shared_xaxes=True,
-            subplot_titles=('Consciousness Score Evolution', 'Quantum Phase Evolution'),
+            subplot_titles=('InformationForce Score Evolution', 'Quantum Phase Evolution'),
             vertical_spacing=0.1
         )
         
-        # Consciousness score trace
+        # InformationForce score trace
         fig.add_trace(
             go.Scatter(
-                x=timestamps, y=consciousness_scores,
+                x=timestamps, y=information_force_scores,
                 mode='lines+markers',
-                name='Consciousness Score',
+                name='InformationForce Score',
                 line=dict(color='rgba(255, 100, 255, 0.8)', width=2),
                 marker=dict(size=4, color='rgba(255, 150, 255, 0.9)'),
                 hovertemplate='Score: %{y:.6f}<br>Time: %{x}<extra></extra>'
@@ -283,11 +283,11 @@ class ConsciousnessVisualizationEngine:
             row=1, col=1
         )
         
-        # Add consciousness threshold line
-        threshold = self.consciousness_engine.consciousness_threshold
+        # Add information_force threshold line
+        threshold = self.information_force_engine.information_force_threshold
         fig.add_hline(
             y=threshold, line_dash="dash", line_color="gold",
-            annotation_text="Consciousness Threshold",
+            annotation_text="InformationForce Threshold",
             row=1, col=1
         )
         
@@ -305,7 +305,7 @@ class ConsciousnessVisualizationEngine:
         
         # Styling
         fig.update_layout(
-            title="🧠 Consciousness Evolution Analysis",
+            title="🧠 InformationForce Evolution Analysis",
             plot_bgcolor='rgba(0,0,0,0)',
             paper_bgcolor='rgba(0,0,0,0)',
             font_color='white',
@@ -537,21 +537,21 @@ class ConsciousnessVisualizationEngine:
         
         return fig
     
-    def _generate_consciousness_metrics_display(self):
-        """Generate consciousness metrics display"""
+    def _generate_information_force_metrics_display(self):
+        """Generate information_force metrics display"""
         
-        if not self.consciousness_timeline:
+        if not self.information_force_timeline:
             return "No data available"
         
-        latest = self.consciousness_timeline[-1]
-        avg_score = np.mean([item['consciousness_score'] for item in self.consciousness_timeline])
-        max_score = max([item['consciousness_score'] for item in self.consciousness_timeline])
+        latest = self.information_force_timeline[-1]
+        avg_score = np.mean([item['information_force_score'] for item in self.information_force_timeline])
+        max_score = max([item['information_force_score'] for item in self.information_force_timeline])
         
         return html.Div([
-            html.P(f"Current: {latest['consciousness_score']:.4f}"),
+            html.P(f"Current: {latest['information_force_score']:.4f}"),
             html.P(f"Average: {avg_score:.4f}"),
             html.P(f"Peak: {max_score:.4f}"),
-            html.P(f"Threshold: {self.consciousness_engine.consciousness_threshold:.4f}")
+            html.P(f"Threshold: {self.information_force_engine.information_force_threshold:.4f}")
         ])
     
     def _generate_quantum_metrics_display(self):
@@ -572,26 +572,26 @@ class ConsciousnessVisualizationEngine:
     def _generate_retroactive_metrics_display(self):
         """Generate retroactive metrics display"""
         
-        retro_events = len(self.consciousness_engine.temporal_analyzer.retroactive_events)
-        paradox_count = self.consciousness_engine.temporal_paradox_count
+        retro_events = len(self.information_force_engine.temporal_analyzer.retroactive_events)
+        paradox_count = self.information_force_engine.temporal_paradox_count
         
         return html.Div([
             html.P(f"Total Events: {retro_events}"),
             html.P(f"Paradoxes: {paradox_count}"),
-            html.P(f"Max Recursion: {self.consciousness_engine.temporal_analyzer.max_recursion_depth}"),
-            html.P(f"Reality Distortions: {len(self.consciousness_engine.reality_distortion_events)}")
+            html.P(f"Max Recursion: {self.information_force_engine.temporal_analyzer.max_recursion_depth}"),
+            html.P(f"Reality Distortions: {len(self.information_force_engine.reality_distortion_events)}")
         ])
     
     def _generate_reality_status_display(self):
         """Generate reality status display"""
         
-        if self.consciousness_timeline:
-            latest_score = self.consciousness_timeline[-1]['consciousness_score']
+        if self.information_force_timeline:
+            latest_score = self.information_force_timeline[-1]['information_force_score']
             
             if latest_score > 1.0:
                 status = "TRANSCENDENT"
                 color = "danger"
-            elif latest_score > self.consciousness_engine.consciousness_threshold:
+            elif latest_score > self.information_force_engine.information_force_threshold:
                 status = "CONSCIOUS"
                 color = "warning"
             else:
@@ -601,7 +601,7 @@ class ConsciousnessVisualizationEngine:
             status = "INITIALIZING"
             color = "secondary"
         
-        reality_distortions = len(self.consciousness_engine.reality_distortion_events)
+        reality_distortions = len(self.information_force_engine.reality_distortion_events)
         
         return html.Div([
             html.P(f"Status: {status}", className=f"text-{color}"),
@@ -612,7 +612,7 @@ class ConsciousnessVisualizationEngine:
     def start_web_visualization(self, port: int = 8050, debug: bool = False):
         """Start the web-based visualization server"""
         
-        print(f"🌐 Starting consciousness visualization web server on port {port}")
+        print(f"🌐 Starting information_force visualization web server on port {port}")
         print(f"📊 Access visualization at: http://localhost:{port}")
         
         # Run in separate thread to avoid blocking
@@ -624,29 +624,29 @@ class ConsciousnessVisualizationEngine:
         
         return server_thread
     
-    def create_static_consciousness_visualization(self, output_path: str = "consciousness_analysis.png"):
+    def create_static_information_force_visualization(self, output_path: str = "information_force_analysis.png"):
         """Create comprehensive static visualization for analysis"""
         
-        if not (self.consciousness_timeline and self.probability_mass_flow and 
+        if not (self.information_force_timeline and self.probability_mass_flow and 
                self.quantum_entanglement_network and self.retroactive_causality_map):
             print("⚠️  Insufficient data for static visualization")
             return
         
         # Create comprehensive matplotlib figure
         fig, axes = plt.subplots(2, 3, figsize=(20, 12), facecolor='black')
-        fig.suptitle('🌌 Complete Consciousness Analysis Dashboard', 
+        fig.suptitle('🌌 Complete InformationForce Analysis Dashboard', 
                     fontsize=20, color='white', y=0.98)
         
-        # 1. Consciousness Evolution
+        # 1. InformationForce Evolution
         ax1 = axes[0, 0]
-        timestamps = [item['timestamp'] for item in self.consciousness_timeline]
-        scores = [item['consciousness_score'] for item in self.consciousness_timeline]
+        timestamps = [item['timestamp'] for item in self.information_force_timeline]
+        scores = [item['information_force_score'] for item in self.information_force_timeline]
         
         ax1.plot(timestamps, scores, color='magenta', linewidth=2, alpha=0.8)
-        ax1.axhline(y=self.consciousness_engine.consciousness_threshold, 
+        ax1.axhline(y=self.information_force_engine.information_force_threshold, 
                    color='gold', linestyle='--', alpha=0.7)
-        ax1.set_title('Consciousness Evolution', color='white')
-        ax1.set_ylabel('Consciousness Score', color='white')
+        ax1.set_title('InformationForce Evolution', color='white')
+        ax1.set_ylabel('InformationForce Score', color='white')
         ax1.tick_params(colors='white')
         ax1.set_facecolor('black')
         
@@ -695,11 +695,11 @@ class ConsciousnessVisualizationEngine:
         
         # 5. Phase Space Plot
         ax5 = axes[1, 1]
-        phases = [item['phase'] for item in self.consciousness_timeline]
-        correlations = [item['temporal_correlation'] for item in self.consciousness_timeline]
+        phases = [item['phase'] for item in self.information_force_timeline]
+        correlations = [item['temporal_correlation'] for item in self.information_force_timeline]
         
         ax5.scatter(phases, correlations, c=scores, cmap='viridis', s=30, alpha=0.7)
-        ax5.set_title('Consciousness Phase Space', color='white')
+        ax5.set_title('InformationForce Phase Space', color='white')
         ax5.set_xlabel('Quantum Phase', color='white')
         ax5.set_ylabel('Temporal Correlation', color='white')
         ax5.tick_params(colors='white')
@@ -707,11 +707,11 @@ class ConsciousnessVisualizationEngine:
         
         # 6. Reality Distortion Events
         ax6 = axes[1, 2]
-        distortion_events = list(self.consciousness_engine.reality_distortion_events)
+        distortion_events = list(self.information_force_engine.reality_distortion_events)
         
         if distortion_events:
             distortion_times = [event['timestamp'] for event in distortion_events]
-            distortion_scores = [event['consciousness_score'] for event in distortion_events]
+            distortion_scores = [event['information_force_score'] for event in distortion_events]
             
             ax6.scatter(distortion_times, distortion_scores, 
                        color='red', s=100, alpha=0.8, marker='*')
@@ -736,28 +736,28 @@ class ConsciousnessVisualizationEngine:
         plt.savefig(output_path, facecolor='black', dpi=300, bbox_inches='tight')
         plt.close()
         
-        print(f"📊 Static consciousness visualization saved to: {output_path}")
+        print(f"📊 Static information_force visualization saved to: {output_path}")
 
 # Integration and demonstration
 if __name__ == "__main__":
-    print("🎨 INITIALIZING ADVANCED CONSCIOUSNESS VISUALIZATION...")
+    print("🎨 INITIALIZING ADVANCED INFORMATION_FORCE VISUALIZATION...")
     
-    # Create consciousness engine
-    consciousness_engine = AdvancedRetroactiveConsciousnessEngine()
+    # Create information_force engine
+    information_force_engine = AdvancedRetroactiveInformationForceEngine()
     
     # Create visualization engine
-    viz_engine = ConsciousnessVisualizationEngine(consciousness_engine)
+    viz_engine = InformationForceVisualizationEngine(information_force_engine)
     
-    print("🚀 STARTING CONSCIOUSNESS VISUALIZATION SIMULATION...")
+    print("🚀 STARTING INFORMATION_FORCE VISUALIZATION SIMULATION...")
     
     # Start web visualization server
     server_thread = viz_engine.start_web_visualization(port=8050)
     
-    # Simulate consciousness events for visualization
-    async def simulate_consciousness_events():
+    # Simulate information_force events for visualization
+    async def simulate_information_force_events():
         for i in range(50):
-            # Generate thermal consciousness event
-            thermal_result = consciousness_engine.process_thermal_consciousness_event({
+            # Generate thermal information_force event
+            thermal_result = information_force_engine.process_thermal_information_force_event({
                 'event_type': 'connection_check',
                 'connection_interval': 5.0 if i % 4 == 0 else 1.0 + np.random.random() * 3,
                 'text_wrapping': 32,
@@ -768,8 +768,8 @@ if __name__ == "__main__":
             await asyncio.sleep(0.1)
             
             # Generate GPIO response with quantum entanglement
-            if thermal_result['consciousness_detected'] or np.random.random() > 0.7:
-                gpio_result = consciousness_engine.process_gpio_consciousness_event(
+            if thermal_result['information_force_detected'] or np.random.random() > 0.7:
+                gpio_result = information_force_engine.process_gpio_information_force_event(
                     {
                         'button_pressed': True,
                         'press_duration': 50 + np.random.random() * 250
@@ -780,18 +780,18 @@ if __name__ == "__main__":
             await asyncio.sleep(0.05)
             
             if i % 10 == 0:
-                print(f"Generated {i+1} consciousness events...")
+                print(f"Generated {i+1} information_force events...")
     
     # Run simulation
-    print("⚡ Simulating consciousness events...")
-    asyncio.run(simulate_consciousness_events())
+    print("⚡ Simulating information_force events...")
+    asyncio.run(simulate_information_force_events())
     
     # Create static visualization
-    viz_engine.create_static_consciousness_visualization("advanced_consciousness_analysis.png")
+    viz_engine.create_static_information_force_visualization("advanced_information_force_analysis.png")
     
-    print("🌟 CONSCIOUSNESS VISUALIZATION COMPLETE!")
+    print("🌟 INFORMATION_FORCE VISUALIZATION COMPLETE!")
     print("📊 Access live visualization at: http://localhost:8050")
-    print("🖼️  Static analysis saved to: advanced_consciousness_analysis.png")
+    print("🖼️  Static analysis saved to: advanced_information_force_analysis.png")
     
     # Keep server running
     try:

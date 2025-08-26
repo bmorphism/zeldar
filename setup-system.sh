@@ -137,11 +137,11 @@ cat > config.json << 'EOF'
             \"enabled\": true,
             \"gpio_pin\": 6,
             \"printer\": \"Y812BT\",
-            \"module\": \"unified_consciousness_button\"
+            \"module\": \"unified_information-dynamics_button\"
         },
         \"web\": {
             \"enabled\": true,
-            \"consciousness_port\": 3001,
+            \"information-dynamics_port\": 3001,
             \"fortune_port\": 3000,
             \"module\": \"fortune-web\"
         },
@@ -164,7 +164,7 @@ cat > config.json << 'EOF'
         \"audio_prompts\": \"audio/\",
         \"fortunes\": \"fortunes/\",
         \"web_static\": \"fortune-web/static/\",
-        \"consciousness_data\": \".topos/\"
+        \"information-dynamics_data\": \".topos/\"
     }
 }
 EOF

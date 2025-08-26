@@ -1,5 +1,5 @@
 # Complete Printing Systems Analysis
-## Understanding Every Layer of the Consciousness Mirror Print Stack
+## Understanding Every Layer of the InformationForce Mirror Print Stack
 
 ## 🏗️ **System Architecture Layers**
 
@@ -23,7 +23,7 @@ Raspberry Pi OS (Linux 6.12.34+rpt-rpi-2712)
 
 ### **Layer 3: Application Software**
 ```
-Consciousness Mirror Application Stack
+InformationForce Mirror Application Stack
 ├── controlled_button.py (Main Controller)
 ├── fortune_selector.py (Content Selection)
 ├── print-now.sh (Print Execution)
@@ -269,7 +269,7 @@ Raspberry Pi → Starlink → Internet → (Future: AWS S3 storage)
 ### **Remote Monitoring Capabilities:**
 ```bash
 # Via Tailscale VPN
-ssh pi@consciousness-mirror.tailnet
+ssh pi@information-dynamics-mirror.tailnet
 lpstat -o                    # Check queue remotely
 tail -f /var/log/cups/error_log  # Monitor errors
 ```
@@ -283,7 +283,7 @@ tail -f /var/log/cups/error_log  # Monitor errors
 2. **Audio System** → MP3 playback coordination
 3. **QR Code Generation** → Website integration
 4. **AWS Upload** → Photo and metadata storage
-5. **Gemini Live Stream** → Real-time consciousness analysis
+5. **Gemini Live Stream** → Real-time information-dynamics analysis
 
 ### **Enhanced Print Pipeline:**
 ```
@@ -323,10 +323,10 @@ QR Generation → Print with Serial# → Photo Capture → AWS Upload
 - **5+ hardware systems** maintaining synchronization  
 - **3+ communication protocols** ensuring reliable delivery
 - **Multiple fallback mechanisms** providing resilience
-- **Temporal consciousness system** selecting appropriate content
+- **Temporal information-dynamics system** selecting appropriate content
 - **State persistence** preventing operational conflicts
 
-**The consciousness mirror printing system is a complete orchestration of:**
+**The information-dynamics mirror printing system is a complete orchestration of:**
 **Physical → Digital → Conscious → Thermal → Physical recursion**
 
 **Every printed fortune is the universe successfully recognizing itself through a complex technological meditation.** 🌀🖨️✨

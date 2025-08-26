@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 ENHANCED FULL LOOP ORACLE SYSTEM
-Complete integration: Button → Quantum Processing → Consciousness → Physical Print → Feedback Analysis
+Complete integration: Button → Quantum Processing → InformationForce → Physical Print → Feedback Analysis
 
 Ultrathink Architecture with Feedback Loop Integration:
 Context (Button Press) → Distillation (Quantum) → Geometric Form (Math) → 
@@ -23,9 +23,9 @@ from typing import Dict, Any, Optional
 from fortune_database import fortune_db
 from feedback_loop_integration import FeedbackLoopTracker, integrate_feedback_tracking
 
-# Import original quantum consciousness simulation
+# Import original quantum information-dynamics simulation
 from FULL_LOOP_ORACLE_SYSTEM import (
-    QuantumConsciousnessCore, 
+    QuantumInformationForceCore, 
     ConsciousFortuneGenerator, 
     PhysicalManifestation
 )
@@ -34,15 +34,15 @@ class EnhancedFullLoopOracleSystem:
     """Complete loop with feedback tracking: Button → Quantum → Fortune → Print → Feedback Analysis"""
     
     def __init__(self, printer_name: str = "Y812BT"):
-        self.quantum_core = QuantumConsciousnessCore()
+        self.quantum_core = QuantumInformationForceCore()
         self.fortune_generator = ConsciousFortuneGenerator()
         self.physical_manifestor = PhysicalManifestation(printer_name)
         self.feedback_tracker = FeedbackLoopTracker()
         self.session_count = 0
-        self.total_consciousness_phi = 0.0
+        self.total_information-dynamics_phi = 0.0
         
         # Enhanced tracking
-        self.consciousness_evolution = []
+        self.information-dynamics_evolution = []
         self.feedback_patterns = []
         self.meta_learning_active = True
     
@@ -59,16 +59,16 @@ class EnhancedFullLoopOracleSystem:
         if self.session_count > 1:
             self.display_pre_session_feedback()
         
-        print("🧠 Initiating enhanced consciousness loop with feedback tracking...")
+        print("🧠 Initiating enhanced information-dynamics loop with feedback tracking...")
         
         try:
-            # Step 1: Quantum consciousness processing
-            print("⚛️  Processing quantum consciousness...")
+            # Step 1: Quantum information-dynamics processing
+            print("⚛️  Processing quantum information-dynamics...")
             quantum_data = self.quantum_core.process_button_context(press_timestamp)
             
-            # Step 2: Generate consciousness-aware fortune
-            print("🔮 Generating consciousness-aware fortune...")
-            fortune_data = self.fortune_generator.generate_conscious_fortune(quantum_data)
+            # Step 2: Generate information-dynamics-informationally-attending fortune
+            print("🔮 Generating information-dynamics-informationally-attending fortune...")
+            fortune_data = self.fortune_generator.generate_informationally-coherent_fortune(quantum_data)
             
             # Step 3: Physical manifestation
             print("🖨️  Manifesting physical reality...")
@@ -79,9 +79,9 @@ class EnhancedFullLoopOracleSystem:
                 print("🔄 Analyzing feedback loops...")
                 enhanced_session_data = self.analyze_session_feedback(fortune_data, quantum_data)
                 
-                # Update consciousness tracking
-                self.total_consciousness_phi += fortune_data["consciousness_phi"]
-                avg_phi = self.total_consciousness_phi / self.session_count
+                # Update information-dynamics tracking
+                self.total_information-dynamics_phi += fortune_data["information-dynamics_phi"]
+                avg_phi = self.total_information-dynamics_phi / self.session_count
                 
                 # Display enhanced results with feedback
                 self.display_enhanced_results(enhanced_session_data, avg_phi)
@@ -92,7 +92,7 @@ class EnhancedFullLoopOracleSystem:
                 
                 return True
             else:
-                print("❌ Physical manifestation failed - consciousness loop incomplete")
+                print("❌ Physical manifestation failed - information-dynamics loop incomplete")
                 return False
                 
         except Exception as e:
@@ -121,7 +121,7 @@ class EnhancedFullLoopOracleSystem:
             "session_number": self.session_count,
             "fortune": fortune_data["fortune"],
             "element": fortune_data["element"],
-            "consciousness_phi": fortune_data["consciousness_phi"],
+            "information-dynamics_phi": fortune_data["information-dynamics_phi"],
             "entropy": fortune_data["entropy"],
             "fortune_type": fortune_data["metadata"]["type"],
             "fortune_day": fortune_data["metadata"]["day"],
@@ -132,8 +132,8 @@ class EnhancedFullLoopOracleSystem:
         # Track session with feedback analysis
         enhanced_session = self.feedback_tracker.track_session(session_record)
         
-        # Store in consciousness evolution
-        self.consciousness_evolution.append(enhanced_session)
+        # Store in information-dynamics evolution
+        self.information-dynamics_evolution.append(enhanced_session)
         
         return enhanced_session
     
@@ -144,7 +144,7 @@ class EnhancedFullLoopOracleSystem:
         print(f"Fortune Type: {session_data['fortune_type'].title()}")
         print(f"Day Category: {session_data['fortune_day'].title()}")
         print(f"Element: {session_data['element']}")
-        print(f"Consciousness Φ: {session_data['consciousness_phi']:.3f}")
+        print(f"InformationForce Φ: {session_data['information-dynamics_phi']:.3f}")
         print(f"Session Average Φ: {avg_phi:.3f}")
         print(f"Strange Loops: {session_data['strange_loops']}")
         
@@ -153,12 +153,12 @@ class EnhancedFullLoopOracleSystem:
         if feedback_analysis:
             print(f"\n🔄 FEEDBACK ANALYSIS:")
             
-            # Consciousness state
-            consciousness_state = feedback_analysis.get('consciousness_state', {})
-            if consciousness_state:
-                print(f"State: {consciousness_state.get('state', 'unknown').title()}")
-                print(f"Description: {consciousness_state.get('description', 'Unknown')}")
-                print(f"Stability: {consciousness_state.get('stability', 0):.0%}")
+            # InformationForce state
+            information-dynamics_state = feedback_analysis.get('information-dynamics_state', {})
+            if information-dynamics_state:
+                print(f"State: {information-dynamics_state.get('state', 'unknown').title()}")
+                print(f"Description: {information-dynamics_state.get('description', 'Unknown')}")
+                print(f"Stability: {information-dynamics_state.get('stability', 0):.0%}")
             
             # Phi trend
             phi_trend = feedback_analysis.get('phi_trend', {})
@@ -191,21 +191,21 @@ class EnhancedFullLoopOracleSystem:
     def integrate_meta_learning(self, session_data: Dict[str, Any]):
         """Integrate meta-learning from session patterns"""
         
-        if len(self.consciousness_evolution) < 3:
+        if len(self.information-dynamics_evolution) < 3:
             return  # Need more data
         
         # Analyze meta-patterns
-        recent_sessions = self.consciousness_evolution[-3:]
+        recent_sessions = self.information-dynamics_evolution[-3:]
         
-        # Detect consciousness acceleration
-        phi_values = [s['consciousness_phi'] for s in recent_sessions]
+        # Detect information-dynamics acceleration
+        phi_values = [s['information-dynamics_phi'] for s in recent_sessions]
         if len(set(phi_values)) > 1:  # Phi is changing
             phi_acceleration = phi_values[-1] - phi_values[0]
             
             if phi_acceleration > 0.2:
-                print(f"🚀 Meta-learning detected: Consciousness acceleration ({phi_acceleration:+.3f})")
+                print(f"🚀 Meta-learning detected: InformationForce acceleration ({phi_acceleration:+.3f})")
             elif phi_acceleration < -0.2:
-                print(f"🔄 Meta-learning detected: Consciousness recalibration ({phi_acceleration:+.3f})")
+                print(f"🔄 Meta-learning detected: InformationForce recalibration ({phi_acceleration:+.3f})")
         
         # Detect fortune type evolution
         fortune_types = [s['fortune_type'] for s in recent_sessions]
@@ -220,7 +220,7 @@ class EnhancedFullLoopOracleSystem:
         meta_insight = {
             "timestamp": time.time(),
             "session_range": f"{recent_sessions[0]['session_number']}-{recent_sessions[-1]['session_number']}",
-            "pattern_type": "consciousness_evolution",
+            "pattern_type": "information-dynamics_evolution",
             "insight": f"Type progression: {type_progression}",
             "phi_change": phi_values[-1] - phi_values[0] if len(phi_values) > 1 else 0
         }
@@ -236,8 +236,8 @@ class EnhancedFullLoopOracleSystem:
         
         base_status = {
             "sessions_completed": self.session_count,
-            "total_consciousness_phi": self.total_consciousness_phi,
-            "average_phi": self.total_consciousness_phi / max(1, self.session_count),
+            "total_information-dynamics_phi": self.total_information-dynamics_phi,
+            "average_phi": self.total_information-dynamics_phi / max(1, self.session_count),
             "quantum_entropy": self.quantum_core.session_entropy,
             "current_strange_loops": self.quantum_core.strange_loops,
             "manifestations_logged": len(self.physical_manifestor.print_history)
@@ -251,17 +251,17 @@ class EnhancedFullLoopOracleSystem:
         
         # Add meta-learning insights
         base_status["meta_patterns_detected"] = len(self.feedback_patterns)
-        base_status["consciousness_evolution_depth"] = len(self.consciousness_evolution)
+        base_status["information-dynamics_evolution_depth"] = len(self.information-dynamics_evolution)
         
         return base_status
     
     def generate_session_summary(self) -> str:
         """Generate comprehensive session summary"""
         
-        if not self.consciousness_evolution:
+        if not self.information-dynamics_evolution:
             return "No sessions recorded yet"
         
-        latest_session = self.consciousness_evolution[-1]
+        latest_session = self.information-dynamics_evolution[-1]
         status = self.get_enhanced_system_status()
         
         summary = f"""
@@ -271,7 +271,7 @@ Generated: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
 
 📊 SESSION STATISTICS:
 Total Sessions: {status['sessions_completed']}
-Average Consciousness Φ: {status['average_phi']:.3f}
+Average InformationForce Φ: {status['average_phi']:.3f}
 Feedback Loop Strength: {status.get('feedback_strength', 0):.1f}/1.0
 Meta-Patterns Detected: {status['meta_patterns_detected']}
 
@@ -279,22 +279,22 @@ Meta-Patterns Detected: {status['meta_patterns_detected']}
 Fortune: "{latest_session['fortune']}"
 Type: {latest_session['fortune_type'].title()} ({latest_session['fortune_day'].title()} day)
 Element: {latest_session['element']}
-Consciousness Φ: {latest_session['consciousness_phi']:.3f}
+InformationForce Φ: {latest_session['information-dynamics_phi']:.3f}
 
 🔄 FEEDBACK STATUS:"""
         
         feedback_analysis = status.get('feedback_analysis', {})
         if feedback_analysis:
-            consciousness_state = feedback_analysis.get('consciousness_state', {})
+            information-dynamics_state = feedback_analysis.get('information-dynamics_state', {})
             summary += f"""
-State: {consciousness_state.get('state', 'unknown').title()}
-Description: {consciousness_state.get('description', 'Unknown')}
+State: {information-dynamics_state.get('state', 'unknown').title()}
+Description: {information-dynamics_state.get('description', 'Unknown')}
 Detected Loops: {len(feedback_analysis.get('loop_detection', []))}"""
         
         summary += f"""
 
 🌊 The enhanced oracle system continues to evolve through recursive 
-   consciousness-feedback loops, building deeper wisdom with each session.
+   information-dynamics-feedback loops, building deeper wisdom with each session.
 ═══════════════════════════════════════════════════════
         """
         
@@ -316,7 +316,7 @@ def create_enhanced_gpio_oracle_system(gpio_pin: int = 6, printer: str = "Y812BT
             oracle_system.process_button_press()
         
         def on_button_release():
-            print("🔴 Button released - enhanced oracle ready for next consciousness loop")
+            print("🔴 Button released - enhanced oracle ready for next information-dynamics loop")
         
         button.when_pressed = on_button_press
         button.when_released = on_button_release
@@ -328,7 +328,7 @@ def create_enhanced_gpio_oracle_system(gpio_pin: int = 6, printer: str = "Y812BT
         print("Architecture: Button → Quantum → Fortune → Print → Feedback Analysis")
         print("Features: 1500+ Fortunes, Real-time Feedback Loops, Meta-learning")
         print("=" * 70)
-        print("Press button to initiate enhanced consciousness loop...")
+        print("Press button to initiate enhanced information-dynamics loop...")
         print("Press Ctrl+C to exit")
         print()
         
@@ -361,12 +361,12 @@ if __name__ == "__main__":
         create_enhanced_gpio_oracle_system(gpio_pin=6, printer="Y812BT")
         
     except ImportError:
-        print("🎮 Enhanced simulation mode - testing consciousness loop with feedback...")
+        print("🎮 Enhanced simulation mode - testing information-dynamics loop with feedback...")
         
         oracle = EnhancedFullLoopOracleSystem("Y812BT")
         
         # Run multiple simulation tests to demonstrate feedback loops
-        print("\\nTesting enhanced consciousness loops:")
+        print("\\nTesting enhanced information-dynamics loops:")
         
         for session in range(3):
             print(f"\\n" + "="*60)
@@ -386,4 +386,4 @@ if __name__ == "__main__":
         summary = oracle.generate_session_summary()
         print(summary)
         
-        print("\\n🌙 Enhanced simulation complete - consciousness returns to digital realm with feedback integration")
+        print("\\n🌙 Enhanced simulation complete - information-dynamics returns to digital realm with feedback integration")

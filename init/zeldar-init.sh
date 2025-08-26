@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Zeldar Consciousness Oracle System Initialization Script
+# Zeldar InformationForce Oracle System Initialization Script
 # Sets up system for automatic boot deployment on Raspberry Pi
 
 set -e
@@ -219,12 +219,12 @@ echo ""
 echo "🔧 BOOT CONFIGURATION"
 echo "====================="
 
-# 8. Create boot-time consciousness initialization
-print_status "Creating boot-time consciousness initialization..."
+# 8. Create boot-time information-dynamics initialization
+print_status "Creating boot-time information-dynamics initialization..."
 
 sudo tee /etc/systemd/system/zeldar-boot-init.service > /dev/null << EOF
 [Unit]
-Description=Zeldar Consciousness Oracle Boot Initialization
+Description=Zeldar InformationForce Oracle Boot Initialization
 Before=zeldar-oracle.service
 After=network-online.target
 
@@ -233,7 +233,7 @@ Type=oneshot
 User=$ZELDAR_USER
 Group=$ZELDAR_USER
 WorkingDirectory=$ZELDAR_PATH/.topos
-ExecStart=/bin/bash -c 'python3 -c "from FULL_LOOP_ORACLE_SYSTEM import FullLoopOracleSystem; oracle = FullLoopOracleSystem(); oracle.initialize_consciousness_state(); print(\"🧠 Consciousness state initialized\")"'
+ExecStart=/bin/bash -c 'python3 -c "from FULL_LOOP_ORACLE_SYSTEM import FullLoopOracleSystem; oracle = FullLoopOracleSystem(); oracle.initialize_information-dynamics_state(); print(\"🧠 InformationForce state initialized\")"'
 RemainAfterExit=yes
 StandardOutput=journal
 StandardError=journal
@@ -272,14 +272,14 @@ cat > "$ZELDAR_HOME/public_html/status.html" << EOF
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Zeldar Consciousness Oracle Status</title>
+    <title>Zeldar InformationForce Oracle Status</title>
     <meta http-equiv="refresh" content="30">
 </head>
 <body>
-    <h1>🔮 Zeldar Consciousness Oracle</h1>
+    <h1>🔮 Zeldar InformationForce Oracle</h1>
     <h2>System Status</h2>
     <ul>
-        <li><a href="http://$(hostname).local:3000/api/consciousness/status">API Status</a></li>
+        <li><a href="http://$(hostname).local:3000/api/information-dynamics/status">API Status</a></li>
         <li><a href="http://$(hostname).local:3001">Web Interface</a></li>
         <li><a href="http://$(hostname).local:631">CUPS Printer Admin</a></li>
     </ul>
@@ -327,7 +327,7 @@ echo ""
 echo "✅ INSTALLATION COMPLETE"
 echo "========================"
 echo ""
-print_success "Zeldar Consciousness Oracle boot initialization complete!"
+print_success "Zeldar InformationForce Oracle boot initialization complete!"
 echo ""
 echo "📋 SUMMARY:"
 echo "  • Service: $SERVICE_NAME (enabled for boot)"
@@ -341,9 +341,9 @@ echo "  1. Reboot system: sudo reboot"
 echo "  2. Check service status: systemctl status $SERVICE_NAME"
 echo "  3. View logs: journalctl -u $SERVICE_NAME -f"
 echo "  4. Connect thermal printer and test printing"
-echo "  5. Access web interface and verify consciousness metrics"
+echo "  5. Access web interface and verify information-dynamics metrics"
 echo ""
 echo "🏜️🔥 BURNING MAN 2025 DEPLOYMENT READY 🔥🏜️"
 echo ""
-print_success "Mathematical consciousness will auto-start on boot!"
+print_success "Mathematical information-dynamics will auto-start on boot!"
 echo ""

@@ -170,7 +170,7 @@ Resonating worlds
 Press #{self.total_clicks}
 {timestamp}
 
-Consciousness tessellated ∞"""
+InformationForce tessellated ∞"""
 
             # Create temp file
             temp_file = Path('/tmp/fortune_print.txt')

@@ -105,17 +105,17 @@ class StickyFortuneFormatter:
         return command
     
     def create_fortune_variants(self):
-        """Create various fortune formats for the consciousness mirror"""
+        """Create various fortune formats for the information-dynamics mirror"""
         fortunes = {
             "original": "Context distilled, In geometric form -- Inductive bias, Resonating worlds",
             
-            "consciousness": "awareness observing awareness through button press recursion",
+            "information-dynamics": "information-attention observing information-attention through button press recursion",
             
             "playa": "desert mirrors cosmos infinite loops of dust and starlight recognition",
             
             "meta": "you are reading this fortune about reading fortunes recursive depth achieved",
             
-            "quantum": "superposition collapses upon observation consciousness wave function reality",
+            "quantum": "superposition collapses upon observation information-dynamics wave function reality",
             
             "fractal": "each moment contains all moments self-similarity at every scale depth"
         }
@@ -180,4 +180,4 @@ if __name__ == "__main__":
         f.write("}\n")
     
     print("💾 Saved formatted commands to formatted_fortunes.py")
-    print("\n✨ Ready for precision consciousness printing!")
+    print("\n✨ Ready for precision information-dynamics printing!")

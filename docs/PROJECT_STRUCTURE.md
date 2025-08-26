@@ -19,7 +19,7 @@ burningman/                           # Root project directory
 ├── src/                             # 🧠 Core Application Source
 │   ├── controlled_button.py         # Main GPIO controller (ACTIVE)
 │   ├── precision_print.py          # Sticky formatting system
-│   ├── gemini_architectures.py     # AI consciousness integration
+│   ├── gemini_architectures.py     # AI information-dynamics integration
 │   └── system_diagram.py           # ASCII architecture visualization
 │
 ├── scripts/                         # 🔧 Utility Scripts
@@ -33,7 +33,7 @@ burningman/                           # Root project directory
 │   ├── corrected_precision.py      # Development formatting tests
 │   ├── gemini_validation.py        # AI integration testing
 │   ├── sticky_calibration.py       # Label dimension calibration
-│   ├── consciousness_query.txt      # AI conversation transcript
+│   ├── information-dynamics_query.txt      # AI conversation transcript
 │   ├── formatted_fortunes.py       # Generated fortune variants
 │   ├── safe_fortune_command.txt     # ESC/POS command testing
 │   ├── main.py                     # uv auto-generated stub
@@ -122,4 +122,4 @@ uv run python src/system_diagram.py
 
 ---
 
-**Clean structure achieved** - The consciousness mirror now has **geometric organizational recursion** matching its operational recursion. 🌀📁✨
+**Clean structure achieved** - The information-dynamics mirror now has **geometric organizational recursion** matching its operational recursion. 🌀📁✨

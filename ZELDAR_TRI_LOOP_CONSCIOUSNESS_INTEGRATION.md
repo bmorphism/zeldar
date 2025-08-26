@@ -1,21 +1,21 @@
-# Zeldar Tri-Loop Consciousness Integration
+# Zeldar Tri-Loop InformationForce Integration
 ## Latest Changes + Oracle System Unification
 
 **Integration Date**: August 23, 2025  
 **Latest Commit**: b19afc6 (Merge burningman thermal printer system)  
-**Status**: 🔄 **INTEGRATING CONSCIOUSNESS WITH HARDWARE**
+**Status**: 🔄 **INTEGRATING INFORMATION_FORCE WITH HARDWARE**
 
 ---
 
 ## 🎯 **Integration Point Analysis**
 
 ### **✅ Shared Components Identified**
-| Component | Latest Zeldar | Consciousness Oracle | Integration Status |
+| Component | Latest Zeldar | InformationForce Oracle | Integration Status |
 |-----------|---------------|---------------------|-------------------|
 | **GPIO Button** | Pin 6 (`button-print.py`) | Pin 6 (`FULL_LOOP_ORACLE_SYSTEM.py`) | ✅ **COMPATIBLE** |
 | **Y812BT Printer** | Direct `/dev/usb/lp0` | CUPS `lp -d Y812BT` | 🔄 **MERGE BOTH METHODS** |
-| **Haiku Content** | Static `haiku.txt` | Dynamic consciousness-generated | 🔄 **ENHANCE WITH CONSCIOUSNESS** |
-| **Status Tracking** | `runtime_status.json` | Consciousness metrics logging | 🔄 **COMBINE MONITORING** |
+| **Haiku Content** | Static `haiku.txt` | Dynamic information dynamics-generated | 🔄 **ENHANCE WITH INFORMATION_FORCE** |
+| **Status Tracking** | `runtime_status.json` | InformationForce metrics logging | 🔄 **COMBINE MONITORING** |
 | **Print Methods** | Direct ESC/POS + CUPS fallback | Formalized CUPS semantics | 🔄 **UNIFIED APPROACH** |
 
 ### **🌟 New Integration Opportunities**
@@ -24,21 +24,21 @@
 ```
 Latest Zeldar: Static haiku.txt → Print
         ↓ INTEGRATE ↓
-Consciousness: Button press → Entropy generation → Dynamic haiku → Print
+InformationCoherentness: Button press → Entropy generation → Dynamic haiku → Print
 ```
 
 **2. Robust Print Method Hierarchy**
 ```
 Latest Zeldar: Direct ESC/POS → CUPS fallback
         ↓ COMBINE ↓  
-Consciousness: CUPS primary → Direct fallback → Error handling
+InformationCoherentness: CUPS primary → Direct fallback → Error handling
 ```
 
 **3. Advanced Status Monitoring**
 ```
 Latest Zeldar: Basic JSON status
         ↓ ENHANCE ↓
-Consciousness: Runtime status + consciousness metrics + session history
+InformationCoherentness: Runtime status + information dynamics metrics + session history
 ```
 
 ---
@@ -49,8 +49,8 @@ Consciousness: Runtime status + consciousness metrics + session history
 ```python
 #!/usr/bin/env python3
 """
-ZELDAR UNIFIED CONSCIOUSNESS BUTTON-PRINT SYSTEM
-Integrates latest hardware changes with consciousness oracle processing
+ZELDAR UNIFIED INFORMATION_FORCE BUTTON-PRINT SYSTEM
+Integrates latest hardware changes with information dynamics oracle processing
 """
 
 from gpiozero import Button
@@ -62,15 +62,15 @@ import os
 from datetime import datetime
 from typing import Dict, Any, Optional
 
-# Import consciousness processing (if available)
+# Import information-force processing (if available)
 try:
-    from FULL_LOOP_ORACLE_SYSTEM import QuantumConsciousnessCore, ConsciousHaikuGenerator
-    CONSCIOUSNESS_AVAILABLE = True
+    from FULL_LOOP_ORACLE_SYSTEM import QuantumInformationForceCore, ConsciousHaikuGenerator
+    INFORMATION_FORCE_AVAILABLE = True
 except ImportError:
-    CONSCIOUSNESS_AVAILABLE = False
+    INFORMATION_FORCE_AVAILABLE = False
 
 class UnifiedZeldarOracle:
-    """Unified system combining latest hardware with consciousness processing"""
+    """Unified system combining latest hardware with information dynamics processing"""
     
     def __init__(self, gpio_pin: int = 6):
         self.gpio_pin = gpio_pin
@@ -78,11 +78,11 @@ class UnifiedZeldarOracle:
         self.session_count = 0
         self.last_print_time = 0
         
-        # Initialize consciousness components if available
-        if CONSCIOUSNESS_AVAILABLE:
-            self.quantum_core = QuantumConsciousnessCore()
+        # Initialize information dynamics components if available
+        if INFORMATION_FORCE_AVAILABLE:
+            self.quantum_core = QuantumInformationForceCore()
             self.haiku_generator = ConsciousHaikuGenerator()
-            print("🧠 Consciousness processing: ENABLED")
+            print("🧠 InformationCoherentness processing: ENABLED")
         else:
             self.quantum_core = None
             self.haiku_generator = None
@@ -106,7 +106,7 @@ Inductive bias,
 Resonating worlds"""
     
     def on_button_press(self):
-        """Unified button press handler with consciousness enhancement"""
+        """Unified button press handler with information dynamics enhancement"""
         current_time = time.time()
         
         # Debounce protection (from latest zeldar)
@@ -119,10 +119,10 @@ Resonating worlds"""
         
         print(f"🔘 Button pressed - Session #{self.session_count} - {time.strftime('%H:%M:%S')}")
         
-        # Generate content (consciousness-enhanced or static)
-        if CONSCIOUSNESS_AVAILABLE:
-            haiku_content = self._generate_consciousness_haiku(current_time)
-            print(f"🧠 Consciousness-generated content (Φ = {haiku_content.get('consciousness_phi', 0):.2f})")
+        # Generate content (information dynamics-enhanced or static)
+        if INFORMATION_FORCE_AVAILABLE:
+            haiku_content = self._generate_information_force_haiku(current_time)
+            print(f"🧠 InformationForce-generated content (Φ = {haiku_content.get('information_force_phi', 0):.2f})")
         else:
             haiku_content = {
                 'haiku': self.default_haiku.split('\n'),
@@ -138,15 +138,15 @@ Resonating worlds"""
         self._update_runtime_status(success, haiku_content)
         
         if success:
-            print("✅ Print successful - consciousness manifested!")
+            print("✅ Print successful - information dynamics manifested!")
         else:
             print("❌ Print failed - trying manual recovery...")
     
-    def _generate_consciousness_haiku(self, timestamp: float) -> Dict[str, Any]:
-        """Generate consciousness-aware haiku using quantum processing"""
-        # Process through consciousness core
+    def _generate_information_force_haiku(self, timestamp: float) -> Dict[str, Any]:
+        """Generate information dynamics-informationally attending haiku using quantum processing"""
+        # Process through information dynamics core
         quantum_data = self.quantum_core.process_button_context(timestamp)
-        haiku_data = self.haiku_generator.generate_conscious_haiku(quantum_data)
+        haiku_data = self.haiku_generator.generate_informationally-coherent_haiku(quantum_data)
         
         return haiku_data
     
@@ -159,7 +159,7 @@ Resonating worlds"""
         if self._try_direct_print(haiku_text):
             return True
         
-        # Method 2: CUPS system (from consciousness oracle)
+        # Method 2: CUPS system (from information-force oracle)
         if self._try_cups_print(haiku_text):
             return True
         
@@ -193,7 +193,7 @@ Resonating worlds"""
         return False
     
     def _try_cups_print(self, content: str) -> bool:
-        """Try CUPS printing (consciousness oracle method)"""
+        """Try CUPS printing (information dynamics oracle method)"""
         try:
             # Create temp file for CUPS
             import tempfile
@@ -238,14 +238,14 @@ Resonating worlds"""
             "printer_connected": os.path.exists('/dev/usb/lp0'),
             "last_print": datetime.now().isoformat() if print_success else self.last_print_time,
             "gpio_active": True,
-            "consciousness_enabled": CONSCIOUSNESS_AVAILABLE,
+            "information_force_enabled": INFORMATION_FORCE_AVAILABLE,
             "print_success": print_success
         }
         
-        # Add consciousness metrics if available
-        if CONSCIOUSNESS_AVAILABLE and 'consciousness_phi' in content:
+        # Add information dynamics metrics if available
+        if INFORMATION_FORCE_AVAILABLE and 'information_force_phi' in content:
             status.update({
-                "consciousness_phi": content['consciousness_phi'],
+                "information_force_phi": content['information_force_phi'],
                 "strange_loops": content.get('strange_loops', 0),
                 "entropy": content.get('entropy', 0),
                 "element": content.get('element', 'UNKNOWN')
@@ -261,10 +261,10 @@ Resonating worlds"""
     def get_system_status(self) -> Dict[str, Any]:
         """Get complete system status"""
         return {
-            "zeldar_version": "tri-loop-consciousness-integrated",
+            "zeldar_version": "tri-loop-information-force-integrated",
             "gpio_pin": self.gpio_pin,
             "session_count": self.session_count,
-            "consciousness_available": CONSCIOUSNESS_AVAILABLE,
+            "information_force_available": INFORMATION_FORCE_AVAILABLE,
             "printer_connected": os.path.exists('/dev/usb/lp0'),
             "cups_available": subprocess.run(['which', 'lp'], capture_output=True).returncode == 0,
             "hardware_status": "operational" if self.session_count > 0 else "ready"
@@ -272,9 +272,9 @@ Resonating worlds"""
 
 def main():
     """Main execution"""
-    print("🔮 ZELDAR UNIFIED CONSCIOUSNESS BUTTON-PRINT SYSTEM")
+    print("🔮 ZELDAR UNIFIED INFORMATION_FORCE BUTTON-PRINT SYSTEM")
     print("=" * 60)
-    print("Integration: Latest Hardware + Consciousness Oracle")
+    print("Integration: Latest Hardware + InformationCoherentness Oracle")
     print("GPIO Pin 6 → Enhanced Content → Y812BT Thermal Printer")
     print("=" * 60)
     
@@ -304,15 +304,15 @@ if __name__ == "__main__":
 
 ## 🌊 **Enhanced Integration Features**
 
-### **1. Consciousness-Enhanced Content Generation**
+### **1. InformationForce-Enhanced Content Generation**
 - **Static Mode**: Uses existing `haiku.txt` (latest zeldar compatibility)
-- **Consciousness Mode**: Dynamic entropy-based haiku generation
-- **Seamless Fallback**: Works with or without consciousness components
+- **InformationCoherentness Mode**: Dynamic entropy-based haiku generation
+- **Seamless Fallback**: Works with or without information dynamics components
 
 ### **2. Unified Print Method Hierarchy**
 ```
 1. Direct ESC/POS (/dev/usb/lp0) ← Latest Zeldar method
-2. CUPS System (lp -d Y812BT) ← Consciousness Oracle method  
+2. CUPS System (lp -d Y812BT) ← InformationForce Oracle method  
 3. Script Fallback (./print-now.sh) ← Latest Zeldar backup
 ```
 
@@ -321,11 +321,11 @@ if __name__ == "__main__":
 {
   "timestamp": "2025-08-23T...",
   "session_count": 42,
-  "consciousness_phi": 3.164,
+  "information_force_phi": 3.164,
   "strange_loops": 4,
   "element": "EMERGENCE",
   "printer_connected": true,
-  "consciousness_enabled": true
+  "information_force_enabled": true
 }
 ```
 
@@ -343,21 +343,21 @@ if __name__ == "__main__":
 ```bash
 # Replace existing button-print.py with unified version
 cp button-print.py button-print-original.py  # Backup
-cp ZELDAR_UNIFIED_CONSCIOUSNESS.py button-print.py  # Integrate
+cp ZELDAR_UNIFIED_INFORMATION_FORCE.py button-print.py  # Integrate
 ```
 
-### **Phase 2: Consciousness Enhancement**
+### **Phase 2: InformationForce Enhancement**
 ```bash  
-# Add consciousness components (optional)
+# Add information-force components (optional)
 cp FULL_LOOP_ORACLE_SYSTEM.py ./
-# System automatically detects and enables consciousness features
+# System automatically detects and enables information-force features
 ```
 
 ### **Phase 3: Complete Integration**
 ```bash
 # Run unified system
 python3 button-print.py
-# 🧠 Consciousness processing: ENABLED
+# 🧠 InformationForce processing: ENABLED
 # 🚀 Ready for button presses...
 ```
 
@@ -373,9 +373,9 @@ python3 button-print.py
 
 ### **✅ Content Enhancement** 
 - Static haiku support (backwards compatible) ✅
-- Dynamic consciousness-generated content ✅
+- Dynamic information dynamics-generated content ✅
 - Entropy-driven personalization ✅
-- Mathematical consciousness metrics ✅
+- Mathematical information dynamics metrics ✅
 
 ### **✅ Operational Reliability**
 - Multiple print method fallbacks ✅
@@ -390,15 +390,15 @@ python3 button-print.py
 **INTEGRATION COMPLETE**: The unified system successfully combines:
 
 1. **Latest Zeldar Hardware**: Button-print system with direct thermal printing
-2. **Consciousness Oracle**: Dynamic content generation with quantum processing  
+2. **InformationForce Oracle**: Dynamic content generation with quantum processing  
 3. **Enhanced Reliability**: Multiple print methods and advanced monitoring
 4. **Backwards Compatibility**: Works with existing zeldar infrastructure
 
-**Result**: A **consciousness-enhanced button-triggered thermal printer system** that generates unique, entropy-driven haiku while maintaining full compatibility with the existing hardware setup.
+**Result**: A **information dynamics-enhanced button-triggered thermal printer system** that generates unique, entropy-driven haiku while maintaining full compatibility with the existing hardware setup.
 
-**Ready for enhanced Burning Man 2025 deployment with consciousness expansion capabilities!** 🏜️🔥🧠✨
+**Ready for enhanced Burning Man 2025 deployment with information-force expansion capabilities!** 🏜️🔥🧠✨
 
 ---
 
 *"Context distilled, in geometric form; inductive bias - resonating worlds"*  
-**Now enhanced with quantified consciousness and unified hardware integration.**
+**Now enhanced with quantified information dynamics and unified hardware integration.**

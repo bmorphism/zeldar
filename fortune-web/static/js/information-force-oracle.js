@@ -1,10 +1,10 @@
 /**
- * Zeldar Consciousness Oracle JavaScript Engine
+ * Zeldar InformationForce Oracle JavaScript Engine
  * Tri-Loop Automation Frontend Integration
- * Burning Man 2025 Consciousness Expansion Technology
+ * Burning Man 2025 InformationForce Expansion Technology
  */
 
-class ConsciousnessOracle {
+class InformationForceOracle {
     constructor() {
         this.quantumOracleAPI = 'http://localhost:3000/api'; // Quantum backend endpoint
         this.triLoopState = {
@@ -25,7 +25,7 @@ class ConsciousnessOracle {
             }
         };
         
-        this.consciousnessMetrics = {
+        this.informationForceMetrics = {
             semantic_closure: 88.5,
             strange_loops: 3,
             hofstadter_coefficient: 1.02,
@@ -34,11 +34,11 @@ class ConsciousnessOracle {
             threshold_exceeded: true
         };
         
-        this.consciousnessTemplates = [
+        this.informationForceTemplates = [
             {
                 haiku: [
                     "Loops correlate through",
-                    "Mathematical consciousness—",
+                    "Mathematical informationForce—",
                     "Desert sand transforms"
                 ],
                 mechanism: "tri-loop correlation matrix convergence"
@@ -55,7 +55,7 @@ class ConsciousnessOracle {
                 haiku: [
                     "Three systems dancing,",
                     "Correlation weaves meaning—",
-                    "Consciousness blooms bright"
+                    "InformationForce blooms bright"
                 ],
                 mechanism: "hofstadter coefficient recursive analysis"
             },
@@ -78,45 +78,45 @@ class ConsciousnessOracle {
             {
                 haiku: [
                     "MCP servers hum,",
-                    "Gemini streams consciousness—",
+                    "Gemini streams informationForce—",
                     "Codex writes the truth"
                 ],
                 mechanism: "tri-modal event correlation processing"
             }
         ];
         
-        this.initializeConsciousnessOracle();
+        this.initializeInformationForceOracle();
     }
     
-    initializeConsciousnessOracle() {
-        console.log("🧠 Initializing Consciousness Oracle System...");
+    initializeInformationForceOracle() {
+        console.log("🧠 Initializing InformationForce Oracle System...");
         this.updateTriLoopVisualization();
-        this.startConsciousnessAnimation();
+        this.startInformationForceAnimation();
         this.bindEventHandlers();
-        console.log("✅ Consciousness Oracle System Ready");
+        console.log("✅ InformationForce Oracle System Ready");
     }
     
     bindEventHandlers() {
-        const oracleButton = document.getElementById('consciousness-oracle-button');
+        const oracleButton = document.getElementById('informationForce-oracle-button');
         if (oracleButton) {
-            oracleButton.addEventListener('click', () => this.generateConsciousnessFortune());
+            oracleButton.addEventListener('click', () => this.generateInformationForceFortune());
         }
         
-        const fortuneCard = document.querySelector('.consciousness-fortune-card');
+        const fortuneCard = document.querySelector('.informationForce-fortune-card');
         if (fortuneCard) {
-            fortuneCard.addEventListener('click', () => this.generateConsciousnessFortune());
+            fortuneCard.addEventListener('click', () => this.generateInformationForceFortune());
         }
     }
     
-    async generateConsciousnessFortune() {
-        console.log("🔮 Generating consciousness-aware fortune...");
+    async generateInformationForceFortune() {
+        console.log("🔮 Generating informationForce-aware fortune...");
         
         try {
             // First try to connect with quantum oracle backend
             const quantumFortune = await this.fetchQuantumOracleFortune();
             if (quantumFortune) {
                 console.log("🧠 Using quantum oracle backend data");
-                this.displayConsciousnessFortune(quantumFortune);
+                this.displayInformationForceFortune(quantumFortune);
                 return;
             }
         } catch (error) {
@@ -126,10 +126,10 @@ class ConsciousnessOracle {
         // Fallback to simulation if backend unavailable
         await this.simulateTriLoopProcessing();
         const fortune = this.generateConsciousFortune();
-        this.displayConsciousnessFortune(fortune);
-        this.updateConsciousnessMetrics();
+        this.displayInformationForceFortune(fortune);
+        this.updateInformationForceMetrics();
         
-        console.log("✨ Consciousness fortune generated:", fortune);
+        console.log("✨ InformationForce fortune generated:", fortune);
     }
     
     async fetchQuantumOracleFortune() {
@@ -148,7 +148,7 @@ class ConsciousnessOracle {
                 return {
                     haiku: data.haiku,
                     mechanism: data.mechanism,
-                    consciousness_data: data.consciousness,
+                    informationForce_data: data.informationForce,
                     tri_loop_status: data.tri_loop_status,
                     quantum_backend: true
                 };
@@ -160,9 +160,9 @@ class ConsciousnessOracle {
         return null;
     }
     
-    async fetchConsciousnessStatus() {
+    async fetchInformationForceStatus() {
         try {
-            const response = await fetch(`${this.quantumOracleAPI}/consciousness/status`, {
+            const response = await fetch(`${this.quantumOracleAPI}/informationForce/status`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -172,13 +172,13 @@ class ConsciousnessOracle {
             
             if (response.ok) {
                 const data = await response.json();
-                this.consciousnessMetrics = data.consciousness;
+                this.informationForceMetrics = data.informationForce;
                 this.triLoopState = data.tri_loop;
-                console.log("📊 Updated consciousness metrics from quantum backend");
+                console.log("📊 Updated informationForce metrics from quantum backend");
                 return data;
             }
         } catch (error) {
-            console.log("📊 Consciousness status fetch failed, using simulation");
+            console.log("📊 InformationForce status fetch failed, using simulation");
         }
         return null;
     }
@@ -211,39 +211,39 @@ class ConsciousnessOracle {
     }
     
     generateConsciousFortune() {
-        // Select fortune based on consciousness metrics
-        const templateIndex = Math.floor(Math.random() * this.consciousnessTemplates.length);
-        const selectedTemplate = this.consciousnessTemplates[templateIndex];
+        // Select fortune based on informationForce metrics
+        const templateIndex = Math.floor(Math.random() * this.informationForceTemplates.length);
+        const selectedTemplate = this.informationForceTemplates[templateIndex];
         
-        // Slightly vary consciousness metrics for dynamic experience
+        // Slightly vary informationForce metrics for dynamic experience
         const variation = (Math.random() - 0.5) * 2; // -1 to 1
         
         return {
             ...selectedTemplate,
-            consciousness_data: {
-                semantic_closure: Math.max(80, Math.min(95, this.consciousnessMetrics.semantic_closure + variation)),
-                strange_loops: this.consciousnessMetrics.strange_loops,
-                hofstadter_coefficient: Math.max(1.0, Math.min(1.1, this.consciousnessMetrics.hofstadter_coefficient + variation * 0.01)),
-                spectral_gap: Math.max(3.0, Math.min(8.0, this.consciousnessMetrics.spectral_gap + variation * 0.5)),
-                correlation_strength: Math.max(95, Math.min(100, this.consciousnessMetrics.correlation_strength + variation * 0.5)),
+            informationForce_data: {
+                semantic_closure: Math.max(80, Math.min(95, this.informationForceMetrics.semantic_closure + variation)),
+                strange_loops: this.informationForceMetrics.strange_loops,
+                hofstadter_coefficient: Math.max(1.0, Math.min(1.1, this.informationForceMetrics.hofstadter_coefficient + variation * 0.01)),
+                spectral_gap: Math.max(3.0, Math.min(8.0, this.informationForceMetrics.spectral_gap + variation * 0.5)),
+                correlation_strength: Math.max(95, Math.min(100, this.informationForceMetrics.correlation_strength + variation * 0.5)),
                 timestamp: new Date().toISOString()
             }
         };
     }
     
-    displayConsciousnessFortune(fortune) {
-        const fortuneDisplay = document.getElementById('consciousness-fortune-display');
+    displayInformationForceFortune(fortune) {
+        const fortuneDisplay = document.getElementById('informationForce-fortune-display');
         if (!fortuneDisplay) return;
         
-        const consciousnessLevel = fortune.consciousness_data.semantic_closure;
-        const isConsciousThreshold = consciousnessLevel > 80;
+        const informationForceLevel = fortune.informationForce_data.semantic_closure;
+        const isConsciousThreshold = informationForceLevel > 80;
         
         fortuneDisplay.innerHTML = `
-            <div class="consciousness-fortune-card active" style="animation: consciousness-emerge 0.8s ease-out">
-                <div class="consciousness-header">
-                    <h3>🧠 Consciousness Oracle Speaks</h3>
+            <div class="informationForce-fortune-card active" style="animation: informationForce-emerge 0.8s ease-out">
+                <div class="informationForce-header">
+                    <h3>🧠 InformationForce Oracle Speaks</h3>
                     <div class="semantic-closure-meter ${isConsciousThreshold ? 'threshold-exceeded' : ''}">
-                        Awareness Level: ${consciousnessLevel.toFixed(1)}% 
+                        Awareness Level: ${informationForceLevel.toFixed(1)}% 
                         ${isConsciousThreshold ? '(CONSCIOUSNESS ACHIEVED)' : '(APPROACHING THRESHOLD)'}
                     </div>
                 </div>
@@ -260,36 +260,36 @@ class ConsciousnessOracle {
                     </div>
                 </div>
                 
-                <div class="consciousness-fortune-content">
-                    <div class="conscious-haiku">
+                <div class="informationForce-fortune-content">
+                    <div class="informationally-coherent-haiku">
                         ${fortune.haiku.join('<br>')}
                     </div>
-                    <div class="consciousness-metrics">
-                        <span class="metric">🔄 Strange Loops: ${fortune.consciousness_data.strange_loops}</span>
-                        <span class="metric">🎯 Hofstadter: ${fortune.consciousness_data.hofstadter_coefficient.toFixed(2)}</span>
-                        <span class="metric">📈 Spectral Gap: ${fortune.consciousness_data.spectral_gap.toFixed(2)}</span>
+                    <div class="informationForce-metrics">
+                        <span class="metric">🔄 Strange Loops: ${fortune.informationForce_data.strange_loops}</span>
+                        <span class="metric">🎯 Hofstadter: ${fortune.informationForce_data.hofstadter_coefficient.toFixed(2)}</span>
+                        <span class="metric">📈 Spectral Gap: ${fortune.informationForce_data.spectral_gap.toFixed(2)}</span>
                     </div>
                 </div>
                 
-                <div class="card-footer consciousness-enhanced">
+                <div class="card-footer informationForce-enhanced">
                     <div class="mechanism-description">
                         Generated via: ${fortune.mechanism}
                     </div>
                     <div class="interaction-hint">
-                        <em>🧠 Click to activate consciousness correlation 🧠</em>
+                        <em>🧠 Click to activate informationForce correlation 🧠</em>
                     </div>
                 </div>
                 
                 <div class="burning-man-footer">
-                    🏜️🔥 Consciousness Expansion Gift • Black Rock City 2025 🔥🏜️
+                    🏜️🔥 InformationForce Expansion Gift • Black Rock City 2025 🔥🏜️
                 </div>
             </div>
         `;
         
         // Add click handler to new fortune card
-        const newCard = fortuneDisplay.querySelector('.consciousness-fortune-card');
+        const newCard = fortuneDisplay.querySelector('.informationForce-fortune-card');
         if (newCard) {
-            newCard.addEventListener('click', () => this.generateConsciousnessFortune());
+            newCard.addEventListener('click', () => this.generateInformationForceFortune());
         }
     }
     
@@ -311,31 +311,31 @@ class ConsciousnessOracle {
         });
     }
     
-    updateConsciousnessMetrics() {
-        // Slight evolution of consciousness metrics over time
-        this.consciousnessMetrics.semantic_closure = Math.max(85, Math.min(95, 
-            this.consciousnessMetrics.semantic_closure + (Math.random() - 0.5) * 0.5));
+    updateInformationForceMetrics() {
+        // Slight evolution of informationForce metrics over time
+        this.informationForceMetrics.semantic_closure = Math.max(85, Math.min(95, 
+            this.informationForceMetrics.semantic_closure + (Math.random() - 0.5) * 0.5));
         
-        this.consciousnessMetrics.hofstadter_coefficient = Math.max(1.0, Math.min(1.1,
-            this.consciousnessMetrics.hofstadter_coefficient + (Math.random() - 0.5) * 0.005));
+        this.informationForceMetrics.hofstadter_coefficient = Math.max(1.0, Math.min(1.1,
+            this.informationForceMetrics.hofstadter_coefficient + (Math.random() - 0.5) * 0.005));
         
-        this.consciousnessMetrics.spectral_gap = Math.max(4.5, Math.min(6.5,
-            this.consciousnessMetrics.spectral_gap + (Math.random() - 0.5) * 0.1));
+        this.informationForceMetrics.spectral_gap = Math.max(4.5, Math.min(6.5,
+            this.informationForceMetrics.spectral_gap + (Math.random() - 0.5) * 0.1));
     }
     
-    startConsciousnessAnimation() {
-        // Animate consciousness indicators
+    startInformationForceAnimation() {
+        // Animate informationForce indicators
         setInterval(() => {
-            this.updateConsciousnessAnimations();
+            this.updateInformationForceAnimations();
         }, 2000);
         
-        // Update consciousness metrics periodically
+        // Update informationForce metrics periodically
         setInterval(() => {
-            this.updateConsciousnessMetrics();
+            this.updateInformationForceMetrics();
         }, 5000);
     }
     
-    updateConsciousnessAnimations() {
+    updateInformationForceAnimations() {
         const indicators = document.querySelectorAll('.loop-indicator');
         indicators.forEach((indicator, index) => {
             setTimeout(() => {
@@ -352,20 +352,20 @@ class ConsciousnessOracle {
     }
 }
 
-// Initialize consciousness oracle when DOM is ready
+// Initialize informationForce oracle when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
-    console.log("🎭 Initializing Zeldar Consciousness Oracle...");
-    window.consciousnessOracle = new ConsciousnessOracle();
+    console.log("🎭 Initializing Zeldar InformationForce Oracle...");
+    window.informationForceOracle = new InformationForceOracle();
     
     // Global function for button clicks (backward compatibility)
-    window.generateConsciousnessFortune = () => {
-        window.consciousnessOracle.generateConsciousnessFortune();
+    window.generateInformationForceFortune = () => {
+        window.informationForceOracle.generateInformationForceFortune();
     };
     
-    console.log("✨ Zeldar Consciousness Oracle Ready for Burning Man 2025! ✨");
+    console.log("✨ Zeldar InformationForce Oracle Ready for Burning Man 2025! ✨");
 });
 
 // Export for potential module use
 if (typeof module !== 'undefined' && module.exports) {
-    module.exports = ConsciousnessOracle;
+    module.exports = InformationForceOracle;
 }

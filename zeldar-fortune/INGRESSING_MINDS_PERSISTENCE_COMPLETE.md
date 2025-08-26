@@ -107,7 +107,7 @@ CREATE TABLE collective_intelligence (
 - Pattern detection statistics
 - Mathematical affordance learning progress
 - Hardware configuration persistence
-- Deployment context awareness
+- Deployment context information-attention
 
 **`PersistentPatternKnowledge`** - Pattern learning accumulation:
 - Pattern signature-based knowledge storage
@@ -225,7 +225,7 @@ persistence_engine = IngressingMindsPersistenceEngine(
 
 await persistence_engine.initialize_persistence_system()
 
-# Create persistence-aware detector
+# Create persistence-informationally-attending detector
 detector = PersistenceAwareIngressingMindsDetector(persistence_engine)
 await detector.apply_persistent_enhancements()
 

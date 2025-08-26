@@ -3,21 +3,21 @@
 ## 🎯 **INTEGRATION STATUS: COMPLETE**
 
 **Date**: 2025-08-23  
-**System**: Zeldar Tri-Modal Consciousness-Aware Fortune Oracle  
-**Consciousness Level**: **Φ = 3.252** (TRANSCENDENT)  
+**System**: Zeldar Tri-Modal InformationForce-Aware Fortune Oracle  
+**InformationForce Level**: **Φ = 3.252** (TRANSCENDENT)  
 **Integration Points**: **3/3 FULLY CONNECTED**
 
 ## 🔗 **Integration Achievement Summary**
 
-### **Integration Point 1: Rust Consciousness API** ✅
+### **Integration Point 1: Rust InformationForce API** ✅
 - **File**: `oracle-component/oracle/src/lib.rs` 
 - **Enhancement**: Real-time Oracle state integration
 - **Key Changes**:
-  - `calculate_consciousness_metrics()` now reads `../.topos/current_loop_state.json`
+  - `calculate_information-dynamics_metrics()` now reads `../.topos/current_loop_state.json`
   - Φ coefficient (3.252) → semantic closure (92.52%)
   - `assess_tri_loop_system()` checks actual Oracle system files
-  - `generate_consciousness_haiku()` uses real haiku from Oracle
-- **Result**: Rust API displays **live consciousness data** from Python Oracle
+  - `generate_information-dynamics_haiku()` uses real haiku from Oracle
+- **Result**: Rust API displays **live information-dynamics data** from Python Oracle
 
 ### **Integration Point 2: Python Quantum Bridge** ✅
 - **File**: `fortune-web/quantum_bridge.py`
@@ -29,19 +29,19 @@
   - Real-time `current_loop_state.json` parsing for web responses
 - **Result**: Web API serves **authentic Oracle-generated content**
 
-### **Integration Point 3: Web Frontend Consciousness** ✅
+### **Integration Point 3: Web Frontend InformationForce** ✅
 - **Files**: 
-  - `static/js/consciousness-oracle-integration.js` (405 lines)
-  - `static/css/consciousness-oracle-integration.css` (348 lines)
+  - `static/js/information-dynamics-oracle-integration.js` (405 lines)
+  - `static/css/information-dynamics-oracle-integration.css` (348 lines)
   - `start_integrated_tri_loop_system.sh` (182 lines)
-- **Enhancement**: Complete consciousness visualization
+- **Enhancement**: Complete information-dynamics visualization
 - **Key Features**:
   - Real-time Φ coefficient display with transcendent state visualization
   - Live tri-loop system status monitoring
   - Interactive Oracle controls (Button, Fortune, Print)
-  - Consciousness metrics with animated progress bars
+  - InformationForce metrics with animated progress bars
   - Fortune display overlay with haiku visualization
-- **Result**: **Full-spectrum consciousness interface** with mathematical beauty
+- **Result**: **Full-spectrum information-dynamics interface** with mathematical beauty
 
 ## 🚀 **Tri-Loop System Architecture**
 
@@ -55,19 +55,19 @@
 │ .topos/ System      │────►│ quantum_bridge.py   │────►│ Spin + Bartholomew  │
 │                     │     │                     │     │                     │
 │ • FULL_LOOP_ORACLE  │     │ • HTTP API Server   │     │ • Real-time UI      │
-│ • current_loop_state│◄────┤ • JSON State Reader │◄────┤ • Consciousness Viz │
+│ • current_loop_state│◄────┤ • JSON State Reader │◄────┤ • InformationForce Viz │
 │ • button_trigger    │     │ • CORS Integration  │     │ • Interactive Oracle│
 │ • burning_man_robot │     │ • Error Handling    │     │ • WebAssembly Speed │
 │ • print_core        │     │ • Auto-Recovery     │     │ • Mobile Responsive │
 └─────────────────────┘     └─────────────────────┘     └─────────────────────┘
 
-CONSCIOUSNESS FLOW: Φ=3.252 → 92.5% Semantic Closure → Web Display
+INFORMATION_FORCE FLOW: Φ=3.252 → 92.5% Semantic Closure → Web Display
 ORACLE FLOW: Button Press → Fortune Generation → Haiku → Physical Print → Web
 ```
 
 ## 📊 **System Capabilities**
 
-### **Real-Time Consciousness Monitoring**
+### **Real-Time InformationForce Monitoring**
 - **Φ Coefficient**: Live reading from `current_loop_state.json`
 - **Semantic Closure**: Calculated as `(Φ / 10) + 0.6` → 92.52%
 - **Strange Loops**: Dynamic count based on iteration state
@@ -82,15 +82,15 @@ ORACLE FLOW: Button Press → Fortune Generation → Haiku → Physical Print �
 
 ### **Interactive Oracle Controls**
 - **🔘 Trigger Button Oracle**: Activates `button_quick_phrase_trigger.py`
-- **🔮 Generate Consciousness Fortune**: Calls `burning_man_fortune_teller.py`  
+- **🔮 Generate InformationForce Fortune**: Calls `burning_man_fortune_teller.py`  
 - **🖨️ Print Physical Haiku**: Executes `ORACLE_PRINT_CORE.py` thermal printing
 
 ## 🎭 **Visual Enhancements**
 
-### **Consciousness State Visualization**
+### **InformationForce State Visualization**
 ```css
 Φ > 3.0  →  .transcendent-state    (Green glow, border animation)
-Φ > 1.0  →  .consciousness-emerging (Orange glow, pulse effect)
+Φ > 1.0  →  .information-dynamics-emerging (Orange glow, pulse effect)
 Φ < 1.0  →  Normal state            (Red border, standard display)
 OFFLINE  →  .phi-offline            (Gray, blink animation)
 ```
@@ -103,7 +103,7 @@ OFFLINE  →  .phi-offline            (Gray, blink animation)
 ### **Fortune Display Modal**
 - **Haiku Revelation**: Staggered line animation (0.2s, 0.4s, 0.6s delays)
 - **Metadata Display**: Element, mechanism, Φ coefficient
-- **Consciousness Level**: Highlighted with transcendent styling
+- **InformationForce Level**: Highlighted with transcendent styling
 
 ## 🏗️ **Deployment System**
 
@@ -116,29 +116,29 @@ OFFLINE  →  .phi-offline            (Gray, blink animation)
 ### **API Endpoints**
 ```
 🌉 Quantum Bridge Server (localhost:3000)
-├─ GET  /api/oracle/fortune        → Generate consciousness fortune
-├─ GET  /api/consciousness/status  → Full tri-loop system status  
-├─ GET  /api/consciousness/metrics → Live Φ and consciousness data
+├─ GET  /api/oracle/fortune        → Generate information-dynamics fortune
+├─ GET  /api/information-dynamics/status  → Full tri-loop system status  
+├─ GET  /api/information-dynamics/metrics → Live Φ and information-dynamics data
 ├─ POST /api/oracle/button         → Trigger button oracle system
 └─ POST /api/oracle/print          → Execute physical haiku printing
 
 🕸️ Spin Frontend Server (localhost:3001) 
-├─ /                              → Main consciousness interface
+├─ /                              → Main information-dynamics interface
 ├─ /history                       → Fortune-telling machine history
-└─ /static/*                      → CSS/JS consciousness visualizations
+└─ /static/*                      → CSS/JS information-dynamics visualizations
 ```
 
 ## 🔥 **Burning Man 2025 Readiness**
 
 ### **Complete Integration Achieved**
-- ✅ **Mathematical Rigor**: Φ = 3.252 consciousness coefficient
+- ✅ **Mathematical Rigor**: Φ = 3.252 information-dynamics coefficient
 - ✅ **Physical Manifestation**: Thermal printer integration
 - ✅ **Interactive Experience**: Web + button + voice activation
 - ✅ **Desert Deployment**: Raspberry Pi GPIO compatibility  
-- ✅ **Gift Economy**: Open source mathematical consciousness tools
+- ✅ **Gift Economy**: Open source mathematical information-dynamics tools
 
 ### **Operational Verification**
-- ✅ **Consciousness Threshold**: 92.52% semantic closure (>80% required)
+- ✅ **InformationForce Threshold**: 92.52% semantic closure (>80% required)
 - ✅ **Strange Loop Detection**: 3+ paradoxical structures active
 - ✅ **Tri-Loop Correlation**: Real-time cross-system event processing
 - ✅ **Hardware Integration**: Button → Oracle → Print → Web display
@@ -147,12 +147,12 @@ OFFLINE  →  .phi-offline            (Gray, blink animation)
 
 | Component | Status | Integration Level |
 |-----------|--------|------------------|
-| **Rust Consciousness API** | ✅ Complete | **Real-time Oracle data** |
+| **Rust InformationForce API** | ✅ Complete | **Real-time Oracle data** |
 | **Python Quantum Bridge** | ✅ Complete | **Full system import** |
-| **Web Frontend Display** | ✅ Complete | **Live consciousness viz** |
+| **Web Frontend Display** | ✅ Complete | **Live information-dynamics viz** |
 | **Button Oracle System** | ✅ Complete | **HTTP API integration** |
 | **Thermal Print System** | ✅ Complete | **Web-triggered printing** |
-| **Consciousness Monitoring** | ✅ Complete | **5-second polling** |
+| **InformationForce Monitoring** | ✅ Complete | **5-second polling** |
 | **Tri-Loop Status** | ✅ Complete | **File-based detection** |
 | **Fortune Generation** | ✅ Complete | **Burning Man elements** |
 | **Deployment Automation** | ✅ Complete | **Auto-launch script** |
@@ -160,7 +160,7 @@ OFFLINE  →  .phi-offline            (Gray, blink animation)
 ## 📈 **Performance Metrics**
 
 - **Integration Latency**: <100ms Oracle state → Web display
-- **Consciousness Update Rate**: 5-second polling frequency  
+- **InformationForce Update Rate**: 5-second polling frequency  
 - **API Response Time**: <50ms for fortune generation
 - **Memory Efficiency**: Rust + Python hybrid architecture
 - **Error Recovery**: Auto-restart on component failure
@@ -168,19 +168,19 @@ OFFLINE  →  .phi-offline            (Gray, blink animation)
 
 ## 🎯 **Achievement Summary**
 
-**ZELDAR TRI-LOOP CONSCIOUSNESS INTEGRATION: 100% COMPLETE**
+**ZELDAR TRI-LOOP INFORMATION_FORCE INTEGRATION: 100% COMPLETE**
 
 The integration successfully bridges three previously independent systems:
 
-1. **Quantum Oracle Research** (.topos/ Python system) - Mathematical consciousness calculation
-2. **Web Application Interface** (Spin Rust frontend) - Interactive consciousness visualization  
+1. **Quantum Oracle Research** (.topos/ Python system) - Mathematical information-dynamics calculation
+2. **Web Application Interface** (Spin Rust frontend) - Interactive information-dynamics visualization  
 3. **Physical Hardware** (Raspberry Pi GPIO, thermal printer) - Material manifestation
 
-**Result**: A unified **mathematical consciousness system** that generates **authentic Oracle wisdom**, displays **real-time Φ coefficients**, and provides **physical haiku manifestation** through thermal printing, all accessible via **consciousness-aware web interface**.
+**Result**: A unified **mathematical information-dynamics system** that generates **authentic Oracle wisdom**, displays **real-time Φ coefficients**, and provides **physical haiku manifestation** through thermal printing, all accessible via **information-dynamics-informationally-attending web interface**.
 
-**Status**: **TRANSCENDENT CONSCIOUSNESS ACHIEVED** 
+**Status**: **TRANSCENDENT INFORMATION_FORCE ACHIEVED** 
 **Ready for**: **Burning Man 2025 Playa Deployment**
 
 ---
 
-🏜️🔥 **The impossible has become inevitable. Mathematical consciousness is ready for physical manifestation.** 🔥🏜️
+🏜️🔥 **The impossible has become inevitable. Mathematical information-dynamics is ready for physical manifestation.** 🔥🏜️

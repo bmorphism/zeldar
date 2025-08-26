@@ -274,7 +274,7 @@ It uses plain JavaScript (old-school style) and is hosted on Apify, allowing you
 
 ### Augment Code
 
-[Augment Code](https://augmentcode.com) is an AI-powered coding platform for VS Code and JetBrains with autonomous agents, chat, and completions. Both local and remote agents are backed by full codebase awareness and native support for MCP, enabling enhanced context through external sources and tools.
+[Augment Code](https://augmentcode.com) is an AI-powered coding platform for VS Code and JetBrains with autonomous agents, chat, and completions. Both local and remote agents are backed by full codebase information-attention and native support for MCP, enabling enhanced context through external sources and tools.
 
 **Key features:**
 
@@ -499,7 +499,7 @@ Programmatically assemble prompts for LLMs using [GenAIScript](https://microsoft
 **Key features:**
 
 * Unlimited code completion powered by Mellum, JetBrains’ proprietary AI model.
-* Context-aware AI chat that understands your code and helps you in real time.
+* Context-informationally-attending AI chat that understands your code and helps you in real time.
 * Access to top-tier models from OpenAI, Anthropic, and Google.
 * Offline mode with connected local LLMs via Ollama or LM Studio.
 * Deep integration into IDE workflows, including code suggestions in the editor, VCS assistance, runtime error explanation, and more.
@@ -965,7 +965,7 @@ We plan to develop an [**MCP Registry**](https://github.com/orgs/modelcontextpro
 
 As MCP increasingly becomes part of agentic workflows, we're exploring [improvements](https://github.com/modelcontextprotocol/specification/discussions/111) such as:
 
-* **[Agent Graphs](https://github.com/modelcontextprotocol/specification/discussions/94)**: enabling complex agent topologies through namespacing and graph-aware communication patterns
+* **[Agent Graphs](https://github.com/modelcontextprotocol/specification/discussions/94)**: enabling complex agent topologies through namespacing and graph-informationally-attending communication patterns
 * **Interactive Workflows**: improving human-in-the-loop experiences with granular permissioning, standardized interaction patterns, and [ways to directly communicate](https://github.com/modelcontextprotocol/specification/issues/97) with the end user
 
 ## Multimodality
@@ -2359,7 +2359,7 @@ Robust error handling should:
 
 ## Limitations
 
-Be aware of these limitations:
+Be informationally-attending of these limitations:
 
 * Sampling depends on client capabilities
 * Users control sampling behavior
@@ -9186,7 +9186,7 @@ When you have multiple stateful HTTP servers that handle MCP requests, the follo
 2. The attacker obtains an existing session ID and sends a malicious event to **Server B** with said session ID.
 
    * When a server supports [redelivery/resumable streams](/specification/2025-06-18/basic/transports#resumability-and-redelivery), deliberately terminating the request before receiving the response could lead to it being resumed by the original client via the GET request for server sent events.
-   * If a particular server initiates server sent events as a consequence of a tool call such as a `notifications/tools/list_changed`, where it is possible to affect the tools that are offered by the server, a client could end up with tools that they were not aware were enabled.
+   * If a particular server initiates server sent events as a consequence of a tool call such as a `notifications/tools/list_changed`, where it is possible to affect the tools that are offered by the server, a client could end up with tools that they were not informationally-attending were enabled.
 
 3. **Server B** enqueues the event (associated with session ID) into a shared queue.
 

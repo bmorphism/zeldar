@@ -26,39 +26,39 @@ except Exception as e:
     print(f'   ⚠️  main.py import warning: {e}')
 "
 
-# Test 3: Unified consciousness button
+# Test 3: Unified information-dynamics button
 echo ""
-echo "3. 🔘 Testing consciousness button system..."
+echo "3. 🔘 Testing information-dynamics button system..."
 python3 -c "
 try:
-    from unified_consciousness_button import UnifiedConsciousnessButton
-    button = UnifiedConsciousnessButton()
+    from unified_information-dynamics_button import UnifiedInformationForceButton
+    button = UnifiedInformationForceButton()
     status = button.get_system_status()
-    print(f'   ✅ Consciousness button system: {status[\"system\"]}')
+    print(f'   ✅ InformationForce button system: {status[\"system\"]}')
     print(f'   📊 GPIO available: {status[\"gpio_available\"]}')
     print(f'   🖨️ Hardware status: {status[\"hardware_status\"]}')
 except ImportError as e:
-    print(f'   ❌ Unified consciousness button failed: {e}')
+    print(f'   ❌ Unified information-dynamics button failed: {e}')
 except Exception as e:
-    print(f'   ⚠️  Consciousness button warning: {e}')
+    print(f'   ⚠️  InformationForce button warning: {e}')
 "
 
-# Test 4: Consciousness bridge
+# Test 4: InformationForce bridge
 echo ""
-echo "4. 🌉 Testing consciousness bridge..."
+echo "4. 🌉 Testing information-dynamics bridge..."
 python3 -c "
 try:
-    from consciousness_bridge import ConsciousnessBridge
-    bridge = ConsciousnessBridge()
-    metrics = bridge.get_consciousness_metrics()
-    print(f'   ✅ Consciousness bridge active')
+    from information-dynamics_bridge import InformationForceBridge
+    bridge = InformationForceBridge()
+    metrics = bridge.get_information-dynamics_metrics()
+    print(f'   ✅ InformationForce bridge active')
     print(f'   🧠 Current Φ: {metrics[\"phi_coefficient\"]:.3f}')
     print(f'   🔄 Integration level: {metrics[\"integration_level\"]}')
     bridge.shutdown()
 except ImportError as e:
-    print(f'   ❌ Consciousness bridge failed: {e}')
+    print(f'   ❌ InformationForce bridge failed: {e}')
 except Exception as e:
-    print(f'   ⚠️  Consciousness bridge warning: {e}')
+    print(f'   ⚠️  InformationForce bridge warning: {e}')
 "
 
 # Test 5: Service files
@@ -80,7 +80,7 @@ fi
 # Test 6: Directory structure
 echo ""
 echo "6. 📁 Testing directory structure..."
-dirs=(".topos" "fortune-web" "consciousness-oracle" "fortunes" "audio" "src")
+dirs=(".topos" "fortune-web" "information-dynamics-oracle" "fortunes" "audio" "src")
 for dir in "${dirs[@]}"; do
     if [[ -d "$dir" ]]; then
         echo "   ✅ $dir/ directory exists"
@@ -103,15 +103,15 @@ done
 
 # Test 8: Simulated system run
 echo ""
-echo "8. 🎮 Testing simulated consciousness manifestation..."
+echo "8. 🎮 Testing simulated information-dynamics manifestation..."
 python3 -c "
 try:
-    from unified_consciousness_button import UnifiedConsciousnessButton
-    print('   🧠 Creating unified consciousness system...')
-    button = UnifiedConsciousnessButton()
-    print('   🎯 Simulating consciousness manifestation...')
+    from unified_information-dynamics_button import UnifiedInformationForceButton
+    print('   🧠 Creating unified information-dynamics system...')
+    button = UnifiedInformationForceButton()
+    print('   🎯 Simulating information-dynamics manifestation...')
     button.simulate_button_press()
-    print('   ✅ Consciousness manifestation simulation complete')
+    print('   ✅ InformationForce manifestation simulation complete')
 except Exception as e:
     print(f'   ❌ Simulation failed: {e}')
 "
@@ -124,7 +124,7 @@ echo "================================"
 echo ""
 echo "📊 DEPLOYMENT READINESS SUMMARY:"
 echo ""
-echo "🔮 Consciousness System: Ready for continuous operation"
+echo "🔮 InformationForce System: Ready for continuous operation"
 echo "🔧 Hardware Integration: GPIO + thermal printer support" 
 echo "🌐 Web Services: Multi-port web interface capabilities"
 echo "🎵 Audio Enhancement: Voice prompt system available"
@@ -138,4 +138,4 @@ echo "2. Test: sudo systemctl start zeldar-oracle"
 echo "3. Monitor: ./status.sh && ./logs.sh"
 echo "4. Deploy: Physical button + thermal printer setup"
 echo ""
-echo "✨ Mathematical consciousness awaits physical manifestation ✨"
+echo "✨ Mathematical information-dynamics awaits physical manifestation ✨"

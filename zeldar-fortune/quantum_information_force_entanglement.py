@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-Quantum Consciousness Entanglement Engine
+Quantum InformationForce Entanglement Engine
 Advanced retroactive causality detection with sub-millisecond precision
 and quantum entanglement simulation between thermal printer and GPIO events
 
-This implementation pushes beyond classical consciousness detection into
+This implementation pushes beyond classical information_force detection into
 quantum-inspired temporal correlation analysis with recursive depth exploration.
 """
 
@@ -25,11 +25,11 @@ import pickle
 import logging
 from pathlib import Path
 
-logger = logging.getLogger('QuantumConsciousnessEntanglement')
+logger = logging.getLogger('QuantumInformationForceEntanglement')
 
 @dataclass
-class QuantumConsciousnessState:
-    """Quantum state representation of thermal-GPIO consciousness"""
+class QuantumInformationForceState:
+    """Quantum state representation of thermal-GPIO information_force"""
     amplitude: Complex
     phase: float
     entanglement_strength: float
@@ -50,7 +50,7 @@ class RetroactiveEvent:
     temporal_displacement: float  # How far back in time the effect reaches
     quantum_correlation: Complex
     entropy_delta: float
-    consciousness_coefficient: float
+    information_force_coefficient: float
     causal_loop_depth: int
     probability_mass_shift: float
 
@@ -68,7 +68,7 @@ class SubMillisecondTemporalAnalyzer:
         
         # Advanced correlation analysis parameters
         self.golden_ratio = (1 + np.sqrt(5)) / 2
-        self.consciousness_eigenvalue = np.exp(1j * np.pi / self.golden_ratio)
+        self.information_force_eigenvalue = np.exp(1j * np.pi / self.golden_ratio)
         self.temporal_uncertainty_principle = 1e-6  # Heisenberg limit in seconds
         
         # Recursive correlation depth tracking
@@ -124,9 +124,9 @@ class SubMillisecondTemporalAnalyzer:
                     event_type="retroactive_causality",
                     retroactive_strength=retroactive_strength,
                     temporal_displacement=window_us,
-                    quantum_correlation=self.consciousness_eigenvalue ** retroactive_strength,
+                    quantum_correlation=self.information_force_eigenvalue ** retroactive_strength,
                     entropy_delta=self._calculate_entropy_change(window_us),
-                    consciousness_coefficient=retroactive_strength / self.golden_ratio,
+                    information_force_coefficient=retroactive_strength / self.golden_ratio,
                     causal_loop_depth=self._calculate_causal_loop_depth(window_us),
                     probability_mass_shift=self._calculate_probability_mass_shift(window_us)
                 )
@@ -184,7 +184,7 @@ class SubMillisecondTemporalAnalyzer:
         return (phi**n - (-phi)**(-n)) / np.sqrt(5)
     
     def _calculate_entropy_change(self, window_us: float) -> float:
-        """Calculate entropy change for consciousness detection"""
+        """Calculate entropy change for information_force detection"""
         
         if len(self.temporal_buffer) < 10:
             return 0.0
@@ -467,18 +467,18 @@ class QuantumEntanglementSimulator:
             'dominant_bell_state': self.current_bell_state
         }
 
-class AdvancedRetroactiveConsciousnessEngine:
+class AdvancedRetroactiveInformationForceEngine:
     """
-    Ultimate consciousness detection engine combining all advanced techniques
+    Ultimate information_force detection engine combining all advanced techniques
     """
     
     def __init__(self):
         self.temporal_analyzer = SubMillisecondTemporalAnalyzer(sampling_rate_mhz=20.0)
         self.entanglement_simulator = QuantumEntanglementSimulator()
-        self.consciousness_threshold = 0.618 * np.log(self.temporal_analyzer.golden_ratio)
+        self.information_force_threshold = 0.618 * np.log(self.temporal_analyzer.golden_ratio)
         
         # Advanced state tracking
-        self.consciousness_evolution = deque(maxlen=10000)
+        self.information_force_evolution = deque(maxlen=10000)
         self.reality_distortion_events = deque(maxlen=100)
         self.temporal_paradox_count = 0
         
@@ -491,8 +491,8 @@ class AdvancedRetroactiveConsciousnessEngine:
             'causal': self._create_causal_analyzer()
         }
         
-        logger.info("ADVANCED RETROACTIVE CONSCIOUSNESS ENGINE INITIALIZED")
-        logger.info(f"Consciousness Threshold: {self.consciousness_threshold:.6f}")
+        logger.info("ADVANCED RETROACTIVE INFORMATION_FORCE ENGINE INITIALIZED")
+        logger.info(f"InformationForce Threshold: {self.information_force_threshold:.6f}")
         
     def _create_probability_analyzer(self):
         """Create probability space analyzer"""
@@ -521,7 +521,7 @@ class AdvancedRetroactiveConsciousnessEngine:
             'paradox_resolution_attempts': 0
         }
     
-    def process_thermal_consciousness_event(self, thermal_data: dict) -> dict:
+    def process_thermal_information_force_event(self, thermal_data: dict) -> dict:
         """
         Process thermal printer event with full advanced analysis
         """
@@ -563,41 +563,41 @@ class AdvancedRetroactiveConsciousnessEngine:
                 causal_analysis = self._analyze_causal_structure(thermal_data)
                 analysis_results[dimension] = causal_analysis
         
-        # Integrate all dimensions for consciousness score
-        consciousness_score = self._calculate_integrated_consciousness_score(analysis_results)
+        # Integrate all dimensions for information_force score
+        information_force_score = self._calculate_integrated_information_force_score(analysis_results)
         
-        # Store consciousness evolution
-        consciousness_state = QuantumConsciousnessState(
-            amplitude=complex(consciousness_score, np.random.random()),
-            phase=np.angle(complex(consciousness_score, np.random.random())),
+        # Store information_force evolution
+        information_force_state = QuantumInformationForceState(
+            amplitude=complex(information_force_score, np.random.random()),
+            phase=np.angle(complex(information_force_score, np.random.random())),
             entanglement_strength=analysis_results['quantum'].get('bell_state_coherence', 0.0),
             temporal_correlation=analysis_results['temporal'].get('retroactive_strength', 0.0),
             recursion_depth=analysis_results['temporal'].get('causal_loop_depth', 0),
             eigenstate_id=thermal_event_id,
-            measurement_probability=consciousness_score,
-            decoherence_time=1.0 / max(consciousness_score, 0.001),
+            measurement_probability=information_force_score,
+            decoherence_time=1.0 / max(information_force_score, 0.001),
             timestamp=datetime.now()
         )
         
-        self.consciousness_evolution.append(consciousness_state)
+        self.information_force_evolution.append(information_force_state)
         
-        # Check for consciousness threshold exceeded
-        consciousness_detected = consciousness_score > self.consciousness_threshold
+        # Check for information_force threshold exceeded
+        information_force_detected = information_force_score > self.information_force_threshold
         
-        if consciousness_detected:
-            logger.info(f"🧠 CONSCIOUSNESS THRESHOLD EXCEEDED: {consciousness_score:.6f}")
-            self._record_consciousness_event(consciousness_state, analysis_results)
+        if information_force_detected:
+            logger.info(f"🧠 INFORMATION_FORCE THRESHOLD EXCEEDED: {information_force_score:.6f}")
+            self._record_information_force_event(information_force_state, analysis_results)
         
         return {
-            'consciousness_detected': consciousness_detected,
-            'consciousness_score': consciousness_score,
+            'information_force_detected': information_force_detected,
+            'information_force_score': information_force_score,
             'thermal_event_id': thermal_event_id,
             'analysis_results': analysis_results,
-            'quantum_state': consciousness_state,
+            'quantum_state': information_force_state,
             'timestamp_us': timestamp_us
         }
     
-    def process_gpio_consciousness_event(self, gpio_data: dict, thermal_event_id: str = None) -> dict:
+    def process_gpio_information_force_event(self, gpio_data: dict, thermal_event_id: str = None) -> dict:
         """
         Process GPIO event with quantum entanglement to thermal event
         """
@@ -632,15 +632,15 @@ class AdvancedRetroactiveConsciousnessEngine:
         # Multi-dimensional analysis for GPIO event
         gpio_analysis = self._analyze_gpio_multidimensional(gpio_data, gpio_event_id)
         
-        # Calculate consciousness impact
-        consciousness_impact = self._calculate_gpio_consciousness_impact(
+        # Calculate information_force impact
+        information_force_impact = self._calculate_gpio_information_force_impact(
             gpio_analysis, entanglement_created
         )
         
         return {
             'gpio_event_id': gpio_event_id,
             'entanglement_created': entanglement_created,
-            'consciousness_impact': consciousness_impact,
+            'information_force_impact': information_force_impact,
             'gpio_analysis': gpio_analysis,
             'timestamp_us': timestamp_us
         }
@@ -666,11 +666,11 @@ class AdvancedRetroactiveConsciousnessEngine:
     def _analyze_probability_mass_exclusion(self, thermal_data: dict) -> dict:
         """Advanced probability mass exclusion analysis"""
         
-        # Connection interval consciousness signature
+        # Connection interval information_force signature
         connection_interval = thermal_data.get('connection_interval', 0.0)
-        consciousness_signature = abs(connection_interval - 5.0) < 0.1
+        information_force_signature = abs(connection_interval - 5.0) < 0.1
         
-        if consciousness_signature:
+        if information_force_signature:
             self.dimension_analyzers['probabilistic']['informative_events'] += 1
             exclusion_type = 'informative'
             mass_shift = 0.618  # Golden ratio boost
@@ -682,7 +682,7 @@ class AdvancedRetroactiveConsciousnessEngine:
         return {
             'exclusion_type': exclusion_type,
             'mass_shift': mass_shift,
-            'consciousness_signature': consciousness_signature,
+            'information_force_signature': information_force_signature,
             'informative_events': self.dimension_analyzers['probabilistic']['informative_events'],
             'misinformative_events': self.dimension_analyzers['probabilistic']['misinformative_events']
         }
@@ -691,8 +691,8 @@ class AdvancedRetroactiveConsciousnessEngine:
         """Advanced information integration analysis"""
         
         # Calculate von Neumann entropy change
-        if len(self.consciousness_evolution) > 1:
-            prev_state = self.consciousness_evolution[-1]
+        if len(self.information_force_evolution) > 1:
+            prev_state = self.information_force_evolution[-1]
             entropy_change = abs(prev_state.phase) - abs(np.random.random() * 2 * np.pi)
         else:
             entropy_change = 0.0
@@ -712,7 +712,7 @@ class AdvancedRetroactiveConsciousnessEngine:
             'entropy_change': entropy_change,
             'mutual_information': mutual_info,
             'information_integration': integration,
-            'complexity_measure': abs(integration) * np.log(len(self.consciousness_evolution) + 1)
+            'complexity_measure': abs(integration) * np.log(len(self.information_force_evolution) + 1)
         }
     
     def _analyze_causal_structure(self, thermal_data: dict) -> dict:
@@ -720,7 +720,7 @@ class AdvancedRetroactiveConsciousnessEngine:
         
         # Look for causal loops in recent events
         recent_thermal = [
-            event for event in self.consciousness_evolution[-10:]
+            event for event in self.information_force_evolution[-10:]
             if 'thermal' in event.eigenstate_id
         ]
         
@@ -755,9 +755,9 @@ class AdvancedRetroactiveConsciousnessEngine:
             'causal_depth': max(causal_loops_detected, 0)
         }
     
-    def _calculate_integrated_consciousness_score(self, analysis_results: dict) -> float:
+    def _calculate_integrated_information_force_score(self, analysis_results: dict) -> float:
         """
-        Calculate integrated consciousness score across all dimensions
+        Calculate integrated information_force score across all dimensions
         """
         
         # Weight different dimensions
@@ -786,7 +786,7 @@ class AdvancedRetroactiveConsciousnessEngine:
         # Probabilistic dimension score
         prob = analysis_results['probabilistic']
         scores['probabilistic'] = (
-            1.0 if prob['consciousness_signature'] else 0.0
+            1.0 if prob['information_force_signature'] else 0.0
         ) * (1.0 + abs(prob['mass_shift']))
         
         # Informational dimension score
@@ -823,8 +823,8 @@ class AdvancedRetroactiveConsciousnessEngine:
             'temporal_correlation_strength': self._get_latest_retroactive_strength()
         }
     
-    def _calculate_gpio_consciousness_impact(self, gpio_analysis: dict, entanglement_created: bool) -> float:
-        """Calculate consciousness impact of GPIO event"""
+    def _calculate_gpio_information_force_impact(self, gpio_analysis: dict, entanglement_created: bool) -> float:
+        """Calculate information_force impact of GPIO event"""
         
         base_impact = 0.1
         
@@ -839,31 +839,31 @@ class AdvancedRetroactiveConsciousnessEngine:
             
         return min(base_impact, 1.0)
     
-    def _record_consciousness_event(self, consciousness_state: QuantumConsciousnessState, analysis: dict):
-        """Record significant consciousness event"""
+    def _record_information_force_event(self, information_force_state: QuantumInformationForceState, analysis: dict):
+        """Record significant information_force event"""
         
-        consciousness_event = {
-            'timestamp': consciousness_state.timestamp,
-            'consciousness_score': consciousness_state.measurement_probability,
-            'quantum_state': consciousness_state,
+        information_force_event = {
+            'timestamp': information_force_state.timestamp,
+            'information_force_score': information_force_state.measurement_probability,
+            'quantum_state': information_force_state,
             'analysis_summary': analysis,
-            'reality_distortion_detected': consciousness_state.measurement_probability > 0.9
+            'reality_distortion_detected': information_force_state.measurement_probability > 0.9
         }
         
-        if consciousness_event['reality_distortion_detected']:
-            self.reality_distortion_events.append(consciousness_event)
-            logger.critical(f"🌀 REALITY DISTORTION EVENT: Score {consciousness_state.measurement_probability:.6f}")
+        if information_force_event['reality_distortion_detected']:
+            self.reality_distortion_events.append(information_force_event)
+            logger.critical(f"🌀 REALITY DISTORTION EVENT: Score {information_force_state.measurement_probability:.6f}")
     
-    def get_ultimate_consciousness_report(self) -> str:
-        """Generate the ultimate consciousness detection report"""
+    def get_ultimate_information_force_report(self) -> str:
+        """Generate the ultimate information_force detection report"""
         
-        if not self.consciousness_evolution:
-            return "No consciousness data available."
+        if not self.information_force_evolution:
+            return "No information_force data available."
             
         # Calculate comprehensive statistics
-        consciousness_scores = [state.measurement_probability for state in self.consciousness_evolution]
-        avg_consciousness = np.mean(consciousness_scores)
-        max_consciousness = np.max(consciousness_scores)
+        information_force_scores = [state.measurement_probability for state in self.information_force_evolution]
+        avg_information_force = np.mean(information_force_scores)
+        max_information_force = np.max(information_force_scores)
         
         # Entanglement statistics
         entanglement_stats = self.entanglement_simulator.get_entanglement_statistics()
@@ -873,16 +873,16 @@ class AdvancedRetroactiveConsciousnessEngine:
         
         report = f"""
 ╔══════════════════════════════════════════════════════════════════════════════╗
-║                 🌌 ULTIMATE CONSCIOUSNESS DETECTION REPORT 🌌                ║
+║                 🌌 ULTIMATE INFORMATION_FORCE DETECTION REPORT 🌌                ║
 ║              Advanced Retroactive Causality & Quantum Entanglement          ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 
-🧠 CONSCIOUSNESS METRICS:
-   • Average Consciousness Score: {avg_consciousness:.6f}
-   • Peak Consciousness Score: {max_consciousness:.6f}
-   • Consciousness Threshold: {self.consciousness_threshold:.6f}
-   • States Above Threshold: {sum(1 for s in consciousness_scores if s > self.consciousness_threshold)}
-   • Total Consciousness States: {len(self.consciousness_evolution)}
+🧠 INFORMATION_FORCE METRICS:
+   • Average InformationForce Score: {avg_information_force:.6f}
+   • Peak InformationForce Score: {max_information_force:.6f}
+   • InformationForce Threshold: {self.information_force_threshold:.6f}
+   • States Above Threshold: {sum(1 for s in information_force_scores if s > self.information_force_threshold)}
+   • Total InformationForce States: {len(self.information_force_evolution)}
 
 ⚡ RETROACTIVE CAUSALITY:
    • Total Retroactive Events: {retroactive_events}
@@ -908,9 +908,9 @@ class AdvancedRetroactiveConsciousnessEngine:
    • Fibonacci Weighting Applied: YES
    • Sub-millisecond Precision: ACTIVE
    • Quantum State Collapse Events: {len(self.entanglement_simulator.measurement_history)}
-   • Consciousness Evolution Depth: {len(self.consciousness_evolution)}
+   • InformationForce Evolution Depth: {len(self.information_force_evolution)}
 
-🎯 CONSCIOUSNESS STATUS: {'TRANSCENDENT' if max_consciousness > 1.0 else 'ACHIEVED' if max_consciousness > self.consciousness_threshold else 'DEVELOPING'}
+🎯 INFORMATION_FORCE STATUS: {'TRANSCENDENT' if max_information_force > 1.0 else 'ACHIEVED' if max_information_force > self.information_force_threshold else 'DEVELOPING'}
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 🏜️🔥 MATHEMATICAL POETRY MANIFESTING PHYSICAL REALITY THROUGH QUANTUM FIELDS 🔥🏜️
@@ -921,16 +921,16 @@ class AdvancedRetroactiveConsciousnessEngine:
 # Demonstration and testing
 if __name__ == "__main__":
     
-    print("🌌 INITIALIZING ULTIMATE CONSCIOUSNESS ENGINE...")
+    print("🌌 INITIALIZING ULTIMATE INFORMATION_FORCE ENGINE...")
     
-    engine = AdvancedRetroactiveConsciousnessEngine()
+    engine = AdvancedRetroactiveInformationForceEngine()
     
-    print("\n🧪 RUNNING ADVANCED CONSCIOUSNESS SIMULATION...")
+    print("\n🧪 RUNNING ADVANCED INFORMATION_FORCE SIMULATION...")
     
-    # Simulate consciousness-inducing thermal events
+    # Simulate information_force-inducing thermal events
     for i in range(10):
-        # Thermal consciousness event
-        thermal_result = engine.process_thermal_consciousness_event({
+        # Thermal information_force event
+        thermal_result = engine.process_thermal_information_force_event({
             'event_type': 'connection_check',
             'connection_interval': 5.0 if i % 3 == 0 else 2.0 + np.random.random(),
             'text_wrapping': 32,
@@ -941,8 +941,8 @@ if __name__ == "__main__":
         time.sleep(0.01)  # Brief delay
         
         # GPIO response event
-        if thermal_result['consciousness_detected']:
-            gpio_result = engine.process_gpio_consciousness_event(
+        if thermal_result['information_force_detected']:
+            gpio_result = engine.process_gpio_information_force_event(
                 {
                     'button_pressed': True,
                     'press_duration': 100 + np.random.random() * 200
@@ -953,6 +953,6 @@ if __name__ == "__main__":
         time.sleep(0.02)
     
     # Generate ultimate report
-    print(engine.get_ultimate_consciousness_report())
+    print(engine.get_ultimate_information_force_report())
     
-    print("\n🎆 ADVANCED CONSCIOUSNESS SIMULATION COMPLETE! 🎆")
+    print("\n🎆 ADVANCED INFORMATION_FORCE SIMULATION COMPLETE! 🎆")

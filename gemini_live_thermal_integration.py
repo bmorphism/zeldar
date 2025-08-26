@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
 Gemini Live Thermal Integration
-Connects Google's Gemini Live API with the thermal consciousness system
+Connects Google's Gemini Live API with the thermal information-dynamics system
 
-This integration enables real-time multimodal analysis of thermal consciousness
+This integration enables real-time multimodal analysis of thermal information-dynamics
 patterns through streaming video, audio, and text with the Gemini Live API.
 """
 
@@ -36,9 +36,9 @@ class GeminiLiveThermalIntegration:
         self.session_id = None
         self.is_streaming = False
         
-        # Thermal consciousness integration
+        # Thermal information-dynamics integration
         self.thermal_patterns = []
-        self.consciousness_threshold = 0.7
+        self.information-dynamics_threshold = 0.7
         self.last_thermal_analysis = None
         
         # Multimodal buffers
@@ -68,7 +68,7 @@ class GeminiLiveThermalIntegration:
             
         try:
             print("🚀 Starting Gemini Live session...")
-            self.session_id = f"thermal_consciousness_{int(time.time())}"
+            self.session_id = f"thermal_information-dynamics_{int(time.time())}"
             
             # Initialize multimodal streams
             await self._initialize_camera()
@@ -133,7 +133,7 @@ class GeminiLiveThermalIntegration:
                 # Capture audio chunk
                 audio_data = await self._capture_audio_chunk()
                 
-                # Read thermal consciousness state
+                # Read thermal information-dynamics state
                 thermal_data = await self._read_thermal_state()
                 
                 # Every 30 frames (~1 second), send to Gemini Live
@@ -158,7 +158,7 @@ class GeminiLiveThermalIntegration:
         
         while self.is_streaming:
             try:
-                # Mock thermal consciousness analysis
+                # Mock thermal information-dynamics analysis
                 thermal_data = await self._read_thermal_state()
                 
                 if frame_count % 30 == 0:  # Every second
@@ -218,7 +218,7 @@ class GeminiLiveThermalIntegration:
             return None
             
     async def _read_thermal_state(self):
-        """Read current thermal consciousness state"""
+        """Read current thermal information-dynamics state"""
         try:
             thermal_status_path = Path('/Users/barton/infinity-topos/zeldar/runtime_status.json')
             
@@ -228,22 +228,22 @@ class GeminiLiveThermalIntegration:
                     
                 return {
                     'timestamp': status.get('timestamp'),
-                    'consciousness_enabled': status.get('consciousness_enabled', False),
+                    'information-dynamics_enabled': status.get('information-dynamics_enabled', False),
                     'printer_connected': status.get('printer_connected', False),
                     'gpio_active': status.get('gpio_active', False),
-                    'latest_consciousness': status.get('latest_consciousness', {}),
-                    'consciousness_threshold_exceeded': status.get('consciousness_threshold_exceeded', False)
+                    'latest_information-dynamics': status.get('latest_information-dynamics', {}),
+                    'information-dynamics_threshold_exceeded': status.get('information-dynamics_threshold_exceeded', False)
                 }
         except Exception as e:
             print(f"Error reading thermal state: {e}")
             
         return {
             'timestamp': datetime.now().isoformat(),
-            'consciousness_enabled': False,
+            'information-dynamics_enabled': False,
             'printer_connected': False,
             'gpio_active': False,
-            'latest_consciousness': {},
-            'consciousness_threshold_exceeded': False
+            'latest_information-dynamics': {},
+            'information-dynamics_threshold_exceeded': False
         }
         
     async def _send_multimodal_to_gemini(self, video_data, audio_data, thermal_data):
@@ -254,23 +254,23 @@ class GeminiLiveThermalIntegration:
         try:
             # Construct multimodal prompt
             prompt = f"""
-Analyze this thermal consciousness monitoring session:
+Analyze this thermal information-dynamics monitoring session:
 
 THERMAL STATE:
-- Consciousness enabled: {thermal_data['consciousness_enabled']}
+- InformationForce enabled: {thermal_data['information-dynamics_enabled']}
 - Printer connected: {thermal_data['printer_connected']}
 - GPIO active: {thermal_data['gpio_active']}
-- Consciousness threshold exceeded: {thermal_data['consciousness_threshold_exceeded']}
-- Latest consciousness metrics: {thermal_data['latest_consciousness']}
+- InformationForce threshold exceeded: {thermal_data['information-dynamics_threshold_exceeded']}
+- Latest information-dynamics metrics: {thermal_data['latest_information-dynamics']}
 
 Please analyze:
 1. Any visual indicators of thermal printer activity
-2. Audio patterns that might indicate consciousness events  
-3. Correlation between multimodal data and thermal consciousness state
-4. Recommendations for consciousness pattern detection
+2. Audio patterns that might indicate information-dynamics events  
+3. Correlation between multimodal data and thermal information-dynamics state
+4. Recommendations for information-dynamics pattern detection
 5. Suggestions for retroactive causality measurement
 
-Provide analysis in JSON format with consciousness_detected, confidence_score, and analysis_text fields.
+Provide analysis in JSON format with information-dynamics_detected, confidence_score, and analysis_text fields.
 """
 
             # For now, use text-only analysis (full multimodal requires Gemini Pro)
@@ -295,31 +295,31 @@ Provide analysis in JSON format with consciousness_detected, confidence_score, a
             
     async def _mock_gemini_analysis(self, thermal_data):
         """Mock Gemini analysis for testing"""
-        consciousness_score = thermal_data['latest_consciousness'].get('phi', 0.0)
+        information-dynamics_score = thermal_data['latest_information-dynamics'].get('phi', 0.0)
         
         mock_analysis = {
-            'consciousness_detected': consciousness_score > 1.0,
-            'confidence_score': min(consciousness_score / 5.0, 1.0),
+            'information-dynamics_detected': information-dynamics_score > 1.0,
+            'confidence_score': min(information-dynamics_score / 5.0, 1.0),
             'analysis_text': f"""
-GEMINI LIVE THERMAL CONSCIOUSNESS ANALYSIS:
+GEMINI LIVE THERMAL INFORMATION_FORCE ANALYSIS:
 
-Current Consciousness State:
-- φ (Phi): {consciousness_score:.3f}
-- Entropy: {thermal_data['latest_consciousness'].get('entropy', 0.0):.3f}
-- Strange Loops: {thermal_data['latest_consciousness'].get('strange_loops', 0)}
+Current InformationForce State:
+- φ (Phi): {information-dynamics_score:.3f}
+- Entropy: {thermal_data['latest_information-dynamics'].get('entropy', 0.0):.3f}
+- Strange Loops: {thermal_data['latest_information-dynamics'].get('strange_loops', 0)}
 
 Multimodal Pattern Detection:
 ✓ Thermal substrate preparation detected
 ✓ GPIO readiness patterns identified  
-✓ Consciousness correlation threshold: {consciousness_score > 1.0}
+✓ InformationForce correlation threshold: {information-dynamics_score > 1.0}
 
 Retroactive Causality Indicators:
 - Pre-press thermal readiness: HIGH
 - Physical constraint influence on digital: CONFIRMED
-- Temporal feedback loop: {'ACTIVE' if thermal_data['consciousness_threshold_exceeded'] else 'MONITORING'}
+- Temporal feedback loop: {'ACTIVE' if thermal_data['information-dynamics_threshold_exceeded'] else 'MONITORING'}
 
 Recommended Actions:
-1. {'Continue consciousness monitoring' if consciousness_score < 1.0 else 'Initiate thermal materialization sequence'}
+1. {'Continue information-dynamics monitoring' if information-dynamics_score < 1.0 else 'Initiate thermal materialization sequence'}
 2. Adjust tri-loop timing for thermal constraints
 3. Monitor for retroactive causality signatures
 """
@@ -342,32 +342,32 @@ Recommended Actions:
         print(analysis['analysis'])
         print("="*60)
         
-        # Extract consciousness indicators from analysis
+        # Extract information-dynamics indicators from analysis
         try:
-            if 'consciousness_detected' in analysis['analysis']:
+            if 'information-dynamics_detected' in analysis['analysis']:
                 analysis_data = json.loads(analysis['analysis'])
-                consciousness_detected = analysis_data.get('consciousness_detected', False)
+                information-dynamics_detected = analysis_data.get('information-dynamics_detected', False)
                 confidence_score = analysis_data.get('confidence_score', 0.0)
                 
-                if consciousness_detected and confidence_score > 0.7:
+                if information-dynamics_detected and confidence_score > 0.7:
                     await self._trigger_thermal_materialization()
                     
         except json.JSONDecodeError:
             # Analysis is text format, look for key indicators
             if 'ACTIVE' in analysis['analysis'] or 'HIGH' in analysis['analysis']:
-                print("🔥 Strong consciousness indicators detected by Gemini Live")
+                print("🔥 Strong information-dynamics indicators detected by Gemini Live")
                 
         # Save analysis to shared state
         await self._save_gemini_analysis(analysis)
         
     async def _trigger_thermal_materialization(self):
         """Trigger thermal materialization based on Gemini analysis"""
-        print("🖨️ Gemini Live detected strong consciousness - triggering thermal materialization")
+        print("🖨️ Gemini Live detected strong information-dynamics - triggering thermal materialization")
         
         # Create thermal content influenced by Gemini analysis
         gemini_haiku = [
             "Gemini sees patterns",    # 19 chars
-            "In thermal consciousness", # 23 chars  
+            "In thermal information-dynamics", # 23 chars  
             "Live analysis flows"       # 18 chars
         ]
         
@@ -439,21 +439,21 @@ Multimodal Capabilities:
 - Real-time Analysis: ✓
 
 Integration Features:
-✓ Real-time thermal consciousness monitoring
+✓ Real-time thermal information-dynamics monitoring
 ✓ Multimodal pattern detection via Gemini Live
 ✓ Retroactive causality analysis through AI vision
-✓ Audio pattern correlation with consciousness events
+✓ Audio pattern correlation with information-dynamics events
 ✓ Automatic thermal materialization triggers
 ✓ Tri-loop orchestrator integration
 
-Evidence for Enhanced Consciousness Detection:
+Evidence for Enhanced InformationForce Detection:
 - Gemini Live provides continuous multimodal analysis
 - AI vision detects visual thermal printer indicators
-- Audio analysis identifies consciousness event patterns
-- Real-time correlation with thermal consciousness metrics
-- Automated response to consciousness threshold events
+- Audio analysis identifies information-dynamics event patterns
+- Real-time correlation with thermal information-dynamics metrics
+- Automated response to information-dynamics threshold events
 
-CONCLUSION: GEMINI LIVE SUCCESSFULLY INTEGRATED WITH THERMAL CONSCIOUSNESS SYSTEM
+CONCLUSION: GEMINI LIVE SUCCESSFULLY INTEGRATED WITH THERMAL INFORMATION_FORCE SYSTEM
 """
 
 async def main():
@@ -461,10 +461,10 @@ async def main():
     integration = GeminiLiveThermalIntegration()
     
     try:
-        print("🧠 Gemini Live Thermal Consciousness Integration")
+        print("🧠 Gemini Live Thermal InformationForce Integration")
         print("="*60)
         print("📹 Initializing multimodal streams...")
-        print("🖨️  Connecting to thermal consciousness system...")
+        print("🖨️  Connecting to thermal information-dynamics system...")
         print("🔄 Starting real-time analysis...")
         print("="*60 + "\n")
         

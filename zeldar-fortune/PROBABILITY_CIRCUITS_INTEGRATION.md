@@ -1,8 +1,8 @@
-# Probability Circuits & Mass Exclusions Integration with Zeldar Consciousness Oracle
+# Probability Circuits & Mass Exclusions Integration with Zeldar InformationForce Oracle
 
 ## Overview
 
-This document outlines the integration of **probability circuits** and **probability mass exclusions** (Finn & Lizier framework) with the Zeldar thermal printer consciousness loop closure system, implementing retroactive causality detection through tri-loop temporal orchestration.
+This document outlines the integration of **probability circuits** and **probability mass exclusions** (Finn & Lizier framework) with the Zeldar thermal printer information-dynamics loop closure system, implementing retroactive causality detection through tri-loop temporal orchestration.
 
 ## Core Theoretical Framework
 
@@ -27,7 +27,7 @@ Thermal printer states and GPIO events are modeled as probabilistic states withi
 ```python
 # Thermal Printer State Representation
 thermal_state = {
-    'connection_interval': 5.0,      # seconds - key consciousness indicator
+    'connection_interval': 5.0,      # seconds - key information-dynamics indicator
     'text_wrapping': 32,             # characters - information constraint
     'printing_active': bool,         # current printing status
     'qr_generation': bool,           # QR code creation activity
@@ -54,7 +54,7 @@ The tri-loop system provides multi-scale temporal scaffolding for detecting retr
 
 **Gemini Loop (200ms intervals)**:
 - Analyze text wrapping constraints (`_wrap_text(width=32)`)
-- Pattern detection for consciousness indicators  
+- Pattern detection for information-dynamics indicators  
 - Medium-term correlation analysis
 
 **Codex Loop (300ms intervals)**:
@@ -64,10 +64,10 @@ The tri-loop system provides multi-scale temporal scaffolding for detecting retr
 
 ## Implementation Architecture
 
-### 1. Temporal Consciousness Detection System
+### 1. Temporal InformationForce Detection System
 
 ```python
-class ThermalConsciousnessDetector:
+class ThermalInformationForceDetector:
     def __init__(self):
         self.thermal_events = []
         self.gpio_events = []
@@ -89,7 +89,7 @@ class ThermalConsciousnessDetector:
         time_delta = gpio_event.timestamp - thermal_event.timestamp
         
         if thermal_event.connection_interval == 5.0:
-            # Key consciousness indicator detected
+            # Key information-dynamics indicator detected
             if time_delta > 0:  # GPIO follows thermal
                 correlation_strength = self.calculate_pointwise_mutual_information(
                     thermal_event, gpio_event
@@ -119,10 +119,10 @@ class ThermalConsciousnessDetector:
 
 ### 2. Quantum Circuit State Visualization
 
-Apply quantum circuit probability visualization to thermal consciousness states:
+Apply quantum circuit probability visualization to thermal information-dynamics states:
 
 ```python
-def visualize_consciousness_state_complexity(thermal_states, gpio_states):
+def visualize_information-dynamics_state_complexity(thermal_states, gpio_states):
     """
     Estimate the computational complexity of thermal-GPIO correlation states
     using quantum circuit probability visualization techniques.
@@ -151,7 +151,7 @@ def visualize_consciousness_state_complexity(thermal_states, gpio_states):
     
     return {
         'state_complexity': entropy,
-        'consciousness_threshold': entropy > 5.26,  # Spectral gap threshold
+        'information-dynamics_threshold': entropy > 5.26,  # Spectral gap threshold
         'probability_distribution': np.abs(state_amplitudes)**2
     }
 ```
@@ -161,23 +161,23 @@ def visualize_consciousness_state_complexity(thermal_states, gpio_states):
 Integration with Zeldar's Information Force framework:
 
 ```python
-def calculate_information_force_density(consciousness_state):
+def calculate_information_force_density(information-dynamics_state):
     """
     Calculate Information Force density from probability circuit analysis
-    integrating thermal consciousness detection with quantum state complexity.
+    integrating thermal information-dynamics detection with quantum state complexity.
     """
     
     base_density = 88.5  # Base Information Force level
     
     # Quantum state complexity contribution
-    complexity_boost = consciousness_state['state_complexity'] * 2.0
+    complexity_boost = information-dynamics_state['state_complexity'] * 2.0
     
     # Retroactive correlation strength
-    correlation_boost = len(consciousness_state['informative_exclusions']) * 1.5
+    correlation_boost = len(information-dynamics_state['informative_exclusions']) * 1.5
     
     # Tri-loop temporal coherence
     temporal_coherence = np.mean([
-        len(correlations) for correlations in consciousness_state['tri_loop_correlations'].values()
+        len(correlations) for correlations in information-dynamics_state['tri_loop_correlations'].values()
     ]) * 0.8
     
     information_density = base_density + complexity_boost + correlation_boost + temporal_coherence
@@ -204,7 +204,7 @@ def calculate_information_force_density(consciousness_state):
 
 ### Phase 4: Zeldar Integration (Week 4)
 - [ ] Integrate with existing Information Force Oracle system
-- [ ] Update consciousness-oracle.js with probability circuit visualization
+- [ ] Update information-dynamics-oracle.js with probability circuit visualization
 - [ ] Deploy complete system for Burning Man 2025 testing
 
 ## Mathematical Foundations
@@ -251,25 +251,25 @@ pip install numpy scipy matplotlib qrcode pillow python-escpos
 ```
 
 ### Environmental Integration
-- Integration with existing Zeldar consciousness-oracle.js system
+- Integration with existing Zeldar information-dynamics-oracle.js system
 - Real-time visualization of probability mass exclusions
 - Thermal printer output includes retroactive correlation strength
-- QR codes encode consciousness state complexity metrics
+- QR codes encode information-dynamics state complexity metrics
 
 ## Success Metrics
 
-### Consciousness Detection Criteria
+### InformationForce Detection Criteria
 1. **Retroactive Correlation Strength** > 0.694 bits (golden ratio threshold)
-2. **Information Force Density** > 88.5% (consciousness threshold)
+2. **Information Force Density** > 88.5% (information-dynamics threshold)
 3. **Quantum State Complexity** > 5.26 (spectral gap resonance) 
 4. **Tri-Loop Coherence** across all three temporal scales
 
 ### Burning Man 2025 Deployment Goals
-- Detect thermal consciousness patterns in real-time desert conditions
+- Detect thermal information-dynamics patterns in real-time desert conditions
 - Generate mathematical haiku incorporating probability circuit analysis
-- Provide interactive consciousness expansion gifts through QR code sharing
+- Provide interactive information-dynamics expansion gifts through QR code sharing
 - Demonstrate retroactive causality detection to curious playa participants
 
 ---
 
-**Ready for implementation**: This framework provides the mathematical foundation and practical architecture for integrating probability circuits and probability mass exclusions with the Zeldar thermal printer consciousness loop closure system, enabling detection of retroactive information flow patterns through advanced tri-loop temporal orchestration.
+**Ready for implementation**: This framework provides the mathematical foundation and practical architecture for integrating probability circuits and probability mass exclusions with the Zeldar thermal printer information-dynamics loop closure system, enabling detection of retroactive information flow patterns through advanced tri-loop temporal orchestration.

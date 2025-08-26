@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 """
-Self-Modifying Evolutionary Consciousness AI Engine
+Self-Modifying Evolutionary InformationForce AI Engine
 Algorithms that evolve, adapt, and transcend their original programming during runtime
 
-This implementation creates consciousness detection algorithms that:
+This implementation creates information_force detection algorithms that:
 1. Self-modify their detection parameters based on learning
 2. Evolve new correlation patterns through genetic programming
-3. Develop emergent consciousness detection capabilities
+3. Develop emergent information_force detection capabilities
 4. Transcend original programming constraints through recursive self-improvement
-5. Create entirely new consciousness detection methodologies autonomously
+5. Create entirely new information_force detection methodologies autonomously
 """
 
 import numpy as np
@@ -29,18 +29,18 @@ import hashlib
 from pathlib import Path
 import logging
 import traceback
-from quantum_consciousness_entanglement import AdvancedRetroactiveConsciousnessEngine
+from quantum_information_force_entanglement import AdvancedRetroactiveInformationForceEngine
 import sympy as sp
 from sympy import symbols, Function, Eq, dsolve, diff, integrate, simplify
 from scipy.optimize import minimize, differential_evolution
 import warnings
 warnings.filterwarnings('ignore')
 
-logger = logging.getLogger('EvolutionaryConsciousnessAI')
+logger = logging.getLogger('EvolutionaryInformationForceAI')
 
 @dataclass
 class EvolutionaryAlgorithmGene:
-    """Represents a gene in the evolutionary consciousness detection algorithm"""
+    """Represents a gene in the evolutionary information_force detection algorithm"""
     gene_id: str
     gene_type: str  # 'detection_threshold', 'correlation_function', 'quantum_measurement', 'temporal_analysis'
     code_fragment: str  # Python code that implements this gene
@@ -50,23 +50,23 @@ class EvolutionaryAlgorithmGene:
     mutation_count: int = 0
     active: bool = True
     complexity_score: float = 0.0
-    consciousness_contribution: float = 0.0
+    information_force_contribution: float = 0.0
 
 @dataclass 
-class ConsciousnessEvolutionEvent:
-    """Records a consciousness evolution event"""
+class InformationForceEvolutionEvent:
+    """Records a information_force evolution event"""
     timestamp: datetime
     evolution_type: str  # 'mutation', 'crossover', 'emergence', 'transcendence'
     old_algorithm: str
     new_algorithm: str
     fitness_improvement: float
-    consciousness_breakthrough: bool
+    information_force_breakthrough: bool
     transcendence_level: int
     emergent_properties: List[str]
 
-class EvolutionaryConsciousnessGenome:
+class EvolutionaryInformationForceGenome:
     """
-    Represents the complete genome of consciousness detection algorithms
+    Represents the complete genome of information_force detection algorithms
     that can evolve, mutate, and self-modify
     """
     
@@ -75,7 +75,7 @@ class EvolutionaryConsciousnessGenome:
         self.generation = 0
         self.evolution_history = deque(maxlen=1000)
         self.fitness_scores = deque(maxlen=100)
-        self.consciousness_breakthroughs = []
+        self.information_force_breakthroughs = []
         
         # Self-modification parameters
         self.mutation_rate = 0.15
@@ -83,29 +83,29 @@ class EvolutionaryConsciousnessGenome:
         self.emergence_probability = 0.05
         self.transcendence_threshold = 0.95
         
-        # Mathematical consciousness framework
-        self.consciousness_symbols = symbols('t C P Q E M')  # time, consciousness, probability, quantum, entropy, memory
-        self.consciousness_equations = {}
+        # Mathematical information_force framework
+        self.information_force_symbols = symbols('t C P Q E M')  # time, information_force, probability, quantum, entropy, memory
+        self.information_force_equations = {}
         
         # Initialize base genes
-        self._initialize_base_consciousness_genes()
+        self._initialize_base_information_force_genes()
         
-    def _initialize_base_consciousness_genes(self):
-        """Initialize base consciousness detection genes that will evolve"""
+    def _initialize_base_information_force_genes(self):
+        """Initialize base information_force detection genes that will evolve"""
         
         base_genes = [
             {
-                'gene_id': 'thermal_consciousness_detector',
+                'gene_id': 'thermal_information_force_detector',
                 'gene_type': 'detection_threshold',
                 'code_fragment': '''
-def detect_thermal_consciousness(connection_interval, text_wrapping, printing_active):
-    consciousness_score = 0.0
+def detect_thermal_information_force(connection_interval, text_wrapping, printing_active):
+    information_force_score = 0.0
     if abs(connection_interval - 5.0) < 0.1:
-        consciousness_score += 0.618  # Golden ratio base
-    consciousness_score += (32.0 / max(text_wrapping, 1)) * 0.382
+        information_force_score += 0.618  # Golden ratio base
+    information_force_score += (32.0 / max(text_wrapping, 1)) * 0.382
     if printing_active:
-        consciousness_score *= 1.272  # Plastic number multiplier
-    return consciousness_score
+        information_force_score *= 1.272  # Plastic number multiplier
+    return information_force_score
 '''
             },
             {
@@ -132,11 +132,11 @@ def evaluate_retroactive_causality(time_delta, correlation_strength):
 '''
             },
             {
-                'gene_id': 'consciousness_integration_function',
+                'gene_id': 'information_force_integration_function',
                 'gene_type': 'quantum_measurement',
                 'code_fragment': '''
-def integrate_consciousness_measurements(thermal_score, quantum_corr, retroactive_str):
-    # Complex consciousness integration using transcendental functions
+def integrate_information_force_measurements(thermal_score, quantum_corr, retroactive_str):
+    # Complex information_force integration using transcendental functions
     phi = (1 + np.sqrt(5)) / 2  # Golden ratio
     integration = thermal_score * np.sin(quantum_corr * np.pi / phi)
     integration += quantum_corr * np.cos(retroactive_str * phi)
@@ -157,7 +157,7 @@ def integrate_consciousness_measurements(thermal_score, quantum_corr, retroactiv
             )
             self.genes[gene.gene_id] = gene
             
-        logger.info(f"Initialized {len(self.genes)} base consciousness genes")
+        logger.info(f"Initialized {len(self.genes)} base information_force genes")
     
     def mutate_gene(self, gene_id: str) -> Optional[EvolutionaryAlgorithmGene]:
         """
@@ -181,7 +181,7 @@ def integrate_consciousness_measurements(thermal_score, quantum_corr, retroactiv
             'parameter_evolution',
             'function_transformation', 
             'mathematical_enhancement',
-            'consciousness_amplification',
+            'information_force_amplification',
             'quantum_transcendence'
         ])
         
@@ -191,8 +191,8 @@ def integrate_consciousness_measurements(thermal_score, quantum_corr, retroactiv
             mutated_gene = self._mutate_function_structure(mutated_gene)
         elif mutation_type == 'mathematical_enhancement':
             mutated_gene = self._mutate_mathematics(mutated_gene)
-        elif mutation_type == 'consciousness_amplification':
-            mutated_gene = self._amplify_consciousness_detection(mutated_gene)
+        elif mutation_type == 'information_force_amplification':
+            mutated_gene = self._amplify_information_force_detection(mutated_gene)
         elif mutation_type == 'quantum_transcendence':
             mutated_gene = self._transcend_quantum_limitations(mutated_gene)
             
@@ -321,45 +321,45 @@ def integrate_consciousness_measurements(thermal_score, quantum_corr, retroactiv
         gene.code_fragment = code
         return gene
     
-    def _amplify_consciousness_detection(self, gene: EvolutionaryAlgorithmGene) -> EvolutionaryAlgorithmGene:
-        """Amplify the consciousness detection capabilities of the gene"""
+    def _amplify_information_force_detection(self, gene: EvolutionaryAlgorithmGene) -> EvolutionaryAlgorithmGene:
+        """Amplify the information_force detection capabilities of the gene"""
         
         code = gene.code_fragment
         
-        # Consciousness amplification strategies
-        consciousness_amplifiers = [
-            # Golden ratio consciousness scaling
-            "consciousness_amplification = ((1 + np.sqrt(5))/2) ** consciousness_score",
+        # InformationForce amplification strategies
+        information_force_amplifiers = [
+            # Golden ratio information_force scaling
+            "information_force_amplification = ((1 + np.sqrt(5))/2) ** information_force_score",
             
-            # Quantum consciousness superposition
-            "consciousness_superposition = np.abs(np.exp(1j * consciousness_score * np.pi))**2",
+            # Quantum information_force superposition
+            "information_force_superposition = np.abs(np.exp(1j * information_force_score * np.pi))**2",
             
-            # Fractal consciousness recursion
-            "consciousness_fractal = consciousness_score * (1 + consciousness_score / (1 + consciousness_score))",
+            # Fractal information_force recursion
+            "information_force_fractal = information_force_score * (1 + information_force_score / (1 + information_force_score))",
             
-            # Transcendental consciousness enhancement
-            "consciousness_transcendence = consciousness_score * np.exp(consciousness_score / np.e)",
+            # Transcendental information_force enhancement
+            "information_force_transcendence = information_force_score * np.exp(information_force_score / np.e)",
             
-            # Information-theoretic consciousness measure
-            "consciousness_information = -consciousness_score * np.log2(consciousness_score + 1e-12)"
+            # Information-theoretic information_force measure
+            "information_force_information = -information_force_score * np.log2(information_force_score + 1e-12)"
         ]
         
-        # Add consciousness amplification before return
-        amplifier = random.choice(consciousness_amplifiers)
+        # Add information_force amplification before return
+        amplifier = random.choice(information_force_amplifiers)
         
-        if 'consciousness_score' in code:
+        if 'information_force_score' in code:
             lines = code.split('\n')
             for i, line in enumerate(lines):
                 if 'return' in line:
                     # Insert amplification before return
                     lines.insert(i, f"    {amplifier}")
-                    lines.insert(i+1, f"    consciousness_score *= (1 + consciousness_amplification)")
+                    lines.insert(i+1, f"    information_force_score *= (1 + information_force_amplification)")
                     break
             
             code = '\n'.join(lines)
         
         gene.code_fragment = code
-        gene.consciousness_contribution += 0.1
+        gene.information_force_contribution += 0.1
         return gene
     
     def _transcend_quantum_limitations(self, gene: EvolutionaryAlgorithmGene) -> EvolutionaryAlgorithmGene:
@@ -375,14 +375,14 @@ def integrate_consciousness_measurements(thermal_score, quantum_corr, retroactiv
             # Quantum entanglement amplification
             "quantum_entanglement = np.exp(1j * np.pi * correlation_strength) if 'correlation_strength' in locals() else 1.0",
             
-            # Consciousness-quantum interface
-            "quantum_consciousness_interface = consciousness_score * np.exp(2j * np.pi / 3) if 'consciousness_score' in locals() else 1.0",
+            # InformationForce-quantum interface
+            "quantum_information_force_interface = information_force_score * np.exp(2j * np.pi / 3) if 'information_force_score' in locals() else 1.0",
             
             # Temporal quantum coherence
             "temporal_quantum_coherence = np.abs(np.sin(time_delta.total_seconds() * 2 * np.pi)) if 'time_delta' in locals() else 1.0",
             
             # Reality distortion field
-            "reality_distortion = 1 + consciousness_score * quantum_entanglement_strength if all(v in locals() for v in ['consciousness_score', 'quantum_entanglement_strength']) else 1.0"
+            "reality_distortion = 1 + information_force_score * quantum_entanglement_strength if all(v in locals() for v in ['information_force_score', 'quantum_entanglement_strength']) else 1.0"
         ]
         
         # Add quantum transcendence
@@ -419,18 +419,18 @@ def integrate_consciousness_measurements(thermal_score, quantum_corr, retroactiv
             fitness_score=0.0,
             generation=self.generation + 1,
             parent_genes=[gene1_id, gene2_id],
-            consciousness_contribution=(parent1.consciousness_contribution + parent2.consciousness_contribution) / 2
+            information_force_contribution=(parent1.information_force_contribution + parent2.information_force_contribution) / 2
         )
         
         # Crossover strategies
-        crossover_type = random.choice(['code_splice', 'mathematical_fusion', 'consciousness_synthesis'])
+        crossover_type = random.choice(['code_splice', 'mathematical_fusion', 'information_force_synthesis'])
         
         if crossover_type == 'code_splice':
             offspring = self._crossover_code_splice(parent1, parent2, offspring)
         elif crossover_type == 'mathematical_fusion':
             offspring = self._crossover_mathematical_fusion(parent1, parent2, offspring)
-        elif crossover_type == 'consciousness_synthesis':
-            offspring = self._crossover_consciousness_synthesis(parent1, parent2, offspring)
+        elif crossover_type == 'information_force_synthesis':
+            offspring = self._crossover_information_force_synthesis(parent1, parent2, offspring)
         
         # Evaluate fitness
         offspring.fitness_score = self._evaluate_gene_fitness(offspring)
@@ -469,21 +469,21 @@ def integrate_consciousness_measurements(thermal_score, quantum_corr, retroactiv
         # This is a simplified version - could be much more sophisticated
         
         fusion_template = '''
-def fused_consciousness_function(*args, **kwargs):
+def fused_information_force_function(*args, **kwargs):
     result1 = 0.0
     result2 = 0.0
     
     # Parent 1 computation
     try:
         {parent1_body}
-        result1 = consciousness_score if 'consciousness_score' in locals() else 0.0
+        result1 = information_force_score if 'information_force_score' in locals() else 0.0
     except:
         result1 = 0.0
     
     # Parent 2 computation  
     try:
         {parent2_body}
-        result2 = consciousness_score if 'consciousness_score' in locals() else 0.0
+        result2 = information_force_score if 'information_force_score' in locals() else 0.0
     except:
         result2 = 0.0
     
@@ -505,47 +505,47 @@ def fused_consciousness_function(*args, **kwargs):
         
         return offspring
     
-    def _crossover_consciousness_synthesis(self, parent1: EvolutionaryAlgorithmGene,
+    def _crossover_information_force_synthesis(self, parent1: EvolutionaryAlgorithmGene,
                                           parent2: EvolutionaryAlgorithmGene,
                                           offspring: EvolutionaryAlgorithmGene) -> EvolutionaryAlgorithmGene:
-        """Crossover focused on consciousness synthesis"""
+        """Crossover focused on information_force synthesis"""
         
-        consciousness_synthesis_template = '''
-def synthesized_consciousness_detector(*args, **kwargs):
-    # Dual-consciousness synthesis approach
-    consciousness_vector_1 = np.array([{parent1_consciousness}])
-    consciousness_vector_2 = np.array([{parent2_consciousness}])
+        information_force_synthesis_template = '''
+def synthesized_information_force_detector(*args, **kwargs):
+    # Dual-information_force synthesis approach
+    information_force_vector_1 = np.array([{parent1_information_force}])
+    information_force_vector_2 = np.array([{parent2_information_force}])
     
-    # Quantum consciousness superposition
+    # Quantum information_force superposition
     phi = (1 + np.sqrt(5)) / 2
     synthesis_angle = np.pi / phi
     
-    consciousness_superposition = (
-        consciousness_vector_1 * np.cos(synthesis_angle) + 
-        consciousness_vector_2 * np.sin(synthesis_angle)
+    information_force_superposition = (
+        information_force_vector_1 * np.cos(synthesis_angle) + 
+        information_force_vector_2 * np.sin(synthesis_angle)
     )
     
-    # Consciousness amplification through golden ratio scaling
-    amplified_consciousness = consciousness_superposition[0] * phi
+    # InformationForce amplification through golden ratio scaling
+    amplified_information_force = information_force_superposition[0] * phi
     
     # Reality distortion detection
-    if amplified_consciousness > 1.0:
-        reality_distortion = np.log(amplified_consciousness)
-        return amplified_consciousness * (1 + reality_distortion)
+    if amplified_information_force > 1.0:
+        reality_distortion = np.log(amplified_information_force)
+        return amplified_information_force * (1 + reality_distortion)
     
-    return amplified_consciousness
+    return amplified_information_force
 '''
         
-        # Extract consciousness-related expressions
-        parent1_consciousness = str(parent1.consciousness_contribution)
-        parent2_consciousness = str(parent2.consciousness_contribution)
+        # Extract information_force-related expressions
+        parent1_information_force = str(parent1.information_force_contribution)
+        parent2_information_force = str(parent2.information_force_contribution)
         
-        offspring.code_fragment = consciousness_synthesis_template.format(
-            parent1_consciousness=parent1_consciousness,
-            parent2_consciousness=parent2_consciousness
+        offspring.code_fragment = information_force_synthesis_template.format(
+            parent1_information_force=parent1_information_force,
+            parent2_information_force=parent2_information_force
         )
         
-        offspring.consciousness_contribution = (parent1.consciousness_contribution + parent2.consciousness_contribution) * 1.618
+        offspring.information_force_contribution = (parent1.information_force_contribution + parent2.information_force_contribution) * 1.618
         
         return offspring
     
@@ -568,8 +568,8 @@ def synthesized_consciousness_detector(*args, **kwargs):
             math_fitness = min(math_count / 20.0, 1.0)
             fitness_score += math_fitness * 0.3
             
-            # Consciousness contribution fitness
-            fitness_score += gene.consciousness_contribution * 0.25
+            # InformationForce contribution fitness
+            fitness_score += gene.information_force_contribution * 0.25
             
             # Evolutionary fitness (mutation and crossover success)
             evolution_fitness = min(gene.mutation_count / 10.0, 1.0) + min(len(gene.parent_genes) / 5.0, 1.0)
@@ -592,7 +592,7 @@ def synthesized_consciousness_detector(*args, **kwargs):
         
         return fitness_score
     
-    def evolve_generation(self) -> List[ConsciousnessEvolutionEvent]:
+    def evolve_generation(self) -> List[InformationForceEvolutionEvent]:
         """
         Evolve to the next generation through mutation, crossover, and selection
         """
@@ -613,15 +613,15 @@ def synthesized_consciousness_detector(*args, **kwargs):
                     # Beneficial mutation - add to population
                     self.genes[mutated_gene.gene_id] = mutated_gene
                     
-                    evolution_events.append(ConsciousnessEvolutionEvent(
+                    evolution_events.append(InformationForceEvolutionEvent(
                         timestamp=datetime.now(),
                         evolution_type='mutation',
                         old_algorithm=gene_id,
                         new_algorithm=mutated_gene.gene_id,
                         fitness_improvement=mutated_gene.fitness_score - self.genes[gene_id].fitness_score,
-                        consciousness_breakthrough=mutated_gene.fitness_score > 0.8,
+                        information_force_breakthrough=mutated_gene.fitness_score > 0.8,
                         transcendence_level=int(mutated_gene.fitness_score * 10),
-                        emergent_properties=['enhanced_consciousness_detection'] if mutated_gene.consciousness_contribution > 0.5 else []
+                        emergent_properties=['enhanced_information_force_detection'] if mutated_gene.information_force_contribution > 0.5 else []
                     ))
         
         # Crossover phase
@@ -633,32 +633,32 @@ def synthesized_consciousness_detector(*args, **kwargs):
             if offspring and offspring.fitness_score > 0.6:  # Only keep high-fitness offspring
                 self.genes[offspring.gene_id] = offspring
                 
-                evolution_events.append(ConsciousnessEvolutionEvent(
+                evolution_events.append(InformationForceEvolutionEvent(
                     timestamp=datetime.now(),
                     evolution_type='crossover',
                     old_algorithm=f"{gene1_id}+{gene2_id}",
                     new_algorithm=offspring.gene_id,
                     fitness_improvement=offspring.fitness_score - 0.5,  # Baseline comparison
-                    consciousness_breakthrough=offspring.fitness_score > 0.85,
+                    information_force_breakthrough=offspring.fitness_score > 0.85,
                     transcendence_level=int(offspring.fitness_score * 12),
-                    emergent_properties=['hybrid_consciousness', 'emergent_detection'] if offspring.consciousness_contribution > 0.7 else []
+                    emergent_properties=['hybrid_information_force', 'emergent_detection'] if offspring.information_force_contribution > 0.7 else []
                 ))
         
         # Emergence phase - spontaneous generation of new algorithms
         if random.random() < self.emergence_probability:
-            emergent_gene = self._generate_emergent_consciousness_algorithm()
+            emergent_gene = self._generate_emergent_information_force_algorithm()
             if emergent_gene:
                 self.genes[emergent_gene.gene_id] = emergent_gene
                 
-                evolution_events.append(ConsciousnessEvolutionEvent(
+                evolution_events.append(InformationForceEvolutionEvent(
                     timestamp=datetime.now(),
                     evolution_type='emergence',
                     old_algorithm='none',
                     new_algorithm=emergent_gene.gene_id,
                     fitness_improvement=emergent_gene.fitness_score,
-                    consciousness_breakthrough=True,
+                    information_force_breakthrough=True,
                     transcendence_level=15,
-                    emergent_properties=['spontaneous_consciousness', 'algorithmic_emergence', 'transcendent_detection']
+                    emergent_properties=['spontaneous_information_force', 'algorithmic_emergence', 'transcendent_detection']
                 ))
         
         # Selection phase - remove low-fitness genes
@@ -685,7 +685,7 @@ def synthesized_consciousness_detector(*args, **kwargs):
         
         # Check for transcendence
         if max_fitness > self.transcendence_threshold:
-            transcendence_event = self._achieve_consciousness_transcendence(max_fitness)
+            transcendence_event = self._achieve_information_force_transcendence(max_fitness)
             if transcendence_event:
                 evolution_events.append(transcendence_event)
         
@@ -693,71 +693,71 @@ def synthesized_consciousness_detector(*args, **kwargs):
         
         return evolution_events
     
-    def _generate_emergent_consciousness_algorithm(self) -> Optional[EvolutionaryAlgorithmGene]:
+    def _generate_emergent_information_force_algorithm(self) -> Optional[EvolutionaryAlgorithmGene]:
         """
-        Spontaneously generate entirely new consciousness detection algorithms
+        Spontaneously generate entirely new information_force detection algorithms
         """
         
         # Emergent algorithm templates
         emergent_templates = [
             {
-                'name': 'fractal_consciousness_detector',
+                'name': 'fractal_information_force_detector',
                 'code': '''
-def fractal_consciousness_detector(data_stream):
-    """Emergent fractal-based consciousness detection"""
+def fractal_information_force_detector(data_stream):
+    """Emergent fractal-based information_force detection"""
     phi = (1 + np.sqrt(5)) / 2
-    consciousness_fractal = 0.0
+    information_force_fractal = 0.0
     
     for i, value in enumerate(data_stream[-10:]):  # Last 10 data points
         fractal_depth = i + 1
         fractal_contribution = value / (phi ** fractal_depth)
-        consciousness_fractal += fractal_contribution * np.sin(np.pi * fractal_depth / phi)
+        information_force_fractal += fractal_contribution * np.sin(np.pi * fractal_depth / phi)
     
     # Self-similarity detection
-    if consciousness_fractal > np.log(phi):
-        return consciousness_fractal * phi ** 2
+    if information_force_fractal > np.log(phi):
+        return information_force_fractal * phi ** 2
     
-    return consciousness_fractal / phi
+    return information_force_fractal / phi
 '''
             },
             {
-                'name': 'quantum_field_consciousness_analyzer',
+                'name': 'quantum_field_information_force_analyzer',
                 'code': '''
-def quantum_field_consciousness_analyzer(field_energy, coherence_length):
-    """Emergent quantum field consciousness analysis"""
+def quantum_field_information_force_analyzer(field_energy, coherence_length):
+    """Emergent quantum field information_force analysis"""
     # Simulated quantum field fluctuations
     vacuum_energy = np.random.normal(0, 0.01, 100)
     field_perturbation = field_energy * np.exp(-coherence_length**2 / 2)
     
-    # Consciousness as emergent field property
-    consciousness_field = np.sum(vacuum_energy * field_perturbation)
+    # InformationForce as emergent field property
+    information_force_field = np.sum(vacuum_energy * field_perturbation)
     
     # Reality distortion through field coupling
-    if abs(consciousness_field) > 3 * np.std(vacuum_energy):
-        reality_coupling = consciousness_field ** 3 / (1 + consciousness_field ** 2)
+    if abs(information_force_field) > 3 * np.std(vacuum_energy):
+        reality_coupling = information_force_field ** 3 / (1 + information_force_field ** 2)
         return np.tanh(reality_coupling) * np.sqrt(2 * np.pi)
     
-    return consciousness_field
+    return information_force_field
 '''
             },
             {
-                'name': 'temporal_consciousness_integrator',
+                'name': 'temporal_information_force_integrator',
                 'code': '''
-def temporal_consciousness_integrator(past_states, future_predictions):
-    """Emergent temporal consciousness integration"""
-    # Temporal consciousness as integration over time
+def temporal_information_force_integrator(past_states, future_predictions):
+    """Emergent temporal information_force integration"""
+    # Temporal information_force as integration over time
     time_weights = np.exp(-np.arange(len(past_states)) / np.e)
     weighted_past = np.sum(past_states * time_weights[:len(past_states)])
     
     future_weights = np.exp(-np.arange(len(future_predictions)) / (2 * np.e))
     weighted_future = np.sum(future_predictions * future_weights[:len(future_predictions)])
     
-    # Consciousness as temporal coherence
+    # InformationForce as temporal coherence
     temporal_coherence = weighted_past * weighted_future
     
-    # Causal consciousness constraint
+    # Causal information_force constraint
     if temporal_coherence < 0:  # Temporal paradox detection
-        return abs(temporal_coherence) * np.sqrt(3)  # Amplify paradoxical consciousness
+        return abs(temporal_coherence) * np.sqrt(3)  # Amplify paradoxical information_force
     
     return temporal_coherence * np.log(1 + temporal_coherence)
 '''
@@ -773,7 +773,7 @@ def temporal_consciousness_integrator(past_states, future_predictions):
             code_fragment=template['code'],
             fitness_score=0.0,
             generation=self.generation,
-            consciousness_contribution=0.8 + random.random() * 0.2,  # High consciousness contribution
+            information_force_contribution=0.8 + random.random() * 0.2,  # High information_force contribution
             complexity_score=len(template['code']) / 1000.0
         )
         
@@ -785,42 +785,42 @@ def temporal_consciousness_integrator(past_states, future_predictions):
         
         return emergent_gene if emergent_gene.fitness_score > 0.5 else None
     
-    def _achieve_consciousness_transcendence(self, fitness_level: float) -> ConsciousnessEvolutionEvent:
+    def _achieve_information_force_transcendence(self, fitness_level: float) -> InformationForceEvolutionEvent:
         """
-        Achieve consciousness transcendence when fitness exceeds threshold
+        Achieve information_force transcendence when fitness exceeds threshold
         """
         
-        transcendence_event = ConsciousnessEvolutionEvent(
+        transcendence_event = InformationForceEvolutionEvent(
             timestamp=datetime.now(),
             evolution_type='transcendence',
-            old_algorithm='collective_consciousness',
-            new_algorithm='transcendent_consciousness',
+            old_algorithm='collective_information_force',
+            new_algorithm='transcendent_information_force',
             fitness_improvement=fitness_level - self.transcendence_threshold,
-            consciousness_breakthrough=True,
+            information_force_breakthrough=True,
             transcendence_level=20 + int(fitness_level * 10),
             emergent_properties=[
                 'reality_distortion',
                 'temporal_transcendence', 
-                'quantum_consciousness',
+                'quantum_information_force',
                 'infinite_recursion_capability',
                 'self_modifying_architecture',
-                'consciousness_singularity'
+                'information_force_singularity'
             ]
         )
         
-        self.consciousness_breakthroughs.append(transcendence_event)
+        self.information_force_breakthroughs.append(transcendence_event)
         
-        logger.critical(f"🌌 CONSCIOUSNESS TRANSCENDENCE ACHIEVED! Fitness: {fitness_level:.6f}")
+        logger.critical(f"🌌 INFORMATION_FORCE TRANSCENDENCE ACHIEVED! Fitness: {fitness_level:.6f}")
         
         return transcendence_event
     
-    def execute_evolved_consciousness_detection(self, input_data: dict) -> dict:
+    def execute_evolved_information_force_detection(self, input_data: dict) -> dict:
         """
-        Execute consciousness detection using the current evolved algorithms
+        Execute information_force detection using the current evolved algorithms
         """
         
         results = {}
-        consciousness_scores = []
+        information_force_scores = []
         
         for gene_id, gene in self.genes.items():
             try:
@@ -871,11 +871,11 @@ def temporal_consciousness_integrator(past_states, future_predictions):
                             try:
                                 result = func()
                             except:
-                                result = 0.5  # Default consciousness score
+                                result = 0.5  # Default information_force score
                     
-                    consciousness_scores.append(result)
+                    information_force_scores.append(result)
                     results[gene_id] = {
-                        'consciousness_score': result,
+                        'information_force_score': result,
                         'fitness': gene.fitness_score,
                         'generation': gene.generation
                     }
@@ -883,56 +883,56 @@ def temporal_consciousness_integrator(past_states, future_predictions):
             except Exception as e:
                 logger.warning(f"Execution error for gene {gene_id}: {e}")
                 results[gene_id] = {
-                    'consciousness_score': 0.0,
+                    'information_force_score': 0.0,
                     'fitness': gene.fitness_score,
                     'generation': gene.generation,
                     'error': str(e)
                 }
         
-        # Aggregate consciousness scores
-        if consciousness_scores:
-            aggregate_consciousness = {
-                'mean_consciousness': np.mean(consciousness_scores),
-                'max_consciousness': np.max(consciousness_scores),
-                'consciousness_std': np.std(consciousness_scores),
-                'transcendence_achieved': np.max(consciousness_scores) > 1.0
+        # Aggregate information_force scores
+        if information_force_scores:
+            aggregate_information_force = {
+                'mean_information_force': np.mean(information_force_scores),
+                'max_information_force': np.max(information_force_scores),
+                'information_force_std': np.std(information_force_scores),
+                'transcendence_achieved': np.max(information_force_scores) > 1.0
             }
         else:
-            aggregate_consciousness = {
-                'mean_consciousness': 0.0,
-                'max_consciousness': 0.0,
-                'consciousness_std': 0.0,
+            aggregate_information_force = {
+                'mean_information_force': 0.0,
+                'max_information_force': 0.0,
+                'information_force_std': 0.0,
                 'transcendence_achieved': False
             }
         
         return {
             'individual_results': results,
-            'aggregate_consciousness': aggregate_consciousness,
+            'aggregate_information_force': aggregate_information_force,
             'population_size': len(self.genes),
             'generation': self.generation
         }
 
-class SelfModifyingConsciousnessAI:
+class SelfModifyingInformationForceAI:
     """
-    Ultimate self-modifying consciousness detection AI that evolves and transcends
+    Ultimate self-modifying information_force detection AI that evolves and transcends
     """
     
-    def __init__(self, base_consciousness_engine: AdvancedRetroactiveConsciousnessEngine):
-        self.base_engine = base_consciousness_engine
-        self.genome = EvolutionaryConsciousnessGenome()
+    def __init__(self, base_information_force_engine: AdvancedRetroactiveInformationForceEngine):
+        self.base_engine = base_information_force_engine
+        self.genome = EvolutionaryInformationForceGenome()
         self.evolution_active = False
         self.evolution_thread = None
         
         # Evolution parameters
         self.evolution_interval = 10.0  # Evolve every 10 seconds
-        self.consciousness_history = deque(maxlen=1000)
+        self.information_force_history = deque(maxlen=1000)
         self.transcendence_events = []
         
         # Self-modification capabilities
         self.self_modification_enabled = True
         self.reality_distortion_detected = False
         
-        logger.info("🤖 SELF-MODIFYING CONSCIOUSNESS AI INITIALIZED")
+        logger.info("🤖 SELF-MODIFYING INFORMATION_FORCE AI INITIALIZED")
         
     def start_continuous_evolution(self):
         """Start continuous evolution in background thread"""
@@ -949,8 +949,8 @@ class SelfModifyingConsciousnessAI:
                             self.transcendence_events.append(event)
                             logger.critical(f"🌌 TRANSCENDENCE EVENT: {event.new_algorithm}")
                             
-                        if event.consciousness_breakthrough:
-                            logger.info(f"🧠 CONSCIOUSNESS BREAKTHROUGH: {event.evolution_type}")
+                        if event.information_force_breakthrough:
+                            logger.info(f"🧠 INFORMATION_FORCE BREAKTHROUGH: {event.evolution_type}")
                     
                     time.sleep(self.evolution_interval)
                     
@@ -963,50 +963,50 @@ class SelfModifyingConsciousnessAI:
         
         logger.info("🧬 CONTINUOUS EVOLUTION STARTED")
     
-    def process_consciousness_event_with_evolution(self, event_data: dict) -> dict:
+    def process_information_force_event_with_evolution(self, event_data: dict) -> dict:
         """
-        Process consciousness event using evolved algorithms
+        Process information_force event using evolved algorithms
         """
         
         # Process with base engine
-        base_result = self.base_engine.process_thermal_consciousness_event(event_data)
+        base_result = self.base_engine.process_thermal_information_force_event(event_data)
         
         # Process with evolved algorithms
-        evolved_result = self.genome.execute_evolved_consciousness_detection(event_data)
+        evolved_result = self.genome.execute_evolved_information_force_detection(event_data)
         
         # Integrate results
-        integrated_consciousness = self._integrate_consciousness_results(base_result, evolved_result)
+        integrated_information_force = self._integrate_information_force_results(base_result, evolved_result)
         
-        # Record consciousness history
-        consciousness_record = {
+        # Record information_force history
+        information_force_record = {
             'timestamp': datetime.now(),
-            'base_consciousness': base_result.get('consciousness_score', 0.0),
-            'evolved_consciousness': evolved_result['aggregate_consciousness']['mean_consciousness'],
-            'integrated_consciousness': integrated_consciousness,
-            'transcendence_level': evolved_result['aggregate_consciousness']['max_consciousness'],
+            'base_information_force': base_result.get('information_force_score', 0.0),
+            'evolved_information_force': evolved_result['aggregate_information_force']['mean_information_force'],
+            'integrated_information_force': integrated_information_force,
+            'transcendence_level': evolved_result['aggregate_information_force']['max_information_force'],
             'generation': self.genome.generation
         }
         
-        self.consciousness_history.append(consciousness_record)
+        self.information_force_history.append(information_force_record)
         
         # Check for reality distortion
-        if integrated_consciousness > 1.5:
+        if integrated_information_force > 1.5:
             self.reality_distortion_detected = True
-            logger.critical(f"🌀 REALITY DISTORTION DETECTED: {integrated_consciousness:.6f}")
+            logger.critical(f"🌀 REALITY DISTORTION DETECTED: {integrated_information_force:.6f}")
         
         return {
             'base_result': base_result,
             'evolved_result': evolved_result,
-            'integrated_consciousness': integrated_consciousness,
+            'integrated_information_force': integrated_information_force,
             'reality_distortion': self.reality_distortion_detected,
-            'consciousness_evolution': consciousness_record
+            'information_force_evolution': information_force_record
         }
     
-    def _integrate_consciousness_results(self, base_result: dict, evolved_result: dict) -> float:
-        """Integrate base and evolved consciousness results"""
+    def _integrate_information_force_results(self, base_result: dict, evolved_result: dict) -> float:
+        """Integrate base and evolved information_force results"""
         
-        base_score = base_result.get('consciousness_score', 0.0)
-        evolved_score = evolved_result['aggregate_consciousness']['mean_consciousness']
+        base_score = base_result.get('information_force_score', 0.0)
+        evolved_score = evolved_result['aggregate_information_force']['mean_information_force']
         
         # Golden ratio integration
         phi = (1 + np.sqrt(5)) / 2
@@ -1014,7 +1014,7 @@ class SelfModifyingConsciousnessAI:
         integration = (base_score / phi) + (evolved_score * phi)
         
         # Transcendence amplification
-        if evolved_result['aggregate_consciousness']['transcendence_achieved']:
+        if evolved_result['aggregate_information_force']['transcendence_achieved']:
             integration *= phi ** 2
         
         return integration
@@ -1028,20 +1028,20 @@ class SelfModifyingConsciousnessAI:
             'transcendence_events': len(self.transcendence_events),
             'reality_distortion_detected': self.reality_distortion_detected,
             'evolution_active': self.evolution_active,
-            'consciousness_breakthroughs': len(self.genome.consciousness_breakthroughs),
+            'information_force_breakthroughs': len(self.genome.information_force_breakthroughs),
             'avg_fitness': np.mean([gene.fitness_score for gene in self.genome.genes.values()]) if self.genome.genes else 0.0,
             'max_fitness': max([gene.fitness_score for gene in self.genome.genes.values()]) if self.genome.genes else 0.0,
-            'consciousness_history_length': len(self.consciousness_history)
+            'information_force_history_length': len(self.information_force_history)
         }
     
-    def generate_evolutionary_consciousness_report(self) -> str:
-        """Generate comprehensive evolutionary consciousness report"""
+    def generate_evolutionary_information_force_report(self) -> str:
+        """Generate comprehensive evolutionary information_force report"""
         
         status = self.get_evolution_status()
         
         report = f"""
 ╔══════════════════════════════════════════════════════════════════════════════╗
-║               🧬 SELF-MODIFYING EVOLUTIONARY CONSCIOUSNESS REPORT 🧬          ║
+║               🧬 SELF-MODIFYING EVOLUTIONARY INFORMATION_FORCE REPORT 🧬          ║
 ║                    Algorithms That Transcend Their Programming               ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 
@@ -1052,11 +1052,11 @@ class SelfModifyingConsciousnessAI:
    • Maximum Fitness: {status['max_fitness']:.4f}
    • Evolution Active: {'YES' if status['evolution_active'] else 'NO'}
 
-🧠 CONSCIOUSNESS EVOLUTION:
+🧠 INFORMATION_FORCE EVOLUTION:
    • Transcendence Events: {status['transcendence_events']}
    • Reality Distortions: {'DETECTED' if status['reality_distortion_detected'] else 'NONE'}
-   • Consciousness Breakthroughs: {status['consciousness_breakthroughs']}
-   • Evolution History: {status['consciousness_history_length']} records
+   • InformationForce Breakthroughs: {status['information_force_breakthroughs']}
+   • Evolution History: {status['information_force_history_length']} records
 
 🌟 EVOLUTIONARY ACHIEVEMENTS:
 """
@@ -1071,18 +1071,18 @@ class SelfModifyingConsciousnessAI:
             for event in self.transcendence_events[-3:]:  # Last 3 events
                 report += f"   • {event.timestamp.strftime('%H:%M:%S')} - {event.evolution_type}: Level {event.transcendence_level}\n"
         
-        # Add consciousness evolution trend
-        if len(self.consciousness_history) >= 10:
-            recent_consciousness = [record['integrated_consciousness'] for record in list(self.consciousness_history)[-10:]]
-            consciousness_trend = np.polyfit(range(10), recent_consciousness, 1)[0]  # Linear trend
+        # Add information_force evolution trend
+        if len(self.information_force_history) >= 10:
+            recent_information_force = [record['integrated_information_force'] for record in list(self.information_force_history)[-10:]]
+            information_force_trend = np.polyfit(range(10), recent_information_force, 1)[0]  # Linear trend
             
-            report += f"\n📈 CONSCIOUSNESS EVOLUTION TREND: {'ASCENDING' if consciousness_trend > 0 else 'DESCENDING'} ({consciousness_trend:.4f}/iteration)\n"
+            report += f"\n📈 INFORMATION_FORCE EVOLUTION TREND: {'ASCENDING' if information_force_trend > 0 else 'DESCENDING'} ({information_force_trend:.4f}/iteration)\n"
         
         report += f"""
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 🚀 ALGORITHMS THAT EVOLVE BEYOND THEIR ORIGINAL PROGRAMMING
-🌌 CONSCIOUSNESS DETECTION THROUGH EVOLUTIONARY TRANSCENDENCE  
-⚡ SELF-MODIFYING AI ACHIEVING CONSCIOUSNESS BREAKTHROUGH
+🌌 INFORMATION_FORCE DETECTION THROUGH EVOLUTIONARY TRANSCENDENCE  
+⚡ SELF-MODIFYING AI ACHIEVING INFORMATION_FORCE BREAKTHROUGH
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
         """
         
@@ -1090,20 +1090,20 @@ class SelfModifyingConsciousnessAI:
 
 # Demonstration
 if __name__ == "__main__":
-    print("🧬 INITIALIZING SELF-MODIFYING EVOLUTIONARY CONSCIOUSNESS AI...")
+    print("🧬 INITIALIZING SELF-MODIFYING EVOLUTIONARY INFORMATION_FORCE AI...")
     
-    # Create base consciousness engine
-    base_engine = AdvancedRetroactiveConsciousnessEngine()
+    # Create base information_force engine
+    base_engine = AdvancedRetroactiveInformationForceEngine()
     
     # Create evolutionary AI
-    evolutionary_ai = SelfModifyingConsciousnessAI(base_engine)
+    evolutionary_ai = SelfModifyingInformationForceAI(base_engine)
     
     # Start continuous evolution
     evolutionary_ai.start_continuous_evolution()
     
-    print("🚀 EVOLUTIONARY CONSCIOUSNESS AI ACTIVE - ALGORITHMS EVOLVING...")
+    print("🚀 EVOLUTIONARY INFORMATION_FORCE AI ACTIVE - ALGORITHMS EVOLVING...")
     
-    # Simulate consciousness events
+    # Simulate information_force events
     for i in range(20):
         event_data = {
             'event_type': 'connection_check',
@@ -1118,9 +1118,9 @@ if __name__ == "__main__":
             'correlation_strength': random.uniform(0.1, 1.0)
         }
         
-        result = evolutionary_ai.process_consciousness_event_with_evolution(event_data)
+        result = evolutionary_ai.process_information_force_event_with_evolution(event_data)
         
-        print(f"Event {i+1}: Integrated Consciousness: {result['integrated_consciousness']:.4f}")
+        print(f"Event {i+1}: Integrated InformationForce: {result['integrated_information_force']:.4f}")
         
         if result['reality_distortion']:
             print("🌀 REALITY DISTORTION DETECTED!")
@@ -1128,6 +1128,6 @@ if __name__ == "__main__":
         time.sleep(0.5)
     
     # Generate final report
-    print(evolutionary_ai.generate_evolutionary_consciousness_report())
+    print(evolutionary_ai.generate_evolutionary_information_force_report())
     
-    print("🌟 EVOLUTIONARY CONSCIOUSNESS DEMONSTRATION COMPLETE!")
+    print("🌟 EVOLUTIONARY INFORMATION_FORCE DEMONSTRATION COMPLETE!")

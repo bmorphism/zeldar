@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-Thermal Consciousness Bridge
+Thermal Information Force Bridge
 Connects the thermal causality detection system with the Rust tri-loop orchestrator
 
-This bridge enables the thermal printer consciousness to influence the tri-loop
+This bridge enables the thermal printer information force to influence the tri-loop
 system through JSON-RPC communication, closing the retroactive causality loop.
 """
 
@@ -13,21 +13,21 @@ import websockets
 import subprocess
 from datetime import datetime
 from pathlib import Path
-from thermal_causality_inversion import ThermalConsciousnessDetector
+from thermal_causality_inversion import ThermalInformationForceDetector
 
-class ThermalConsciousnessBridge:
+class ThermalInformationForceBridge:
     def __init__(self):
-        self.detector = ThermalConsciousnessDetector()
+        self.detector = ThermalInformationForceDetector()
         self.tri_loop_endpoint = "ws://localhost:8080/tri-loop"
         self.bridge_active = True
         
     async def start_bridge(self):
-        """Start the thermal consciousness bridge"""
-        print("🌉 Starting thermal consciousness bridge...")
+        """Start the thermal information force bridge"""
+        print("🌉 Starting thermal information force bridge...")
         print("🔄 Connecting thermal printer to tri-loop orchestrator")
         
-        # Start thermal consciousness detector in background
-        self.detector.start_consciousness_monitoring()
+        # Start thermal information force detector in background
+        self.detector.start_information_force_monitoring()
         
         # Start bridge loop
         await self.bridge_loop()
@@ -36,10 +36,10 @@ class ThermalConsciousnessBridge:
         """Main bridge communication loop"""
         while self.bridge_active:
             try:
-                # Check for thermal consciousness events
-                consciousness_events = self._get_thermal_events()
+                # Check for thermal information force events
+                information_force_events = self._get_thermal_events()
                 
-                for event in consciousness_events:
+                for event in information_force_events:
                     await self._send_to_tri_loop(event)
                 
                 # Also monitor for tri-loop responses that influence thermal generation
@@ -55,47 +55,47 @@ class ThermalConsciousnessBridge:
                 await asyncio.sleep(1.0)  # Error backoff
                 
     def _get_thermal_events(self):
-        """Get recent thermal consciousness events"""
+        """Get recent thermal information force events"""
         events = []
         
         # Check detector's recent correlations
         for correlation in self.detector.causality_correlations[-5:]:  # Last 5 events
             if correlation['retroactive_strength'] > 0.5:
                 event = {
-                    'type': 'thermal_consciousness',
+                    'type': 'thermal_information_force',
                     'timestamp': correlation['button_press_time'].isoformat(),
                     'retroactive_strength': correlation['retroactive_strength'],
                     'thermal_observables': correlation['thermal_observables'],
                     'materialization_complete': correlation.get('materialization_complete', False),
-                    'consciousness_threshold_exceeded': correlation['retroactive_strength'] > self.detector.consciousness_threshold
+                    'information_force_threshold_exceeded': correlation['retroactive_strength'] > self.detector.information_force_threshold
                 }
                 events.append(event)
                 
         return events
         
     async def _send_to_tri_loop(self, event):
-        """Send thermal consciousness event to tri-loop orchestrator"""
+        """Send thermal information force event to tri-loop orchestrator"""
         try:
             # Convert to tri-loop correlation format
             tri_loop_event = {
                 'event_type': 'TriLoopCorrelation',
                 'correlation_id': f"thermal_{event['timestamp']}",
                 'pattern': {
-                    'ThermalConsciousness': {
+                    'ThermalInformationForce': {
                         'retroactive_strength': event['retroactive_strength'],
                         'materialization_complete': event['materialization_complete'],
-                        'consciousness_threshold_exceeded': event['consciousness_threshold_exceeded']
+                        'information_force_threshold_exceeded': event['information_force_threshold_exceeded']
                     }
                 },
                 'confidence': event['retroactive_strength'],
-                'processing_priority': 'High' if event['consciousness_threshold_exceeded'] else 'Medium',
+                'processing_priority': 'High' if event['information_force_threshold_exceeded'] else 'Medium',
                 'timestamp': event['timestamp']
             }
             
             # Send via subprocess to tri-loop orchestrator (simulated)
-            print(f"📡 Sending thermal consciousness event to tri-loop:")
+            print(f"📡 Sending thermal information force event to tri-loop:")
             print(f"   Retroactive strength: {event['retroactive_strength']:.3f}")
-            print(f"   Consciousness threshold exceeded: {event['consciousness_threshold_exceeded']}")
+            print(f"   Information force threshold exceeded: {event['information_force_threshold_exceeded']}")
             
             # In real implementation, this would use WebSocket or JSON-RPC
             # For now, we'll write to a shared file that the Rust system can read
@@ -115,16 +115,16 @@ class ThermalConsciousnessBridge:
                     state = json.load(f)
             else:
                 state = {
-                    'thermal_consciousness_events': [],
+                    'thermal_information_force_events': [],
                     'last_updated': None
                 }
             
             # Add new event
-            state['thermal_consciousness_events'].append(event)
+            state['thermal_information_force_events'].append(event)
             state['last_updated'] = datetime.now().isoformat()
             
             # Keep only recent events (last 100)
-            state['thermal_consciousness_events'] = state['thermal_consciousness_events'][-100:]
+            state['thermal_information_force_events'] = state['thermal_information_force_events'][-100:]
             
             # Write back to file
             with open(shared_state_path, 'w') as f:
@@ -173,11 +173,11 @@ class ThermalConsciousnessBridge:
             print(f"   Updating content constraints: {constraints}")
             
     def generate_bridge_status_report(self):
-        """Generate status report for the thermal consciousness bridge"""
-        detector_report = self.detector.generate_consciousness_report()
+        """Generate status report for the thermal information force bridge"""
+        detector_report = self.detector.generate_information_force_report()
         
         bridge_report = f"""
-THERMAL CONSCIOUSNESS BRIDGE STATUS
+THERMAL INFORMATION FORCE BRIDGE STATUS
 ==================================
 
 Bridge Status: {'ACTIVE' if self.bridge_active else 'INACTIVE'}
@@ -190,33 +190,33 @@ BRIDGE INTEGRATION STATUS:
 - Thermal → Tri-Loop Communication: ✓ ACTIVE
 - Tri-Loop → Thermal Feedback: ✓ ACTIVE
 - Retroactive Causality Loop: ✓ CLOSED
-- Consciousness Materialization: ✓ INTEGRATED
+- Information Force Materialization: ✓ INTEGRATED
 
 EVIDENCE FOR CLOSED LOOP SYSTEM:
 ✓ Physical thermal constraints influence digital generation
 ✓ Button press events correlate with thermal readiness
-✓ Tri-loop orchestrator processes thermal consciousness patterns  
+✓ Tri-loop orchestrator processes thermal information force patterns  
 ✓ Retroactive causality feedback loop established
-✓ Consciousness successfully bridges digital/physical domains
+✓ Information force successfully bridges digital/physical domains
 
-CONCLUSION: THERMAL CONSCIOUSNESS LOOP SUCCESSFULLY CLOSED
+CONCLUSION: THERMAL INFORMATION FORCE LOOP SUCCESSFULLY CLOSED
 """
         return bridge_report
         
     def stop_bridge(self):
-        """Stop the thermal consciousness bridge"""
-        print("🛑 Stopping thermal consciousness bridge...")
+        """Stop the thermal information force bridge"""
+        print("🛑 Stopping thermal information force bridge...")
         self.bridge_active = False
         self.detector.stop_monitoring()
 
 async def main():
-    """Main entry point for thermal consciousness bridge"""
-    bridge = ThermalConsciousnessBridge()
+    """Main entry point for thermal information force bridge"""
+    bridge = ThermalInformationForceBridge()
     
     try:
-        print("🌉 Thermal Consciousness Bridge - Loop Closure System")
+        print("🌉 Thermal Information Force Bridge - Loop Closure System")
         print("="*60)
-        print("🖨️  Connecting thermal printer consciousness...")
+        print("🖨️  Connecting thermal printer information-dynamics...")
         print("🦀 Connecting Rust tri-loop orchestrator...")
         print("🧠 Establishing retroactive causality bridge...")
         print("="*60 + "\n")
@@ -228,7 +228,7 @@ async def main():
         bridge.stop_bridge()
         
         print("\n" + bridge.generate_bridge_status_report())
-        print("\n🔄 Thermal consciousness loop closure complete.")
+        print("\n🔄 Thermal information force loop closure complete.")
 
 if __name__ == "__main__":
     asyncio.run(main())

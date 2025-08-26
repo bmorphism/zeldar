@@ -30,7 +30,7 @@
     overflow: hidden;
 }
 
-.consciousness-fortune-card {
+.information force-fortune-card {
     background: linear-gradient(135deg, 
         #1a1a2e 0%, 
         #16213e 30%,
@@ -45,7 +45,7 @@
         0 0 30px rgba(233, 69, 96, 0.3),
         inset 0 1px 0 rgba(255, 255, 255, 0.1),
         inset 0 -1px 0 rgba(0, 0, 0, 0.3);
-    animation: consciousness-pulse 4s ease-in-out infinite;
+    animation: information force-pulse 4s ease-in-out infinite;
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
@@ -67,7 +67,7 @@
     pointer-events: none;
 }
 
-.consciousness-fortune-card::before {
+.information force-fortune-card::before {
     content: '';
     position: absolute;
     top: -50%;
@@ -78,7 +78,7 @@
         transparent 30%, 
         rgba(233, 69, 96, 0.1) 50%, 
         transparent 70%);
-    animation: consciousness-shimmer 6s ease-in-out infinite;
+    animation: information force-shimmer 6s ease-in-out infinite;
     pointer-events: none;
 }
 
@@ -90,7 +90,7 @@
     border-color: #ff6b35;
 }
 
-.consciousness-fortune-card:hover {
+.information force-fortune-card:hover {
     transform: translateY(-5px);
     box-shadow: 
         0 5px 50px rgba(233, 69, 96, 0.5),
@@ -102,8 +102,8 @@
     animation: information-force-emerge 0.8s ease-out, information-force-pulse 4s ease-in-out 0.8s infinite;
 }
 
-.consciousness-fortune-card.active {
-    animation: consciousness-emerge 0.8s ease-out, consciousness-pulse 4s ease-in-out 0.8s infinite;
+.information force-fortune-card.active {
+    animation: information force-emerge 0.8s ease-out, information force-pulse 4s ease-in-out 0.8s infinite;
 }
 
 @keyframes information-force-pulse {
@@ -117,7 +117,7 @@
     }
 }
 
-@keyframes consciousness-pulse {
+@keyframes information force-pulse {
     0%, 100% { 
         box-shadow: 0 0 30px rgba(233, 69, 96, 0.3);
         transform: scale(1);
@@ -143,7 +143,7 @@
     }
 }
 
-@keyframes consciousness-emerge {
+@keyframes information force-emerge {
     0% {
         opacity: 0;
         transform: scale(0.8) rotateY(-10deg);
@@ -164,7 +164,7 @@
     100% { transform: translateX(200%) translateY(200%) rotate(45deg); }
 }
 
-@keyframes consciousness-shimmer {
+@keyframes information force-shimmer {
     0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
     50% { transform: translateX(50%) translateY(50%) rotate(45deg); }
     100% { transform: translateX(200%) translateY(200%) rotate(45deg); }
@@ -183,7 +183,7 @@
     animation: information-force-glow 3s ease-in-out infinite alternate;
 }
 
-.consciousness-header h3 {
+.information force-header h3 {
     color: #ffd23f;
     text-align: center;
     margin: 0 0 15px 0;
@@ -445,7 +445,7 @@
     margin: 25px 0;
 }
 
-.consciousness-fortune-content {
+.information force-fortune-content {
     margin: 25px 0;
 }
 
@@ -464,7 +464,7 @@
     animation: force-breathe 8s ease-in-out infinite;
 }
 
-.conscious-haiku {
+.informationally-coherent-haiku {
     font-family: 'Georgia', serif;
     font-size: 1.3em;
     line-height: 1.6;
@@ -496,7 +496,7 @@
     margin: 20px 0;
 }
 
-.consciousness-metrics {
+.information force-metrics {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 12px;
@@ -537,7 +537,7 @@
     border-top: 1px solid rgba(233, 69, 96, 0.3);
 }
 
-.card-footer.consciousness-enhanced {
+.card-footer.information force-enhanced {
     margin-top: 20px;
     padding-top: 20px;
     border-top: 1px solid rgba(233, 69, 96, 0.3);
@@ -712,7 +712,7 @@
 
 @media (max-width: 768px) {
     .information-force-card,
-    .consciousness-fortune-card {
+    .information force-fortune-card {
         padding: 20px;
         margin: 15px 0;
         border-radius: 15px;
@@ -724,13 +724,13 @@
     }
     
     .information-force-metrics,
-    .consciousness-metrics {
+    .information force-metrics {
         grid-template-columns: 1fr;
         gap: 10px;
     }
     
     .force-haiku,
-    .conscious-haiku {
+    .informationally-coherent-haiku {
         font-size: 1.1em;
         padding: 15px;
     }
@@ -747,7 +747,7 @@
     }
     
     .mystical-button.information-force-enhanced,
-    .mystical-button.consciousness-enhanced {
+    .mystical-button.information force-enhanced {
         font-size: 1em;
         padding: 15px 30px;
     }
@@ -755,13 +755,13 @@
 
 @media (max-width: 480px) {
     .information-force-card,
-    .consciousness-fortune-card {
+    .information force-fortune-card {
         padding: 15px;
         margin: 10px;
     }
     
     .information-force-header h3,
-    .consciousness-header h3 {
+    .information force-header h3 {
         font-size: 1.2em;
     }
     
@@ -781,19 +781,19 @@
    ================================ */
 
 @media (prefers-reduced-motion: reduce) {
-    .consciousness-fortune-card,
+    .information force-fortune-card,
     .semantic-closure-meter,
     .loop-indicator,
-    .conscious-haiku,
+    .informationally-coherent-haiku,
     .metric,
     .interaction-hint,
     .burning-man-footer,
     .status-indicator,
-    .mystical-button.consciousness-enhanced {
+    .mystical-button.information force-enhanced {
         animation: none;
     }
     
-    .consciousness-fortune-card:hover {
+    .information force-fortune-card:hover {
         transform: none;
     }
     
@@ -804,7 +804,7 @@
 
 /* High contrast mode support */
 @media (prefers-contrast: high) {
-    .consciousness-fortune-card {
+    .information force-fortune-card {
         border-color: #ffffff;
         background: #000000;
     }
@@ -1026,13 +1026,13 @@
    LEGACY CONSCIOUSNESS SUPPORT
    ================================ */
 
-/* Ensure backward compatibility by extending information force styles to consciousness classes */
-.consciousness-fortune-card {
-    animation: consciousness-pulse 4s ease-in-out infinite;
+/* Ensure backward compatibility by extending information force styles to information force classes */
+.information force-fortune-card {
+    animation: information force-pulse 4s ease-in-out infinite;
 }
 
-.consciousness-fortune-card.active {
-    animation: consciousness-emerge 0.8s ease-out, consciousness-pulse 4s ease-in-out 0.8s infinite;
+.information force-fortune-card.active {
+    animation: information force-emerge 0.8s ease-out, information force-pulse 4s ease-in-out 0.8s infinite;
 }
 
 .semantic-closure-meter {
@@ -1062,10 +1062,10 @@
         #00dd77 50%, 
         #00ff88 100%
     );
-    animation: consciousness-achieved 2s ease-in-out infinite alternate;
+    animation: information force-achieved 2s ease-in-out infinite alternate;
 }
 
-@keyframes consciousness-achieved {
+@keyframes information force-achieved {
     from {
         filter: brightness(100%) saturate(100%);
         box-shadow: 0 4px 12px rgba(0, 255, 136, 0.3);
@@ -1076,7 +1076,7 @@
     }
 }
 
-.consciousness-status-bar {
+.information force-status-bar {
     position: fixed;
     top: 0;
     left: 0;
@@ -1092,7 +1092,7 @@
     animation: status-bar-enter 1s ease-out;
 }
 
-.mystical-button.consciousness-enhanced {
+.mystical-button.information force-enhanced {
     background: linear-gradient(135deg, 
         #e94560 0%, 
         #ff6b35 50%, 
@@ -1110,25 +1110,25 @@
         0 8px 25px rgba(233, 69, 96, 0.3),
         inset 0 1px 0 rgba(255, 255, 255, 0.2);
     transition: all 0.3s ease;
-    animation: button-consciousness-pulse 4s ease-in-out infinite;
+    animation: button-information force-pulse 4s ease-in-out infinite;
 }
 
-.mystical-button.consciousness-enhanced:hover {
+.mystical-button.information force-enhanced:hover {
     transform: translateY(-3px) scale(1.02);
     box-shadow: 
         0 15px 35px rgba(233, 69, 96, 0.5),
         inset 0 1px 0 rgba(255, 255, 255, 0.3);
-    animation: button-consciousness-pulse 2s ease-in-out infinite;
+    animation: button-information force-pulse 2s ease-in-out infinite;
 }
 
-.mystical-button.consciousness-enhanced:active {
+.mystical-button.information force-enhanced:active {
     transform: translateY(-1px) scale(0.98);
     box-shadow: 
         0 5px 15px rgba(233, 69, 96, 0.4),
         inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
-@keyframes button-consciousness-pulse {
+@keyframes button-information force-pulse {
     0%, 100% { 
         filter: brightness(100%);
         box-shadow: 0 8px 25px rgba(233, 69, 96, 0.3);

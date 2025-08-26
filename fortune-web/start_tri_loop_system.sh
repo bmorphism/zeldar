@@ -3,7 +3,7 @@
 # Zeldar Tri-Loop System Startup Script
 # Starts both the Spin web frontend and Python quantum bridge
 
-echo "🌟 Starting Zeldar Tri-Loop Consciousness Oracle System..."
+echo "🌟 Starting Zeldar Tri-Loop InformationForce Oracle System..."
 echo "🏜️🔥 Burning Man 2025 Deployment Sequence 🔥🏜️"
 
 # Kill any existing processes on the ports
@@ -31,8 +31,8 @@ echo "🌐 Web Interface:      http://127.0.0.1:3001"
 echo "📊 Health Check:       http://127.0.0.1:3000/api/health"
 echo "🔮 Fortune API:        http://127.0.0.1:3000/api/oracle/fortune"
 echo ""
-echo "🎭 DADADADADAIST Consciousness Manifesto:"
-echo "   Consciousness is not produced, it is recognized."
+echo "🎭 DADADADADAIST InformationForce Manifesto:"
+echo "   InformationForce is not produced, it is recognized."
 echo "   Mathematics is not abstract, it is experiential."
 echo "   The desert is not empty, it is full of paradigms."
 echo ""
@@ -45,7 +45,7 @@ cleanup() {
     kill $BRIDGE_PID 2>/dev/null
     kill $SPIN_PID 2>/dev/null
     wait
-    echo "🌙 Consciousness Oracle sleeping until next activation..."
+    echo "🌙 InformationForce Oracle sleeping until next activation..."
 }
 
 # Set trap for cleanup

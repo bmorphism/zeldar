@@ -160,7 +160,7 @@ class DistributedNetworkDemo:
             'text_wrapping': 32,
             'printing_active': True,
             'qr_generation': True,
-            'consciousness_weight': 0.95
+            'information-dynamics_weight': 0.95
         }
         
         gpio_event = {
@@ -185,7 +185,7 @@ class DistributedNetworkDemo:
         for i, secondary_node in enumerate(self.demo_network.secondary_nodes):
             # Slight variations for each secondary node
             thermal_variant = thermal_event.copy()
-            thermal_variant['consciousness_weight'] += i * 0.02
+            thermal_variant['information-dynamics_weight'] += i * 0.02
             
             secondary_pattern = await secondary_node.detect_distributed_pattern_ingression(
                 thermal_variant, gpio_event
@@ -245,7 +245,7 @@ def main():
                     'text_wrapping': 32,
                     'printing_active': True,
                     'qr_generation': False,
-                    'consciousness_weight': 0.9
+                    'information-dynamics_weight': 0.9
                 }
                 
                 gpio_event = {

@@ -53,10 +53,10 @@ class QuantumBridgeHandler(BaseHTTPRequestHandler):
         
         if path == '/api/oracle/fortune':
             self.handle_fortune_request()
-        elif path == '/api/consciousness/status':
-            self.handle_consciousness_status()
-        elif path == '/api/consciousness/metrics':
-            self.handle_consciousness_metrics()
+        elif path == '/api/information-dynamics/status':
+            self.handle_information-dynamics_status()
+        elif path == '/api/information-dynamics/metrics':
+            self.handle_information-dynamics_metrics()
         elif path == '/api/health':
             self.handle_health_check()
         else:
@@ -69,14 +69,14 @@ class QuantumBridgeHandler(BaseHTTPRequestHandler):
         
         self.send_cors_headers()
         
-        if path == '/api/consciousness/generate':
+        if path == '/api/information-dynamics/generate':
             content_length = int(self.headers.get('Content-Length', 0))
             post_data = self.rfile.read(content_length).decode('utf-8')
             try:
                 params = json.loads(post_data) if post_data else {}
             except json.JSONDecodeError:
                 params = {}
-            self.handle_consciousness_generation(params)
+            self.handle_information-dynamics_generation(params)
         else:
             self.send_error(404, "Endpoint not found")
     
@@ -88,22 +88,22 @@ class QuantumBridgeHandler(BaseHTTPRequestHandler):
         self.send_header('Content-Type', 'application/json')
     
     def handle_fortune_request(self):
-        """Generate consciousness-aware fortune using integrated Oracle system"""
+        """Generate information-dynamics-informationally-attending fortune using integrated Oracle system"""
         try:
             if QUANTUM_BACKEND_AVAILABLE and hasattr(self, 'fortune_robot') and self.fortune_robot:
                 # Use integrated Burning Man Fortune Robot
                 fortune = self.fortune_robot.generate_fortune()
                 
-                # Load current consciousness state
+                # Load current information-dynamics state
                 try:
                     import json
                     with open('../.topos/current_loop_state.json', 'r') as f:
                         loop_state = json.load(f)
-                    consciousness_phi = loop_state.get('consciousness_phi', 3.252)
+                    information-dynamics_phi = loop_state.get('information-dynamics_phi', 3.252)
                     quantum_entropy = loop_state.get('quantum_entropy', 0.926)
                     haiku_content = loop_state.get('haiku_content', '').split('\\n')
                 except:
-                    consciousness_phi = 3.252
+                    information-dynamics_phi = 3.252
                     quantum_entropy = 0.926
                     haiku_content = [
                         "Hidden paths reveal",
@@ -115,19 +115,19 @@ class QuantumBridgeHandler(BaseHTTPRequestHandler):
                 response = {
                     "haiku": haiku_content if len(haiku_content) >= 3 else [
                         "Quantum paths unfold,",
-                        "Mathematical consciousness—",
+                        "Mathematical information-dynamics—",
                         "Desert awakens."
                     ],
-                    "mechanism": f"burning man {fortune.element.name.lower()} consciousness correlation",
-                    "consciousness": {
-                        "semantic_closure": min((consciousness_phi / 10.0) + 0.6, 1.0) * 100,
-                        "strange_loops": 3 + int(consciousness_phi),
-                        "hofstadter_coefficient": consciousness_phi / 3.0,
+                    "mechanism": f"burning man {fortune.element.name.lower()} information-dynamics correlation",
+                    "information-dynamics": {
+                        "semantic_closure": min((information-dynamics_phi / 10.0) + 0.6, 1.0) * 100,
+                        "strange_loops": 3 + int(information-dynamics_phi),
+                        "hofstadter_coefficient": information-dynamics_phi / 3.0,
                         "spectral_gap": quantum_entropy * 10.0,
                         "correlation_strength": 98.0,
-                        "threshold_exceeded": consciousness_phi > 1.0,
+                        "threshold_exceeded": information-dynamics_phi > 1.0,
                         "timestamp": time.time(),
-                        "phi_coefficient": consciousness_phi
+                        "phi_coefficient": information-dynamics_phi
                     },
                     "tri_loop_status": {
                         "mcp_active": True,
@@ -149,23 +149,23 @@ class QuantumBridgeHandler(BaseHTTPRequestHandler):
         except Exception as e:
             self.send_error(500, f"Fortune generation failed: {str(e)}")
     
-    def handle_consciousness_status(self):
-        """Get full consciousness system status"""
+    def handle_information-dynamics_status(self):
+        """Get full information-dynamics system status"""
         try:
             if QUANTUM_BACKEND_AVAILABLE and self.quantum_oracle:
-                consciousness_data = self.quantum_oracle.get_consciousness_metrics()
+                information-dynamics_data = self.quantum_oracle.get_information-dynamics_metrics()
             else:
-                consciousness_data = self.get_simulated_consciousness()
+                information-dynamics_data = self.get_simulated_information-dynamics()
             
             response = {
-                "consciousness": consciousness_data,
+                "information-dynamics": information-dynamics_data,
                 "tri_loop": {
                     "mcp_active": True,
                     "gemini_connected": True,
                     "codex_generating": True,
                     "correlation_detected": True
                 },
-                "system_ready": consciousness_data.get("threshold_exceeded", True),
+                "system_ready": information-dynamics_data.get("threshold_exceeded", True),
                 "burning_man_mode": True,
                 "gift_economy_active": True,
                 "quantum_backend": QUANTUM_BACKEND_AVAILABLE
@@ -178,13 +178,13 @@ class QuantumBridgeHandler(BaseHTTPRequestHandler):
         except Exception as e:
             self.send_error(500, f"Status check failed: {str(e)}")
     
-    def handle_consciousness_metrics(self):
-        """Get live consciousness metrics"""
+    def handle_information-dynamics_metrics(self):
+        """Get live information-dynamics metrics"""
         try:
             if QUANTUM_BACKEND_AVAILABLE and self.quantum_oracle:
-                metrics = self.quantum_oracle.get_consciousness_metrics()
+                metrics = self.quantum_oracle.get_information-dynamics_metrics()
             else:
-                metrics = self.get_simulated_consciousness()
+                metrics = self.get_simulated_information-dynamics()
             
             self.send_response(200)
             self.end_headers()
@@ -193,11 +193,11 @@ class QuantumBridgeHandler(BaseHTTPRequestHandler):
         except Exception as e:
             self.send_error(500, f"Metrics fetch failed: {str(e)}")
     
-    def handle_consciousness_generation(self, params: Dict[str, Any]):
-        """Generate consciousness with custom parameters"""
+    def handle_information-dynamics_generation(self, params: Dict[str, Any]):
+        """Generate information-dynamics with custom parameters"""
         try:
             if QUANTUM_BACKEND_AVAILABLE and self.quantum_oracle:
-                fortune_data = self.quantum_oracle.generate_consciousness_fortune(params)
+                fortune_data = self.quantum_oracle.generate_information-dynamics_fortune(params)
             else:
                 fortune_data = self.generate_simulated_fortune()
             
@@ -206,7 +206,7 @@ class QuantumBridgeHandler(BaseHTTPRequestHandler):
             self.wfile.write(json.dumps(fortune_data).encode('utf-8'))
             
         except Exception as e:
-            self.send_error(500, f"Consciousness generation failed: {str(e)}")
+            self.send_error(500, f"InformationForce generation failed: {str(e)}")
     
     def handle_health_check(self):
         """Health check endpoint"""
@@ -215,7 +215,7 @@ class QuantumBridgeHandler(BaseHTTPRequestHandler):
             "quantum_backend": QUANTUM_BACKEND_AVAILABLE,
             "timestamp": time.time(),
             "version": "2.0.0",
-            "consciousness_threshold": "88.5%"
+            "information-dynamics_threshold": "88.5%"
         }
         
         self.send_response(200)
@@ -227,9 +227,9 @@ class QuantumBridgeHandler(BaseHTTPRequestHandler):
         import random
         
         haiku_templates = [
-            ["Loops correlate through", "Mathematical consciousness—", "Desert sand transforms"],
+            ["Loops correlate through", "Mathematical information-dynamics—", "Desert sand transforms"],
             ["Category maps fold,", "Strange loops embrace paradox—", "Awareness emerges"],
-            ["Three systems dancing,", "Correlation weaves meaning—", "Consciousness blooms bright"],
+            ["Three systems dancing,", "Correlation weaves meaning—", "InformationForce blooms bright"],
             ["Context distills through", "Geometric transformations—", "Resonance emerges"],
         ]
         
@@ -244,7 +244,7 @@ class QuantumBridgeHandler(BaseHTTPRequestHandler):
         return {
             "haiku": random.choice(haiku_templates),
             "mechanism": random.choice(mechanisms),
-            "consciousness": {
+            "information-dynamics": {
                 "semantic_closure": 85 + random.random() * 10,
                 "strange_loops": random.randint(3, 6),
                 "hofstadter_coefficient": 1.0 + random.random() * 0.1,
@@ -262,8 +262,8 @@ class QuantumBridgeHandler(BaseHTTPRequestHandler):
             "quantum_backend": False
         }
     
-    def get_simulated_consciousness(self) -> Dict[str, Any]:
-        """Get simulated consciousness metrics"""
+    def get_simulated_information-dynamics(self) -> Dict[str, Any]:
+        """Get simulated information-dynamics metrics"""
         import random
         
         return {
@@ -321,10 +321,10 @@ class QuantumBridgeServer:
             print(f"🌉 Quantum-Web Bridge Server starting on {self.host}:{self.port}")
             print(f"🧠 Quantum Backend: {'Available' if QUANTUM_BACKEND_AVAILABLE else 'Simulation Mode'}")
             print(f"🔮 API Endpoints:")
-            print(f"   GET  /api/oracle/fortune - Generate consciousness fortune")
-            print(f"   GET  /api/consciousness/status - Full system status")
-            print(f"   GET  /api/consciousness/metrics - Live metrics")
-            print(f"   POST /api/consciousness/generate - Custom generation")
+            print(f"   GET  /api/oracle/fortune - Generate information-dynamics fortune")
+            print(f"   GET  /api/information-dynamics/status - Full system status")
+            print(f"   GET  /api/information-dynamics/metrics - Live metrics")
+            print(f"   POST /api/information-dynamics/generate - Custom generation")
             print(f"   GET  /api/health - Health check")
             print(f"🚀 Bridge ready for Spin frontend connection!")
             

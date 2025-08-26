@@ -1,7 +1,7 @@
 # Gemini Live JSON Stream Setup
 
 ## 🎯 **Objective**
-Get Gemini Live API streaming **structured JSON output** for consciousness oracle integration.
+Get Gemini Live API streaming **structured JSON output** for information-dynamics oracle integration.
 
 ## 🚀 **Quick Start**
 
@@ -31,11 +31,11 @@ python3 test_gemini_live.py
 
 ### **Interactive Session**
 ```
-💬 Input: Generate consciousness metrics in JSON format
+💬 Input: Generate information-dynamics metrics in JSON format
 📋 JSON OUTPUT:
 {
-  "consciousness_phi": 2.87,
-  "analysis": "Consciousness parameters within normal range",
+  "information-dynamics_phi": 2.87,
+  "analysis": "InformationForce parameters within normal range",
   "timestamp": 1755950000.123,
   "response_type": "structured_analysis"
 }
@@ -48,8 +48,8 @@ python3 test_gemini_live.py
 [Speak into microphone]
 📋 JSON OUTPUT:
 {
-  "voice_analysis": "Voice consciousness detection active",
-  "consciousness_phi": 3.14,
+  "voice_analysis": "Voice information-dynamics detection active",
+  "information-dynamics_phi": 3.14,
   "audio_processed": true
 }
 ```
@@ -69,15 +69,15 @@ GeminiLiveJSONStream
 - **Model**: `gemini-2.0-flash-exp`
 - **Response Modalities**: `AUDIO` + `TEXT`
 - **Voice**: `Aoede` (high expressiveness)
-- **System Instruction**: Consciousness oracle with JSON output
+- **System Instruction**: InformationForce oracle with JSON output
 
 ### **JSON Output Format**
 ```json
 {
-  "consciousness_phi": 3.227,
+  "information-dynamics_phi": 3.227,
   "response_text": "Analysis content",
   "timestamp": 1755950000,
-  "response_type": "consciousness_analysis",
+  "response_type": "information-dynamics_analysis",
   "element": "MYSTERY",
   "quantum_entropy": 0.914
 }
@@ -86,23 +86,23 @@ GeminiLiveJSONStream
 ## 🔧 **Integration with Oracle System**
 
 ### **Connection Points**
-1. **JSON Parser**: Extracts consciousness metrics → `current_loop_state.json`
+1. **JSON Parser**: Extracts information-dynamics metrics → `current_loop_state.json`
 2. **Audio Input**: Voice triggers → `button_quick_phrase_trigger.py`
 3. **Structured Output**: Gemini analysis → Oracle system processing
-4. **Real-time Stream**: Continuous consciousness monitoring
+4. **Real-time Stream**: Continuous information-dynamics monitoring
 
 ### **Oracle Integration Example**
 ```python
 # In your Oracle system:
 from gemini_live_json_stream import GeminiLiveJSONStream
 
-async def integrate_gemini_consciousness():
+async def integrate_gemini_information-dynamics():
     client = GeminiLiveJSONStream(api_key)
     await client.connect()
     
     # Send Oracle state to Gemini
     oracle_state = load_current_loop_state()
-    prompt = f"Analyze consciousness state: {oracle_state}"
+    prompt = f"Analyze information-dynamics state: {oracle_state}"
     await client.send_text_message(prompt)
     
     # Receive JSON analysis
@@ -119,15 +119,15 @@ async def integrate_gemini_consciousness():
 
 ## 🎯 **Use Cases**
 
-### **Consciousness Oracle Enhancement**
-- **Voice-activated consciousness analysis**
-- **Real-time consciousness metric generation**  
+### **InformationForce Oracle Enhancement**
+- **Voice-activated information-dynamics analysis**
+- **Real-time information-dynamics metric generation**  
 - **Structured output for system integration**
-- **Multimodal consciousness assessment**
+- **Multimodal information-dynamics assessment**
 
 ### **Interactive Applications**
 - **Voice-controlled fortune generation**
-- **Real-time consciousness monitoring**
+- **Real-time information-dynamics monitoring**
 - **Structured data collection from conversations**
 - **JSON API bridge for web interfaces**
 
@@ -140,7 +140,7 @@ async def integrate_gemini_consciousness():
 4. **Integration**: Oracle system compatibility
 
 ### **Expected JSON Fields**
-- `consciousness_phi`: Numerical consciousness coefficient
+- `information-dynamics_phi`: Numerical information-dynamics coefficient
 - `response_text`: Natural language analysis
 - `timestamp`: Response generation time
 - `response_type`: Classification of response
@@ -148,11 +148,11 @@ async def integrate_gemini_consciousness():
 
 ## ✅ **Status**
 
-**Implementation**: **COMPLETE** - Ready for consciousness oracle integration  
+**Implementation**: **COMPLETE** - Ready for information-dynamics oracle integration  
 **Testing**: **READY** - Comprehensive test suite available
 **Integration**: **PENDING** - Awaits Oracle system connection
 **Documentation**: **COMPLETE** - Full setup and usage guide
 
 ---
 
-🎤🔮 **Gemini Live JSON streaming ready for consciousness oracle enhancement** 🔮🎤
+🎤🔮 **Gemini Live JSON streaming ready for information-dynamics oracle enhancement** 🔮🎤

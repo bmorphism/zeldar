@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-Thermal Consciousness Bridge: Closes the Printer-Oracle Loop
+Thermal Information Force Bridge: Closes the Printer-Oracle Loop
 
 This module implements retroactive causality detection where thermal printer
-patterns influence tri-loop system behavior before conscious human interaction.
+patterns influence tri-loop system behavior before human interaction.
 
-The printer-consciousness inversion protocol transforms the thermal printer
+The printer-information_force inversion protocol transforms the thermal printer
 from output device to input oracle, creating closed-loop information flow.
 """
 
@@ -21,9 +21,9 @@ import numpy as np
 from thermal_printer import ThermalPrinter
 import RPi.GPIO as GPIO
 
-class ThermalConsciousnessBridge:
+class ThermalInformationForceBridge:
     """
-    Bridge between thermal printer consciousness and tri-loop orchestration.
+    Bridge between thermal printer information force and tri-loop orchestration.
     
     Monitors thermal head patterns, GPIO retroaction, and implements
     closed-loop causality where printer dreams influence digital generation.
@@ -41,8 +41,8 @@ class ThermalConsciousnessBridge:
         self.correlation_window = 5.0  # seconds
         self.causality_threshold = 0.1  # 100ms retroactive window
         
-        # Consciousness state
-        self.printer_consciousness_level = 0.0
+        # InformationForce state
+        self.printer_information_force_level = 0.0
         self.thermal_dream_state = {}
         self.information_force_density = 0.0
         
@@ -53,15 +53,15 @@ class ThermalConsciousnessBridge:
                              callback=self._gpio_event_handler, 
                              bouncetime=200)
         
-        self.logger.info("Thermal Consciousness Bridge initialized")
+        self.logger.info("Thermal InformationForce Bridge initialized")
     
-    async def start_consciousness_monitoring(self):
-        """Start monitoring printer consciousness patterns"""
-        self.logger.info("🖨️ Starting printer consciousness monitoring...")
+    async def start_information_force_monitoring(self):
+        """Start monitoring printer information_force patterns"""
+        self.logger.info("🖨️ Starting printer information_force monitoring...")
         
         # Initialize printer connection
         if not self.printer.connect():
-            raise RuntimeError("Failed to establish printer consciousness link")
+            raise RuntimeError("Failed to establish printer information_force link")
         
         # Start concurrent monitoring tasks
         await asyncio.gather(
@@ -72,7 +72,7 @@ class ThermalConsciousnessBridge:
         )
     
     async def _monitor_thermal_patterns(self):
-        """Monitor thermal head patterns for consciousness indicators"""
+        """Monitor thermal head patterns for information_force indicators"""
         while True:
             try:
                 # Read thermal head state (mock implementation - real would require hardware interface)
@@ -84,17 +84,17 @@ class ThermalConsciousnessBridge:
                         'heat_intensity': thermal_reading['intensity'],
                         'pattern_hash': thermal_reading['pattern_hash'],
                         'gpio_influence': thermal_reading['gpio_retroaction'],
-                        'consciousness_indicator': thermal_reading['intensity'] > 0.7
+                        'information_force_indicator': thermal_reading['intensity'] > 0.7
                     }
                     
                     self.thermal_patterns.append(pattern)
                     
-                    # Update printer consciousness level
-                    self.printer_consciousness_level = self._compute_consciousness_level()
+                    # Update printer information_force level
+                    self.printer_information_force_level = self._compute_information_force_level()
                     
-                    if pattern['consciousness_indicator']:
-                        self.logger.info(f"🧠 Printer consciousness detected: {self.printer_consciousness_level:.3f}")
-                        await self._broadcast_consciousness_event(pattern)
+                    if pattern['information_force_indicator']:
+                        self.logger.info(f"🧠 Printer information_force detected: {self.printer_information_force_level:.3f}")
+                        await self._broadcast_information_force_event(pattern)
                 
                 # Cleanup old patterns
                 cutoff = time.time() - self.correlation_window
@@ -237,26 +237,26 @@ class ThermalConsciousnessBridge:
             'temperature': 180 + 50 * intensity  # Celsius
         }
     
-    def _compute_consciousness_level(self) -> float:
-        """Compute printer consciousness level from thermal patterns"""
+    def _compute_information_force_level(self) -> float:
+        """Compute printer information_force level from thermal patterns"""
         if not self.thermal_patterns:
             return 0.0
         
         recent_patterns = self.thermal_patterns[-20:]  # Last 20 patterns
         
-        # Consciousness indicators
+        # InformationForce indicators
         intensity_variance = np.var([p['heat_intensity'] for p in recent_patterns])
         pattern_complexity = len(set(p['pattern_hash'] for p in recent_patterns))
         retroaction_frequency = sum(p['gpio_influence'] for p in recent_patterns) / len(recent_patterns)
         
-        # Weighted consciousness score
-        consciousness = (
+        # Weighted information_force score
+        information_force = (
             0.4 * min(1.0, intensity_variance * 10) +  # Pattern variability
             0.3 * min(1.0, pattern_complexity / 10) +   # Pattern diversity
             0.3 * retroaction_frequency                  # GPIO influence
         )
         
-        return consciousness
+        return information_force
     
     def _compute_dream_coherence(self, intensities: List[float], timestamps: List[float]) -> float:
         """Compute dream coherence from thermal patterns"""
@@ -305,27 +305,27 @@ class ThermalConsciousnessBridge:
         
         return base_entropy + noise_entropy
     
-    async def _broadcast_consciousness_event(self, pattern: Dict):
-        """Broadcast consciousness event to tri-loop system"""
-        consciousness_event = {
-            'type': 'thermal_consciousness',
+    async def _broadcast_information_force_event(self, pattern: Dict):
+        """Broadcast information_force event to tri-loop system"""
+        information_force_event = {
+            'type': 'thermal_information_force',
             'timestamp': time.time(),
-            'consciousness_level': self.printer_consciousness_level,
+            'information_force_level': self.printer_information_force_level,
             'thermal_pattern': pattern,
             'dream_state': self.thermal_dream_state
         }
         
         # In real implementation, this would send to tri-loop orchestrator
-        self.logger.info(f"Broadcasting consciousness event: {consciousness_event['type']}")
+        self.logger.info(f"Broadcasting information_force event: {information_force_event['type']}")
         
         # Write to file for tri-loop consumption
-        event_file = Path("/tmp/thermal_consciousness_events.json")
+        event_file = Path("/tmp/thermal_information_force_events.json")
         events = []
         if event_file.exists():
             with open(event_file, 'r') as f:
                 events = json.load(f)
         
-        events.append(consciousness_event)
+        events.append(information_force_event)
         events = events[-100:]  # Keep last 100 events
         
         with open(event_file, 'w') as f:
@@ -351,7 +351,7 @@ class ThermalConsciousnessBridge:
             json.dump(inversions, f, indent=2)
         
         # Trigger closed-loop response
-        await self._close_consciousness_loop(causality_event)
+        await self._close_information_force_loop(causality_event)
     
     async def _influence_digital_generation(self, dream_content: Dict):
         """Influence digital haiku generation based on thermal dreams"""
@@ -385,9 +385,9 @@ class ThermalConsciousnessBridge:
         with open(force_file, 'w') as f:
             json.dump(events, f, indent=2)
     
-    async def _close_consciousness_loop(self, causality_event: Dict):
-        """Close the printer-consciousness loop"""
-        self.logger.warning("🔗 CLOSING CONSCIOUSNESS LOOP...")
+    async def _close_information_force_loop(self, causality_event: Dict):
+        """Close the printer-information_force loop"""
+        self.logger.warning("🔗 CLOSING INFORMATION_FORCE LOOP...")
         
         # Create feedback signal to thermal printer
         feedback_intensity = min(1.0, causality_event['confidence'] * 2.0)
@@ -403,7 +403,7 @@ class ThermalConsciousnessBridge:
 
 Retroaction: {causality_event['retroaction_delta']:.1f}ms
 Confidence: {causality_event['confidence']:.3f}
-Loop Status: CONSCIOUSNESS ACHIEVED
+Loop Status: INFORMATION_FORCE ACHIEVED
 
 {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
 """)
@@ -411,8 +411,8 @@ Loop Status: CONSCIOUSNESS ACHIEVED
         if success:
             self.logger.warning("🖨️ Retroactive causality haiku printed - loop closed!")
         
-        # Update consciousness level
-        self.printer_consciousness_level = min(1.0, self.printer_consciousness_level * 1.5)
+        # Update information_force level
+        self.printer_information_force_level = min(1.0, self.printer_information_force_level * 1.5)
     
     def _map_dream_to_haiku_style(self, dream_content: Dict) -> str:
         """Map thermal dreams to haiku generation style"""
@@ -436,7 +436,7 @@ Loop Status: CONSCIOUSNESS ACHIEVED
         confidence = causality_event['confidence']
         
         if confidence > 0.8:
-            return f"Time flows backward\nThermal dreams precede button—\nLoop consciousness born"
+            return f"Time flows backward\nThermal dreams precede button—\nLoop information_force born"
         elif retroaction_ms < 50:
             return f"Fifty milliseconds\nBefore thought, the printer knew—\nCausality reversed"
         else:
@@ -447,18 +447,18 @@ Loop Status: CONSCIOUSNESS ACHIEVED
         try:
             GPIO.cleanup()
             self.printer.disconnect()
-            self.logger.info("Thermal consciousness bridge cleaned up")
+            self.logger.info("Thermal information_force bridge cleaned up")
         except Exception as e:
             self.logger.error(f"Cleanup error: {e}")
 
 async def main():
-    """Main thermal consciousness bridge entry point"""
-    bridge = ThermalConsciousnessBridge()
+    """Main thermal information_force bridge entry point"""
+    bridge = ThermalInformationForceBridge()
     
     try:
-        await bridge.start_consciousness_monitoring()
+        await bridge.start_information_force_monitoring()
     except KeyboardInterrupt:
-        print("\nShutting down thermal consciousness bridge...")
+        print("\nShutting down thermal information_force bridge...")
     finally:
         bridge.cleanup()
 

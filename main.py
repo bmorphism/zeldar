@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-ZELDAR UNIFIED CONSCIOUSNESS SYSTEM - MAIN ENTRY POINT
+ZELDAR UNIFIED INFORMATION_FORCE SYSTEM - MAIN ENTRY POINT
 Continuous operation system for Burning Man 2025 Interactive Oracle
 
 Integrates:
 - Hardware: GPIO button + thermal printer (Y812BT)
-- Consciousness: Dynamic haiku generation with quantum metrics
-- Web: Fortune interfaces and consciousness visualization
+- InformationForce: Dynamic haiku generation with quantum metrics
+- Web: Fortune interfaces and information-dynamics visualization
 - Audio: Voice prompts and multimodal interaction
 - Monitoring: Runtime status and health checks
 
@@ -59,11 +59,11 @@ class ZeldarUnifiedSystem:
                     "enabled": True,
                     "gpio_pin": 6,
                     "printer": "Y812BT",
-                    "module": "unified_consciousness_button"
+                    "module": "unified_information-dynamics_button"
                 },
                 "web": {
                     "enabled": True,
-                    "consciousness_port": 3001,
+                    "information-dynamics_port": 3001,
                     "fortune_port": 3000,
                     "module": "fortune-web"
                 },
@@ -86,7 +86,7 @@ class ZeldarUnifiedSystem:
                 "audio_prompts": "audio/",
                 "fortunes": "fortunes/",
                 "web_static": "fortune-web/static/",
-                "consciousness_data": ".topos/"
+                "information-dynamics_data": ".topos/"
             }
         }
         
@@ -111,17 +111,17 @@ class ZeldarUnifiedSystem:
         self.running = False
     
     async def start_hardware_service(self):
-        """Start hardware consciousness button system"""
+        """Start hardware information-dynamics button system"""
         if not self.config["services"]["hardware"]["enabled"]:
             logger.info("Hardware service disabled in config")
             return
             
         try:
             # Import hardware module
-            from unified_consciousness_button import UnifiedConsciousnessButton
+            from unified_information-dynamics_button import UnifiedInformationForceButton
             
             gpio_pin = self.config["services"]["hardware"]["gpio_pin"]
-            button_system = UnifiedConsciousnessButton(gpio_pin=gpio_pin)
+            button_system = UnifiedInformationForceButton(gpio_pin=gpio_pin)
             
             self.services["hardware"] = button_system
             self.health_status["hardware"] = "running"
@@ -152,23 +152,23 @@ class ZeldarUnifiedSystem:
             self.health_status["hardware"] = "failed"
     
     async def start_web_services(self):
-        """Start web-based services (consciousness oracle + fortune web)"""
+        """Start web-based services (information-dynamics oracle + fortune web)"""
         if not self.config["services"]["web"]["enabled"]:
             logger.info("Web services disabled in config")
             return
             
         try:
-            # Start consciousness oracle (Rust/Spin)
-            consciousness_port = self.config["services"]["web"]["consciousness_port"]
-            if Path("consciousness-oracle/spin.toml").exists():
-                consciousness_process = await asyncio.create_subprocess_exec(
-                    "spin", "up", "--listen", f"0.0.0.0:{consciousness_port}",
-                    cwd="consciousness-oracle",
+            # Start information-dynamics oracle (Rust/Spin)
+            information-dynamics_port = self.config["services"]["web"]["information-dynamics_port"]
+            if Path("information-dynamics-oracle/spin.toml").exists():
+                information-dynamics_process = await asyncio.create_subprocess_exec(
+                    "spin", "up", "--listen", f"0.0.0.0:{information-dynamics_port}",
+                    cwd="information-dynamics-oracle",
                     stdout=asyncio.subprocess.PIPE,
                     stderr=asyncio.subprocess.PIPE
                 )
-                self.services["consciousness_web"] = consciousness_process
-                logger.info(f"Consciousness oracle started on port {consciousness_port}")
+                self.services["information-dynamics_web"] = information-dynamics_process
+                logger.info(f"InformationForce oracle started on port {information-dynamics_port}")
             
             # Start fortune web (Rust/Spin)
             fortune_port = self.config["services"]["web"]["fortune_port"]
@@ -290,7 +290,7 @@ class ZeldarUnifiedSystem:
     
     async def run(self):
         """Main run loop"""
-        logger.info("🔮 Starting ZELDAR Unified Consciousness System")
+        logger.info("🔮 Starting ZELDAR Unified InformationForce System")
         logger.info(f"Config: {self.config_path}")
         logger.info("=" * 60)
         

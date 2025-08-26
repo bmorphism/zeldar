@@ -178,7 +178,7 @@ ENVIRONMENTAL CHALLENGES:          SYSTEM SOLUTIONS:
 OPERATIONAL FLOW:
 Human → Button → Pi → Printer → Paper → Human → [Recursive Loop]
   ↑                                               ↓
-  └── Consciousness Recognition Experience ←──────┘
+  └── InformationForce Recognition Experience ←──────┘
 
 REPOSITORY STATUS:
 ┌─────────────────────────────────────────────────────────────────────────────┐

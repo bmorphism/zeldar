@@ -1,5 +1,5 @@
 [Unit]
-Description=Zeldar Tri-Loop Consciousness Oracle System
+Description=Zeldar Tri-Loop InformationForce Oracle System
 Documentation=https://github.com/infinity-topos/zeldar
 After=network-online.target
 Wants=network-online.target
@@ -40,4 +40,4 @@ CPUQuota=80%
 
 [Install]
 WantedBy=multi-user.target
-Alias=consciousness-oracle.service
+Alias=information-dynamics-oracle.service

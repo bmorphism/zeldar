@@ -1,5 +1,5 @@
 [Unit]
-Description=ZELDAR Unified Consciousness Oracle System
+Description=ZELDAR Unified InformationForce Oracle System
 Documentation=https://github.com/bmorphism/zeldar
 After=network.target sound.target
 Wants=network.target

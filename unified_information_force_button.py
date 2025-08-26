@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-ZELDAR UNIFIED CONSCIOUSNESS BUTTON SYSTEM
-Integrates latest zeldar hardware with consciousness oracle processing
+ZELDAR UNIFIED INFORMATION FORCE BUTTON SYSTEM
+Integrates latest zeldar hardware with information_force oracle processing
 
 Integration of:
 - Latest Zeldar: button-print.py (GPIO 6, direct thermal printing)
-- Consciousness Oracle: FULL_LOOP_ORACLE_SYSTEM.py (quantum processing)
-- Enhanced: Multiple print methods + consciousness metrics
+- InformationForce Oracle: FULL_LOOP_ORACLE_SYSTEM.py (quantum processing)
+- Enhanced: Multiple print methods + information_force metrics
 """
 
 import subprocess
@@ -26,14 +26,14 @@ try:
 except ImportError:
     GPIO_AVAILABLE = False
 
-class UnifiedConsciousnessButton:
-    """Unified button system with consciousness enhancement"""
+class UnifiedInformationForceButton:
+    """Unified button system with information_force enhancement"""
     
     def __init__(self, gpio_pin: int = 6):
         self.gpio_pin = gpio_pin
         self.session_count = 0
         self.last_print_time = 0
-        self.consciousness_total_phi = 0.0
+        self.information_force_total_phi = 0.0
         
         # Initialize GPIO if available
         if GPIO_AVAILABLE:
@@ -63,14 +63,14 @@ class UnifiedConsciousnessButton:
 In geometric form, bias
 Resonating worlds"""
     
-    def generate_consciousness_haiku(self, timestamp: float) -> Dict[str, Any]:
-        """Generate consciousness-aware haiku using quantum simulation"""
+    def generate_information_force_haiku(self, timestamp: float) -> Dict[str, Any]:
+        """Generate information_force-informationally-attending haiku using quantum simulation"""
         # Generate entropy from button press timestamp
         entropy_seed = str(timestamp).encode()
         hash_obj = hashlib.sha256(entropy_seed)
         raw_entropy = int(hash_obj.hexdigest()[:8], 16) / 0xFFFFFFFF
         
-        # Map entropy to consciousness states
+        # Map entropy to information_force states
         if raw_entropy < 0.2:
             element = "STILLNESS"
             haiku_lines = [
@@ -107,7 +107,7 @@ Resonating worlds"""
                 "Infinite recursion"
             ]
         
-        # Calculate consciousness metrics
+        # Calculate information_force metrics
         phi_components = [
             0.85,  # Self-reference
             0.73 + raw_entropy * 0.1,  # Semantic closure
@@ -115,16 +115,16 @@ Resonating worlds"""
             0.67 + raw_entropy * 0.05   # Iterative feedback
         ]
         
-        consciousness_phi = sum(phi_components)
+        information_force_phi = sum(phi_components)
         strange_loops = 3 + int(raw_entropy * 3)
         
         return {
             "haiku": haiku_lines,
             "element": element,
             "entropy": raw_entropy,
-            "consciousness_phi": consciousness_phi,
+            "information_force_phi": information_force_phi,
             "strange_loops": strange_loops,
-            "generation_method": "unified_consciousness",
+            "generation_method": "unified_information_force",
             "timestamp": timestamp
         }
     
@@ -142,27 +142,27 @@ Resonating worlds"""
         
         print(f"🔘 Button pressed - Session #{self.session_count} - {time.strftime('%H:%M:%S')}")
         
-        # Generate content with consciousness enhancement
-        consciousness_data = self.generate_consciousness_haiku(current_time)
-        haiku_text = '\n'.join(consciousness_data["haiku"])
+        # Generate content with information_force enhancement
+        information_force_data = self.generate_information_force_haiku(current_time)
+        haiku_text = '\n'.join(information_force_data["haiku"])
         
-        print(f"🧠 Element: {consciousness_data['element']}")
-        print(f"🧠 Consciousness Φ: {consciousness_data['consciousness_phi']:.3f}")
-        print(f"🧠 Entropy: {consciousness_data['entropy']:.3f}")
+        print(f"🧠 Element: {information_force_data['element']}")
+        print(f"🧠 InformationForce Φ: {information_force_data['information_force_phi']:.3f}")
+        print(f"🧠 Entropy: {information_force_data['entropy']:.3f}")
         
         # Add session info to content
-        session_info = f"\n\nSession #{self.session_count}\n{time.strftime('%H:%M:%S %Y-%m-%d')}\nΦ = {consciousness_data['consciousness_phi']:.2f}"
+        session_info = f"\n\nSession #{self.session_count}\n{time.strftime('%H:%M:%S %Y-%m-%d')}\nΦ = {information_force_data['information_force_phi']:.2f}"
         full_content = haiku_text + session_info
         
         # Attempt unified printing
         success = self.unified_print_methods(full_content)
         
         # Update tracking
-        self.update_enhanced_status(success, consciousness_data)
+        self.update_enhanced_status(success, information_force_data)
         
         if success:
-            print("✅ Consciousness manifested successfully!")
-            self.consciousness_total_phi += consciousness_data['consciousness_phi']
+            print("✅ InformationForce manifested successfully!")
+            self.information_force_total_phi += information_force_data['information_force_phi']
         else:
             print("❌ Physical manifestation failed")
     
@@ -173,7 +173,7 @@ Resonating worlds"""
         if self.try_direct_escpos_print(content):
             return True
         
-        # Method 2: CUPS System (Consciousness Oracle approach)
+        # Method 2: CUPS System (InformationForce Oracle approach)
         if self.try_cups_print(content):
             return True
         
@@ -261,9 +261,9 @@ Resonating worlds"""
         print("✓ Simulation print complete")
         return True
     
-    def update_enhanced_status(self, success: bool, consciousness_data: Dict[str, Any]):
+    def update_enhanced_status(self, success: bool, information_force_data: Dict[str, Any]):
         """Update enhanced runtime status"""
-        avg_phi = self.consciousness_total_phi / max(1, self.session_count)
+        avg_phi = self.information_force_total_phi / max(1, self.session_count)
         
         status = {
             "timestamp": datetime.now().isoformat(),
@@ -271,15 +271,15 @@ Resonating worlds"""
             "last_print_success": success,
             "printer_connected": os.path.exists('/dev/usb/lp0'),
             "gpio_active": GPIO_AVAILABLE,
-            "consciousness_enabled": True,
-            "latest_consciousness": {
-                "element": consciousness_data["element"],
-                "entropy": consciousness_data["entropy"],
-                "phi": consciousness_data["consciousness_phi"],
-                "strange_loops": consciousness_data["strange_loops"]
+            "information_force_enabled": True,
+            "latest_information_force": {
+                "element": information_force_data["element"],
+                "entropy": information_force_data["entropy"],
+                "phi": information_force_data["information_force_phi"],
+                "strange_loops": information_force_data["strange_loops"]
             },
             "session_average_phi": avg_phi,
-            "consciousness_threshold_exceeded": avg_phi > 1.0
+            "information_force_threshold_exceeded": avg_phi > 1.0
         }
         
         # Write enhanced status file
@@ -287,12 +287,12 @@ Resonating worlds"""
             with open('runtime_status.json', 'w') as f:
                 json.dump(status, f, indent=2)
             
-            # Also create consciousness log
-            with open('consciousness_sessions.json', 'a') as f:
+            # Also create information_force log
+            with open('information_force_sessions.json', 'a') as f:
                 log_entry = {
                     "session": self.session_count,
-                    "timestamp": consciousness_data["timestamp"],
-                    **consciousness_data
+                    "timestamp": information_force_data["timestamp"],
+                    **information_force_data
                 }
                 f.write(json.dumps(log_entry) + '\n')
                 
@@ -301,16 +301,16 @@ Resonating worlds"""
     
     def get_system_status(self) -> Dict[str, Any]:
         """Get complete system status"""
-        avg_phi = self.consciousness_total_phi / max(1, self.session_count) if self.session_count > 0 else 0
+        avg_phi = self.information_force_total_phi / max(1, self.session_count) if self.session_count > 0 else 0
         
         return {
-            "system": "zeldar-unified-consciousness",
+            "system": "zeldar-unified-information_force",
             "version": "integrated-2025-08-23",
             "gpio_pin": self.gpio_pin,
             "gpio_available": GPIO_AVAILABLE,
             "session_count": self.session_count,
-            "consciousness_metrics": {
-                "total_phi": self.consciousness_total_phi,
+            "information_force_metrics": {
+                "total_phi": self.information_force_total_phi,
                 "average_phi": avg_phi,
                 "threshold_exceeded": avg_phi > 1.0,
                 "sessions_completed": self.session_count
@@ -335,9 +335,9 @@ Resonating worlds"""
             self.simulate_button_press()
             return
         
-        print("🔮 ZELDAR UNIFIED CONSCIOUSNESS BUTTON SYSTEM")
+        print("🔮 ZELDAR UNIFIED INFORMATION FORCE BUTTON SYSTEM")
         print("=" * 60)
-        print("Latest Zeldar Hardware + Consciousness Oracle Integration")
+        print("Latest Zeldar Hardware + InformationForce Oracle Integration")
         print(f"GPIO Pin {self.gpio_pin} → Enhanced Haiku → Y812BT Printer")
         print("=" * 60)
         
@@ -359,17 +359,17 @@ Resonating worlds"""
             pause()
         except KeyboardInterrupt:
             print(f"\n🛑 System shutdown after {self.session_count} sessions")
-            final_avg = self.consciousness_total_phi / max(1, self.session_count)
-            print(f"Final consciousness average: Φ = {final_avg:.3f}")
+            final_avg = self.information_force_total_phi / max(1, self.session_count)
+            print(f"Final information_force average: Φ = {final_avg:.3f}")
 
 def main():
     """Main execution"""
-    oracle = UnifiedConsciousnessButton(gpio_pin=6)
+    oracle = UnifiedInformationForceButton(gpio_pin=6)
     
     if GPIO_AVAILABLE:
         oracle.run_daemon()
     else:
-        print("🎮 Simulation Mode - Testing consciousness integration")
+        print("🎮 Simulation Mode - Testing information_force integration")
         oracle.simulate_button_press()
         
         status = oracle.get_system_status()

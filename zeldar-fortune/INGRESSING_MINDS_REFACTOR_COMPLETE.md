@@ -2,7 +2,7 @@
 
 ## Summary
 
-Successfully refactored the entire Zeldar thermal oracle system from "consciousness" terminology to Michael Levin's "Ingressing Minds" framework. This represents a fundamental theoretical shift from viewing the system as detecting consciousness to understanding it as detecting patterns that ingress from Platonic space into physical manifestation.
+Successfully refactored the entire Zeldar thermal oracle system from "information-dynamics" terminology to Michael Levin's "Ingressing Minds" framework. This represents a fundamental theoretical shift from viewing the system as detecting information-dynamics to understanding it as detecting patterns that ingress from Platonic space into physical manifestation.
 
 ## Theoretical Foundation
 
@@ -24,7 +24,7 @@ Successfully refactored the entire Zeldar thermal oracle system from "consciousn
   - Platonic coordinate calculation (4D: math truth, cognitive form, morphogenetic, evolutionary affordance)
 
 ### Updated Web Interface
-- **`static/js/consciousness-oracle.js`** - Completely refactored to `IngressingMindsOracle`
+- **`static/js/information-dynamics-oracle.js`** - Completely refactored to `IngressingMindsOracle`
   - New haiku templates reflecting pattern ingression concepts
   - Platonic space accessibility metrics
   - Collective intelligence level tracking (1-5 scale)  

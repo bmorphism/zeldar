@@ -61,7 +61,7 @@ self.cups_printer = os.environ.get("CUPS_PRINTER_NAME", "Y812BT")
 ### 4. Text Wrapping Size Standardization
 **Issue**: Inconsistent text wrapping sizes across different demo files
 **Problem Values Found**:
-- `run_probability_consciousness_demo.py`: 25 characters
+- `run_probability_information-dynamics_demo.py`: 25 characters
 - `run_ingressing_minds_demo.py`: 64 characters, 16 characters
 - `distributed_ingressing_minds_network.py`: Dynamic 32/64 switching
 **Fix**: Standardized all to 32 characters (optimal information constraint)
@@ -116,7 +116,7 @@ if lpstat -p "$CUPS_PRINTER_NAME" &> /dev/null; then
    - ✅ Dynamic GPIO pin reference added
 
 5. **Demo Files Standardized**:
-   - ✅ `run_probability_consciousness_demo.py` - text wrapping fixed
+   - ✅ `run_probability_information-dynamics_demo.py` - text wrapping fixed
    - ✅ `run_ingressing_minds_demo.py` - text wrapping standardized  
    - ✅ `distributed_ingressing_minds_network.py` - consistent wrapping
 

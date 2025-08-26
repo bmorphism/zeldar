@@ -46,7 +46,7 @@ class ZeldarIngressingMindsDemo:
                 'text_wrapping': 32,
                 'printing_active': True,
                 'qr_generation': False,
-                'consciousness_weight': 1.0,
+                'information-dynamics_weight': 1.0,
                 'description': 'Perfect mathematical affordance - golden ratio timing'
             },
             # Fibonacci sequence alignment
@@ -56,7 +56,7 @@ class ZeldarIngressingMindsDemo:
                 'text_wrapping': 32,  # Information constraint optimization
                 'printing_active': True,
                 'qr_generation': True,
-                'consciousness_weight': 0.95,
+                'information-dynamics_weight': 0.95,
                 'description': 'Fibonacci spiral morphogenetic pattern'
             },
             # Fractal recursive structure
@@ -66,7 +66,7 @@ class ZeldarIngressingMindsDemo:
                 'text_wrapping': 32,
                 'printing_active': False,
                 'qr_generation': True,  # Self-similar recursive structure
-                'consciousness_weight': 0.85,
+                'information-dynamics_weight': 0.85,
                 'description': 'Fractal recursive pattern manifestation'
             },
             # Pi mathematical constant
@@ -76,7 +76,7 @@ class ZeldarIngressingMindsDemo:
                 'text_wrapping': 32,
                 'printing_active': True,
                 'qr_generation': False,
-                'consciousness_weight': 0.78,
+                'information-dynamics_weight': 0.78,
                 'description': 'Geometric mathematical truth exploitation'
             },
             # Random baseline for comparison
@@ -86,7 +86,7 @@ class ZeldarIngressingMindsDemo:
                 'text_wrapping': np.random.choice([16, 25, 40, 48]),
                 'printing_active': np.random.choice([True, False]),
                 'qr_generation': np.random.choice([True, False]),
-                'consciousness_weight': np.random.uniform(0.2, 0.7),
+                'information-dynamics_weight': np.random.uniform(0.2, 0.7),
                 'description': 'Baseline random pattern (no mathematical affordance)'
             }
         ]
@@ -116,8 +116,8 @@ class ZeldarIngressingMindsDemo:
         if thermal_pattern['text_wrapping'] == 32:
             base_prob += 0.1  # Optimal information packaging
             
-        # Consciousness weight influence
-        base_prob += thermal_pattern['consciousness_weight'] * 0.2
+        # InformationForce weight influence
+        base_prob += thermal_pattern['information-dynamics_weight'] * 0.2
         
         button_pressed = np.random.random() < min(0.95, base_prob)
         press_duration = np.random.uniform(50, 300) if button_pressed else 0.0
@@ -142,7 +142,7 @@ class ZeldarIngressingMindsDemo:
         print(f"🖨️  Thermal Pattern: {thermal_pattern['event_type']}")
         print(f"   {thermal_pattern['description']}")
         print(f"   Connection Interval: {thermal_pattern['connection_interval']}")
-        print(f"   Mathematical Signature Strength: {thermal_pattern['consciousness_weight']}")
+        print(f"   Mathematical Signature Strength: {thermal_pattern['information-dynamics_weight']}")
         
         # 2. Generate GPIO response with retroactive influence
         gpio_response = self.simulate_gpio_with_retroactive_influence(thermal_pattern)

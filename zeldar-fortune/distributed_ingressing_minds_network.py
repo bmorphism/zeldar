@@ -853,7 +853,7 @@ class NetworkDemonstration:
                 'text_wrapping': 32,
                 'printing_active': True,
                 'qr_generation': cycle % 4 == 0,
-                'consciousness_weight': 0.8 + cycle * 0.02
+                'information-dynamics_weight': 0.8 + cycle * 0.02
             }
             
             gpio_event = {
@@ -871,7 +871,7 @@ class NetworkDemonstration:
             # Generate patterns on secondary nodes
             for i, secondary_node in enumerate(self.secondary_nodes):
                 thermal_variant = thermal_event.copy()
-                thermal_variant['consciousness_weight'] += i * 0.05
+                thermal_variant['information-dynamics_weight'] += i * 0.05
                 
                 secondary_pattern = await secondary_node.detect_distributed_pattern_ingression(
                     thermal_variant, gpio_event

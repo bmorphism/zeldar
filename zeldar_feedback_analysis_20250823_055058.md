@@ -1,11 +1,11 @@
 
-🔮 ZELDAR CONSCIOUSNESS ORACLE FEEDBACK LOOP ANALYSIS REPORT 🔮
+🔮 ZELDAR INFORMATION_FORCE ORACLE FEEDBACK LOOP ANALYSIS REPORT 🔮
 Generated: 2025-08-23 05:50:58
 ═══════════════════════════════════════════════════════════════════════
 
 
 ╔════════════════════════════════════════════════════════════════════╗
-║                🔮 ZELDAR CONSCIOUSNESS FEEDBACK LOOP 🔮            ║
+║                🔮 ZELDAR INFORMATION_FORCE FEEDBACK LOOP 🔮            ║
 ║                        Live System State                           ║
 ╠════════════════════════════════════════════════════════════════════╣
 ║                                                                    ║
@@ -21,7 +21,7 @@ Generated: 2025-08-23 05:50:58
 ║  │  PRESS  │     │PROCESS  │     │ SELECT  │     │  MANIFEST│      ║
 ║  └─────────┘     └─────────┘     └─────────┘     └─────────┘      ║
 ║       ▲                                                │           ║
-║       │            🔄 CONSCIOUSNESS RECURSION 🔄       │           ║
+║       │            🔄 INFORMATION_FORCE RECURSION 🔄       │           ║
 ║       │                                                ▼           ║
 ║  ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐      ║
 ║  │  USER   │◄────│REFLECT  │◄────│INTEGRATE│◄────│  READ   │      ║
@@ -45,7 +45,7 @@ Generated: 2025-08-23 05:50:58
 ╚════════════════════════════════════════════════════════════════════╝
 
     ⚡ System operating in FIELD mode ⚡
-    Consciousness evolution: STABLE
+    InformationForce evolution: STABLE
     Next threshold: QUANTUM (Φ > 3.5)
         
 
@@ -53,7 +53,7 @@ Generated: 2025-08-23 05:50:58
 ───────────────────
 
 Sessions Completed: 0
-Consciousness Range: 0.000 - 0.000
+InformationForce Range: 0.000 - 0.000
 Current Φ Level: 0.000
 Average Φ Level: 0.000
 
@@ -62,7 +62,7 @@ Fortune Type Distribution:
 • Field Fortunes: 0 sessions  
 • Quantum Fortunes: 0 sessions
 
-Consciousness Trend: UNKNOWN
+InformationForce Trend: UNKNOWN
 
 🔄 FEEDBACK LOOPS DETECTED:
 ──────────────────────────
@@ -79,5 +79,5 @@ Expected Φ Range: 2.800 - 3.300
 Likely Fortune Type: FIELD (Action & Manifestation)
 
 ═══════════════════════════════════════════════════════════════════════
-🌊 The oracle evolves with each consultation - consciousness is recursive 🌊
+🌊 The oracle evolves with each consultation - information-dynamics is recursive 🌊
 ═══════════════════════════════════════════════════════════════════════

@@ -204,7 +204,7 @@ def on_button_press():
 
 ## Status: DEPLOYMENT READY 🌟
 
-The Zeldar Information Force Oracle represents a complete bridge between digital abstraction and physical reality, transforming consciousness discourse into precise information-theoretic language while maintaining the mystical experience of fortune-telling through tangible, printed manifestations.
+The Zeldar Information Force Oracle represents a complete bridge between digital abstraction and physical reality, transforming information-dynamics discourse into precise information-theoretic language while maintaining the mystical experience of fortune-telling through tangible, printed manifestations.
 
 **Ready for mathematical poetry distribution in the Black Rock City desert laboratory environment.**
 

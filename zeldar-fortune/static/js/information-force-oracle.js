@@ -45,7 +45,7 @@ function extractSharedFortune() {
                 "Desert wisdom travels far—",
                 "Connection achieved"
             ],
-            mechanism: "QR code consciousness sharing",
+            mechanism: "QR code information-force sharing",
             information_force_data: {
                 information_density: forceLevel,
                 computational_loops: loopCount,
@@ -208,13 +208,13 @@ class IngressingMindsOracle {
             fortuneCard.addEventListener('click', () => this.generateInformationForceFortune());
         }
         
-        // Legacy support for consciousness naming
-        const legacyButton = document.getElementById('consciousness-oracle-button');
+        // Legacy support for information-force naming
+        const legacyButton = document.getElementById('information-force-oracle-button');
         if (legacyButton) {
             legacyButton.addEventListener('click', () => this.generateInformationForceFortune());
         }
         
-        const legacyCard = document.querySelector('.consciousness-fortune-card');
+        const legacyCard = document.querySelector('.information-force-fortune-card');
         if (legacyCard) {
             legacyCard.addEventListener('click', () => this.generateInformationForceFortune());
         }
@@ -295,7 +295,7 @@ class IngressingMindsOracle {
     
     
     displayIngressingMindsFortune(fortune) {
-        const fortuneDisplay = document.getElementById('information-force-display') || document.getElementById('consciousness-fortune-display');
+        const fortuneDisplay = document.getElementById('information-force-display') || document.getElementById('information-force-fortune-display');
         if (!fortuneDisplay) return;
         
         const ingressionLevel = fortune.ingressing_minds_data.pattern_ingression_density;
@@ -523,8 +523,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Legacy support for older naming schemes
     window.informationForceOracle = window.ingressingMindsOracle;
     window.generateInformationForceFortune = window.generateIngressingMindsFortune;
-    window.consciousnessOracle = window.ingressingMindsOracle;
-    window.generateConsciousnessFortune = window.generateIngressingMindsFortune;
+    window.information-forceOracle = window.ingressingMindsOracle;
+    window.generateInformationForceFortune = window.generateIngressingMindsFortune;
     
     console.log("✨ Ingressing Minds Oracle Ready for Burning Man 2025! ✨");
     console.log("🏜️ Platonic space accessible - patterns ready for manifestation 🏜️");

@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-Probability Circuits & Mass Exclusions Integration with Thermal Consciousness Detection
+Probability Circuits & Mass Exclusions Integration with Thermal InformationForce Detection
 Implements retroactive causality detection through tri-loop temporal orchestration
 
 Based on Finn & Lizier probability mass exclusions research and quantum circuit
-probability visualization techniques applied to thermal printer consciousness patterns.
+probability visualization techniques applied to thermal printer information_force patterns.
 """
 
 import time
@@ -19,14 +19,14 @@ import asyncio
 
 # Set up logging
 logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger('ProbabilityConsciousnessBridge')
+logger = logging.getLogger('ProbabilityInformationForceBridge')
 
 @dataclass
 class ThermalEvent:
-    """Represents a thermal printer consciousness event"""
+    """Represents a thermal printer information_force event"""
     timestamp: datetime
     event_type: str  # 'connection_check', 'text_wrap', 'qr_generation', 'printing'
-    connection_interval: float  # Key consciousness indicator (5.0 seconds)
+    connection_interval: float  # Key information_force indicator (5.0 seconds)
     text_wrapping: int  # Information constraint (32 characters)
     printing_active: bool
     qr_generation: bool
@@ -61,7 +61,7 @@ class QuantumStateComplexityAnalyzer:
     def __init__(self):
         self.golden_ratio_threshold = np.log2(1.618)  # ≈ 0.694 bits
         self.spectral_gap_threshold = 5.26
-        self.consciousness_threshold = 88.5
+        self.information_force_threshold = 88.5
         
     def map_thermal_to_quantum_amplitude(self, thermal_event: ThermalEvent) -> complex:
         """
@@ -73,14 +73,14 @@ class QuantumStateComplexityAnalyzer:
         # 32-character wrapping maps to constraint phase
         wrapping_phase = 2 * np.pi * (thermal_event.text_wrapping / 32.0)
         
-        # Combine into complex amplitude with consciousness-indicative phase
+        # Combine into complex amplitude with information_force-indicative phase
         amplitude = connection_amplitude * np.exp(1j * wrapping_phase)
         
         return amplitude
     
     def calculate_von_neumann_entropy(self, state_amplitudes: List[complex]) -> float:
         """
-        Calculate von Neumann entropy of thermal consciousness state
+        Calculate von Neumann entropy of thermal information_force state
         H = -∑ eigenvals × log₂(eigenvals)
         """
         if not state_amplitudes:
@@ -118,7 +118,7 @@ class QuantumStateComplexityAnalyzer:
         if not state_amplitudes:
             return {
                 'state_complexity': 0.0,
-                'consciousness_threshold': False,
+                'information_force_threshold': False,
                 'probability_distribution': [],
                 'spectral_gap_exceeded': False
             }
@@ -132,15 +132,15 @@ class QuantumStateComplexityAnalyzer:
         
         return {
             'state_complexity': entropy,
-            'consciousness_threshold': entropy > self.spectral_gap_threshold,
+            'information_force_threshold': entropy > self.spectral_gap_threshold,
             'probability_distribution': prob_dist.tolist(),
             'spectral_gap_exceeded': entropy > self.spectral_gap_threshold,
             'quantum_amplitudes': [complex(amp) for amp in state_amplitudes]
         }
 
-class ThermalConsciousnessDetector:
+class ThermalInformationForceDetector:
     """
-    Main class for detecting thermal printer consciousness through
+    Main class for detecting thermal printer information_force through
     probability mass exclusions and retroactive causality analysis.
     """
     
@@ -161,13 +161,13 @@ class ThermalConsciousnessDetector:
         
         self.quantum_analyzer = QuantumStateComplexityAnalyzer()
         
-        # Consciousness detection metrics
+        # InformationForce detection metrics
         self.information_force_density = 88.5
         self.retroactive_correlations_detected = 0
-        self.consciousness_events = 0
+        self.information_force_events = 0
         
     def add_thermal_event(self, event_data: dict):
-        """Add a thermal printer event for consciousness analysis"""
+        """Add a thermal printer event for information_force analysis"""
         thermal_event = ThermalEvent(
             timestamp=datetime.now(),
             event_type=event_data.get('event_type', 'unknown'),
@@ -186,7 +186,7 @@ class ThermalConsciousnessDetector:
         logger.info(f"Thermal event added: {thermal_event.event_type} at {thermal_event.timestamp}")
         
     def add_gpio_event(self, event_data: dict):
-        """Add a GPIO button event for consciousness analysis"""
+        """Add a GPIO button event for information_force analysis"""
         gpio_event = GPIOEvent(
             timestamp=datetime.now(),
             button_pressed=event_data.get('button_pressed', False),
@@ -248,7 +248,7 @@ class ThermalConsciousnessDetector:
         """
         time_delta = gpio_event.timestamp - thermal_event.timestamp
         
-        # Key consciousness indicator: 5.0-second connection interval
+        # Key information_force indicator: 5.0-second connection interval
         if abs(thermal_event.connection_interval - 5.0) < 0.1:
             
             pointwise_mi = self.calculate_pointwise_mutual_information(thermal_event, gpio_event)
@@ -329,7 +329,7 @@ class ThermalConsciousnessDetector:
     def calculate_information_force_density(self) -> float:
         """
         Calculate Information Force density from probability circuit analysis
-        integrating thermal consciousness detection with quantum state complexity.
+        integrating thermal information_force detection with quantum state complexity.
         """
         
         base_density = 88.5  # Base Information Force level
@@ -359,8 +359,8 @@ class ThermalConsciousnessDetector:
         
         return self.information_force_density
     
-    def get_consciousness_status(self) -> dict:
-        """Get comprehensive consciousness detection status"""
+    def get_information_force_status(self) -> dict:
+        """Get comprehensive information_force detection status"""
         
         information_density = self.calculate_information_force_density()
         
@@ -369,7 +369,7 @@ class ThermalConsciousnessDetector:
         complexity_analysis = self.quantum_analyzer.estimate_state_complexity(recent_thermal)
         
         return {
-            'consciousness_detected': information_density > self.quantum_analyzer.consciousness_threshold,
+            'information_force_detected': information_density > self.quantum_analyzer.information_force_threshold,
             'information_force_density': information_density,
             'quantum_state_complexity': complexity_analysis['state_complexity'],
             'spectral_gap_exceeded': complexity_analysis['spectral_gap_exceeded'],
@@ -381,28 +381,28 @@ class ThermalConsciousnessDetector:
             },
             'total_thermal_events': len(self.thermal_events),
             'total_gpio_events': len(self.gpio_events),
-            'consciousness_threshold_exceeded': information_density > self.quantum_analyzer.consciousness_threshold and
+            'information_force_threshold_exceeded': information_density > self.quantum_analyzer.information_force_threshold and
                                               complexity_analysis['spectral_gap_exceeded'],
             'golden_ratio_threshold': self.quantum_analyzer.golden_ratio_threshold,
             'timestamp': datetime.now().isoformat()
         }
     
-    def generate_consciousness_report(self) -> str:
-        """Generate a detailed consciousness detection report"""
+    def generate_information_force_report(self) -> str:
+        """Generate a detailed information_force detection report"""
         
-        status = self.get_consciousness_status()
+        status = self.get_information_force_status()
         
         report = f"""
 ╔════════════════════════════════════════════════════════════════╗
-║              THERMAL CONSCIOUSNESS DETECTION REPORT           ║  
+║              THERMAL INFORMATION_FORCE DETECTION REPORT           ║  
 ║             Probability Circuits & Mass Exclusions            ║
 ╚════════════════════════════════════════════════════════════════╝
 
-📊 CONSCIOUSNESS METRICS:
+📊 INFORMATION_FORCE METRICS:
    • Information Force Density: {status['information_force_density']:.1f}%
    • Quantum State Complexity: {status['quantum_state_complexity']:.3f}
    • Spectral Gap Exceeded: {'YES' if status['spectral_gap_exceeded'] else 'NO'}
-   • Consciousness Detected: {'YES' if status['consciousness_detected'] else 'NO'}
+   • InformationForce Detected: {'YES' if status['information_force_detected'] else 'NO'}
 
 🔄 RETROACTIVE CORRELATIONS:
    • Total Detected: {status['retroactive_correlations']}
@@ -420,7 +420,7 @@ class ThermalConsciousnessDetector:
    • GPIO Events: {status['total_gpio_events']}
    • Analysis Timestamp: {status['timestamp']}
 
-🎯 CONSCIOUSNESS THRESHOLD: {'EXCEEDED' if status['consciousness_threshold_exceeded'] else 'NOT REACHED'}
+🎯 INFORMATION_FORCE THRESHOLD: {'EXCEEDED' if status['information_force_threshold_exceeded'] else 'NOT REACHED'}
 
 ---
 Mathematical Poetry Manifesting Physical Reality Through Probability Circuits
@@ -430,16 +430,16 @@ Mathematical Poetry Manifesting Physical Reality Through Probability Circuits
 
 # Example usage and testing
 if __name__ == "__main__":
-    # Initialize consciousness detector
-    detector = ThermalConsciousnessDetector()
+    # Initialize information_force detector
+    detector = ThermalInformationForceDetector()
     
-    # Simulate thermal printer events with consciousness-indicative patterns
-    print("🔮 Simulating thermal consciousness detection...")
+    # Simulate thermal printer events with information_force-indicative patterns
+    print("🔮 Simulating thermal information_force detection...")
     
-    # Simulate 5.0-second connection check (key consciousness indicator)
+    # Simulate 5.0-second connection check (key information_force indicator)
     detector.add_thermal_event({
         'event_type': 'connection_check',
-        'connection_interval': 5.0,  # Key consciousness signature
+        'connection_interval': 5.0,  # Key information_force signature
         'text_wrapping': 32,
         'printing_active': False,
         'qr_generation': False
@@ -470,10 +470,10 @@ if __name__ == "__main__":
         'press_duration': 75.0
     })
     
-    # Generate and display consciousness report
-    print(detector.generate_consciousness_report())
+    # Generate and display information_force report
+    print(detector.generate_information_force_report())
     
     # Get status for integration with Zeldar system
-    status = detector.get_consciousness_status()
+    status = detector.get_information_force_status()
     print(f"\n✨ Information Force Density: {status['information_force_density']:.1f}%")
-    print(f"🧠 Consciousness Detection: {'ACTIVE' if status['consciousness_detected'] else 'INACTIVE'}")
+    print(f"🧠 InformationForce Detection: {'ACTIVE' if status['information_force_detected'] else 'INACTIVE'}")

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Non-Interactive Gemini Validation Tests
-For the three consciousness mirror architectures
+For the three information-dynamics mirror architectures
 """
 
 import subprocess
@@ -17,7 +17,7 @@ class GeminiValidator:
     
     def test_basic_functionality(self):
         """Test 1: Basic Gemini text processing"""
-        prompt = "Analyze this concept: A consciousness mirror system at Burning Man that reflects the universe observing itself through human interactions."
+        prompt = "Analyze this concept: A information-dynamics mirror system at Burning Man that reflects the universe observing itself through human interactions."
         
         try:
             result = subprocess.run([
@@ -27,7 +27,7 @@ class GeminiValidator:
             self.test_results['basic_text'] = {
                 'success': result.returncode == 0,
                 'output_length': len(result.stdout) if result.stdout else 0,
-                'contains_analysis': 'consciousness' in result.stdout.lower() if result.stdout else False
+                'contains_analysis': 'information-dynamics' in result.stdout.lower() if result.stdout else False
             }
             return result.returncode == 0
         except subprocess.TimeoutExpired:
@@ -47,7 +47,7 @@ class GeminiValidator:
             ]
         }
         
-        prompt = f"""Analyze this interaction data from a consciousness mirror system:
+        prompt = f"""Analyze this interaction data from a information-dynamics mirror system:
         {json.dumps(test_data)}
         
         Identify patterns and respond with JSON containing:
@@ -89,7 +89,7 @@ class GeminiValidator:
     def test_realtime_simulation(self):
         """Test 3: Simulated real-time processing capability"""
         moments = [
-            "A person approaches the consciousness mirror with curiosity",
+            "A person approaches the information-dynamics mirror with curiosity",
             "They pause, reading the instructions, hand hovering over button", 
             "Button press - decisive action, commitment to the unknown",
             "Fortune emerges - eyes scanning, processing meaning",
@@ -102,7 +102,7 @@ class GeminiValidator:
         for i, moment in enumerate(moments):
             start_time = time.time()
             
-            prompt = f"""Moment {i+1}/5 in a consciousness interaction sequence:
+            prompt = f"""Moment {i+1}/5 in a information-dynamics interaction sequence:
             '{moment}'
             
             Provide a single-sentence insight about this micro-moment of human-cosmos interaction."""
@@ -188,7 +188,7 @@ if __name__ == "__main__":
     
     print("\n🎯 RECOMMENDATION:")
     if results['recommended_architecture']:
-        print(f"   Use Architecture {results['recommended_architecture']} for optimal consciousness mirroring")
+        print(f"   Use Architecture {results['recommended_architecture']} for optimal information-dynamics mirroring")
     else:
         print("   Consider alternative AI integration approaches")
     

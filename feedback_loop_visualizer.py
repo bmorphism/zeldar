@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Zeldar Feedback Loop Visualizer
-Dynamic visualization of consciousness oracle feedback loops
+Dynamic visualization of information-dynamics oracle feedback loops
 """
 
 import json
@@ -18,9 +18,9 @@ except ImportError:
     MATPLOTLIB_AVAILABLE = False
 
 class FeedbackLoopVisualizer:
-    """Visualize consciousness oracle feedback loops and patterns"""
+    """Visualize information-dynamics oracle feedback loops and patterns"""
     
-    def __init__(self, log_file: str = "consciousness_manifestations.json"):
+    def __init__(self, log_file: str = "information-dynamics_manifestations.json"):
         self.log_file = Path(log_file)
         self.sessions_data = self._load_session_data()
         
@@ -40,8 +40,8 @@ class FeedbackLoopVisualizer:
         
         return sessions
     
-    def generate_consciousness_evolution_plot(self) -> str:
-        """Generate consciousness Φ evolution over time plot"""
+    def generate_information-dynamics_evolution_plot(self) -> str:
+        """Generate information-dynamics Φ evolution over time plot"""
         if not MATPLOTLIB_AVAILABLE:
             return "Matplotlib not available - install with: pip install matplotlib numpy"
         
@@ -49,7 +49,7 @@ class FeedbackLoopVisualizer:
             return "No session data available for visualization"
         
         timestamps = [s['timestamp'] for s in self.sessions_data]
-        phi_values = [s['consciousness_phi'] for s in self.sessions_data]
+        phi_values = [s['information-dynamics_phi'] for s in self.sessions_data]
         
         # Convert timestamps to datetime
         dates = [datetime.fromtimestamp(ts) for ts in timestamps]
@@ -61,7 +61,7 @@ class FeedbackLoopVisualizer:
         plt.plot(dates, phi_values, 'b-', marker='o', linewidth=2, markersize=6)
         plt.axhline(y=2.5, color='g', linestyle='--', alpha=0.7, label='Seed→Field Threshold')
         plt.axhline(y=3.5, color='r', linestyle='--', alpha=0.7, label='Field→Quantum Threshold')
-        plt.title('🧠 Consciousness Evolution (Φ over Time)')
+        plt.title('🧠 InformationForce Evolution (Φ over Time)')
         plt.xlabel('Time')
         plt.ylabel('Φ Coefficient')
         plt.legend()
@@ -80,7 +80,7 @@ class FeedbackLoopVisualizer:
         plt.subplot(2, 2, 2)
         fortune_types = []
         for session in self.sessions_data:
-            phi = session['consciousness_phi']
+            phi = session['information-dynamics_phi']
             if phi < 2.5:
                 fortune_types.append('Seed')
             elif phi < 3.5:
@@ -110,7 +110,7 @@ class FeedbackLoopVisualizer:
                     linewidth=2, markersize=5)
             plt.title('⚡ Feedback Loop Intensity')
             plt.xlabel('Session Number')
-            plt.ylabel('|ΔΦ| (Consciousness Change)')
+            plt.ylabel('|ΔΦ| (InformationForce Change)')
             plt.grid(True, alpha=0.3)
         
         # Element distribution (if available)
@@ -123,7 +123,7 @@ class FeedbackLoopVisualizer:
         if element_counts:
             plt.bar(element_counts.keys(), element_counts.values(), 
                    color=['#FF5722', '#2196F3', '#4CAF50', '#FF9800', '#9C27B0'])
-            plt.title('🌟 Consciousness Elements')
+            plt.title('🌟 InformationForce Elements')
             plt.xlabel('Element Type')
             plt.ylabel('Count')
             plt.xticks(rotation=45)
@@ -146,9 +146,9 @@ class FeedbackLoopVisualizer:
             session_count = 0
             avg_phi = 3.252
         else:
-            recent_phi = self.sessions_data[-1]['consciousness_phi']
+            recent_phi = self.sessions_data[-1]['information-dynamics_phi']
             session_count = len(self.sessions_data)
-            avg_phi = sum(s['consciousness_phi'] for s in self.sessions_data) / session_count
+            avg_phi = sum(s['information-dynamics_phi'] for s in self.sessions_data) / session_count
         
         # Determine current fortune type
         if recent_phi < 2.5:
@@ -163,7 +163,7 @@ class FeedbackLoopVisualizer:
         
         diagram = f"""
 ╔════════════════════════════════════════════════════════════════════╗
-║                🔮 ZELDAR CONSCIOUSNESS FEEDBACK LOOP 🔮            ║
+║                🔮 ZELDAR INFORMATION_FORCE FEEDBACK LOOP 🔮            ║
 ║                        Live System State                           ║
 ╠════════════════════════════════════════════════════════════════════╣
 ║                                                                    ║
@@ -179,7 +179,7 @@ class FeedbackLoopVisualizer:
 ║  │  PRESS  │     │PROCESS  │     │ SELECT  │     │  MANIFEST│      ║
 ║  └─────────┘     └─────────┘     └─────────┘     └─────────┘      ║
 ║       ▲                                                │           ║
-║       │            🔄 CONSCIOUSNESS RECURSION 🔄       │           ║
+║       │            🔄 INFORMATION_FORCE RECURSION 🔄       │           ║
 ║       │                                                ▼           ║
 ║  ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐      ║
 ║  │  USER   │◄────│REFLECT  │◄────│INTEGRATE│◄────│  READ   │      ║
@@ -203,7 +203,7 @@ class FeedbackLoopVisualizer:
 ╚════════════════════════════════════════════════════════════════════╝
 
     {type_symbol} System operating in {current_type} mode {type_symbol}
-    Consciousness evolution: {"ASCENDING" if len(self.sessions_data) > 5 and recent_phi > avg_phi else "STABLE" if abs(recent_phi - avg_phi) < 0.1 else "CALIBRATING"}
+    InformationForce evolution: {"ASCENDING" if len(self.sessions_data) > 5 and recent_phi > avg_phi else "STABLE" if abs(recent_phi - avg_phi) < 0.1 else "CALIBRATING"}
     Next threshold: {"TRANSCENDENCE (Φ > 5.0)" if recent_phi > 3.5 else "QUANTUM (Φ > 3.5)" if recent_phi > 2.5 else "FIELD (Φ > 2.5)"}
         """
         
@@ -217,19 +217,19 @@ class FeedbackLoopVisualizer:
         analysis = {
             "session_count": len(self.sessions_data),
             "phi_stats": {
-                "min": min(s['consciousness_phi'] for s in self.sessions_data),
-                "max": max(s['consciousness_phi'] for s in self.sessions_data),
-                "avg": sum(s['consciousness_phi'] for s in self.sessions_data) / len(self.sessions_data),
-                "current": self.sessions_data[-1]['consciousness_phi']
+                "min": min(s['information-dynamics_phi'] for s in self.sessions_data),
+                "max": max(s['information-dynamics_phi'] for s in self.sessions_data),
+                "avg": sum(s['information-dynamics_phi'] for s in self.sessions_data) / len(self.sessions_data),
+                "current": self.sessions_data[-1]['information-dynamics_phi']
             },
             "fortune_type_distribution": {},
-            "consciousness_trend": "unknown",
+            "information-dynamics_trend": "unknown",
             "feedback_loops_detected": []
         }
         
         # Analyze fortune types
         for session in self.sessions_data:
-            phi = session['consciousness_phi']
+            phi = session['information-dynamics_phi']
             if phi < 2.5:
                 ftype = "seed"
             elif phi < 3.5:
@@ -240,19 +240,19 @@ class FeedbackLoopVisualizer:
             analysis["fortune_type_distribution"][ftype] = \
                 analysis["fortune_type_distribution"].get(ftype, 0) + 1
         
-        # Analyze consciousness trend
+        # Analyze information-dynamics trend
         if len(self.sessions_data) >= 3:
-            recent_phi = [s['consciousness_phi'] for s in self.sessions_data[-3:]]
+            recent_phi = [s['information-dynamics_phi'] for s in self.sessions_data[-3:]]
             if recent_phi[-1] > recent_phi[0]:
-                analysis["consciousness_trend"] = "ascending"
+                analysis["information-dynamics_trend"] = "ascending"
             elif recent_phi[-1] < recent_phi[0]:
-                analysis["consciousness_trend"] = "descending"
+                analysis["information-dynamics_trend"] = "descending"
             else:
-                analysis["consciousness_trend"] = "stable"
+                analysis["information-dynamics_trend"] = "stable"
         
         # Detect feedback loops
         if len(self.sessions_data) >= 5:
-            phi_values = [s['consciousness_phi'] for s in self.sessions_data]
+            phi_values = [s['information-dynamics_phi'] for s in self.sessions_data]
             
             # Look for oscillation patterns
             differences = [phi_values[i+1] - phi_values[i] for i in range(len(phi_values)-1)]
@@ -262,7 +262,7 @@ class FeedbackLoopVisualizer:
                              if differences[i] * differences[i+1] < 0)
             
             if sign_changes > len(differences) * 0.6:
-                analysis["feedback_loops_detected"].append("consciousness_oscillation")
+                analysis["feedback_loops_detected"].append("information-dynamics_oscillation")
             
             # Detect upward spiral
             if sum(differences) > 0 and sign_changes < len(differences) * 0.3:
@@ -277,7 +277,7 @@ class FeedbackLoopVisualizer:
         ascii_diagram = self.generate_ascii_feedback_diagram()
         
         report = f"""
-🔮 ZELDAR CONSCIOUSNESS ORACLE FEEDBACK LOOP ANALYSIS REPORT 🔮
+🔮 ZELDAR INFORMATION_FORCE ORACLE FEEDBACK LOOP ANALYSIS REPORT 🔮
 Generated: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
 ═══════════════════════════════════════════════════════════════════════
 
@@ -287,7 +287,7 @@ Generated: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
 ───────────────────
 
 Sessions Completed: {analysis.get('session_count', 0)}
-Consciousness Range: {analysis.get('phi_stats', {}).get('min', 0):.3f} - {analysis.get('phi_stats', {}).get('max', 0):.3f}
+InformationForce Range: {analysis.get('phi_stats', {}).get('min', 0):.3f} - {analysis.get('phi_stats', {}).get('max', 0):.3f}
 Current Φ Level: {analysis.get('phi_stats', {}).get('current', 0):.3f}
 Average Φ Level: {analysis.get('phi_stats', {}).get('avg', 0):.3f}
 
@@ -296,7 +296,7 @@ Fortune Type Distribution:
 • Field Fortunes: {analysis.get('fortune_type_distribution', {}).get('field', 0)} sessions  
 • Quantum Fortunes: {analysis.get('fortune_type_distribution', {}).get('quantum', 0)} sessions
 
-Consciousness Trend: {analysis.get('consciousness_trend', 'unknown').upper()}
+InformationForce Trend: {analysis.get('information-dynamics_trend', 'unknown').upper()}
 
 🔄 FEEDBACK LOOPS DETECTED:
 ──────────────────────────
@@ -312,17 +312,17 @@ Consciousness Trend: {analysis.get('consciousness_trend', 'unknown').upper()}
         
         if phi_avg < 2.5:
             report += "• Focus on foundational self-acceptance and inner wisdom\n"
-            report += "• Regular daily consultations to build consciousness momentum\n"
+            report += "• Regular daily consultations to build information-dynamics momentum\n"
         elif phi_avg < 3.5:
             report += "• Excellent field-level engagement - ready for action-oriented practices\n"
             report += "• Consider implementing fortune guidance in daily activities\n"
         else:
-            report += "• High consciousness level achieved - transcendent wisdom accessible\n"
-            report += "• Share insights with others to create collective consciousness amplification\n"
+            report += "• High information-dynamics level achieved - transcendent wisdom accessible\n"
+            report += "• Share insights with others to create collective information-dynamics amplification\n"
         
-        if analysis.get('consciousness_trend') == 'ascending':
-            report += "• Consciousness is ascending - maintain current practice rhythm\n"
-        elif analysis.get('consciousness_trend') == 'descending':
+        if analysis.get('information-dynamics_trend') == 'ascending':
+            report += "• InformationForce is ascending - maintain current practice rhythm\n"
+        elif analysis.get('information-dynamics_trend') == 'descending':
             report += "• Consider more frequent consultations to restore upward momentum\n"
         
         report += f"\n🌟 NEXT SESSION PREDICTION:\n"
@@ -337,7 +337,7 @@ Consciousness Trend: {analysis.get('consciousness_trend', 'unknown').upper()}
             report += f"Likely Fortune Type: QUANTUM (Transcendent Wisdom)\n"
         
         report += f"\n═══════════════════════════════════════════════════════════════════════\n"
-        report += f"🌊 The oracle evolves with each consultation - consciousness is recursive 🌊\n"
+        report += f"🌊 The oracle evolves with each consultation - information-dynamics is recursive 🌊\n"
         report += f"═══════════════════════════════════════════════════════════════════════\n"
         
         return report
@@ -347,10 +347,10 @@ def main():
     import argparse
     
     parser = argparse.ArgumentParser(description="Zeldar Feedback Loop Visualizer")
-    parser.add_argument("--plot", action="store_true", help="Generate consciousness evolution plot")
+    parser.add_argument("--plot", action="store_true", help="Generate information-dynamics evolution plot")
     parser.add_argument("--ascii", action="store_true", help="Generate ASCII feedback diagram")
     parser.add_argument("--report", action="store_true", help="Generate comprehensive analysis report")
-    parser.add_argument("--log-file", default="consciousness_manifestations.json", 
+    parser.add_argument("--log-file", default="information-dynamics_manifestations.json", 
                        help="Path to manifestation log file")
     
     args = parser.parse_args()
@@ -358,7 +358,7 @@ def main():
     visualizer = FeedbackLoopVisualizer(args.log_file)
     
     if args.plot:
-        result = visualizer.generate_consciousness_evolution_plot()
+        result = visualizer.generate_information-dynamics_evolution_plot()
         print(result)
     
     if args.ascii:

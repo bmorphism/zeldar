@@ -35,7 +35,7 @@ class OracleAPI:
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 serial_number TEXT UNIQUE NOT NULL,
                 fortune_text TEXT NOT NULL,
-                consciousness_phi REAL NOT NULL,
+                information-dynamics_phi REAL NOT NULL,
                 element TEXT NOT NULL,
                 fortune_type TEXT NOT NULL,
                 session_id TEXT NOT NULL,
@@ -80,8 +80,8 @@ class OracleAPI:
                         if cursor.fetchone():
                             continue  # Skip duplicates
                         
-                        # Determine fortune type from consciousness level
-                        phi = session_data.get('consciousness_phi', 3.0)
+                        # Determine fortune type from information-dynamics level
+                        phi = session_data.get('information-dynamics_phi', 3.0)
                         if phi < 2.5:
                             fortune_type = 'seed'
                         elif phi < 3.5:
@@ -92,7 +92,7 @@ class OracleAPI:
                         # Insert fortune
                         cursor.execute('''
                             INSERT INTO fortunes (
-                                serial_number, fortune_text, consciousness_phi, element,
+                                serial_number, fortune_text, information-dynamics_phi, element,
                                 fortune_type, session_id, timestamp, datetime_str,
                                 photo_path, photo_url, voice_file, metadata
                             ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
@@ -131,7 +131,7 @@ class OracleAPI:
         cursor = conn.cursor()
         
         cursor.execute('''
-            SELECT serial_number, fortune_text, consciousness_phi, element,
+            SELECT serial_number, fortune_text, information-dynamics_phi, element,
                    fortune_type, session_id, timestamp, datetime_str,
                    photo_url, voice_file, metadata
             FROM fortunes
@@ -148,7 +148,7 @@ class OracleAPI:
         fortune_data = {
             'serial_number': result[0],
             'fortune': result[1],
-            'consciousness_phi': result[2],
+            'information-dynamics_phi': result[2],
             'element': result[3],
             'fortune_type': result[4],
             'session_id': result[5],
@@ -167,7 +167,7 @@ class OracleAPI:
         cursor = conn.cursor()
         
         cursor.execute('''
-            SELECT serial_number, fortune_text, consciousness_phi, element,
+            SELECT serial_number, fortune_text, information-dynamics_phi, element,
                    fortune_type, session_id, datetime_str
             FROM fortunes
             ORDER BY timestamp DESC
@@ -182,7 +182,7 @@ class OracleAPI:
             fortunes.append({
                 'serial_number': row[0],
                 'fortune': row[1],
-                'consciousness_phi': row[2],
+                'information-dynamics_phi': row[2],
                 'element': row[3],
                 'fortune_type': row[4],
                 'session_id': row[5],
@@ -200,8 +200,8 @@ class OracleAPI:
         cursor.execute('SELECT COUNT(*) FROM fortunes')
         total_count = cursor.fetchone()[0]
         
-        # Consciousness stats
-        cursor.execute('SELECT MIN(consciousness_phi), MAX(consciousness_phi), AVG(consciousness_phi) FROM fortunes')
+        # InformationForce stats
+        cursor.execute('SELECT MIN(information-dynamics_phi), MAX(information-dynamics_phi), AVG(information-dynamics_phi) FROM fortunes')
         phi_stats = cursor.fetchone()
         
         # Fortune type distribution
@@ -216,7 +216,7 @@ class OracleAPI:
         
         return {
             'total_fortunes': total_count,
-            'consciousness_range': {
+            'information-dynamics_range': {
                 'min': phi_stats[0] or 0,
                 'max': phi_stats[1] or 0,
                 'average': phi_stats[2] or 0

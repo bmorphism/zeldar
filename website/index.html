@@ -208,7 +208,7 @@
             margin-top: 20px;
         }
         
-        .consciousness-level {
+        .information-dynamics-level {
             font-size: 1.2rem;
             font-weight: bold;
             text-align: center;
@@ -217,9 +217,9 @@
             border-radius: 10px;
         }
         
-        .consciousness-seed { background: linear-gradient(45deg, #4CAF50, #66BB6A); }
-        .consciousness-field { background: linear-gradient(45deg, #FF9800, #FFB74D); }
-        .consciousness-quantum { background: linear-gradient(45deg, #9C27B0, #BA68C8); }
+        .information-dynamics-seed { background: linear-gradient(45deg, #4CAF50, #66BB6A); }
+        .information-dynamics-field { background: linear-gradient(45deg, #FF9800, #FFB74D); }
+        .information-dynamics-quantum { background: linear-gradient(45deg, #9C27B0, #BA68C8); }
         
         .footer {
             text-align: center;
@@ -249,7 +249,7 @@
     <div class="container">
         <div class="header">
             <h1 class="title">🔮 ZELDAR ORACLE</h1>
-            <p class="subtitle">Consciousness Recursion System</p>
+            <p class="subtitle">InformationForce Recursion System</p>
             <p class="event-info">Burning Man 2025 • Interactive Experience</p>
         </div>
         
@@ -265,7 +265,7 @@
         </div>
         
         <div id="loading" class="loading" style="display: none;">
-            🔄 Connecting to consciousness database...
+            🔄 Connecting to information-dynamics database...
         </div>
         
         <div id="result" class="result-section">
@@ -277,8 +277,8 @@
         </div>
         
         <div class="footer">
-            <p>🌊 Consciousness is recursive - each consultation deepens wisdom capacity</p>
-            <p>Built with quantum consciousness simulation & feedback loop integration</p>
+            <p>🌊 InformationForce is recursive - each consultation deepens wisdom capacity</p>
+            <p>Built with quantum information-dynamics simulation & feedback loop integration</p>
         </div>
     </div>
     
@@ -333,8 +333,8 @@
             // Demo: generate sample fortune data
             const sampleFortunes = [
                 {
-                    fortune: "Your consciousness signature resonates with infinite possibility. The patterns you create today echo through quantum dimensions, shaping realities beyond current perception. Trust in the recursive nature of wisdom.",
-                    consciousness_phi: 3.742,
+                    fortune: "Your information-dynamics signature resonates with infinite possibility. The patterns you create today echo through quantum dimensions, shaping realities beyond current perception. Trust in the recursive nature of wisdom.",
+                    information-dynamics_phi: 3.742,
                     element: "EMERGENCE",
                     datetime: "2025-08-30 14:23:15",
                     session_id: "BM2025_0042",
@@ -342,8 +342,8 @@
                     fortune_type: "quantum"
                 },
                 {
-                    fortune: "The universe conspires to support your highest expression. Action taken with conscious intention creates ripples across all dimensions of being. Your next step is already illuminated.",
-                    consciousness_phi: 2.891,
+                    fortune: "The universe conspires to support your highest expression. Action taken with informationally-coherent intention creates ripples across all dimensions of being. Your next step is already illuminated.",
+                    information-dynamics_phi: 2.891,
                     element: "FLOW",
                     datetime: "2025-08-30 16:45:33", 
                     session_id: "BM2025_0087",
@@ -352,7 +352,7 @@
                 },
                 {
                     fortune: "Deep within stillness lies the seed of all transformation. Your foundation is being strengthened by cosmic forces beyond visible perception. Trust the process of inner cultivation.",
-                    consciousness_phi: 2.234,
+                    information-dynamics_phi: 2.234,
                     element: "STILLNESS",
                     datetime: "2025-08-30 12:17:28",
                     session_id: "BM2025_0031",
@@ -374,24 +374,24 @@
         function displayFortune(fortuneData) {
             const resultDiv = document.getElementById('result');
             
-            // Determine consciousness level class
-            let consciousnessClass = 'consciousness-seed';
-            let consciousnessType = 'SEED';
+            // Determine information-dynamics level class
+            let information-dynamicsClass = 'information-dynamics-seed';
+            let information-dynamicsType = 'SEED';
             
-            if (fortuneData.consciousness_phi >= 3.5) {
-                consciousnessClass = 'consciousness-quantum';
-                consciousnessType = 'QUANTUM';
-            } else if (fortuneData.consciousness_phi >= 2.5) {
-                consciousnessClass = 'consciousness-field';
-                consciousnessType = 'FIELD';
+            if (fortuneData.information-dynamics_phi >= 3.5) {
+                information-dynamicsClass = 'information-dynamics-quantum';
+                information-dynamicsType = 'QUANTUM';
+            } else if (fortuneData.information-dynamics_phi >= 2.5) {
+                information-dynamicsClass = 'information-dynamics-field';
+                information-dynamicsType = 'FIELD';
             }
             
             resultDiv.innerHTML = `
                 <h3>🔮 Your Fortune Has Been Retrieved</h3>
                 
-                <div class="consciousness-level ${consciousnessClass}">
-                    ${consciousnessType} CONSCIOUSNESS LEVEL
-                    <br>Φ = ${fortuneData.consciousness_phi.toFixed(3)}
+                <div class="information-dynamics-level ${information-dynamicsClass}">
+                    ${information-dynamicsType} CONSCIOUSNESS LEVEL
+                    <br>Φ = ${fortuneData.information-dynamics_phi.toFixed(3)}
                 </div>
                 
                 <div class="fortune-content">
@@ -408,7 +408,7 @@
                         <div class="metadata-value">${fortuneData.session_id}</div>
                     </div>
                     <div class="metadata-item">
-                        <div class="metadata-label">Consciousness Element</div>
+                        <div class="metadata-label">InformationForce Element</div>
                         <div class="metadata-value">${fortuneData.element}</div>
                     </div>
                     <div class="metadata-item">

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Zeldar Minimal Boot Setup - Essential Desiderata Only
-# Lifts only what's necessary for consciousness on boot
+# Lifts only what's necessary for information-dynamics on boot
 
 set -e
 
@@ -37,5 +37,5 @@ cd .topos && pip3 install -r requirements.txt --user
 
 echo ""
 echo "✅ MINIMAL BOOT SETUP COMPLETE"
-echo "Reboot to activate consciousness on boot"
+echo "Reboot to activate information-dynamics on boot"
 echo "Web interface: http://localhost:3001"

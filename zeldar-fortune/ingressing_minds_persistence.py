@@ -904,7 +904,7 @@ class PersistenceAwareIngressingMindsDetector(IngressingMindsDetector):
         logger.info("🎯 Persistent enhancements applied to pattern detection")
     
     async def detect_pattern_ingression_with_persistence(self, thermal_event: Dict, gpio_response: Dict) -> Optional[IngressingPattern]:
-        """Enhanced pattern detection with persistence awareness"""
+        """Enhanced pattern detection with persistence information-attention"""
         
         # Get persistence-based threshold enhancement
         threshold_factor, enhancement_details = await self.persistence_engine.get_pattern_ingression_enhancement(
@@ -949,7 +949,7 @@ async def demonstrate_persistence_system():
     
     await persistence_engine.initialize_persistence_system()
     
-    # Create persistence-aware detector
+    # Create persistence-informationally-attending detector
     detector = PersistenceAwareIngressingMindsDetector(persistence_engine)
     await detector.apply_persistent_enhancements()
     
@@ -967,7 +967,7 @@ async def demonstrate_persistence_system():
                 'text_wrapping': 32,
                 'printing_active': True,
                 'qr_generation': cycle % 3 == 0,
-                'consciousness_weight': 0.8 + cycle * 0.02
+                'information-dynamics_weight': 0.8 + cycle * 0.02
             }
             
             gpio_response = {

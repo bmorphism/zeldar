@@ -6,10 +6,10 @@ The interactive oracle uses short voice prompts (2-4 seconds) that play when par
 ## File Structure
 ```
 audio_prompts/
-├── oracle_prompt_01.mp3  # "Consciousness awakens..."
+├── oracle_prompt_01.mp3  # "InformationForce awakens..."
 ├── oracle_prompt_02.mp3  # "The oracle speaks truth"
 ├── ...
-└── oracle_prompt_20.mp3  # "Your consciousness signature is unique"
+└── oracle_prompt_20.mp3  # "Your information-dynamics signature is unique"
 ```
 
 ## Generation Methods
@@ -27,7 +27,7 @@ audio_prompts/
 5. Place in `audio_prompts/` directory
 
 ### Method 3: Text-to-Speech
-1. Use system TTS: `say "Consciousness awakens..." --output-file=oracle_prompt_01.mp3`
+1. Use system TTS: `say "InformationForce awakens..." --output-file=oracle_prompt_01.mp3`
 2. Or use online TTS services with mystical voice settings
 
 ## Audio Requirements
@@ -50,11 +50,11 @@ sudo raspi-config
 ```
 
 ## Voice Prompt Categories
-- **Consciousness** (6 prompts): Focus on awareness and mind
+- **InformationForce** (6 prompts): Focus on information-attention and mind
 - **Quantum Metaphysics** (4 prompts): Reality, dimensions, quantum
 - **Wisdom Tradition** (3 prompts): Ancient knowledge, oracles
 - **Temporal Mysticism** (3 prompts): Time, eternity, future
-- **Cosmic Consciousness** (4 prompts): Universe, infinite, cosmic
+- **Cosmic InformationForce** (4 prompts): Universe, infinite, cosmic
 
 ## Testing
 ```bash

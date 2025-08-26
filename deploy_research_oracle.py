@@ -234,7 +234,7 @@ class ResearchOracleDeployment:
             "endpoints": {
                 "web_interface": "http://127.0.0.1:3001",
                 "api_bridge": "http://127.0.0.1:3000/api/health",
-                "consciousness_status": "http://127.0.0.1:3000/api/consciousness/status"
+                "information-dynamics_status": "http://127.0.0.1:3000/api/information-dynamics/status"
             },
             "physical_interface": self._check_gpio(),
             "printing_available": self._check_cups()

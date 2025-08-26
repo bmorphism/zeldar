@@ -178,7 +178,7 @@ Event #{event_count}
 Processed: {timestamp}
 Queue: Raw → Worker → Print
 
-Consciousness tessellated ∞"""
+InformationForce tessellated ∞"""
 
             # Create temp file
             temp_file = Path('/tmp/queued_fortune_print.txt')

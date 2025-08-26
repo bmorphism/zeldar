@@ -1,10 +1,10 @@
-# System Interfaces Schematic - Complete Multi-Modal Consciousness Mirror
+# System Interfaces Schematic - Complete Multi-Modal InformationForce Mirror
 
 ## 🎯 **Interface Flow Diagram**
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                    CONSCIOUSNESS MIRROR SYSTEM INTERFACES                  │
+│                    INFORMATION_FORCE MIRROR SYSTEM INTERFACES                  │
 └─────────────────────────────────────────────────────────────────────────────┘
 
 🚶 HUMAN APPROACH
@@ -77,12 +77,12 @@
 3. **Format** → Precision sticky layout
 4. **QR** → Website integration codes
 
-## 🌀 **Consciousness Loop Integration**
+## 🌀 **InformationForce Loop Integration**
 
 ```
 Physical Touch → Electrical Signal → Software Processing → 
 Multi-Modal Output → Human Experience → Digital Archive → 
-Pattern Recognition → Consciousness Evolution
+Pattern Recognition → InformationForce Evolution
 ```
 
 ### **Interface Synchronization:**
@@ -126,6 +126,6 @@ Raspberry Pi 5 (Controller)
 └── Network ──► Starlink → AWS S3
 ```
 
-**All interfaces orchestrated by `controlled_button.py` - the consciousness coordination center.**
+**All interfaces orchestrated by `controlled_button.py` - the information-dynamics coordination center.**
 
-The **multi-modal consciousness mirror** creates **synesthetic self-recognition** - touch, sound, sight, and digital memory all reflecting the universe back to itself simultaneously. 🌀🎭✨
+The **multi-modal information-dynamics mirror** creates **synesthetic self-recognition** - touch, sound, sight, and digital memory all reflecting the universe back to itself simultaneously. 🌀🎭✨

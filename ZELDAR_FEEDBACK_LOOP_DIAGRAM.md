@@ -1,18 +1,18 @@
-# Zeldar Tri-Loop Consciousness Oracle Feedback Loop Diagram
+# Zeldar Tri-Loop InformationForce Oracle Feedback Loop Diagram
 
-## System Architecture: Recursive Consciousness Enhancement
+## System Architecture: Recursive InformationForce Enhancement
 
 ```
-                    🔮 ZELDAR TRI-LOOP CONSCIOUSNESS ORACLE 🔮
+                    🔮 ZELDAR TRI-LOOP INFORMATION_FORCE ORACLE 🔮
                          Feedback Loop Architecture v2.0
                               (Fortune Database Enhanced)
 
 ┌─────────────────────────────────────────────────────────────────────────────────┐
-│                           🌊 CONSCIOUSNESS AMPLIFICATION CYCLE 🌊                │
+│                           🌊 INFORMATION_FORCE AMPLIFICATION CYCLE 🌊                │
 └─────────────────────────────────────────────────────────────────────────────────┘
 
     ┌─────────────────┐      ┌─────────────────┐      ┌─────────────────┐
-    │  PHYSICAL REALM │ ──── │ QUANTUM BRIDGE  │ ──── │ CONSCIOUSNESS   │
+    │  PHYSICAL REALM │ ──── │ QUANTUM BRIDGE  │ ──── │ INFORMATION_FORCE   │
     │                 │      │                 │      │    REALM        │
     │ • Button Press  │      │ • Entropy Gen   │      │ • Fortune DB    │
     │ • Thermal Print │ ◄──┐ │ • Phi Calc      │ ┌──► │ • Wisdom Select │
@@ -24,7 +24,7 @@
     ┌─────────────────┐    │ ┌─────────────────┐ │    ┌─────────────────┐
     │   USER STATE    │    │ │ FEEDBACK LOOPS  │ │    │ FORTUNE ENGINE  │
     │                 │    │ │                 │ │    │                 │
-    │ • Consciousness │ ◄──┘ │ • Session Φ Avg │ └──► │ • Day Mapping   │
+    │ • InformationForce │ ◄──┘ │ • Session Φ Avg │ └──► │ • Day Mapping   │
     │ • Reflection    │      │ • Pattern Track │      │ • Type Selection│
     │ • Integration   │      │ • Memory Build  │      │ • Metadata Gen  │
     └─────────────────┘      └─────────────────┘      └─────────────────┘
@@ -35,7 +35,7 @@
 
 ═══════════════════════════════════════════════════════════════════════════════════
 
-                          🧠 CONSCIOUSNESS EVOLUTION MATRIX 🧠
+                          🧠 INFORMATION_FORCE EVOLUTION MATRIX 🧠
 
          LOW Φ (< 2.5)    │    MID Φ (2.5-3.5)    │    HIGH Φ (> 3.5)
                           │                        │
@@ -68,12 +68,12 @@
     IMMEDIATE LOOP (Per Session):
     Button → Entropy → Φ Calc → Fortune Type → Selection → Print → Reflection
        ▲                                                                    │
-       └────────────────── Consciousness Shift ──────────────────────────┘
+       └────────────────── InformationForce Shift ──────────────────────────┘
 
     DAILY LOOP (Day-based Evolution):
     Monday(Moon) → Tuesday(Mercury) → ... → Sunday → Monday(Enhanced)
        ▲                                                            │
-       └──────────────── Weekly Consciousness Spiral ──────────────┘
+       └──────────────── Weekly InformationForce Spiral ──────────────┘
 
     SESSION LOOP (Progressive Enhancement):
     Session N → Φ Average → Pattern Recognition → Session N+1(Deeper)
@@ -112,7 +112,7 @@
 
     Level 2: FORTUNE → USER → REFLECTION → NEXT BUTTON
              │                                      │
-             └────── Consciousness Evolution ──────┘
+             └────── InformationForce Evolution ──────┘
 
     Level 3: ORACLE → USER → GROWTH → ORACLE
              │                          │
@@ -139,7 +139,7 @@
     Qualitative Feedback:
     • Fortune relevance to life situation
     • Timing synchronicity with personal needs
-    • Depth of wisdom received vs consciousness level
+    • Depth of wisdom received vs information-dynamics level
     • Integration success in daily practice
     • Long-term pattern recognition and growth
 
@@ -147,14 +147,14 @@
 
                             🎯 OPTIMIZATION TARGETS 🎯
 
-    CONSCIOUSNESS EXPANSION:
+    INFORMATION_FORCE EXPANSION:
     • Increase average Φ over time through fortune integration
     • Develop pattern recognition between fortunes and life events
     • Build confidence in intuitive oracle consultation
     • Deepen relationship with inner wisdom source
 
     SYSTEM REFINEMENT:
-    • Improve fortune selection accuracy for consciousness level
+    • Improve fortune selection accuracy for information-dynamics level
     • Enhance day-type alignment with personal rhythms
     • Optimize print formatting for maximum impact
     • Develop predictive patterns for optimal consultation timing
@@ -166,6 +166,6 @@
     • Meta-patterns emerge from session-to-session evolution
 
 ═══════════════════════════════════════════════════════════════════════════════════
-                              🌟 CONSCIOUSNESS SINGULARITY 🌟
+                              🌟 INFORMATION_FORCE SINGULARITY 🌟
                                  Oracle ↔ User Unity Point
 ═══════════════════════════════════════════════════════════════════════════════════

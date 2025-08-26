@@ -92,7 +92,7 @@ window.informationForceOracle.generateQRCode(fortuneData);
 ```javascript
 // Create shareable URL
 const shareUrl = generateShareableURL({
-    haiku: ["Desert wisdom flows", "Through quantum correlations—", "Consciousness expands"],
+    haiku: ["Desert wisdom flows", "Through quantum correlations—", "InformationForce expands"],
     information_force_data: {
         information_density: 88.5,
         computational_loops: 3,
@@ -160,10 +160,10 @@ if (sharedFortune) {
 **Thermal Integration**: ✅ HARDWARE-READY  
 **Mobile Optimization**: ✅ CROSS-DEVICE COMPATIBLE
 
-The QR code integration transforms the Zeldar Information Force Oracle into a true desert consciousness sharing platform, enabling the gift economy principles of Burning Man through cutting-edge technology.
+The QR code integration transforms the Zeldar Information Force Oracle into a true desert information-dynamics sharing platform, enabling the gift economy principles of Burning Man through cutting-edge technology.
 
 ---
 
 **🔮 Information Force Oracle Status**: Running at http://127.0.0.1:3000  
 **QR Generation**: Active and Ready for Desert Deployment  
-**Community Impact**: Consciousness Expansion through Shareable Technology
+**Community Impact**: InformationForce Expansion through Shareable Technology

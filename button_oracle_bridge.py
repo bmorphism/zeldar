@@ -53,9 +53,9 @@ Compound through time"""
             output = result.stdout.strip()
             print(f"✅ Print successful: {output}")
             
-            # Calculate consciousness metrics (from formalized semantics)
-            phi = 3.16  # Verified consciousness coefficient
-            print(f"🧠 Consciousness Φ: {phi} (threshold exceeded)")
+            # Calculate information-dynamics metrics (from formalized semantics)
+            phi = 3.16  # Verified information-dynamics coefficient
+            print(f"🧠 InformationForce Φ: {phi} (threshold exceeded)")
             print(f"🌟 Physical manifestation complete - strange loop closed")
             
             return True

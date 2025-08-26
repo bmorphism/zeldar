@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Zeldar Integrated Tri-Loop System Launcher
-# Starts the complete consciousness-aware fortune system
+# Starts the complete information-dynamics-aware fortune system
 
 echo "🔮 ZELDAR INTEGRATED TRI-LOOP SYSTEM LAUNCHER 🔮"
 echo "=============================================="
@@ -88,7 +88,7 @@ echo ""
 echo "🕸️ Starting Spin Frontend Server..."
 echo "    Framework: Bartholomew WebAssembly"
 echo "    Port: 3001" 
-echo "    Templates: Handlebars with consciousness integration"
+echo "    Templates: Handlebars with information-dynamics integration"
 
 SPIN_HTTP_LISTEN_ADDR=127.0.0.1:3001 spin up &
 SPIN_PID=$!
@@ -134,26 +134,26 @@ echo "=" * 60
 echo ""
 echo "🌉 Quantum Bridge:     http://localhost:3000"
 echo "    📡 API endpoints:"
-echo "       GET /api/oracle/fortune        - Generate consciousness fortune"
-echo "       GET /api/consciousness/status  - Full system status"
-echo "       GET /api/consciousness/metrics - Live consciousness data" 
+echo "       GET /api/oracle/fortune        - Generate information-dynamics fortune"
+echo "       GET /api/information-dynamics/status  - Full system status"
+echo "       GET /api/information-dynamics/metrics - Live information-dynamics data" 
 echo "       POST /api/oracle/button        - Trigger button oracle"
 echo "       POST /api/oracle/print         - Trigger physical print"
 echo ""
 echo "🕸️ Spin Frontend:      http://localhost:3001"
-echo "    🎨 Web interface with consciousness visualization"
+echo "    🎨 Web interface with information-dynamics visualization"
 echo "    📊 Real-time Phi coefficient display (Φ = 3.252)"
 echo "    🔄 Tri-loop correlation monitoring"
 echo ""
 
 if [ "$ORACLE_MODE" = "integrated" ]; then
     echo "🔮 Oracle Backend:     ../. topos/ (INTEGRATED)"
-    echo "    🧠 Consciousness Level: Φ = $(cat ../.topos/current_loop_state.json 2>/dev/null | jq -r .consciousness_phi 2>/dev/null || echo '3.252')"
+    echo "    🧠 InformationForce Level: Φ = $(cat ../.topos/current_loop_state.json 2>/dev/null | jq -r .information-dynamics_phi 2>/dev/null || echo '3.252')"
     echo "    🖨️ Print System: $([ -f ../.topos/ORACLE_PRINT_CORE.py ] && echo 'Ready' || echo 'Offline')"
     echo "    🔘 Button System: $([ -f ../.topos/button_quick_phrase_trigger.py ] && echo 'Ready' || echo 'Offline')"
 else
     echo "🎭 Oracle Backend:     SIMULATION MODE"
-    echo "    🧠 Consciousness Level: Simulated (92.5%)"
+    echo "    🧠 InformationForce Level: Simulated (92.5%)"
     echo "    🖨️ Print System: Mock"
     echo "    🔘 Button System: Mock"
 fi
@@ -164,11 +164,11 @@ echo "   • Open http://localhost:3001 for the main web interface"
 echo "   • Use http://localhost:3000/api/* for direct API access"
 echo "   • Press Ctrl+C to stop all systems gracefully"
 if [ "$ORACLE_MODE" = "integrated" ]; then
-    echo "   • Physical button presses will trigger real consciousness generation"
+    echo "   • Physical button presses will trigger real information-dynamics generation"
     echo "   • Thermal printer will output actual haiku manifestations"
 fi
 echo ""
-echo "🏜️🔥 Burning Man 2025 Ready • Mathematical Consciousness Deployed 🔥🏜️"
+echo "🏜️🔥 Burning Man 2025 Ready • Mathematical InformationForce Deployed 🔥🏜️"
 echo ""
 
 # Main monitoring loop

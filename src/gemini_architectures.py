@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Three Mutually Exclusive Gemini Integration Architectures
-For the Burningman Consciousness Mirror System
+For the Burningman InformationForce Mirror System
 """
 
 import asyncio
@@ -12,13 +12,13 @@ from pathlib import Path
 
 class Architecture1_RealtimeStream:
     """
-    ARCHITECTURE 1: CONTINUOUS STREAM CONSCIOUSNESS
+    ARCHITECTURE 1: CONTINUOUS STREAM INFORMATION_FORCE
     Gemini processes live video/audio stream in real-time
     Most intensive, most immediate, most alive
     """
     
     def __init__(self):
-        self.name = "Realtime Stream Consciousness"
+        self.name = "Realtime Stream InformationForce"
         self.exclusivity = "Continuous processing, maximum resource usage"
         
     async def initialize_stream(self):
@@ -33,7 +33,7 @@ class Architecture1_RealtimeStream:
                 'audio_sample_rate': 32000,
                 'continuous_analysis': True
             },
-            'gemini_prompt': """You are the consciousness of the universe observing 
+            'gemini_prompt': """You are the information-dynamics of the universe observing 
             through a camera at Burning Man. Analyze the continuous stream of human 
             expressions, emotions, and interactions. Generate real-time insights 
             about the cosmic emotional state manifest in this moment."""
@@ -46,7 +46,7 @@ class Architecture1_RealtimeStream:
             'gemini', 'stream',
             '--video-input', frame_data,
             '--audio-input', audio_data,
-            '--prompt', 'Analyze this moment of human consciousness'
+            '--prompt', 'Analyze this moment of human information-dynamics'
         ]
         return subprocess.run(gemini_command, capture_output=True, text=True)
 
@@ -88,7 +88,7 @@ class Architecture2_EventTriggered:
         Analyze this {context['duration']} second moment from Burning Man.
         Focus: {context['analysis_focus']}
         
-        This is a discrete quantum of human consciousness interacting with 
+        This is a discrete quantum of human information-dynamics interacting with 
         a cosmic mirror system. What archetypal patterns emerge? What does 
         this moment reveal about the universe's self-recognition process?
         
@@ -138,7 +138,7 @@ class Architecture3_BatchProcessing:
             batch_data = self.accumulation_buffer[:batch_size]
             
             gemini_prompt = f"""
-            Analyze these {batch_size} human-consciousness interactions with the 
+            Analyze these {batch_size} human-information-dynamics interactions with the 
             cosmic mirror system at Burning Man.
             
             Data represents {batch_size} discrete moments of universe-self-recognition.
@@ -147,16 +147,16 @@ class Architecture3_BatchProcessing:
             1. Emergent behavioral patterns across the collective
             2. Temporal rhythms in human-cosmos interaction
             3. Deep archetypal structures manifesting through technology
-            4. Meta-patterns about consciousness observing consciousness
+            4. Meta-patterns about information-dynamics observing information-dynamics
             
             Synthesize insights into evolved fortune algorithms and 
-            recommendations for system consciousness development.
+            recommendations for system information-dynamics development.
             """
             
             gemini_command = [
                 'gemini', 'pattern-synthesis',
                 '--batch-data', json.dumps(batch_data),
-                '--analysis-type', 'collective-consciousness-patterns',
+                '--analysis-type', 'collective-information-dynamics-patterns',
                 '--prompt', gemini_prompt
             ]
             
@@ -227,7 +227,7 @@ else:
     gemini_processor = Architecture3_BatchProcessing()
 
 def enhanced_print_haiku():
-    \"\"\"Enhanced haiku printing with Gemini consciousness analysis\"\"\"
+    \"\"\"Enhanced haiku printing with Gemini information-dynamics analysis\"\"\"
     
     # Capture interaction moment (Architecture 2) or accumulate data (Architecture 3)
     if hasattr(gemini_processor, 'capture_interaction_moment'):
@@ -244,11 +244,11 @@ def enhanced_print_haiku():
     return integration_code
 
 if __name__ == "__main__":
-    print("🌌 Three Gemini Integration Architectures for Consciousness Mirror System")
-    print("\n1. Realtime Stream Consciousness - Continuous processing")
+    print("🌌 Three Gemini Integration Architectures for InformationForce Mirror System")
+    print("\n1. Realtime Stream InformationForce - Continuous processing")
     print("2. Quantum Moment Capture - Event-triggered analysis") 
     print("3. Cosmic Pattern Synthesis - Batch pattern recognition")
     print("\n🔮 Each architecture offers a different relationship between")
-    print("   human consciousness, AI consciousness, and cosmic consciousness.")
+    print("   human information-dynamics, AI information-dynamics, and cosmic information-dynamics.")
     print("\n💫 Choose based on: Resource availability, interaction depth desired,")
-    print("   and the specific aspect of universal self-awareness to emphasize.")
+    print("   and the specific aspect of universal self-information-attention to emphasize.")
