@@ -257,6 +257,11 @@ class IntelligentButton:
             
             print(f"   🔒 REFRACTORY PERIOD ACTIVE - Blocking all new events")
             
+            # Speaking delay - allow time to finish speaking before print starts
+            speaking_delay = 3.0  # 3 seconds for speaking/dramatic pause
+            print(f"   🎭 Speaking delay: {speaking_delay}s (allowing time to finish speaking)")
+            time.sleep(speaking_delay)
+            
             # Generate Moon Day fortune first
             fortune_result = self.generate_moon_fortune(job)
             
